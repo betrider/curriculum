@@ -5,10 +5,10 @@ import 'a.dart';
 Vehicle myVehicle = Vehicle();
 
 // ERROR: Cannot be inherited(interface 클래스 외부에서 확장 불가능)
-class Car extends Vehicle {
-  int passengers = 4;
-  // ...
-}
+// class Car extends Vehicle {
+//   int passengers = 4;
+//   // ...
+// }
 
 // Can be implemented
 class MockVehicle implements Vehicle {

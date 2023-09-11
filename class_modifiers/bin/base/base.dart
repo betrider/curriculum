@@ -15,9 +15,9 @@ base class Car extends Vehicle {
 }
 
 // ERROR: Cannot be implemented(base 클래스 외부에서 구현 불가능)
-base class MockVehicle implements Vehicle {
-  @override
-  void moveForward(int meters) {
-    print('MockVehicle : $meters');
-  }
-}
+// base class MockVehicle implements Vehicle {
+//   @override
+//   void moveForward(int meters) {
+//     print('MockVehicle : $meters');
+//   }
+// }
