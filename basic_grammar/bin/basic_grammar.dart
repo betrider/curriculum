@@ -1,4 +1,4 @@
-// ignore_for_file: unused_local_variable, dead_code, unnecessary_type_check, equal_elements_in_set
+// ignore_for_file: unused_local_variable, dead_code, unnecessary_type_check, equal_elements_in_set, unnecessary_null_comparison
 
 import 'dart:async';
 import 'dart:isolate';    
@@ -567,7 +567,34 @@ void isolateFunction() {
 
 /// 15.null safety(널 안정성)
 void nullSafetyFunction() {
+
+  // String? -> null
+  //         -> String
+
+  String stringValue = 'dart';
+  // stringValue = null; // 오류
+
+  String? nullStringValue = 'dart';
+  nullStringValue = null;
   
+  // stringValue = nullStringValue; // error
+  stringValue = nullStringValue ?? 'dart'; // null인 경우 'dart'입력
+  stringValue = nullStringValue!; // null이 아니다 입력
+  if(nullStringValue != null){ // 분기처리(오토캐스팅)
+    stringValue = nullStringValue;
+  }
+
+  nullStringValue = stringValue; // String -> String? (ok)
+
+  /// list가 null인 경우
+  /// 
+  /// list.isEmpty -> error
+  /// list?.isEmpty -> null
+  /// list?.isEmpty ?? false -> false
+  List<String>? list;
+  if(list?.isEmpty ?? true){
+    print('list is null');
+  }
 }
 
 /// 16.serialize(직렬화)
