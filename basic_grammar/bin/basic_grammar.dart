@@ -1,5 +1,8 @@
 // ignore_for_file: unused_local_variable, dead_code, unnecessary_type_check, equal_elements_in_set
 
+import 'dart:async';
+import 'dart:isolate';    
+
 void main(List<String> arguments) {
   print('기초 문법 시작');
 
@@ -50,6 +53,14 @@ void main(List<String> arguments) {
 
   // 16.serialize(직렬화)
   serializeFunction();
+
+  // 17.extension(확장)
+
+  // 18.enums(열거형)
+
+  // 19.접근지정자
+
+  // 20.상속
 
   // 기타.dynamic과 object 차이점
   dynamicVsObjectDifferenceFunction();
@@ -414,7 +425,7 @@ void errorHandlingFunction() {
   /// finally : 예외처리가 끝나고 실행 할 부분(선택영역)
   try {
     print('try');
-    // throw Exception('test');
+    // throw Exception('test'); // 강제 예외처리
   } on Exception catch (e) {
     print('on Exception details:\n $e');
   } catch (e, s) {
@@ -427,29 +438,137 @@ void errorHandlingFunction() {
 
 /// 11.Parameters(매개변수), Named parameters(명명된 매개변수), Optional positional parameters(선택적 위치 매개변수)
 void parametersFunction() {
-
   // Parameters(매개변수)
   var testFunction1 = parameterFunction1('argument1');
 
   // Named parameters(명명된 매개변수)
   var testFunction2 = parameterFunction2(parameter1: 'argument1');
-  
+
   // Optional positional parameters(선택적 위치 매개변수)
   var testFunction3_1 = parameterFunction3('argument1');
   var testFunction3_2 = parameterFunction3('argument1', 'argument2');
 }
 
 /// 12.class(클래스)
-void classFunction() {}
+void classFunction() {
+
+  // 일반 생성자
+  Point point = Point(1, 10);
+  print('x:${point.x} y:${point.y}');
+
+  // 이름있는 생성자
+  Point point1 = Point.named1(2, 20);
+  print('x:${point1.x} y:${point1.y}');
+
+  // 이름있는 생성자(명명된 매개변수 - 필수1)
+  Point point2 = Point.named2(x:3, y:30);
+  print('x:${point2.x} y:${point2.y}');
+
+  // 이름있는 생성자(명명된 매개변수 - 선택/기본값)
+  Point point3 = Point.named3();
+  print('x:${point3.x} y:${point3.y}');
+
+  // 이름있는 생성자(명명된 매개변수 - 필수2)
+  Point point4 = Point.named4(xx: 4, yy: 40);
+  print('x:${point4.x} y:${point4.y}');
+
+  // 클래스 호출
+  print(point4.call());  
+  print(point4());  
+}
 
 /// 13.async(비동기)
-void asyncFunction() {}
+void asyncFunction() async{
+
+  /// future
+  /// 
+  /// 미래에 구체적인 결과물로 실제적인 객체로 반환된다는 의미
+  
+  Future<String> versionValue = Future.delayed(Duration(seconds: 3)).then((value) => '1.0.0');
+  String versionValue2 = await versionValue;
+  print('versionValue2:$versionValue2');
+
+  // ------------------------------------------------------------------------
+
+  /// stream(일반)
+  /// 
+  /// 데이터나 이벤트가 들어오는 통로
+  /// 오직 1개만 수신가능
+  /// stream이 연결될 때 까지 데이터를 모아둠
+
+  // StreamController를 생성합니다.
+  final StreamController<String> controller1 = StreamController();
+
+  // Stream을 얻습니다.
+  Stream<String> stream1 = controller1.stream;
+
+  // 데이터를 Stream으로 보냅니다.
+  controller1.sink.add('stream 데이터1');
+  controller1.sink.add('stream 데이터2');
+  controller1.sink.add('stream 데이터3');
+
+  // Stream을 구독(subscribe)하여 데이터를 읽습니다.
+  stream1.listen((data) {
+    print('stream1 받은 데이터: $data');
+  });
+
+  // 오류
+  // Stream<String> stream2 = controller1.stream;
+
+  // 오류
+  // stream2.listen((data) {
+  //   print('stream2 받은 데이터: $data');
+  // });
+
+  // StreamController를 닫습니다.
+  controller1.close();
+
+  // ------------------------------------------------------------------------
+
+  /// stream(브로드캐스트)
+  /// 
+  /// 데이터나 이벤트가 들어오는 통로
+  /// N개 수신가능
+  /// stream이 연결되기 전에 들어온 데이터는 소멸됌
+  
+  // StreamController를 생성합니다.
+  final StreamController<String> controller2 = StreamController.broadcast();
+
+  // Stream을 얻습니다.
+  Stream<String> stream2 = controller2.stream;
+
+  // 데이터를 Stream으로 보냅니다.
+  controller2.sink.add('broadcast 데이터1');
+  controller2.sink.add('broadcast 데이터2');
+  controller2.sink.add('broadcast 데이터3');
+
+  // Stream을 구독(subscribe)하여 데이터를 읽습니다.
+  stream2.listen((data) {
+    print('broadcast 받은 데이터: $data');
+  });
+
+  // StreamController를 닫습니다.
+  controller2.close();
+
+}
 
 /// 14.isolate(격리)
-void isolateFunction() {}
+void isolateFunction() {
+  
+  /// isolate(격리)
+  /// 
+  /// 앱 내에서 모든 다트 코드는 격리되어 실행됩니다.
+  /// 앱이 하나의(main isolate)만 사용합니다.
+  /// 추가로 isolate를 만들어 여러 프로세서 코어에서 병렬로 코드를 실행할 수 있습니다.(다중 코어 활용)
+  Isolate.spawn(entryPointFunction,'Hello!!');
+  Isolate.spawn(entryPointFunction,'Whats up!!');   
+  Isolate.spawn(entryPointFunction,'Welcome!!');
+}
 
 /// 15.null safety(널 안정성)
-void nullSafetyFunction() {}
+void nullSafetyFunction() {
+  
+}
 
 /// 16.serialize(직렬화)
 void serializeFunction() {}
@@ -531,12 +650,66 @@ class Todo {
   const Todo(this.who, this.what);
 }
 
-void parameterFunction1(String parameter1){
+void parameterFunction1(String parameter1) {
   // ...
 }
-void parameterFunction2({required String parameter1, String? parameter2, String parameter3 = 'argument3'}){
+void parameterFunction2({required String parameter1, String? parameter2, String parameter3 = 'argument3'}) {
   // ...
 }
-void parameterFunction3(String parameter1, [String? parameter2]){
+void parameterFunction3(String parameter1, [String? parameter2]) {
   // ...
 }
+
+class Point {
+  double x; // Declare instance variable x, initially null.
+  double y; // Declare y, initially null.
+  double z = 0; // Declare z, initially 0.
+
+  // 기본 생성자(필수)
+  Point(this.x, this.y);
+  
+  // 이름 있는 생성자1(필수)
+  Point.named1(this.x, this.y);
+
+  // 이름 있는 생성자2(필수)
+  Point.named2({
+    required this.x,
+    required this.y,
+  });
+
+  // 이름 있는 생성자3(기본값)
+  Point.named3({
+    this.x = 1,
+    this.y = 5,
+  });
+
+  // 이름 있는 생성자4(필수 - 대입)
+  Point.named4({
+    required double xx,
+    required double yy,
+  }) : x = xx, y = yy;
+
+  // 이름 있는 생성자5(불가능)
+  // Point.named5({
+  //   required double xx,
+  //   required double yy,
+  // }) {
+  //   this.x = xx;
+  //   this.y = yy;
+  // }
+
+  // 호출 함수
+  String call() => 'call : x:$x, y:$y, z:$z';
+}
+
+Future<int> sumStream(Stream<int> stream) async {
+  var sum=0;
+  await for(var value in stream) {
+    sum += value;
+  }
+  return sum;
+}
+
+void entryPointFunction(var msg){   
+   print('the message is :$msg');   
+}    
