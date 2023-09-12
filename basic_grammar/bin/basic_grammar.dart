@@ -85,6 +85,10 @@ void variablesFunction() {
   // 날짜
   DateTime datetimeValue = DateTime.now();
 
+  // Runes(생략)
+
+  // Symbol(생략)
+
   // 레코드 → ----------------------------------- ↓ ↓
 
   // record 자료형(dart 3.0 이상)
@@ -332,10 +336,7 @@ void keywordsFunction() {
 
 /// 8.조건문
 void conditionalStatementFunction() {
-  /// if - else
-  ///
-  /// 클래스 레벨에서만 사용 가능(클래스 멤버)
-
+  /// if - else if - else
   int intValue = 3;
 
   if (intValue == 1) {
@@ -349,8 +350,6 @@ void conditionalStatementFunction() {
   }
 
   /// if - case
-  ///
-  /// 클래스 레벨에서만 사용 가능(클래스 멤버)
   List<int> listValue = [1, 2];
 
   if (listValue case [int x, int y]) {
@@ -358,8 +357,6 @@ void conditionalStatementFunction() {
   }
 
   /// switch - case
-  ///
-  /// 클래스 레벨에서만 사용 가능(클래스 멤버)
   DayOfWeek enumValue = DayOfWeek.saturday;
 
   switch (enumValue) {
@@ -376,16 +373,71 @@ void conditionalStatementFunction() {
     default:
       print('주말');
   }
+
+  /// switch - expressions
+  ///
+  /// 스위치 표현식(생략)
 }
 
 /// 9.반복문
-void loopFunction() {}
+void loopFunction() {
+  /// for문(일반)
+  ///
+  /// 시작값에서 끝값까지 증가 값만큼의 간격으로 코드를 반복하며 변수는 반복값에 대입된다
+  for (var i = 0; i < ['1', '2', '3'].length; i++) {
+    print('i:$i');
+  }
+
+  /// for in
+  ///
+  /// 객체의 각 프로퍼티에 대해 변수에 하나씩 할당하는 반복문
+  for (var element in ['1', '2', '3']) {
+    print('element:$element');
+  }
+
+  /// while(생략)
+  ///
+  /// 조건식이 true 일 경우에 계속해서 반복합니다.
+
+  /// do - while(생략)
+  ///
+  /// 최초 한 번 실행 후 조건식이 true 일 경우에 계속해서 반복합니다.
+}
 
 /// 10.오류 처리(error handling)
-void errorHandlingFunction() {}
+void errorHandlingFunction() {
+  /// try - (on) - catch - (finally)
+  ///
+  /// try : 코드 실행부
+  /// on : 특정 오류 조건을 잡는 부분(선택영역)
+  /// catch : 나머지 오류를 잡는 부분
+  /// finally : 예외처리가 끝나고 실행 할 부분(선택영역)
+  try {
+    print('try');
+    // throw Exception('test');
+  } on Exception catch (e) {
+    print('on Exception details:\n $e');
+  } catch (e, s) {
+    print('catch details:\n $e');
+    print('catch Stack trace:\n $s');
+  } finally {
+    print('finally');
+  }
+}
 
-/// 11.Parameters(매개변수), Named parameters(명명된 매개변수), Optional positional parameters(선택적 매개변수)
-void parametersFunction() {}
+/// 11.Parameters(매개변수), Named parameters(명명된 매개변수), Optional positional parameters(선택적 위치 매개변수)
+void parametersFunction() {
+
+  // Parameters(매개변수)
+  var testFunction1 = parameterFunction1('argument1');
+
+  // Named parameters(명명된 매개변수)
+  var testFunction2 = parameterFunction2(parameter1: 'argument1');
+  
+  // Optional positional parameters(선택적 위치 매개변수)
+  var testFunction3_1 = parameterFunction3('argument1');
+  var testFunction3_2 = parameterFunction3('argument1', 'argument2');
+}
 
 /// 12.class(클래스)
 void classFunction() {}
@@ -477,4 +529,14 @@ class Todo {
   final String what;
 
   const Todo(this.who, this.what);
+}
+
+void parameterFunction1(String parameter1){
+  // ...
+}
+void parameterFunction2({required String parameter1, String? parameter2, String parameter3 = 'argument3'}){
+  // ...
+}
+void parameterFunction3(String parameter1, [String? parameter2]){
+  // ...
 }
