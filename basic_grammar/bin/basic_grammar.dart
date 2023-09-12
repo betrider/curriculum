@@ -1,4 +1,4 @@
-// ignore_for_file: unused_local_variable, dead_code, unnecessary_type_check
+// ignore_for_file: unused_local_variable, dead_code, unnecessary_type_check, equal_elements_in_set
 
 void main(List<String> arguments) {
   print('기초 문법 시작');
@@ -29,6 +29,9 @@ void main(List<String> arguments) {
 
 /// 1.변수
 void variablesFunction() {
+
+  // 일반 유형 → ----------------------------------- ↓ ↓
+
   dynamic dynamicValue = 'dart'; // 가변타입(null o)
   dynamicValue = 55;
 
@@ -41,13 +44,76 @@ void variablesFunction() {
   numValue = 75.5;
 
   int intValue = 15; // 정수
+
   double doubleValue = 75.5; // 소수
 
   bool boolValue = false; // 논리연산자
+
   DateTime datetimeValue = DateTime.now(); // 날짜
 
-  const int constValue = 10000; // 상수(컴파일 타임)
-  final DateTime finalValue = DateTime.now(); // 상수(런타임 타임)
+
+  // 레코드 → ----------------------------------- ↓ ↓
+
+  // record 자료형(dart 3.0 이상)
+  (String, String, {int a, bool b}) record = ('first', a: 2, b: true, 'last');
+  print(record.$1);
+  print(record.a);
+  print(record.b);
+  print(record.$2);
+
+
+  // 컬렉션 → ----------------------------------- ↓ ↓
+
+  // List
+  //
+  // 순서 o
+  // 중복 o
+  List<String> listValue = ['1','2','3','3']; // ['1','2','3','3']
+
+  // Set
+  //
+  // 순서 x
+  // 중복 x
+  Set<String> setValue = {'1','2','3','3'}; // {'1','2','3'}
+
+  // Map
+  //
+  // Key(키)랑 Value(값)으로 나눠서 데이터 관리
+  // 순서x
+  // 중복x
+  Map<String, String> mapValue = {'key1':'value1'}; // {'key1':'value1'}
+
+  // 기타 → ----------------------------------- ↓ ↓
+
+  // 스프레드 연산자
+  //
+  // 스프레드 연산자는 컬렉션에 여러 값을 삽입하는 간결한 방법을 제공합니다.
+  var list1 = [1, 2, 3];
+  var list2 = [0, ...list1]; // [0, 1, 2, 3]
+
+  // 제어 흐름 연산자
+  var list3 = ['Home', if(false)'Furniture']; // ['home']
+  var list4 = ['Home', if('hero' case 'hero')'Furniture']; // ['home', 'Furniture']
+  var list5 = ['Home', for (var i in ['1','2','3']) 'home$i']; // ['home', 'home1', 'home2', 'home3']
+
+  // 제네릭
+  //
+  // 데이터의 타입을 외부에서 지정하는 기법
+  var list6 = [];
+  var list7 = <String>[];
+  var list8 = <int>[];
+  var set1 = <String>{};
+  var map1 = <String, int>{};
+
+  // typedef
+  //
+  // 데이터 타입을 새롭게 정의하는 키워드
+
+  /*
+    typedef IntList = List<int>;
+    IntList il = [1, 2, 3];
+  */
+
 }
 
 /// 2.캐스팅
@@ -202,6 +268,16 @@ void libraryFunction(){
 /// 7.키워드(https://dart.dev/language/keywords)
 void keywordsFunction() {
 
+  /// const
+  /// 
+  /// 상수(컴파일 타임)
+  const int constValue = 10000;
+
+  /// const
+  /// 
+  /// 상수(런타임 타임)
+  final DateTime finalValue = DateTime.now();
+
   /// static
   ///
   /// 클래스 레벨에서만 사용 가능(클래스 멤버)
@@ -221,14 +297,6 @@ void keywordsFunction() {
     late String description;
   */
 
-  // typedef
-  //
-  // 데이터 타입을 새롭게 정의하는 키워드
-
-  /*
-    typedef IntList = List<int>;
-    IntList il = [1, 2, 3];
-  */
 }
 
 enum DayOfWeek {
@@ -253,7 +321,7 @@ void dynamicAndObject() {
 
   /// 대상이 객체 Object라는 것 외에 어떤 것도 가정할 수 없다는 뜻이다.
   /// 객체로서 가장 기본적인 메소드 toString, hashCode를 호출할 수 있다. 하지만 o.foo() 같은 호출은 불가능하다.
-  Object objectValue = 'Bob';
+  Object objectValue = 'dart';
 
   // 차이점1 --------------------------------------------
 
