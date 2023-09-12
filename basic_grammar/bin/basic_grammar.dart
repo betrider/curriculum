@@ -443,6 +443,13 @@ void errorHandlingFunction() {
 
 /// 11.Parameters(매개변수), Named parameters(명명된 매개변수), Optional positional parameters(선택적 위치 매개변수)
 void parametersFunction() {
+
+  //* argument 함수 혹은 메서드를 호출할 때 입력되는 실제 값
+  //* parameter 함수 혹은 메서드 정의에서 나열되는 변수 명
+
+  //* function 함수는 클래스나 객체와 상관없이 독립적으로 정의할 수 있습니다.
+  //* method 메소드는 클래스의 인스턴스에 의해 호출되며, 클래스의 상태와 상호작용할 수 있습니다.
+  
   /// Parameters(매개변수)
   var testFunction1 = parameterFunction1('argument1');
 
