@@ -4,16 +4,22 @@
 enum DayOfWeek {
   /// 월요일
   monday,
+
   /// 화요일
   tuesday,
+
   /// 수요일
   wednesday,
+
   /// 목요일
   thursday,
+
   /// 금요일
   friday,
+
   /// 토요일
   saturday,
+
   /// 일요일
   sunday;
 
@@ -142,12 +148,46 @@ class User {
   User.fromJson(Map<String, dynamic> json)
       : name = json['name'],
         email = json['email'];
+  
+
+  /// Map -> User
+  /// 
+  /// 팩토리 사례1
+  /// 
+  /// 팩토리는 자신의 클래스를 반환해야 합니다.
+  /// 
+  /// 초기화 목록에서 처리할 수 없는 논리를 사용하여 최종 변수를 초기화하는 것입니다.
+  factory User.fromJson2(Map<String, dynamic> json) {
+    return User(
+      json['name'],
+      json['email'],
+    );
+  }
 
   /// User -> Map
   Map<String, dynamic> toJson() => {
         'name': name,
         'email': email,
       };
+}
+
+/// 싱글톤 클래스
+/// 
+/// 팩토리 사례2
+/// 
+/// 팩토리는 자신의 클래스를 반환해야 합니다.
+/// 
+/// 새 인스턴스를 항상 생성하지 않는 생성자를 구현할 때 키워드를 사용합니다.
+class Singleton {
+  static final Singleton _instance = Singleton._internal();
+
+  factory Singleton() {
+    return _instance;
+  }
+
+  Singleton._internal() { //클래스가 최초 생성될때 1회 발생
+    //초기화 코드    
+  }
 }
 
 /// extension 예제
@@ -174,8 +214,10 @@ enum SimpleColor {
 enum Vehicle implements Comparable<Vehicle> {
   /// 자동차
   car(tires: 4, passengers: 5, carbonPerKilometer: 400),
+
   /// 버스
   bus(tires: 6, passengers: 50, carbonPerKilometer: 800),
+
   /// 오토바이
   bicycle(tires: 2, passengers: 1, carbonPerKilometer: 0);
 
@@ -230,7 +272,7 @@ class Person {
 /// 상속
 
 /// mixin 정의
-/// 
+///
 /// 클래스에 새로운 기능을 주입하고 코드를 재사용하는 데 도움이 됩니다.
 mixin LoggingMixin {
   void log(String message) {
@@ -239,7 +281,7 @@ mixin LoggingMixin {
 }
 
 /// 추상 클래스 정의
-/// 
+///
 /// 추상 메서드를 포함할 수 있는 클래스입니다.
 /// 추상 클래스는 직접 인스턴스화할 수 없습니다.
 /// 하위 클래스에서 추상 메서드를 구현해야 합니다.
@@ -252,7 +294,7 @@ abstract class Shape {
 
   /// 추상 메서드
   double calculateArea();
-  
+
   /// 메서드
   void printInfo() {
     print("이 도형은 추상 클래스 Shape의 인스턴스입니다.");
@@ -261,11 +303,10 @@ abstract class Shape {
 }
 
 /// extends(확장)
-/// 
+///
 /// 클래스의 모든 내용을 재정의 할 필요는 없습니다.
 /// 추상 메서드는 필수로 재정의 해야 합니다.
 class Circle extends Shape {
-
   /// 멤버 변수
   double radius;
 
@@ -288,10 +329,9 @@ class Circle extends Shape {
 }
 
 /// implements(구현)
-/// 
+///
 /// 클래스의 모든 내용을 필수로 재정의 해야 합니다.
-class Square implements Shape{
-
+class Square implements Shape {
   /// 멤버 변수
   double radius;
 
@@ -314,5 +354,26 @@ class Square implements Shape{
     print("원의 반지름: $radius");
     print("원의 면적: ${calculateArea()}");
   }
-  
+}
+
+T genericFunction<T>(List<T> ts) {
+  // 초기 작업 또는 에러 확인, 그리고 ...
+  T tmp = ts[0];
+  // 추가적인 확인 또는 프로세싱 ...
+  return tmp;
+}
+
+class GenericClass<T extends num> {
+  final T data;
+  GenericClass(this.data);
+}
+
+class Foo {
+  final String one;
+  final int two;
+
+  Foo({
+    required this.one,
+    required this.two,
+  });
 }

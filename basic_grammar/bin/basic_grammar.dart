@@ -69,6 +69,12 @@ void main(List<String> arguments) {
   // 20.상속
   inheritanceFunction();
 
+  // 21.팩토리
+  factoryFunction();
+
+  // 22.패턴
+  patternFunction();
+
   // 기타.dynamic과 object 차이점
   dynamicVsObjectDifferenceFunction();
 
@@ -107,15 +113,6 @@ void variablesFunction() {
 
   /// Symbol(생략)
 
-  /// 레코드 → ----------------------------------- ↓ ↓
-
-  /// record 자료형(dart 3.0 이상)
-  (String, String, {int a, bool b}) record = ('first', a: 2, b: true, 'last');
-  print(record.$1);
-  print(record.a);
-  print(record.b);
-  print(record.$2);
-
   /// 컬렉션 → ----------------------------------- ↓ ↓
 
   /// List
@@ -153,18 +150,25 @@ void variablesFunction() {
     for (var i in ['1', '2', '3']) 'home$i'
   ]; // ['home', 'home1', 'home2', 'home3']
 
-  /// 패턴 매칭(dart 3.0 이상)
-  var list6 = ['1', '2'];
-  var [a, b] = list6;
-
   /// 제네릭
   ///
   /// 데이터의 타입을 외부에서 지정하는 기법
-  var list7 = [];
-  var list8 = <String>[];
-  var list9 = <int>[];
+  ///
+  /// extends를 통해 타입 제한
+  var list6 = [];
+  var list7 = <String>[];
+  var list8 = <int>[];
   var set1 = <String>{};
   var map1 = <String, int>{};
+
+  var genericFunction1 = genericFunction<bool>([true, false, true]);
+  var genericFunction2 = genericFunction<String>(['dart', 'flutter']);
+  var genericFunction3 = genericFunction<int>([1, 5, 4]);
+
+  GenericClass genericClass1 = GenericClass<num>(5.5);
+  GenericClass genericClass2 = GenericClass<int>(5);
+  GenericClass genericClass3 = GenericClass<double>(5.5);
+  // Foo foo4 = Foo<String>(5.5); // error
 
   /// typedef
   ///
@@ -395,10 +399,6 @@ void conditionalStatementFunction() {
     default:
       print('주말');
   }
-
-  /// switch - expressions
-  ///
-  /// 스위치 표현식(생략)
 }
 
 /// 9.반복문
@@ -698,12 +698,10 @@ void accessModifierFunction() {
   print(person2.age);
   person2.age = 10;
   print(person2.age);
-
 }
 
 /// 20.상속
 void inheritanceFunction() {
-  
   // 추상 클래스는 직접 인스턴스화할 수 없습니다.
   // Shape shape = Shape(); // 에러 발생
 
@@ -713,6 +711,112 @@ void inheritanceFunction() {
 
   Square square = Square("파란색", 4.0);
   square.printInfo();
+}
+
+/// 21.팩토리
+void factoryFunction() {
+  /// 사례1
+  ///
+  /// 자신의 클래스를 반환
+  User user = User.fromJson2({'name': 'john', 'email': 'john@example.com'});
+
+  /// 사례2
+  ///
+  /// 싱글톤
+  ///
+  /// 캐싱된 인스턴스 반환
+  Manager manager1 = Manager();
+  print(manager1.hashCode);
+  Manager manager2 = Manager();
+  print(manager2.hashCode);
+
+  Singleton singleton1 = Singleton();
+  print(singleton1.hashCode);
+  Singleton singleton2 = Singleton();
+  print(singleton2.hashCode);
+}
+
+/// 22.패턴(dart3.0 이상)
+void patternFunction() {
+  /// 1.Matching(매칭)
+  ///
+  /// 표현식에 들어가는 데이터는 상수여야 합니다.
+  const a1 = 'a';
+  const b1 = 'b';
+  const c1 = 'c';
+  var obj = ['a', 'b'];
+  switch (obj) {
+    case [a1, b1]:
+      print('$a1, $b1');
+    case [a1, b1, c1]:
+      print('$a1, $b1, $c1');
+    case ['a' || 'b', var c]:
+      print(c);
+  }
+
+  /// 2.Destructuring(구조분해)
+  var list = ['1', '2'];
+  var [a2, b2] = list; // a2 = 1, b2 = 2
+
+  /// 3.Variable declaration(변수 선언)
+  var (a3, [b3, c3]) = ('str', [1, 2]);
+
+  /// 4.ariable assignment(변수 할당)
+  var (a4, b4) = ('left', 'right');
+  (b4, a4) = (a4, b4); // Swap.
+  print('$a4 $b4'); // Prints "right left".
+
+  /// 5.switch문 표현식
+  int obj2 = 51;
+  switch (obj2) {
+    // Matches if 1 == obj.
+    case 1:
+      print('one');
+
+    // Matches if the value of obj is between the
+    // constant values of 'first' and 'last'.
+    case >= 0 && <= 10:
+      print('in range');
+
+    default:
+      print('out range');
+  }
+
+  /// 6.switch문 논리 패턴
+  var color = SimpleColor.blue;
+  var isPrimary = switch (color) { SimpleColor.red || SimpleColor.blue => true, _ => false };
+
+  /// 7.for-in element 분해
+  Map<String, int> hist = {
+    'a': 23,
+    'b': 100,
+  };
+
+  for (var MapEntry(key: key, value: count) in hist.entries) {
+    print('$key occurred $count times');
+  }
+
+  /// 8.record 자료형(dart 3.0 이상)
+  (String, String, {int a, bool b}) record = ('first', a: 2, b: true, 'last');
+  print(record.$1);
+  print(record.a);
+  print(record.b);
+  print(record.$2);
+
+  ({String a, String b}) record2 = (a: '11', b: '22');
+  print(record2.a);
+  print(record2.b);
+
+  final Foo foo = Foo(one: 'one', two: 2);
+  var Foo(:one, :two) = foo;
+  print('one $one, two $two');
+
+  // 9.json 검증
+  var json = {
+    'user': ['Lily', 13]
+  };
+  var {'user': [name, age]} = json;
+  print('name $name, age $age');
 }
 
 /// 기타.dynamic과 object 차이
