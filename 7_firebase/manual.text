@@ -4,3 +4,12 @@
 2.사이트에서 프로젝트 생성
 3.dart pub global activate flutterfire_cli
 4.flutterfire configure --project=fir-curriculum-85481
+
+
+// 안드로이드
+
+1.SHA256 인증서 추가(jks에서 추출)
+
+// IOS
+
+1.APN 인증서 추가(애플 개발자 사이트에서 추출)
