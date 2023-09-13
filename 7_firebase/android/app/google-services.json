@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "789677626329",
+    "project_id": "fir-curriculum-85481",
+    "storage_bucket": "fir-curriculum-85481.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:789677626329:android:4eb2b51013fcbd4a96bfc8",
+        "android_client_info": {
+          "package_name": "com.betrider.firebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2QWGBtkfcn8DIsopgoW4f6tO0hc3C0e0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
