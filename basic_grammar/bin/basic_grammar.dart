@@ -694,10 +694,26 @@ void accessModifierFunction() {
   Person person2 = Person();
   // print(person2._age); // 오류
   // person2._sleep(); // 오류
+
+  print(person2.age);
+  person2.age = 10;
+  print(person2.age);
+
 }
 
 /// 20.상속
-void inheritanceFunction() {}
+void inheritanceFunction() {
+  
+  // 추상 클래스는 직접 인스턴스화할 수 없습니다.
+  // Shape shape = Shape(); // 에러 발생
+
+  // Circle 클래스와 Square 클래스 모두 Shape 추상 클래스를 상속받아 사용할 수 있습니다.
+  Circle circle = Circle("빨간색", 5.0);
+  circle.printInfo();
+
+  Square square = Square("파란색", 4.0);
+  square.printInfo();
+}
 
 /// 기타.dynamic과 object 차이
 void dynamicVsObjectDifferenceFunction() {

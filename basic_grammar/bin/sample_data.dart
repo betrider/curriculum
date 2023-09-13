@@ -1,17 +1,24 @@
-// ignore_for_file: unused_field, unused_element
+// ignore_for_file: unused_field, unused_element, unnecessary_getters_setters
 
 /// 열거형(요일)
 enum DayOfWeek {
+  /// 월요일
   monday,
+  /// 화요일
   tuesday,
+  /// 수요일
   wednesday,
+  /// 목요일
   thursday,
+  /// 금요일
   friday,
+  /// 토요일
   saturday,
+  /// 일요일
   sunday;
 
   /// name -> Enum.name으로 변환
-  /// 
+  ///
   /// ``` dart
   /// var enumValue = DayOfWeek.strToEnum('monday'); // DayOfWeek.monday
   /// ```
@@ -26,7 +33,7 @@ class Employee {
   }
 }
 
-/// method 예제
+/// class method 예제
 class Manager extends Employee {
   @override
   void printMethod() {
@@ -128,12 +135,15 @@ class User {
   /// 이메일
   final String email;
 
+  /// 생성자
   User(this.name, this.email);
 
+  /// Map -> User
   User.fromJson(Map<String, dynamic> json)
       : name = json['name'],
         email = json['email'];
 
+  /// User -> Map
   Map<String, dynamic> toJson() => {
         'name': name,
         'email': email,
@@ -162,10 +172,14 @@ enum SimpleColor {
 
 /// 발전된 enum 선언
 enum Vehicle implements Comparable<Vehicle> {
+  /// 자동차
   car(tires: 4, passengers: 5, carbonPerKilometer: 400),
+  /// 버스
   bus(tires: 6, passengers: 50, carbonPerKilometer: 800),
+  /// 오토바이
   bicycle(tires: 2, passengers: 1, carbonPerKilometer: 0);
 
+  /// 생성자
   const Vehicle({
     required this.tires,
     required this.passengers,
@@ -186,22 +200,119 @@ enum Vehicle implements Comparable<Vehicle> {
 
 class Person {
   /// public 멤버 변수
-  final String name;
+  String name;
+
   /// private 멤버 변수
-  final int _age;
+  int _age;
+
+  /// getter(read)
+  int get age => _age;
+
+  /// setter(write)
+  set age(int value) => _age = value;
 
   /// 생성자
-  const Person({
+  Person({
     this.name = '홍길동',
   }) : _age = 55;
 
   /// public 멤버 함수
-  void eat(){
+  void eat() {
     print('eat');
   }
 
   /// private 멤버 함수
-  void _sleep(){
+  void _sleep() {
     print('sleep');
   }
+}
+
+/// 상속
+
+/// mixin 정의
+/// 
+/// 클래스에 새로운 기능을 주입하고 코드를 재사용하는 데 도움이 됩니다.
+mixin LoggingMixin {
+  void log(String message) {
+    print('로그: $message');
+  }
+}
+
+/// 추상 클래스 정의
+/// 
+/// 추상 메서드를 포함할 수 있는 클래스입니다.
+/// 추상 클래스는 직접 인스턴스화할 수 없습니다.
+/// 하위 클래스에서 추상 메서드를 구현해야 합니다.
+abstract class Shape {
+  /// 멤버 변수
+  String color;
+
+  /// 생성자
+  Shape(this.color);
+
+  /// 추상 메서드
+  double calculateArea();
+  
+  /// 메서드
+  void printInfo() {
+    print("이 도형은 추상 클래스 Shape의 인스턴스입니다.");
+    print("색상: $color");
+  }
+}
+
+/// extends(확장)
+/// 
+/// 클래스의 모든 내용을 재정의 할 필요는 없습니다.
+/// 추상 메서드는 필수로 재정의 해야 합니다.
+class Circle extends Shape {
+
+  /// 멤버 변수
+  double radius;
+
+  /// 생성자
+  Circle(String color, this.radius) : super(color);
+
+  /// 재정의(필수)
+  @override
+  double calculateArea() {
+    return 3.14 * radius * radius;
+  }
+
+  /// 부모 클래스의 메서드 오버라이딩(재정의)
+  @override
+  void printInfo() {
+    print("원의 반지름: $radius");
+    print("원의 면적: ${calculateArea()}");
+    super.printInfo(); // 부모 클래스의 printInfo 메서드 호출
+  }
+}
+
+/// implements(구현)
+/// 
+/// 클래스의 모든 내용을 필수로 재정의 해야 합니다.
+class Square implements Shape{
+
+  /// 멤버 변수
+  double radius;
+
+  /// 생성자
+  Square(this.color, this.radius);
+
+  /// 재정의(필수)
+  @override
+  String color;
+
+  /// 재정의(필수)
+  @override
+  double calculateArea() {
+    return 3.14 * radius * radius;
+  }
+
+  /// 재정의(필수)
+  @override
+  void printInfo() {
+    print("원의 반지름: $radius");
+    print("원의 면적: ${calculateArea()}");
+  }
+  
 }
