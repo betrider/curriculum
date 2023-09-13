@@ -1,16 +1,57 @@
-# flutter_widget
+# 🔴 프로젝트 구조
 
-A new Flutter project.
+## 1.dart_tool
 
-## Getting Started
+- Dart2부터 추가되었으며 pub과 다른 다른 tool에서 사용하는 폴더입니다.
 
-This project is a starting point for a Flutter application.
+## 2.idea
 
-A few resources to get you started if this is your first Flutter project:
+- 개발 도구에 필요한 설정이 구성된 폴더입니다.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 3.android
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- ANDROID 네이티브 코드가 작성되는 경로로써 플러터를 통해 컴파일되어 생성된 ANDROID 앱에 대한 소스코드가 구성되는 경로입니다.
+
+## 4.assets(직접생성)
+
+- 프로젝트에서 사용되는 이미지,아이콘,폰트 등 리소스 파일을 저장하는 폴더입니다.
+
+## 5.ios
+
+- iOS 네이티브 코드가 작성되는 경로로써 플러터를 통해 컴파일되어 생성된 iOS 앱 소스코드가 구성되는 경로입니다.
+
+## 6.lib
+
+- 앱 개발시 가장 많이 이용하게 되는 경로로써 플러터를 통한 앱 개발시 가장 기본이되는 소스코드 (.dart 파일)가 구성되는 경로이며 프로젝트의 기본 경로입니다.
+
+## 7.test
+
+- 앱 개발 시 테스트 코드를 작성하여 테스트 할 때 사용하는 폴더입니다.
+
+## 8.gitignore
+
+- 해당 파일은 git 버전 관리에서 업로드에서 제외할 정보가 담겨있습니다.
+
+## 9.metadata
+
+- 플러터 프로젝트를 위한 내부 파일, 프로젝트가 관리하는 파일입니다.
+
+## 10.analysis_options.yaml
+
+- lint(소스 코드를 분석하여 프로그램 오류, 버그, 스타일 오류를 표시하는 도구) 라이브러리의 세팅 파일입니다.
+- 
+## 11.flutter_application.iml
+
+- 개발 도구에 필요한 설정 파일로 프로젝트의 내부 파일입니다.
+
+## 12.pubspec.lock
+
+- 패키지 매니저가 이용하는 파일입니다.
+
+## 13.pubspec.yaml
+
+- 플러터 프로젝트에서 사용하는 모든 메타데이터 (패키지, 프로젝트 버전, 자원 등)의 종속성을 명시하고 관리하는 파일입니다.
+
+## 14.README.md
+
+- 프로젝트에 대한 설명을 작성하는 파일입니다.
