@@ -4,6 +4,7 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:isolate';
 
+import 'class_modifiers/abstract/abstract.dart';
 import 'sample_data.dart';
 
 void main(List<String> arguments) {
@@ -498,6 +499,14 @@ void classFunction() {
   /// 클래스 호출
   print(point4.call());
   print(point4());
+
+  /// 클래스 수정자
+  print('클래스 수정자');
+  Car car = Car();
+  MockVehicle vehicle = MockVehicle();
+
+  car.moveForward(5);
+  vehicle.moveForward(15);
 }
 
 /// 13.async(비동기)
