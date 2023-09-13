@@ -29,7 +29,7 @@ if (keystorePropertiesFile.exists()) {
 }
 
 android {
-    namespace "com.example.flutter_widget"
+    namespace "com.betrider.ready"
     compileSdkVersion 31
     ndkVersion flutter.ndkVersion
 
@@ -47,7 +47,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.example.flutter_widget"
+        applicationId "com.betrider.ready"
         minSdkVersion 26
         targetSdkVersion 31
         versionCode flutterVersionCode.toInteger()

@@ -1,4 +1,4 @@
-package com.example.flutter_widget
+package com.betrider.riverpod
 
 import io.flutter.embedding.android.FlutterActivity
 

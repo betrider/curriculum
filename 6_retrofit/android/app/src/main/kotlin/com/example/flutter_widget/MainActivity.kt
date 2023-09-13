@@ -1,4 +1,4 @@
-package com.example.flutter_widget
+package com.betrider.retrofit
 
 import io.flutter.embedding.android.FlutterActivity
 
