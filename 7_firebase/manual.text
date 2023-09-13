@@ -1,0 +1,6 @@
+// 파이어베이스 세팅
+
+1.firebase login
+2.사이트에서 프로젝트 생성
+3.dart pub global activate flutterfire_cli
+4.flutterfire configure --project=fir-curriculum-85481

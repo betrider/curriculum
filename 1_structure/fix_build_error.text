@@ -6,20 +6,25 @@
 1.flutter pub cache clean
 2.flutter pub get
 
+
 -- 안드로이드 에뮬레이터 오류
 
 1.Device Manager -> Wipe Data(초기화)
 
+
 -- 안드로이드 NDK, CMAKE 설치 오류
+
 1.안드로이드 스튜디오
 2.sdk 매니저
 3.sdk tools 탭
 4.ndk 또는 cmake 설치
 
+
 -- 안드로이드 버전 오류
 
 1.app/build.gradle 이동
 2.compileSdkVersion, targetSdkVersion 버전 올리기
+
 
 -- ios 빌드 오류1
 
@@ -29,6 +34,7 @@
 4.cd ..
 5.flutter clean
 6.flutter pub get
+
 
 -- ios 빌드 오류2
 오류내용 : error: Try launching Xcode and selecting "Product > Run" to fix the problem
