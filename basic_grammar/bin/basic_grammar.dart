@@ -1,8 +1,10 @@
-// ignore_for_file: unused_local_variable, dead_code, unnecessary_type_check, equal_elements_in_set, unnecessary_null_comparison
+// ignore_for_file: unused_local_variable, dead_code, unnecessary_type_check, equal_elements_in_set, unnecessary_null_comparison, unused_field, unused_element
 
 import 'dart:async';
 import 'dart:convert';
 import 'dart:isolate';
+
+import 'sample_data.dart';
 
 void main(List<String> arguments) {
   print('기초 문법 시작');
@@ -151,12 +153,16 @@ void variablesFunction() {
     for (var i in ['1', '2', '3']) 'home$i'
   ]; // ['home', 'home1', 'home2', 'home3']
 
+  /// 패턴 매칭(dart 3.0 이상)
+  var list6 = ['1', '2'];
+  var [a, b] = list6;
+
   /// 제네릭
   ///
   /// 데이터의 타입을 외부에서 지정하는 기법
-  var list6 = [];
-  var list7 = <String>[];
-  var list8 = <int>[];
+  var list7 = [];
+  var list8 = <String>[];
+  var list9 = <int>[];
   var set1 = <String>{};
   var map1 = <String, int>{};
 
@@ -443,13 +449,12 @@ void errorHandlingFunction() {
 
 /// 11.Parameters(매개변수), Named parameters(명명된 매개변수), Optional positional parameters(선택적 위치 매개변수)
 void parametersFunction() {
-
   //* argument 함수 혹은 메서드를 호출할 때 입력되는 실제 값
   //* parameter 함수 혹은 메서드 정의에서 나열되는 변수 명
 
   //* function 함수는 클래스나 객체와 상관없이 독립적으로 정의할 수 있습니다.
-  //* method 메소드는 클래스의 인스턴스에 의해 호출되며, 클래스의 상태와 상호작용할 수 있습니다.
-  
+  //* method 메서드는 클래스의 인스턴스에 의해 호출되며, 클래스의 상태와 상호작용할 수 있습니다.
+
   /// Parameters(매개변수)
   var testFunction1 = parameterFunction1('argument1');
 
@@ -463,6 +468,13 @@ void parametersFunction() {
 
 /// 12.class(클래스)
 void classFunction() {
+  //* 클래스 - 설계도
+  //* 객체 - 소프트웨어 세계에 구현할 대상
+  //* 인스턴스 - 소프트웨어 세계에 구현된 실체
+
+  Point p; // 클래스와 객체
+  p = Point(1, 1); // 인스턴스화 (객체를 메모리에 할당)
+
   /// 일반 생성자
   Point point = Point(1, 10);
   print('x:${point.x} y:${point.y}');
@@ -490,10 +502,12 @@ void classFunction() {
 
 /// 13.async(비동기)
 void asyncFunction() async {
+  //* 동기 - 직렬성(코드가 끝날때 까지 나머지 코드의 실행을 멈춘다.)
+  //* 비동기 - 병렬성(코드가 끝날때 까지 코드의 실행을 멈추지 않고 다음 코드를 먼저 실행한다.)
+
   /// future
   ///
   /// 미래에 구체적인 결과물로 실제적인 객체로 반환된다는 의미
-
   Future<String> versionValue = Future.delayed(Duration(seconds: 3)).then((value) => '1.0.0');
   String versionValue2 = await versionValue;
   print('versionValue2:$versionValue2');
@@ -620,7 +634,7 @@ void serializeFunction() {
   /// json 데이터 -> Map 데이터로 역직렬화
   Map<String, dynamic> userMap = jsonDecode(jsonString);
 
-  /// userMap라는 데이터에 어떤값이 존재할 수 있는지 모름 / 자료형도 모름
+  /// userMap라는 데이터에 어떤값이 존재할 수 있는지 모름 / 자료형도 모름 / 설명주석 사용 불가
   print(userMap['name']);
   print(userMap['email']);
 
@@ -631,47 +645,68 @@ void serializeFunction() {
 }
 
 /// 17.extension(확장)
-void extensionFunction(){
-  
+void extensionFunction() {
+  //* extension - 일반 메서드와 함께 확장 메서드를 제안하는 키워드
+
+  /// 오늘 날짜
+  DateTime time1 = DateTime.now();
+
+  /// 내일 날짜
+  DateTime time2 = time1.add(Duration(days: 1));
+
+  /// 어제 날짜
+  DateTime time3 = time1.add(Duration(days: -1));
+
+  print(time1 < time2); // true
+  print(time1 < time3); // false
 }
 
 /// 18.enums(열거형)
-void enumsFunction(){
+void enumsFunction() {
+  /// 간단한 enum
+  SimpleColor simpleColor = SimpleColor.red;
 
+  /// 발전된 enum(dart 2.17이상)
+  Vehicle vehicle = Vehicle.car;
+  Vehicle vehicle2 = Vehicle.bus;
+
+  print(vehicle.carbonFootprint);
+  print(vehicle.carbonPerKilometer);
+  print(vehicle.compareTo(vehicle2));
 }
 
-/// 19.접근지정자
-void accessModifierFunction(){
+/// 19.접근지정자(public & privite)
+void accessModifierFunction() {
+  /// 1.public
+  ///
+  /// 접근 범위에 제한 없이 모든 곳에서 접근이 가능합니다.
+  ///
+  /// 기본적으로 아무런 키워드가 없는 경우 public 입니다.
+  Person person = Person();
+  print(person.name);
+  person.eat();
 
+  /// 2.private
+  ///
+  /// 동일 클래스 내에서만 접근이 가능합니다.
+  ///
+  /// 사용법은 변수나 메서드 앞에 _(밑줄)을 붙여서 사용합니다.
+  Person person2 = Person();
+  // print(person2._age); // 오류
+  // person2._sleep(); // 오류
 }
 
 /// 20.상속
-void inheritanceFunction(){
+void inheritanceFunction() {}
 
-}
-
-enum DayOfWeek {
-  monday,
-  tuesday,
-  wednesday,
-  thursday,
-  friday,
-  saturday,
-  sunday;
-
-  static DayOfWeek strToEnum(String str) {
-    return DayOfWeek.values.byName(str);
-  }
-}
-
-/// dynamic과 object 차이
+/// 기타.dynamic과 object 차이
 void dynamicVsObjectDifferenceFunction() {
-  /// 대상은 어떤 것도 가정할 수 없으며 타입도 체크하지 말라는 뜻이다.
-  /// 프로그래머가 어떤 타입인지 알고 있고 직접 처리한다고 가정하기 때문에 o.foo()와 같은 호출은 오히려 컴파일러가 경고하지 않는다.
+  /// 대상은 어떤 것도 가정할 수 없으며 타입도 체크하지 말라는 뜻입니다.
+  /// 프로그래머가 어떤 타입인지 알고 있고 직접 처리한다고 가정하기 때문에 o.foo()와 같은 호출은 오히려 컴파일러가 경고하지 않습니다.
   dynamic dynamicValue = 'flutter';
 
-  /// 대상이 객체 Object라는 것 외에 어떤 것도 가정할 수 없다는 뜻이다.
-  /// 객체로서 가장 기본적인 메소드 toString, hashCode를 호출할 수 있다. 하지만 o.foo() 같은 호출은 불가능하다.
+  /// 대상이 객체 Object라는 것 외에 어떤 것도 가정할 수 없다는 뜻입니다.
+  /// 객체로서 가장 기본적인 메서드 toString, hashCode를 호출할 수 있다. 하지만 o.foo() 같은 호출은 불가능합니다.
   Object objectValue = 'dart';
 
   // 차이점1 --------------------------------------------
@@ -695,118 +730,4 @@ void dynamicVsObjectDifferenceFunction() {
   // 차이점4 --------------------------------------------
   String tempValue1 = dynamicValue;
   String tempValue2 = objectValue as String; // 타입 캐스팅 필수
-}
-
-class Employee {
-  void printMethod() {
-    print("Employee Object");
-  }
-}
-
-class Manager extends Employee {
-  @override
-  void printMethod() {
-    print("Manager Object");
-  }
-
-  @Deprecated('삭제 예정입니다.')
-  void printMethod2() {
-    print("Manager Object2");
-  }
-
-  @Todo('Dash', 'Implement this function')
-  void printMethod3() {
-    print("Manager Object2");
-  }
-}
-
-class Todo {
-  final String who;
-  final String what;
-
-  const Todo(this.who, this.what);
-}
-
-void parameterFunction1(String parameter1) {
-  // ...
-}
-void parameterFunction2({required String parameter1, String? parameter2, String parameter3 = 'argument3'}) {
-  // ...
-}
-void parameterFunction3(String parameter1, [String? parameter2]) {
-  // ...
-}
-
-class Point {
-  double x; // Declare instance variable x, initially null.
-  double y; // Declare y, initially null.
-  double z = 0; // Declare z, initially 0.
-
-  /// 기본 생성자(필수)
-  Point(this.x, this.y);
-
-  /// 이름 있는 생성자1(필수)
-  Point.named1(this.x, this.y);
-
-  /// 이름 있는 생성자2(필수)
-  Point.named2({
-    required this.x,
-    required this.y,
-  });
-
-  /// 이름 있는 생성자3(기본값)
-  Point.named3({
-    this.x = 1,
-    this.y = 5,
-  });
-
-  /// 이름 있는 생성자4(필수 - 대입)
-  Point.named4({
-    required double xx,
-    required double yy,
-  })  : x = xx,
-        y = yy;
-
-  /// 이름 있는 생성자5(불가능)
-  // Point.named5({
-  //   required double xx,
-  //   required double yy,
-  // }) {
-  //   this.x = xx;
-  //   this.y = yy;
-  // }
-
-  /// 호출 함수
-  String call() => 'call : x:$x, y:$y, z:$z';
-}
-
-Future<int> sumStream(Stream<int> stream) async {
-  var sum = 0;
-  await for (var value in stream) {
-    sum += value;
-  }
-  return sum;
-}
-
-void entryPointFunction(var msg) {
-  print('the message is :$msg');
-}
-
-class User {
-  /// 이름
-  final String name;
-
-  /// 이메일
-  final String email;
-
-  User(this.name, this.email);
-
-  User.fromJson(Map<String, dynamic> json)
-      : name = json['name'],
-        email = json['email'];
-
-  Map<String, dynamic> toJson() => {
-        'name': name,
-        'email': email,
-      };
 }
