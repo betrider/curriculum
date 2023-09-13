@@ -1,6 +1,7 @@
 name: flutter_widget # (1) 앱의 이름
 description: A new Flutter project. # (2) 앱에 대한 간단한 설명
 version: 1.0.0+1 # (3) 앱의 버전 번호
+publish_to: none
 
 environment:
   sdk: '>=3.1.0 <4.0.0' # (4) Flutter SDK의 지원 버전 범위
@@ -10,10 +11,23 @@ dependencies:
     sdk: flutter # (5) Flutter SDK 의존성
   cupertino_icons: ^1.0.2 # (6) 외부 패키지 의존성
 
+  # 외부 패키지
+  provider:
+    git:
+      url: https://github.com/rrousselGit/provider # 주소
+      ref: master  # 또는 원하는 브랜치 또는 태그로 변경
+
+  # 내부 패키지
+  custom_package:
+    path: ./ext/custom_package
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0 # (7) 내부 패키지 의존성
+
+dependencies_override:
+  http: ^0.13.0  # http 패키지의 버전 0.13.0으로 재정의(패키지간 충돌시 사용)
 
 flutter:
   uses-material-design: true

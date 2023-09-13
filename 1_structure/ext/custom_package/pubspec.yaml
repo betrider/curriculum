@@ -1,0 +1,6 @@
+name: custom_package
+description: 커스텀 패키지
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.1.0 <4.0.0'
