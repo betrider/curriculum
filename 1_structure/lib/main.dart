@@ -1,10 +1,14 @@
-import 'package:flutter/material.dart'; // (1) Flutter의 Material 패키지를 가져옵니다.
+// ignore_for_file: unused_local_variable
+
+import 'package:flutter/material.dart';
+import 'package:flutter_widget/theme_sample.dart'; // (1) Flutter의 Material 패키지를 가져옵니다.
 
 void main() {
   runApp(const MyApp()); // (2) MyApp 위젯을 실행하여 앱을 시작합니다.
 }
 
-class MyApp extends StatelessWidget { // 상태가 변하지 않는 정적인 UI 위젯
+class MyApp extends StatelessWidget {
+  // 상태가 변하지 않는 정적인 UI 위젯
   const MyApp({super.key});
 
   @override
@@ -12,25 +16,25 @@ class MyApp extends StatelessWidget { // 상태가 변하지 않는 정적인 UI
     // Material Design 스타일의 앱
     return MaterialApp(
       title: 'Flutter Demo', // (3) 앱의 제목
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple), // (4) 앱의 색상 테마 설정
-        useMaterial3: true,
-      ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'), // (5) 앱의 첫 화면
+      theme: customThemeData(),
+      home: const MyHomePage(
+        title: 'Flutter Demo Home Page',
+      ), // (5) 앱의 첫 화면
     );
   }
 }
 
-class MyHomePage extends StatefulWidget { // 상태가 변하는 동적인 UI 위젯
+class MyHomePage extends StatefulWidget {
+  // 상태가 변하는 동적인 UI 위젯
   const MyHomePage({super.key, required this.title});
 
   final String title; // (6) 홈 화면 제목
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<MyHomePage> createState() => MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class MyHomePageState extends State<MyHomePage> {
   int _counter = 0; // (7) 카운터 값
 
   void _incrementCounter() {
@@ -41,6 +45,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    print('빌드 시작');
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      print('빌드 성공');
+    });
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary, // (9) 앱 바의 배경색
@@ -67,4 +75,11 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
     );
   }
+}
+
+void key(){
+  var objectKey = const ObjectKey(['a','b','c']);
+  var valueKey = const ValueKey('key2');
+  var uniqueKey = UniqueKey();
+  var globalKey = GlobalKey<MyHomePageState>();
 }

@@ -36,8 +36,16 @@ flutter:
     - assets/ # 앱에 포함될 정적 자원 디렉토리 (이미지 등)
     - assets/fonts  
     - assets/images  
+    
 
   fonts:
+
+    # svg파일 ttf로 변환 : https://www.fluttericon.com/
+    # 참고 ttf 파일 : https://www.fontspace.com/social-media-color-font-f30260
+    - family: SocialMediaIcons
+      fonts:
+        - asset: assets/fonts/SocialMediaIcons.ttf
+
     - family: Pretendard  # 폰트 패밀리 이름
       fonts:
         - asset: assets/fonts/pretendard/Pretendard-Thin.otf
