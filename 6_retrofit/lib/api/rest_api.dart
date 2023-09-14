@@ -35,4 +35,14 @@ abstract class RestClient {
 
   @DELETE('/posts/{postId}')
   Future<dynamic> deletePosts(@Path("postId") String postId);
+
+  @POST("/tasks/{cc}")
+  Future<dynamic> testMethod(
+    @Queries() Map<String, dynamic> aa, // queryParameters 형식에 추가(addAll) 
+    @Query('apikey') String bb, // queryParameters 형식에 추가
+    @Path('cc') String cc, // path 파라미터용(link)
+    @Body() RefreshTokenRequest dd, // class 형식으로 추가(1)
+    @Field() String ff, // Map 형식으로 추가(2)
+    @Part() String ee, // FormData 형식으로 추가(3)
+  );
 }
