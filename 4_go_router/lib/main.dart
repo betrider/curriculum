@@ -1,25 +1,7 @@
-import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
+import 'shell_route/shell_route_main.dart' as shell_route;
+// import 'param/param_main.dart' as param_route;
 
-// deep 링크 설명 : https://docs.flutter.dev/cookbook/navigation/set-up-app-links 
- void main() => runApp(MaterialApp.router(routerConfig: router));
-
- /// This handles '/' and '/details'.
- final router = GoRouter(
-   routes: [
-     GoRoute(
-       path: '/',
-       builder: (_, __) => Scaffold(
-         appBar: AppBar(title: const Text('Home Screen')),
-       ),
-       routes: [
-         GoRoute(
-           path: 'details',
-           builder: (_, __) => Scaffold(
-             appBar: AppBar(title: const Text('Details Screen')),
-           ),
-         ),
-       ],
-     ),
-   ],
- );
+void main() {
+  shell_route.main();
+  // param_route.main();
+}
