@@ -2,7 +2,10 @@
 
 import 'dart:async';
 import 'dart:convert';
+import 'dart:developer';
 import 'dart:isolate';
+
+import 'package:logger/logger.dart';
 
 import 'class_modifiers/abstract/abstract.dart';
 import 'sample_data.dart';
@@ -81,6 +84,9 @@ void main(List<String> arguments) {
 
   // 기타.dynamic과 object 차이점
   dynamicVsObjectDifferenceFunction();
+
+  // 기타.로그
+  logFunction();
 
   print('기초 문법 종료');
 }
@@ -832,8 +838,7 @@ void patternFunction() {
 }
 
 /// 값 복사, 주소 복사 차이
-void callByValueCallByReferenceFunction(){
-
+void callByValueCallByReferenceFunction() {
   String stringValue1 = 'ab';
   String stringValue2 = stringValue1;
   print(stringValue1.hashCode);
@@ -862,15 +867,15 @@ void callByValueCallByReferenceFunction(){
   dateTimeValue2 = dateTimeValue2.add(Duration(days: 50));
   print(dateTimeValue1);
 
-  List listValue1 = [1,2,3];
+  List listValue1 = [1, 2, 3];
   List listValue2 = listValue1;
   print(listValue1.hashCode);
   print(listValue2.hashCode);
-  listValue2 = [1,2]; // 새로 값을 주입하면 새로운 주소 할당(기존 링크 해제)
+  listValue2 = [1, 2]; // 새로 값을 주입하면 새로운 주소 할당(기존 링크 해제)
   // listValue2.clear(); // 기존 값을 바꾸면 원본 값이 바뀜
   print(listValue1);
 
-  Map mapValue1 = {'a':'aa'};
+  Map mapValue1 = {'a': 'aa'};
   Map mapValue2 = mapValue1;
   print(mapValue1.hashCode);
   print(mapValue2.hashCode);
@@ -907,24 +912,24 @@ void callByValueCallByReferenceFunction(){
   bool boolValue = false;
   changeBool(boolValue);
   print(boolValue);
-  
+
   /// 4.날짜 - x
   DateTime datetimeValue = DateTime(2017, 9, 7, 17, 30);
   changeDateTime(datetimeValue);
   print(datetimeValue);
 
   /// 5.List - o
-  List<String> listValue = ['a','b'];
+  List<String> listValue = ['a', 'b'];
   changeList(listValue);
   print(listValue);
 
   /// 6.Map - o
-  Map<String,String> mapValue = {'a':'11', 'b':'22'};
+  Map<String, String> mapValue = {'a': '11', 'b': '22'};
   changeMap(mapValue);
   print(mapValue);
 
   /// 7.Set - o
-  Set<String> setValue = {'a','b'};
+  Set<String> setValue = {'a', 'b'};
   changeSet(setValue);
   print(setValue);
 
@@ -934,35 +939,35 @@ void callByValueCallByReferenceFunction(){
   print(fooValue.one);
 }
 
-void changeString(String value){
+void changeString(String value) {
   value = 'f';
 }
 
-void changeNum(num value){
+void changeNum(num value) {
   value = 100;
 }
 
-void changeBool(bool value){
+void changeBool(bool value) {
   value = true;
 }
 
-void changeDateTime(DateTime value){
+void changeDateTime(DateTime value) {
   value = DateTime.now();
 }
 
-void changeList(List value){
+void changeList(List value) {
   value.add('4');
 }
 
-void changeMap(Map value){
+void changeMap(Map value) {
   value.clear();
 }
 
-void changeSet(Set value){
+void changeSet(Set value) {
   value.clear();
 }
 
-void changeClass(Foo value){
+void changeClass(Foo value) {
   value.one = '123';
 }
 
@@ -997,4 +1002,162 @@ void dynamicVsObjectDifferenceFunction() {
   // 차이점4 --------------------------------------------
   String tempValue1 = dynamicValue;
   String tempValue2 = objectValue as String; // 타입 캐스팅 필수
+}
+
+/// 기타.log
+void logFunction() {
+  print('print message');
+
+  print('---------------------');
+
+  log('log message');
+
+  print('---------------------');
+
+  var logger = Logger();
+  logger.t("Trace log");
+  logger.d("Debug log");
+  logger.i("Info log");
+  logger.w("Warning log");
+  logger.e("Error log", error: 'Test Error');
+  logger.f("What a fatal log", error: 'fatal Error', stackTrace: StackTrace.current);
+
+  print('---------------------');
+
+  var prettyLogger = Logger(printer: PrettyPrinter());
+  prettyLogger.t("Trace log");
+  prettyLogger.d("Debug log");
+  prettyLogger.i("Info log");
+  prettyLogger.w("Warning log");
+  prettyLogger.e("Error log", error: 'Test Error');
+  prettyLogger.f("What a fatal log", error: 'fatal Error', stackTrace: StackTrace.current);
+
+  print('---------------------');
+
+  var prettyLogger2 = Logger(
+    level: Level.all,
+    printer: _SimpleLogPrinter(),
+    output: _SimpleLogOutput(),
+  );
+  prettyLogger2.t("Trace log");
+  prettyLogger2.d("Debug log");
+  prettyLogger2.i("Info log");
+  prettyLogger2.w("Warning log");
+  prettyLogger2.e("Error log", error: 'Test Error');
+  prettyLogger2.f("What a fatal log", error: 'fatal Error', stackTrace: StackTrace.current);
+}
+
+class _SimpleLogPrinter extends LogPrinter {
+  @override
+  List<String> log(LogEvent event) {
+    List<String> lines = event.message.toString().split('\n');
+    switch (event.level) {
+      // live  ------------------------------------------------------------
+      case Level.fatal: // 오류(system)
+        return lines.map((text) => '\x1B[37m📋 $text\x1B[0m').toList();
+      case Level.error: // 오류(repositoy & data)
+        return lines.map((text) => '\x1B[31m📕 $text\x1B[0m').toList();
+      case Level.warning: // 경고(provider)
+        return lines.map((text) => '\x1B[38;5;208m📙 $text\x1B[0m').toList();
+      // debug ------------------------------------------------------------
+      case Level.info: // 정보
+        return lines.map((text) => '\x1B[33m📔 $text\x1B[0m').toList();
+      case Level.debug: // 디버그
+        return lines.map((text) => '\x1B[38;5;249m📓[debug] $text\x1B[0m').toList();
+      case Level.trace: // 추적(정보 x)
+        return lines.map((text) => '\x1B[92m📗 $text\x1B[0m').toList();
+      default:
+        return lines.map((text) => '\x1B[31m📕 $text\x1B[0m').toList();
+    }
+  }
+}
+
+class _SimpleLogOutput extends LogOutput {
+  @override
+  void output(OutputEvent event) {
+    String name = event.level.name;
+    for (var line in event.lines) {
+      log(
+        line,
+        name: event.origin.stackTrace == null ? name : '$name - ${getFileAndLineName(event.origin.stackTrace!)}',
+      );
+    }
+  }
+
+  String getFileAndLineName(StackTrace trace) {
+    var customTrace = CustomStackTraceService(trace);
+    return '${customTrace.fileName}:${customTrace.lineNumber}';
+  }
+}
+
+class CustomStackTraceService {
+  final StackTrace _trace;
+
+  late String fileName;
+  late String functionName;
+  late String callerFunctionName;
+  late int lineNumber;
+
+  CustomStackTraceService(this._trace) {
+    _parseTrace();
+  }
+
+  String _getFunctionNameFromFrame(String frame) {
+    /* Just giving another nickname to the frame */
+    var currentTrace = frame;
+
+    /* To get rid off the #number thing, get the index of the first whitespace */
+    var indexOfWhiteSpace = currentTrace.indexOf(' ');
+
+    /* Create a substring from the first whitespace index till the end of the string */
+    var subStr = currentTrace.substring(indexOfWhiteSpace);
+
+    /* Grab the function name using reg expr */
+    var indexOfFunction = subStr.indexOf(RegExp(r'[A-Za-z0-9]'));
+
+    /* Create a new substring from the function name index till the end of string */
+    subStr = subStr.substring(indexOfFunction);
+
+    indexOfWhiteSpace = subStr.indexOf(' ');
+
+    /* Create a new substring from start to the first index of a whitespace. This substring gives us the function name */
+    subStr = subStr.substring(0, indexOfWhiteSpace);
+
+    return subStr;
+  }
+
+  void _parseTrace() {
+    /* The trace comes with multiple lines of strings, (each line is also known as a frame), so split the trace's string by lines to get all the frames */
+    var frames = _trace.toString().split("\n");
+
+    /* The first frame is the current function */
+    functionName = _getFunctionNameFromFrame(frames[0]);
+
+    try {
+      /* The second frame is the caller function */
+      callerFunctionName = _getFunctionNameFromFrame(frames[2]);
+    } catch (e) {
+      callerFunctionName = '';
+    }
+
+    /* The first frame has all the information we need */
+    var traceString = frames[0];
+
+    /* Search through the string and find the index of the file name by looking for the '.dart' regex */
+    var indexOfFileName = traceString.indexOf(RegExp(r'[A-Z_a-z]+.dart'));
+
+    var fileInfo = traceString.substring(indexOfFileName);
+
+    var listOfInfos = fileInfo.split(":");
+
+    /* Splitting fileInfo by the character ":" separates the file name, the line number and the column counter nicely.
+      Example: main.dart:5:12
+      To get the file name, we split with ":" and get the first index
+      To get the line number, we would have to get the second index
+      To get the column number, we would have to get the third index
+    */
+
+    fileName = listOfInfos[0];
+    lineNumber = int.parse(listOfInfos[1]);
+  }
 }

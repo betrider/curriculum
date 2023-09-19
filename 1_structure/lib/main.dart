@@ -2,7 +2,7 @@
 
 import 'package:custom_package/custom_package.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_widget/theme_sample.dart'; // (1) Flutter의 Material 패키지를 가져옵니다.
+import 'package:flutter_widget/theme_sample.dart';
 
 void main() {
   runApp(const MyApp()); // (2) MyApp 위젯을 실행하여 앱을 시작합니다.
@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo', // (3) 앱의 제목
       theme: customThemeData(),
+      // theme: ThemeData.dark(),
       home: const MyHomePage(
         title: 'Flutter Demo Home Page',
       ), // (5) 앱의 첫 화면
