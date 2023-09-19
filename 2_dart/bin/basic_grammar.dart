@@ -1036,8 +1036,8 @@ void logFunction() {
 
   var prettyLogger2 = Logger(
     level: Level.all,
-    printer: _SimpleLogPrinter(),
-    output: _SimpleLogOutput(),
+    printer: SimpleLogPrinter(),
+    output: SimpleLogOutput(),
   );
   prettyLogger2.t("Trace log");
   prettyLogger2.d("Debug log");
@@ -1047,7 +1047,7 @@ void logFunction() {
   prettyLogger2.f("What a fatal log", error: 'fatal Error', stackTrace: StackTrace.current);
 }
 
-class _SimpleLogPrinter extends LogPrinter {
+class SimpleLogPrinter extends LogPrinter {
   @override
   List<String> log(LogEvent event) {
     List<String> lines = event.message.toString().split('\n');
@@ -1072,7 +1072,7 @@ class _SimpleLogPrinter extends LogPrinter {
   }
 }
 
-class _SimpleLogOutput extends LogOutput {
+class SimpleLogOutput extends LogOutput {
   @override
   void output(OutputEvent event) {
     String name = event.level.name;
