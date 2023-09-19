@@ -2,6 +2,7 @@
 
 import 'package:dio/dio.dart';
 
+/// 로그용 인터셉터
 class CustomLogInterceptor extends Interceptor {
   @override
   void onRequest(RequestOptions options, RequestInterceptorHandler handler) {
