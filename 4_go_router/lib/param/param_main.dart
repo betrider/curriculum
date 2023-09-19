@@ -44,20 +44,21 @@ final router = GoRouter(
               )
             ]),
         GoRoute(
-            path: 'extra',
-            builder: (context, state) {
-              var extra = state.extra as ({String id, String name});
-              return ExtraParamScreen(
-                id: extra.id,
-                name: extra.name,
-              );
-            },
-            routes: [
-              GoRoute(
-                path: 'detail',
-                builder: (context, state) => const DetailScreen(),
-              )
-            ]),
+          path: 'extra',
+          builder: (context, state) {
+            var extra = state.extra as ({String id, String name});
+            return ExtraParamScreen(
+              id: extra.id,
+              name: extra.name,
+            );
+          },
+          routes: [
+            GoRoute(
+              path: 'detail',
+              builder: (context, state) => const DetailScreen(),
+            )
+          ],
+        ),
       ],
     ),
     GoRoute(

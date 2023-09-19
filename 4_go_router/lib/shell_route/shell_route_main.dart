@@ -1,62 +1,39 @@
-// Copyright 2013 The Flutter Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-
-// ignore_for_file: avoid_print
-
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-final GlobalKey<NavigatorState> _rootNavigatorKey =
-    GlobalKey<NavigatorState>(debugLabel: 'root');
-final GlobalKey<NavigatorState> _shellNavigatorKey =
-    GlobalKey<NavigatorState>(debugLabel: 'shell');
-
-// This scenario demonstrates how to set up nested navigation using ShellRoute,
-// which is a pattern where an additional Navigator is placed in the widget tree
-// to be used instead of the root navigator. This allows deep-links to display
-// pages along with other UI components such as a BottomNavigationBar.
-//
-// This example demonstrates how to display a route within a ShellRoute and also
-// push a screen using a different navigator (such as the root Navigator) by
-// providing a `parentNavigatorKey`.
+final GlobalKey<NavigatorState> _rootNavigatorKey = GlobalKey<NavigatorState>(debugLabel: 'root');
+final GlobalKey<NavigatorState> _shellNavigatorKey = GlobalKey<NavigatorState>(debugLabel: 'shell');
 
 void main() {
   runApp(ShellRouteExampleApp());
 }
 
-/// An example demonstrating how to use [ShellRoute]
 class ShellRouteExampleApp extends StatelessWidget {
-  /// Creates a [ShellRouteExampleApp]
   ShellRouteExampleApp({super.key});
 
   final GoRouter _router = GoRouter(
     navigatorKey: _rootNavigatorKey,
-    initialLocation: '/a',
-    debugLogDiagnostics: true,
+    initialLocation: '/', // 최초 위치 설정
+    debugLogDiagnostics: true, // 로그
     redirect: (context, state) {
-      if(state.uri.toString().startsWith('/c')){
+      if (state.uri.toString().startsWith('/c')) {
         return '/a';
       }
       return null;
     },
     routes: <RouteBase>[
-      /// Application shell
       ShellRoute(
         navigatorKey: _shellNavigatorKey,
         builder: (BuildContext context, GoRouterState state, Widget child) {
           return ScaffoldWithNavBar(child: child);
         },
         routes: <RouteBase>[
-          /// The first screen to display in the bottom navigation bar.
           GoRoute(
             path: '/a',
             builder: (BuildContext context, GoRouterState state) {
               return const ScreenA();
             },
             routes: <RouteBase>[
-              // The details screen to display stacked on the inner Navigator.
-              // This will cover screen A but not the application shell.
               GoRoute(
                 path: 'details',
                 builder: (BuildContext context, GoRouterState state) {
@@ -65,18 +42,12 @@ class ShellRouteExampleApp extends StatelessWidget {
               ),
             ],
           ),
-
-          /// Displayed when the second item in the the bottom navigation bar is
-          /// selected.
           GoRoute(
             path: '/b',
             builder: (BuildContext context, GoRouterState state) {
               return const ScreenB();
             },
             routes: <RouteBase>[
-              /// Same as "/a/details", but displayed on the root Navigator by
-              /// specifying [parentNavigatorKey]. This will cover both screen B
-              /// and the application shell.
               GoRoute(
                 path: 'details',
                 parentNavigatorKey: _rootNavigatorKey,
@@ -86,16 +57,12 @@ class ShellRouteExampleApp extends StatelessWidget {
               ),
             ],
           ),
-
-          /// The third screen to display in the bottom navigation bar.
           GoRoute(
             path: '/c',
             builder: (BuildContext context, GoRouterState state) {
               return const ScreenC();
             },
             routes: <RouteBase>[
-              // The details screen to display stacked on the inner Navigator.
-              // This will cover screen A but not the application shell.
               GoRoute(
                 path: 'details',
                 builder: (BuildContext context, GoRouterState state) {
@@ -121,17 +88,12 @@ class ShellRouteExampleApp extends StatelessWidget {
   }
 }
 
-/// Builds the "shell" for the app by building a Scaffold with a
-/// BottomNavigationBar, where [child] is placed in the body of the Scaffold.
 class ScaffoldWithNavBar extends StatelessWidget {
-  /// Constructs an [ScaffoldWithNavBar].
   const ScaffoldWithNavBar({
     required this.child,
     super.key,
   });
 
-  /// The widget to display in the body of the Scaffold.
-  /// In this sample, it is a Navigator.
   final Widget child;
 
   @override
@@ -188,9 +150,7 @@ class ScaffoldWithNavBar extends StatelessWidget {
   }
 }
 
-/// The first screen in the bottom navigation bar.
 class ScreenA extends StatelessWidget {
-  /// Constructs a [ScreenA] widget.
   const ScreenA({super.key});
 
   @override
@@ -216,14 +176,11 @@ class ScreenA extends StatelessWidget {
   }
 }
 
-/// The second screen in the bottom navigation bar.
 class ScreenB extends StatelessWidget {
-  /// Constructs a [ScreenB] widget.
   const ScreenB({super.key});
 
   @override
   Widget build(BuildContext context) {
-    print('bb');
     return Scaffold(
       appBar: AppBar(),
       body: Center(
@@ -245,14 +202,11 @@ class ScreenB extends StatelessWidget {
   }
 }
 
-/// The third screen in the bottom navigation bar.
 class ScreenC extends StatelessWidget {
-  /// Constructs a [ScreenC] widget.
   const ScreenC({super.key});
 
   @override
   Widget build(BuildContext context) {
-    print('cc');
     return Scaffold(
       appBar: AppBar(),
       body: Center(
@@ -274,20 +228,16 @@ class ScreenC extends StatelessWidget {
   }
 }
 
-/// The details screen for either the A, B or C screen.
 class DetailsScreen extends StatelessWidget {
-  /// Constructs a [DetailsScreen].
   const DetailsScreen({
     required this.label,
     super.key,
   });
 
-  /// The label to display in the center of the screen.
   final String label;
 
   @override
   Widget build(BuildContext context) {
-    print('deatil');
     return Scaffold(
       appBar: AppBar(
         title: const Text('Details Screen'),
