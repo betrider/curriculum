@@ -369,8 +369,8 @@ class GenericClass<T extends num> {
 }
 
 class Foo {
-  final String one;
-  final int two;
+  String one;
+  int two;
 
   Foo({
     required this.one,

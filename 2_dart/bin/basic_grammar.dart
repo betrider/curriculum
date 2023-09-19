@@ -76,6 +76,9 @@ void main(List<String> arguments) {
   // 22.패턴
   patternFunction();
 
+  // 23.포인터
+  callByValueCallByReferenceFunction();
+
   // 기타.dynamic과 object 차이점
   dynamicVsObjectDifferenceFunction();
 
@@ -826,6 +829,141 @@ void patternFunction() {
   };
   var {'user': [name, age]} = json;
   print('name $name, age $age');
+}
+
+/// 값 복사, 주소 복사 차이
+void callByValueCallByReferenceFunction(){
+
+  String stringValue1 = 'ab';
+  String stringValue2 = stringValue1;
+  print(stringValue1.hashCode);
+  print(stringValue2.hashCode);
+  stringValue2 = '';
+  print(stringValue1);
+
+  num numValue1 = 50;
+  num numValue2 = numValue1;
+  print(numValue1.hashCode);
+  print(numValue2.hashCode);
+  numValue2 = 100;
+  print(numValue1);
+
+  bool boolValue1 = false;
+  bool boolValue2 = boolValue1;
+  print(boolValue1.hashCode);
+  print(boolValue2.hashCode);
+  boolValue2 = true;
+  print(boolValue1);
+
+  DateTime dateTimeValue1 = DateTime(2017, 9, 7, 17, 30);
+  DateTime dateTimeValue2 = dateTimeValue1;
+  print(dateTimeValue1.hashCode);
+  print(dateTimeValue2.hashCode);
+  dateTimeValue2 = dateTimeValue2.add(Duration(days: 50));
+  print(dateTimeValue1);
+
+  List listValue1 = [1,2,3];
+  List listValue2 = listValue1;
+  print(listValue1.hashCode);
+  print(listValue2.hashCode);
+  listValue2 = [1,2]; // 새로 값을 주입하면 새로운 주소 할당(기존 링크 해제)
+  // listValue2.clear(); // 기존 값을 바꾸면 원본 값이 바뀜
+  print(listValue1);
+
+  Map mapValue1 = {'a':'aa'};
+  Map mapValue2 = mapValue1;
+  print(mapValue1.hashCode);
+  print(mapValue2.hashCode);
+  mapValue2.clear();
+  print(mapValue1);
+
+  Set setValue1 = {'a'};
+  Set setValue2 = setValue1;
+  print(setValue1.hashCode);
+  print(setValue2.hashCode);
+  setValue2.clear();
+  print(setValue1);
+
+  Foo fooValue1 = Foo(one: 'one', two: 2);
+  Foo fooValue2 = fooValue1;
+  print(fooValue1.hashCode);
+  print(fooValue2.hashCode);
+  fooValue2.two = 222;
+  print(fooValue1.two);
+
+  // ------------------------------------------------------------------------
+
+  /// 1.문자열 - x
+  String stringValue = 'ab';
+  changeString(stringValue);
+  print(stringValue);
+
+  /// 2.숫자 - x
+  num numValue = 12;
+  changeNum(numValue);
+  print(numValue);
+
+  /// 3.논리 - x
+  bool boolValue = false;
+  changeBool(boolValue);
+  print(boolValue);
+  
+  /// 4.날짜 - x
+  DateTime datetimeValue = DateTime(2017, 9, 7, 17, 30);
+  changeDateTime(datetimeValue);
+  print(datetimeValue);
+
+  /// 5.List - o
+  List<String> listValue = ['a','b'];
+  changeList(listValue);
+  print(listValue);
+
+  /// 6.Map - o
+  Map<String,String> mapValue = {'a':'11', 'b':'22'};
+  changeMap(mapValue);
+  print(mapValue);
+
+  /// 7.Set - o
+  Set<String> setValue = {'a','b'};
+  changeSet(setValue);
+  print(setValue);
+
+  /// 8.class - o
+  Foo fooValue = Foo(one: '11', two: 22);
+  changeClass(fooValue);
+  print(fooValue.one);
+}
+
+void changeString(String value){
+  value = 'f';
+}
+
+void changeNum(num value){
+  value = 100;
+}
+
+void changeBool(bool value){
+  value = true;
+}
+
+void changeDateTime(DateTime value){
+  value = DateTime.now();
+}
+
+void changeList(List value){
+  value.add('4');
+}
+
+void changeMap(Map value){
+  value.clear();
+}
+
+void changeSet(Set value){
+  value.clear();
+}
+
+void changeClass(Foo value){
+  value.one = '123';
 }
 
 /// 기타.dynamic과 object 차이
