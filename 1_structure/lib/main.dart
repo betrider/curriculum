@@ -1,5 +1,6 @@
 // ignore_for_file: unused_local_variable
 
+import 'package:custom_package/custom_package.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_widget/theme_sample.dart'; // (1) Flutter의 Material 패키지를 가져옵니다.
 
@@ -13,6 +14,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print('ext library : $customData');
     // Material Design 스타일의 앱
     return MaterialApp(
       title: 'Flutter Demo', // (3) 앱의 제목
@@ -51,7 +53,7 @@ class MyHomePageState extends State<MyHomePage> {
     });
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary, // (9) 앱 바의 배경색
+        backgroundColor: Theme.of(context).colorScheme.primary, // (9) 앱 바의 배경색
         title: Text(widget.title), // (10) 앱 바에 표시될 제목
       ),
       body: Center(
@@ -65,6 +67,16 @@ class MyHomePageState extends State<MyHomePage> {
               '$_counter', // (12) 카운터 값 표시
               style: Theme.of(context).textTheme.headlineMedium, // (13) 텍스트 스타일 설정
             ),
+            const SizedBox(height: 16),
+            const Text(
+              '안녕하세요',
+              style: TextStyle(fontSize: 50),
+            ),
+            const SizedBox(height: 16),
+            const Text(
+              '안녕하세요',
+              style: TextStyle(fontFamily: 'Pretendard', fontSize: 50),
+            ),
           ],
         ),
       ),
@@ -77,8 +89,8 @@ class MyHomePageState extends State<MyHomePage> {
   }
 }
 
-void key(){
-  var objectKey = const ObjectKey(['a','b','c']);
+void key() {
+  var objectKey = const ObjectKey(['a', 'b', 'c']);
   var valueKey = const ValueKey('key2');
   var uniqueKey = UniqueKey();
   var globalKey = GlobalKey<MyHomePageState>();

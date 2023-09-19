@@ -34,8 +34,8 @@ flutter:
 
   assets:
     - assets/ # 앱에 포함될 정적 자원 디렉토리 (이미지 등)
-    - assets/fonts  
-    - assets/images  
+    - assets/fonts/
+    - assets/images/
     
 
   fonts:
@@ -48,21 +48,21 @@ flutter:
 
     - family: Pretendard  # 폰트 패밀리 이름
       fonts:
-        - asset: assets/fonts/pretendard/Pretendard-Thin.otf
+        - asset: assets/fonts/Pretendard-Thin.otf
           weight: 100
-        - asset: assets/fonts/pretendard/Pretendard-ExtraLight.otf
+        - asset: assets/fonts/Pretendard-ExtraLight.otf
           weight: 200
-        - asset: assets/fonts/pretendard/Pretendard-Light.otf
+        - asset: assets/fonts/Pretendard-Light.otf
           weight: 300
-        - asset: assets/fonts/pretendard/Pretendard-Regular.otf
+        - asset: assets/fonts/Pretendard-Regular.otf
           weight: 400
-        - asset: assets/fonts/pretendard/Pretendard-Medium.otf
+        - asset: assets/fonts/Pretendard-Medium.otf
           weight: 500
-        - asset: assets/fonts/pretendard/Pretendard-SemiBold.otf
+        - asset: assets/fonts/Pretendard-SemiBold.otf
           weight: 600
-        - asset: assets/fonts/pretendard/Pretendard-Bold.otf
+        - asset: assets/fonts/Pretendard-Bold.otf
           weight: 700
-        - asset: assets/fonts/pretendard/Pretendard-ExtraBold.otf
+        - asset: assets/fonts/Pretendard-ExtraBold.otf
           weight: 800
-        - asset: assets/fonts/pretendard/Pretendard-Black.otf
+        - asset: assets/fonts/Pretendard-Black.otf
           weight: 900
