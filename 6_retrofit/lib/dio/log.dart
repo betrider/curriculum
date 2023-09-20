@@ -1,8 +1,17 @@
-// ignore_for_file: avoid_print
-
 import 'package:dio/dio.dart';
+import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
-/// 로그용 인터셉터
+void main(){
+  var dio = Dio();
+  dio.interceptors.add(LogInterceptor(responseBody: false));
+
+  var dio2 = Dio();
+  dio2.interceptors.add(PrettyDioLogger());
+
+  var dio3 = Dio();
+  dio3.interceptors.add(CustomLogInterceptor());
+}
+
 class CustomLogInterceptor extends Interceptor {
   @override
   void onRequest(RequestOptions options, RequestInterceptorHandler handler) {

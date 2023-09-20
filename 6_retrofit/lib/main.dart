@@ -185,11 +185,8 @@ RestClient getRestClient() {
     ),
   );
 
-  // log interceptor 추가1
+  // log interceptor
   dio.interceptors.add(PrettyDioLogger());
-
-  // log interceptor 추가2
-  // dio.interceptors.add(CustomLogInterceptor());
 
   final client = RestClient(dio);
 
@@ -200,4 +197,14 @@ Future<String> refreshToken() async {
   // Perform a request to the refresh token endpoint and return the new access token.
   // You can replace this with your own implementation.
   return 'your_new_access_token';
+}
+
+
+class DioPage extends StatelessWidget {
+  const DioPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder();
+  }
 }
