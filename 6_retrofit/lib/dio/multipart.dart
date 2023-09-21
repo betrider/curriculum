@@ -8,4 +8,5 @@ void main() async {
     'file': await MultipartFile.fromFile('./text.txt', filename: 'upload.txt'),
   });
   final response = await dio.post('/info', data: formData);
+  print(response);
 }

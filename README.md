@@ -7,4 +7,4 @@
 # 5장 riverpod
 # 6장 retrofit
 # 7장 firebase
-# 8장 출시준비
+# 8장 앱 출시준비

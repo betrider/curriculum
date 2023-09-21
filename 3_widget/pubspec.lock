@@ -75,6 +75,19 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_web_plugins:
+    dependency: transitive
+    description: flutter
+    source: sdk
+    version: "0.0.0"
+  go_router:
+    dependency: "direct main"
+    description:
+      name: go_router
+      sha256: e1a30a66d734f9e498b1b6522d6a75ded28242bad2359a9158df38a1c30bcf1f
+      url: "https://pub.dev"
+    source: hosted
+    version: "10.2.0"
   lints:
     dependency: transitive
     description:
@@ -83,6 +96,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.1"
+  logging:
+    dependency: transitive
+    description:
+      name: logging
+      sha256: "623a88c9594aa774443aa3eb2d41807a48486b5613e67599fb4c41c0ad47c340"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.2.0"
   matcher:
     dependency: transitive
     description:
@@ -115,6 +136,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.8.3"
+  random_color:
+    dependency: "direct main"
+    description:
+      name: random_color
+      sha256: ec6fffad26e3e1d19e64389e031e9fd324ce1a6cf79bb9a5b050302d6dba37bb
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.6-nullsafety"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -186,3 +215,4 @@ packages:
     version: "0.1.4-beta"
 sdks:
   dart: ">=3.1.0 <4.0.0"
+  flutter: ">=3.7.0"
