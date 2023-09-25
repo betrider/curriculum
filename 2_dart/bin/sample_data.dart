@@ -198,6 +198,12 @@ extension DateTimeExtension on DateTime {
   bool operator <=(other) => compareTo(other) <= 0;
 }
 
+extension ListExtension on List {
+  List operator *(other) {
+    return [for (var i = 0; i < other; i++) ...this];
+  }
+}
+
 /// 간단한 enum 선언
 enum SimpleColor {
   /// 빨간색
