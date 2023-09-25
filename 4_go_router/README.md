@@ -1,16 +1,7 @@
-# flutter_widget
+# 3장 위젯
 
-A new Flutter project.
+위젯과 관련된 커리큘럼 입니다.
 
-## Getting Started
+## 참조할만한 링크
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- [위젯 vs 헬퍼 메서드](https://www.youtube.com/watch?v=IOyq-eTRhvo)
