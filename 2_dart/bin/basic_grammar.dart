@@ -79,8 +79,11 @@ void main(List<String> arguments) {
   // 22.패턴
   patternFunction();
 
-  // 23.포인터
+  // 23.값 복사와 주소 복사
   callByValueCallByReferenceFunction();
+
+  // 24.정규식
+  regExpFunction();
 
   // 기타.dynamic과 object 차이점
   dynamicVsObjectDifferenceFunction();
@@ -837,7 +840,7 @@ void patternFunction() {
   print('name $name, age $age');
 }
 
-/// 값 복사, 주소 복사 차이
+/// 23.값 복사, 주소 복사 차이
 void callByValueCallByReferenceFunction() {
   String stringValue1 = 'ab';
   String stringValue2 = stringValue1;
@@ -971,6 +974,38 @@ void changeClass(Foo value) {
   value.one = '123';
 }
 
+/// 24.정규식
+void regExpFunction() {
+  String input = "Hello123";
+  RegExp regex = RegExp(r'[a-z]'); // 소문자를 확인하는 정규식
+  bool hasLowerCase = regex.hasMatch(input);
+
+  if (hasLowerCase) {
+    print("입력 문자열에 소문자가 포함되어 있습니다.");
+  } else {
+    print("입력 문자열에 소문자가 포함되어 있지 않습니다.");
+  }
+
+  String email = "example@example.comaaa";
+  RegExp emailRegExp = RegExp(r'^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$');
+
+  if (emailRegExp.hasMatch(email)) {
+    print("유효한 이메일 주소입니다.");
+  } else {
+    print("유효하지 않은 이메일 주소입니다.");
+  }
+
+  String phoneNumber = "010-1234-5678"; // 예시 휴대폰 번호
+  RegExp phoneRegExp = RegExp(r'^01[0-9]-\d{3,4}-\d{4}$');
+
+  if (phoneRegExp.hasMatch(phoneNumber)) {
+    print("유효한 한국 휴대폰 번호입니다.");
+  } else {
+    print("유효하지 않은 휴대폰 번호입니다.");
+  }
+
+}
+
 /// 기타.dynamic과 object 차이
 void dynamicVsObjectDifferenceFunction() {
   /// 대상은 어떤 것도 가정할 수 없으며 타입도 체크하지 말라는 뜻입니다.
@@ -1063,7 +1098,7 @@ class SimpleLogPrinter extends LogPrinter {
       case Level.info: // 정보
         return lines.map((text) => '\x1B[33m📔 $text\x1B[0m').toList();
       case Level.debug: // 디버그
-        return lines.map((text) => '\x1B[38;5;249m📓[debug] $text\x1B[0m').toList();
+        return lines.map((text) => '\x1B[38;5;249m📓 $text\x1B[0m').toList();
       case Level.trace: // 추적(정보 x)
         return lines.map((text) => '\x1B[92m📗 $text\x1B[0m').toList();
       default:
