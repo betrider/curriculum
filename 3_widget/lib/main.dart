@@ -1,4 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_widget/pages/accessibility/accessibility.dart';
+import 'package:flutter_widget/pages/animationAndMotion/animation_and_motion.dart';
+import 'package:flutter_widget/pages/assetsImagesAndIcons/assets_images_and_icons.dart';
+import 'package:flutter_widget/pages/async/async.dart';
+import 'package:flutter_widget/pages/basics/basics.dart';
+import 'package:flutter_widget/pages/cupertino/cupertino.dart';
+import 'package:flutter_widget/pages/input/input.dart';
+import 'package:flutter_widget/pages/interactionModels/interaction_models.dart';
+import 'package:flutter_widget/pages/layout/layout.dart';
+import 'package:flutter_widget/pages/materialComponents/material_components.dart';
+import 'package:flutter_widget/pages/others/others.dart';
+import 'package:flutter_widget/pages/paintingAndEffects/painting_and_effects.dart';
+import 'package:flutter_widget/pages/scrolling/scrolling.dart';
+import 'package:flutter_widget/pages/styling/styling.dart';
+import 'package:flutter_widget/pages/text/text.dart';
 import 'package:go_router/go_router.dart';
 import 'package:random_color/random_color.dart';
 
@@ -14,6 +29,62 @@ final router = GoRouter(
         GoRoute(
           path: 'accessibility',
           builder: (_, __) => const AccessibilityWidget(),
+        ),
+        GoRoute(
+          path: 'animation',
+          builder: (_, __) => const AnimationAndMotionWidget(),
+        ),
+        GoRoute(
+          path: 'assets',
+          builder: (_, __) => const AssetsImagesAndIconsWidget(),
+        ),
+        GoRoute(
+          path: 'async',
+          builder: (_, __) => const AsyncWidget(),
+        ),
+        GoRoute(
+          path: 'basics',
+          builder: (_, __) => const BasicsWidget(),
+        ),
+        GoRoute(
+          path: 'cupertino',
+          builder: (_, __) => const CupertinoWidget(),
+        ),
+        GoRoute(
+          path: 'input',
+          builder: (_, __) => const InputWidget(),
+        ),
+        GoRoute(
+          path: 'interaction',
+          builder: (_, __) => const InteractionModelsWidget(),
+        ),
+        GoRoute(
+          path: 'layout',
+          builder: (_, __) => const LayoutWidget(),
+        ),
+        GoRoute(
+          path: 'material',
+          builder: (_, __) => const MaterialComponentsWidget(),
+        ),
+        GoRoute(
+          path: 'painting',
+          builder: (_, __) => const PaintingAndEffectsWidget(),
+        ),
+        GoRoute(
+          path: 'scrolling',
+          builder: (_, __) => const ScrollingWidget(),
+        ),
+        GoRoute(
+          path: 'styling',
+          builder: (_, __) => const StylingWidget(),
+        ),
+        GoRoute(
+          path: 'text',
+          builder: (_, __) => const TextWidget(),
+        ),
+        GoRoute(
+          path: 'others',
+          builder: (_, __) => const OthersWidget(),
         ),
       ],
     ),
@@ -37,317 +108,247 @@ class MainScreen extends StatelessWidget {
         mainAxisSpacing: 4,
         crossAxisCount: 2,
         children: [
-          Container(
-            padding: const EdgeInsets.all(20),
-            decoration: BoxDecoration(border: Border.all(color: randomColor.randomColor(), width: 2)),
-            child: const Center(
-              child: Text('FIRST'),
+          InkWell(
+            onTap: (){
+              context.push('/accessibility');
+            },
+            child: Container(
+              padding: const EdgeInsets.all(20),
+              decoration: BoxDecoration(border: Border.all(color: randomColor.randomColor(), width: 2)),
+              child: const Center(
+                child: Text(
+                  'Accessibility',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 24),
+                ),
+              ),
             ),
           ),
-          Container(
-            padding: const EdgeInsets.all(20),
-            decoration: BoxDecoration(border: Border.all(color: randomColor.randomColor(), width: 2)),
-            child: const Center(
-              child: Text('SECOND'),
+          InkWell(
+            onTap: (){
+              context.push('/animation');
+            },
+            child: Container(
+              padding: const EdgeInsets.all(20),
+              decoration: BoxDecoration(border: Border.all(color: randomColor.randomColor(), width: 2)),
+              child: const Center(
+                child: Text(
+                  'Animation and motion widgets',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 24),
+                ),
+              ),
             ),
           ),
-          Container(
-            padding: const EdgeInsets.all(20),
-            decoration: BoxDecoration(border: Border.all(color: randomColor.randomColor(), width: 2)),
-            child: const Center(
-              child: Text('THIRD'),
+          InkWell(
+            onTap: (){
+              context.push('/assets');
+            },
+            child: Container(
+              padding: const EdgeInsets.all(20),
+              decoration: BoxDecoration(border: Border.all(color: randomColor.randomColor(), width: 2)),
+              child: const Center(
+                child: Text(
+                  'Assets, Images, and Icons',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 24),
+                ),
+              ),
             ),
           ),
-          Container(
-            padding: const EdgeInsets.all(20),
-            decoration: BoxDecoration(border: Border.all(color: randomColor.randomColor(), width: 2)),
-            child: const Center(
-              child: Text('FOURTH'),
+          InkWell(
+            onTap: (){
+              context.push('/async');
+            },
+            child: Container(
+              padding: const EdgeInsets.all(20),
+              decoration: BoxDecoration(border: Border.all(color: randomColor.randomColor(), width: 2)),
+              child: const Center(
+                child: Text(
+                  'Async',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 24),
+                ),
+              ),
             ),
           ),
-          Container(
-            padding: const EdgeInsets.all(20),
-            decoration: BoxDecoration(border: Border.all(color: randomColor.randomColor(), width: 2)),
-            child: const Center(
-              child: Text('FIFTH'),
+          InkWell(
+            onTap: (){
+              context.push('/basics');
+            },
+            child: Container(
+              padding: const EdgeInsets.all(20),
+              decoration: BoxDecoration(border: Border.all(color: randomColor.randomColor(), width: 2)),
+              child: const Center(
+                child: Text(
+                  'Basics',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 24),
+                ),
+              ),
             ),
           ),
-          Container(
-            padding: const EdgeInsets.all(20),
-            decoration: BoxDecoration(border: Border.all(color: randomColor.randomColor(), width: 2)),
-            child: const Center(
-              child: Text('SIXTH'),
+          InkWell(
+            onTap: (){
+              context.push('/cupertino');
+            },
+            child: Container(
+              padding: const EdgeInsets.all(20),
+              decoration: BoxDecoration(border: Border.all(color: randomColor.randomColor(), width: 2)),
+              child: const Center(
+                child: Text(
+                  'Cupertino (iOS-style widgets)',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 24),
+                ),
+              ),
             ),
           ),
-          Container(
-            padding: const EdgeInsets.all(20),
-            decoration: BoxDecoration(border: Border.all(color: randomColor.randomColor(), width: 2)),
-            child: const Center(
-              child: Text('SEVENTH'),
+          InkWell(
+            onTap: (){
+              context.push('/input');
+            },
+            child: Container(
+              padding: const EdgeInsets.all(20),
+              decoration: BoxDecoration(border: Border.all(color: randomColor.randomColor(), width: 2)),
+              child: const Center(
+                child: Text(
+                  'Input',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 24),
+                ),
+              ),
             ),
           ),
-          Container(
-            padding: const EdgeInsets.all(20),
-            decoration: BoxDecoration(border: Border.all(color: randomColor.randomColor(), width: 2)),
-            child: const Center(
-              child: Text('EIGHTH'),
+          InkWell(
+            onTap: (){
+              context.push('/interaction');
+            },
+            child: Container(
+              padding: const EdgeInsets.all(20),
+              decoration: BoxDecoration(border: Border.all(color: randomColor.randomColor(), width: 2)),
+              child: const Center(
+                child: Text(
+                  'Interaction Models',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 24),
+                ),
+              ),
             ),
           ),
-          Container(
-            padding: const EdgeInsets.all(20),
-            decoration: BoxDecoration(border: Border.all(color: randomColor.randomColor(), width: 2)),
-            child: const Center(
-              child: Text('NINTH'),
+          InkWell(
+            onTap: (){
+              context.push('/layout');
+            },
+            child: Container(
+              padding: const EdgeInsets.all(20),
+              decoration: BoxDecoration(border: Border.all(color: randomColor.randomColor(), width: 2)),
+              child: const Center(
+                child: Text(
+                  'Layout',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 24),
+                ),
+              ),
             ),
           ),
-          Container(
-            padding: const EdgeInsets.all(20),
-            decoration: BoxDecoration(border: Border.all(color: randomColor.randomColor(), width: 2)),
-            child: const Center(
-              child: Text('TEN'),
+          InkWell(
+            onTap: (){
+              context.push('/material');
+            },
+            child: Container(
+              padding: const EdgeInsets.all(20),
+              decoration: BoxDecoration(border: Border.all(color: randomColor.randomColor(), width: 2)),
+              child: const Center(
+                child: Text(
+                  'Material Components',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 24),
+                ),
+              ),
+            ),
+          ),
+          InkWell(
+            onTap: (){
+              context.push('/painting');
+            },
+            child: Container(
+              padding: const EdgeInsets.all(20),
+              decoration: BoxDecoration(border: Border.all(color: randomColor.randomColor(), width: 2)),
+              child: const Center(
+                child: Text(
+                  'Painting and effects',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 24),
+                ),
+              ),
+            ),
+          ),
+          InkWell(
+            onTap: (){
+              context.push('/scrolling');
+            },
+            child: Container(
+              padding: const EdgeInsets.all(20),
+              decoration: BoxDecoration(border: Border.all(color: randomColor.randomColor(), width: 2)),
+              child: const Center(
+                child: Text(
+                  'Scrolling',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 24),
+                ),
+              ),
+            ),
+          ),
+          InkWell(
+            onTap: (){
+              context.push('/styling');
+            },
+            child: Container(
+              padding: const EdgeInsets.all(20),
+              decoration: BoxDecoration(border: Border.all(color: randomColor.randomColor(), width: 2)),
+              child: const Center(
+                child: Text(
+                  'Styling',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 24),
+                ),
+              ),
+            ),
+          ),
+          InkWell(
+            onTap: (){
+              context.push('/text');
+            },
+            child: Container(
+              padding: const EdgeInsets.all(20),
+              decoration: BoxDecoration(border: Border.all(color: randomColor.randomColor(), width: 2)),
+              child: const Center(
+                child: Text(
+                  'Text',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 24),
+                ),
+              ),
+            ),
+          ),
+          InkWell(
+            onTap: (){
+              context.push('/others');
+            },
+            child: Container(
+              padding: const EdgeInsets.all(20),
+              decoration: BoxDecoration(border: Border.all(color: randomColor.randomColor(), width: 2)),
+              child: const Center(
+                child: Text(
+                  'Others',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 24),
+                ),
+              ),
             ),
           ),
         ],
-      ),
-    );
-  }
-}
-
-class AccessibilityWidget extends StatelessWidget {
-  const AccessibilityWidget({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('주석'),
-        centerTitle: true,
-      ),
-    );
-  }
-}
-
-class AnimationWidget extends StatelessWidget {
-  const AnimationWidget({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('애니메이션'),
-        centerTitle: true,
-      ),
-    );
-  }
-}
-
-class AssetsWidget extends StatelessWidget {
-  const AssetsWidget({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('자산'),
-        centerTitle: true,
-      ),
-    );
-  }
-}
-
-class AsyncWidget extends StatelessWidget {
-  const AsyncWidget({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('비동기'),
-        centerTitle: true,
-      ),
-    );
-  }
-}
-
-class BasicsWidget extends StatelessWidget {
-  const BasicsWidget({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('기초'),
-        centerTitle: true,
-      ),
-    );
-  }
-}
-
-class CupertinoWidget extends StatelessWidget {
-  const CupertinoWidget({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('쿠퍼티노(IOS)'),
-        centerTitle: true,
-      ),
-    );
-  }
-}
-
-class InputWidget extends StatelessWidget {
-  const InputWidget({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('입력'),
-        centerTitle: true,
-      ),
-    );
-  }
-}
-
-class InteractionWidget extends StatelessWidget {
-  const InteractionWidget({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('상호작용'),
-        centerTitle: true,
-      ),
-    );
-  }
-}
-
-class LayoutWidget extends StatelessWidget {
-  const LayoutWidget({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('레이아웃 구성'),
-        centerTitle: true,
-      ),
-    );
-  }
-}
-
-class MaterialWidget extends StatelessWidget {
-  const MaterialWidget({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('머테리얼(ANDROID)'),
-        centerTitle: true,
-      ),
-    );
-  }
-}
-
-class PaintingWidget extends StatelessWidget {
-  const PaintingWidget({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('페인팅'),
-        centerTitle: true,
-      ),
-    );
-  }
-}
-
-class ScrollingWidget extends StatelessWidget {
-  const ScrollingWidget({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('스크롤'),
-        centerTitle: true,
-      ),
-    );
-  }
-}
-
-class StylingWidget extends StatelessWidget {
-  const StylingWidget({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('텍스트'),
-        centerTitle: true,
-      ),
-    );
-  }
-}
-
-class TextWidget extends StatelessWidget {
-  const TextWidget({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('자산'),
-        centerTitle: true,
-      ),
-    );
-  }
-}
-
-class OthersWidget extends StatelessWidget {
-  const OthersWidget({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('기타'),
-        centerTitle: true,
       ),
     );
   }
