@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// 페이지별로 작동하는 스크롤 가능한 목록입니다.
 class PageViewExample extends StatelessWidget {
   const PageViewExample({super.key});
 

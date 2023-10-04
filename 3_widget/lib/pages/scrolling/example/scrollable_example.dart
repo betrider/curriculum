@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
+/// Scrollable은 제스처 인식을 포함하여 스크롤 가능한 위젯에 대한 상호 작용 모델을 구현하지만 뷰포트가 실제로 표시되는 방식에 대한 의견은 없습니다.
 class ScrollableExample extends StatelessWidget {
   const ScrollableExample({super.key});
 

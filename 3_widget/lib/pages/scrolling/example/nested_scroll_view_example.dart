@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// 내부에 다른 스크롤 뷰가 중첩될 수 있는 스크롤 뷰는 스크롤 위치가 본질적으로 연결되어 있습니다.
 class NestedScrollViewExample extends StatelessWidget {
   const NestedScrollViewExample({super.key});
 

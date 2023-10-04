@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// 스크롤 가능한 항목을 위한 머티리얼 디자인 당겨서 새로고침 래퍼입니다.
 class RefreshIndicatorExample extends StatefulWidget {
   const RefreshIndicatorExample({super.key});
 

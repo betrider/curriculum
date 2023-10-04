@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// 그리드 목록은 수직 및 수평 레이아웃으로 배열된 셀의 반복 패턴으로 구성됩니다. GridView 위젯은 이 구성요소를 구현합니다.
 class GridViewExample extends StatelessWidget {
   const GridViewExample({super.key});
 

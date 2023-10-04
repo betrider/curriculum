@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// 한도에 도달할 때까지 스크롤 가능 항목의 크기를 조정한 다음 스크롤하여 드래그 동작에 응답하는 Scrollable용 컨테이너입니다.
 class DraggableScrollableSheetExample extends StatelessWidget {
   const DraggableScrollableSheetExample({super.key});
 

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// 머티리얼 디자인 스크롤바. 스크롤바는 스크롤 가능 위젯의 어느 부분이 실제로 표시되는지를 나타냅니다.
 class ScrollbarExample extends StatefulWidget {
   const ScrollbarExample({super.key});
 

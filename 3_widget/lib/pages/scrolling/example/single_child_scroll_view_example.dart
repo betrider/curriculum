@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// 단일 위젯을 스크롤할 수 있는 상자입니다. 이 위젯은 일반적으로 완전히 단일 상자가 있는 경우에 유용합니다.
 class SingleChildScrollViewExample extends StatelessWidget {
   const SingleChildScrollViewExample({super.key});
 

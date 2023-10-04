@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// Sliver를 사용하여 사용자 정의 스크롤 효과를 만드는 ScrollView입니다.
 class CustomScrollViewExample extends StatelessWidget {
   const CustomScrollViewExample({super.key});
 

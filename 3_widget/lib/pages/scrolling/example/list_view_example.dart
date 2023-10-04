@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// 스크롤 가능한 선형 위젯 목록입니다. ListView는 가장 일반적으로 사용되는 스크롤 위젯입니다. 스크롤 방향으로 자식을 차례로 표시합니다.
 class ListViewExample extends StatelessWidget {
   const ListViewExample({super.key});
 

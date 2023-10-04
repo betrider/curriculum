@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// 스크롤 가능 위젯이 하위 트리에서 작동하는 방식을 제어합니다.
 class ScrollConfigurationExample extends StatelessWidget {
   const ScrollConfigurationExample({super.key});
 

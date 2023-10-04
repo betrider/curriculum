@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// 트리에 나타나는 알림을 수신하는 위젯입니다.
 class NotificationListenerExample extends StatefulWidget {
   const NotificationListenerExample({Key? key}) : super(key: key);
 
