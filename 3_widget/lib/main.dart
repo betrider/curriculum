@@ -4,11 +4,10 @@ import 'package:flutter_widget/pages/animationAndMotion/animation_and_motion.dar
 import 'package:flutter_widget/pages/assetsImagesAndIcons/assets_images_and_icons.dart';
 import 'package:flutter_widget/pages/async/async.dart';
 import 'package:flutter_widget/pages/basics/basics.dart';
-import 'package:flutter_widget/pages/cupertino/cupertino.dart';
 import 'package:flutter_widget/pages/input/input.dart';
 import 'package:flutter_widget/pages/interactionModels/interaction_models.dart';
 import 'package:flutter_widget/pages/layout/layout.dart';
-import 'package:flutter_widget/pages/materialComponents/material_components.dart';
+import 'package:flutter_widget/pages/materialAndCupertino/material_and_cupertino.dart';
 import 'package:flutter_widget/pages/others/others.dart';
 import 'package:flutter_widget/pages/paintingAndEffects/painting_and_effects.dart';
 import 'package:flutter_widget/pages/scrolling/scrolling.dart';
@@ -47,8 +46,8 @@ final router = GoRouter(
           builder: (_, __) => const BasicsWidget(),
         ),
         GoRoute(
-          path: 'cupertino',
-          builder: (_, __) => const CupertinoWidget(),
+          path: 'materialAndCupertino',
+          builder: (_, __) => const MaterialAndCupertino(),
         ),
         GoRoute(
           path: 'input',
@@ -61,10 +60,6 @@ final router = GoRouter(
         GoRoute(
           path: 'layout',
           builder: (_, __) => const LayoutWidget(),
-        ),
-        GoRoute(
-          path: 'material',
-          builder: (_, __) => const MaterialComponentsWidget(),
         ),
         GoRoute(
           path: 'painting',
