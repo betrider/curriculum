@@ -5,8 +5,9 @@ class FlutterLogoExample extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(child: FlutterLogo()),
+    return Scaffold(
+      appBar: AppBar(title: const Text('FlutterLogoExample')),
+      body: const Center(child: FlutterLogo()),
     );
   }
 }

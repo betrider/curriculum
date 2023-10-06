@@ -8,8 +8,9 @@ class AssetBundleExample extends StatelessWidget {
     // var bundle = DefaultAssetBundle.of(context);
     // bundle.loadString('asset/configure.json');
 
-    return const Scaffold(
-      body: Column(
+    return Scaffold(
+      appBar: AppBar(title: const Text('AssetBundleExample')),
+      body: const Column(
         children: [
           Image(image: AssetImage('assets/images/hamilton.jpeg')),
         ],

@@ -6,6 +6,7 @@ class OutlinedButtonExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: const Text('OutlinedButtonExample')),
       body: Center(
         child: OutlinedButton(
           onPressed: () {},
