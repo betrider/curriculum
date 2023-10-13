@@ -519,6 +519,12 @@ void classFunction() {
 
   car.moveForward(5);
   vehicle.moveForward(15);
+
+  /// overload operator
+  Consumption one = Consumption(electricity: 15, gas: 3, water: 9);
+  Consumption two = Consumption(electricity: 5, gas: 7, water: 11);
+  Consumption result = one + two * 0.5;
+  print("Result is $result");
 }
 
 /// 13.async(비동기)
@@ -1003,7 +1009,6 @@ void regExpFunction() {
   } else {
     print("유효하지 않은 휴대폰 번호입니다.");
   }
-
 }
 
 /// 기타.dynamic과 object 차이

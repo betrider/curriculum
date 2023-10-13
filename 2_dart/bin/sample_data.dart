@@ -119,6 +119,35 @@ class Point {
   String call() => 'call : x:$x, y:$y, z:$z';
 }
 
+class MeterReading {
+  final double electricity;
+  final double gas;
+  final double water;
+  MeterReading({
+    required this.electricity,
+    required this.gas,
+    required this.water,
+  });
+}
+
+class Consumption extends MeterReading {
+  Consumption({
+    required super.electricity,
+    required super.gas,
+    required super.water,
+  });
+  Consumption operator *(double multiplier) => Consumption(
+        electricity: electricity * multiplier,
+        gas: gas * multiplier,
+        water: water * multiplier,
+      );
+  Consumption operator +(Consumption other) => Consumption(
+        electricity: electricity + other.electricity,
+        gas: gas + other.gas,
+        water: water + other.water,
+      );
+}
+
 /// async 예제
 Future<int> sumStream(Stream<int> stream) async {
   var sum = 0;
@@ -148,14 +177,13 @@ class User {
   User.fromJson(Map<String, dynamic> json)
       : name = json['name'],
         email = json['email'];
-  
 
   /// Map -> User
-  /// 
+  ///
   /// 팩토리 사례1
-  /// 
+  ///
   /// 팩토리는 자신의 클래스를 반환해야 합니다.
-  /// 
+  ///
   /// 초기화 목록에서 처리할 수 없는 논리를 사용하여 최종 변수를 초기화하는 것입니다.
   factory User.fromJson2(Map<String, dynamic> json) {
     return User(
@@ -172,11 +200,11 @@ class User {
 }
 
 /// 싱글톤 클래스
-/// 
+///
 /// 팩토리 사례2
-/// 
+///
 /// 팩토리는 자신의 클래스를 반환해야 합니다.
-/// 
+///
 /// 새 인스턴스를 항상 생성하지 않는 생성자를 구현할 때 키워드를 사용합니다.
 class Singleton {
   static final Singleton _instance = Singleton._internal();
@@ -185,8 +213,9 @@ class Singleton {
     return _instance;
   }
 
-  Singleton._internal() { //클래스가 최초 생성될때 1회 발생
-    //초기화 코드    
+  Singleton._internal() {
+    //클래스가 최초 생성될때 1회 발생
+    //초기화 코드
   }
 }
 
