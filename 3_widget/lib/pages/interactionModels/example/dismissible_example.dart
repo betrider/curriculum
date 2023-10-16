@@ -12,27 +12,30 @@ class _DismissibleExampleState extends State<DismissibleExample> {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      itemCount: items.length,
-      padding: const EdgeInsets.symmetric(vertical: 16),
-      itemBuilder: (BuildContext context, int index) {
-        return Dismissible(
-          background: Container(
-            color: Colors.green,
-          ),
-          key: ValueKey<int>(items[index]),
-          onDismissed: (DismissDirection direction) {
-            setState(() {
-              items.removeAt(index);
-            });
-          },
-          child: ListTile(
-            title: Text(
-              'Item ${items[index]}',
+    return Scaffold(
+      appBar: AppBar(title: const Text('DismissibleExample')),
+      body: ListView.builder(
+        itemCount: items.length,
+        padding: const EdgeInsets.symmetric(vertical: 16),
+        itemBuilder: (BuildContext context, int index) {
+          return Dismissible(
+            background: Container(
+              color: Colors.green,
             ),
-          ),
-        );
-      },
+            key: ValueKey<int>(items[index]),
+            onDismissed: (DismissDirection direction) {
+              setState(() {
+                items.removeAt(index);
+              });
+            },
+            child: ListTile(
+              title: Text(
+                'Item ${items[index]}',
+              ),
+            ),
+          );
+        },
+      ),
     );
   }
 }

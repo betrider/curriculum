@@ -13,6 +13,7 @@ class _GestureDetectorExampleState extends State<GestureDetectorExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: const Text('GestureDetectorExample')),
       body: Container(
         alignment: FractionalOffset.center,
         child: Column(
