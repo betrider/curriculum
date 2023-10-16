@@ -42,8 +42,8 @@ class _StatefulWidgetExampleState extends State<StatefulWidgetExample> {
 
   @override
   void dispose() {
-    super.dispose();
     print('5.dispose');
+    super.dispose();
   }
 
   // context.mounted -> false
