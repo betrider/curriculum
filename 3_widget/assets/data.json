@@ -1,0 +1,1574 @@
+{
+    "sentences": [
+        {
+            "index": 0,
+            "startTime": 2.02,
+            "endTime": 8.99,
+            "chunks": [
+                {
+                    "text": "Thank you,",
+                    "startTime": 2.02,
+                    "endTime": 2.62,
+                    "index": 0
+                },
+                {
+                    "text": "mister secretary general,",
+                    "startTime": 2.68,
+                    "endTime": 3.97,
+                    "index": 1
+                },
+                {
+                    "text": "UNICEF executive director,",
+                    "startTime": 4.3,
+                    "endTime": 5.93,
+                    "index": 2
+                },
+                {
+                    "text": "and all the excellencies",
+                    "startTime": 6.3,
+                    "endTime": 7.29,
+                    "index": 3
+                },
+                {
+                    "text": "and distinguished guests",
+                    "startTime": 7.3,
+                    "endTime": 8.15,
+                    "index": 4
+                },
+                {
+                    "text": "from all across the world.",
+                    "startTime": 8.16,
+                    "endTime": 8.99,
+                    "index": 5
+                }
+            ]
+        },
+        {
+            "index": 1,
+            "startTime": 10.65,
+            "endTime": 14.85,
+            "chunks": [
+                {
+                    "text": "My name is Kim Nam Jun,",
+                    "startTime": 10.65,
+                    "endTime": 12.08,
+                    "index": 6
+                },
+                {
+                    "text": "also known as RM,",
+                    "startTime": 12.21,
+                    "endTime": 13.36,
+                    "index": 7
+                },
+                {
+                    "text": "the leader of the group BTS.",
+                    "startTime": 13.54,
+                    "endTime": 14.85,
+                    "index": 8
+                }
+            ]
+        },
+        {
+            "index": 2,
+            "startTime": 15.81,
+            "endTime": 21.26,
+            "chunks": [
+                {
+                    "text": "It's an incredible honor",
+                    "startTime": 15.81,
+                    "endTime": 16.9,
+                    "index": 9
+                },
+                {
+                    "text": "to be invited",
+                    "startTime": 16.91,
+                    "endTime": 17.7,
+                    "index": 10
+                },
+                {
+                    "text": "to an occasion of such significance",
+                    "startTime": 17.71,
+                    "endTime": 20.04,
+                    "index": 11
+                },
+                {
+                    "text": "for today's young generation.",
+                    "startTime": 20.05,
+                    "endTime": 21.26,
+                    "index": 12
+                }
+            ]
+        },
+        {
+            "index": 3,
+            "startTime": 22.45,
+            "endTime": 31.82,
+            "chunks": [
+                {
+                    "text": "Last November,",
+                    "startTime": 22.45,
+                    "endTime": 23.3,
+                    "index": 13
+                },
+                {
+                    "text": "BTS launched the LOVE MYSELF campaign with UNICEF",
+                    "startTime": 23.69,
+                    "endTime": 27.15,
+                    "index": 14
+                },
+                {
+                    "text": "built on our belief",
+                    "startTime": 27.45,
+                    "endTime": 28.58,
+                    "index": 15
+                },
+                {
+                    "text": "that true love first begins",
+                    "startTime": 28.59,
+                    "endTime": 30.94,
+                    "index": 16
+                },
+                {
+                    "text": "with loving myself.",
+                    "startTime": 30.95,
+                    "endTime": 31.82,
+                    "index": 17
+                }
+            ]
+        },
+        {
+            "index": 4,
+            "startTime": 32.88,
+            "endTime": 39.69,
+            "chunks": [
+                {
+                    "text": "We've been partnering",
+                    "startTime": 32.88,
+                    "endTime": 33.83,
+                    "index": 18
+                },
+                {
+                    "text": "with UNICEF's #ENDviolence program",
+                    "startTime": 33.84,
+                    "endTime": 35.89,
+                    "index": 19
+                },
+                {
+                    "text": "to protect children and young people",
+                    "startTime": 36.34,
+                    "endTime": 38.29,
+                    "index": 20
+                },
+                {
+                    "text": "all over the world",
+                    "startTime": 38.34,
+                    "endTime": 39.03,
+                    "index": 21
+                },
+                {
+                    "text": "from violence.",
+                    "startTime": 39.04,
+                    "endTime": 39.69,
+                    "index": 22
+                }
+            ]
+        },
+        {
+            "index": 5,
+            "startTime": 40.86,
+            "endTime": 46.6,
+            "chunks": [
+                {
+                    "text": "And,",
+                    "startTime": 40.86,
+                    "endTime": 41.09,
+                    "index": 23
+                },
+                {
+                    "text": "our fans have become",
+                    "startTime": 41.1,
+                    "endTime": 42.57,
+                    "index": 24
+                },
+                {
+                    "text": "a major part of this campaign",
+                    "startTime": 42.58,
+                    "endTime": 44.07,
+                    "index": 25
+                },
+                {
+                    "text": "with their action and",
+                    "startTime": 44.22,
+                    "endTime": 45.49,
+                    "index": 26
+                },
+                {
+                    "text": "with their enthusiasm.",
+                    "startTime": 45.5,
+                    "endTime": 46.6,
+                    "index": 27
+                }
+            ]
+        },
+        {
+            "index": 6,
+            "startTime": 47.47,
+            "endTime": 52.81,
+            "chunks": [
+                {
+                    "text": "We truly have the best fans",
+                    "startTime": 47.47,
+                    "endTime": 49.3,
+                    "index": 28
+                },
+                {
+                    "text": "in the world.",
+                    "startTime": 49.31,
+                    "endTime": 52.81,
+                    "index": 29
+                }
+            ]
+        },
+        {
+            "index": 7,
+            "startTime": 52.82,
+            "endTime": 54.99,
+            "chunks": [
+                {
+                    "text": "I'd like to begin",
+                    "startTime": 52.82,
+                    "endTime": 53.62,
+                    "index": 30
+                },
+                {
+                    "text": "by talking about myself.",
+                    "startTime": 53.67,
+                    "endTime": 54.99,
+                    "index": 31
+                }
+            ]
+        },
+        {
+            "index": 8,
+            "startTime": 56.72,
+            "endTime": 60.62,
+            "chunks": [
+                {
+                    "text": "I was born in Ilsan,",
+                    "startTime": 56.72,
+                    "endTime": 57.85333333333333,
+                    "index": 32
+                },
+                {
+                    "text": "a city near Seoul,",
+                    "startTime": 57.85333333333333,
+                    "endTime": 59.37,
+                    "index": 33
+                },
+                {
+                    "text": "South Korea.",
+                    "startTime": 59.94,
+                    "endTime": 60.62,
+                    "index": 34
+                }
+            ]
+        },
+        {
+            "index": 9,
+            "startTime": 61.79,
+            "endTime": 67.24,
+            "chunks": [
+                {
+                    "text": "It is a really beautiful place",
+                    "startTime": 61.79,
+                    "endTime": 63.4,
+                    "index": 35
+                },
+                {
+                    "text": "with a lake, hills,",
+                    "startTime": 63.49,
+                    "endTime": 65.2,
+                    "index": 36
+                },
+                {
+                    "text": "and even an annual flower festival.",
+                    "startTime": 65.31,
+                    "endTime": 67.24,
+                    "index": 37
+                }
+            ]
+        },
+        {
+            "index": 10,
+            "startTime": 67.81,
+            "endTime": 72.22,
+            "chunks": [
+                {
+                    "text": "I spent a very happy childhood there,",
+                    "startTime": 67.81,
+                    "endTime": 70.26,
+                    "index": 38
+                },
+                {
+                    "text": "and I was just an ordinary boy.",
+                    "startTime": 70.37,
+                    "endTime": 72.22,
+                    "index": 39
+                }
+            ]
+        },
+        {
+            "index": 11,
+            "startTime": 73.75,
+            "endTime": 79.37,
+            "chunks": [
+                {
+                    "text": "I used to look up",
+                    "startTime": 73.75,
+                    "endTime": 74.72,
+                    "index": 40
+                },
+                {
+                    "text": "at the night sky",
+                    "startTime": 74.73,
+                    "endTime": 75.3325,
+                    "index": 41
+                },
+                {
+                    "text": "and wonder,",
+                    "startTime": 75.3325,
+                    "endTime": 76.1,
+                    "index": 42
+                },
+                {
+                    "text": "and I used to dream the dreams of a boy.",
+                    "startTime": 77.03,
+                    "endTime": 79.37,
+                    "index": 43
+                }
+            ]
+        },
+        {
+            "index": 12,
+            "startTime": 80.81,
+            "endTime": 84.51,
+            "chunks": [
+                {
+                    "text": "I used to imagine",
+                    "startTime": 80.81,
+                    "endTime": 82.44,
+                    "index": 44
+                },
+                {
+                    "text": "that I was a super hero",
+                    "startTime": 82.58,
+                    "endTime": 83.66,
+                    "index": 45
+                },
+                {
+                    "text": "who could save the world.",
+                    "startTime": 83.67,
+                    "endTime": 84.51,
+                    "index": 46
+                }
+            ]
+        },
+        {
+            "index": 13,
+            "startTime": 86.78,
+            "endTime": 95.15,
+            "chunks": [
+                {
+                    "text": "And in an intro",
+                    "startTime": 86.78,
+                    "endTime": 87.83,
+                    "index": 47
+                },
+                {
+                    "text": "to one of our early albums,",
+                    "startTime": 87.84,
+                    "endTime": 89.43,
+                    "index": 48
+                },
+                {
+                    "text": "there's a line",
+                    "startTime": 89.8,
+                    "endTime": 90.65,
+                    "index": 49
+                },
+                {
+                    "text": "that says,",
+                    "startTime": 90.66,
+                    "endTime": 91.36,
+                    "index": 50
+                },
+                {
+                    "text": "\"My heart stopped",
+                    "startTime": 91.78,
+                    "endTime": 92.93,
+                    "index": 51
+                },
+                {
+                    "text": "when I was maybe",
+                    "startTime": 92.94,
+                    "endTime": 94.47,
+                    "index": 52
+                },
+                {
+                    "text": "nine or ten.\"",
+                    "startTime": 94.48,
+                    "endTime": 95.15,
+                    "index": 53
+                }
+            ]
+        },
+        {
+            "index": 14,
+            "startTime": 96.64,
+            "endTime": 104.81,
+            "chunks": [
+                {
+                    "text": "Looking back,",
+                    "startTime": 96.64,
+                    "endTime": 97.51,
+                    "index": 54
+                },
+                {
+                    "text": "I think",
+                    "startTime": 98.64,
+                    "endTime": 99.05,
+                    "index": 55
+                },
+                {
+                    "text": "that's when I began to worry about",
+                    "startTime": 99.06,
+                    "endTime": 100.64,
+                    "index": 56
+                },
+                {
+                    "text": "what other people thought of me,",
+                    "startTime": 100.7,
+                    "endTime": 102.61,
+                    "index": 57
+                },
+                {
+                    "text": "and started seeing myself through their eyes.",
+                    "startTime": 102.68,
+                    "endTime": 104.81,
+                    "index": 58
+                }
+            ]
+        },
+        {
+            "index": 15,
+            "startTime": 106.1,
+            "endTime": 110.8,
+            "chunks": [
+                {
+                    "text": "I stopped looking up",
+                    "startTime": 106.1,
+                    "endTime": 107.99,
+                    "index": 59
+                },
+                {
+                    "text": "at the night skies,",
+                    "startTime": 108,
+                    "endTime": 109.06,
+                    "index": 60
+                },
+                {
+                    "text": "the stars.",
+                    "startTime": 109.91,
+                    "endTime": 110.8,
+                    "index": 61
+                }
+            ]
+        },
+        {
+            "index": 16,
+            "startTime": 111.37,
+            "endTime": 113.08,
+            "chunks": [
+                {
+                    "text": "I stopped daydreaming.",
+                    "startTime": 111.37,
+                    "endTime": 113.08,
+                    "index": 62
+                }
+            ]
+        },
+        {
+            "index": 17,
+            "startTime": 114.31,
+            "endTime": 119.62,
+            "chunks": [
+                {
+                    "text": "Instead,",
+                    "startTime": 114.31,
+                    "endTime": 115.18,
+                    "index": 63
+                },
+                {
+                    "text": "I just tried to jam myself",
+                    "startTime": 115.47,
+                    "endTime": 117.34,
+                    "index": 64
+                },
+                {
+                    "text": "into the molds",
+                    "startTime": 117.43,
+                    "endTime": 118.5,
+                    "index": 65
+                },
+                {
+                    "text": "that other people made.",
+                    "startTime": 118.59,
+                    "endTime": 119.62,
+                    "index": 66
+                }
+            ]
+        },
+        {
+            "index": 18,
+            "startTime": 121.36,
+            "endTime": 126.79,
+            "chunks": [
+                {
+                    "text": "Soon,",
+                    "startTime": 121.36,
+                    "endTime": 122.09,
+                    "index": 67
+                },
+                {
+                    "text": "I began to shut out my own voice,",
+                    "startTime": 122.2,
+                    "endTime": 124.27,
+                    "index": 68
+                },
+                {
+                    "text": "and started to listen",
+                    "startTime": 124.52,
+                    "endTime": 125.65,
+                    "index": 69
+                },
+                {
+                    "text": "to the voices of others.",
+                    "startTime": 125.7,
+                    "endTime": 126.79,
+                    "index": 70
+                }
+            ]
+        },
+        {
+            "index": 19,
+            "startTime": 128.63,
+            "endTime": 131.95,
+            "chunks": [
+                {
+                    "text": "No one called out my name,",
+                    "startTime": 128.63,
+                    "endTime": 130.42,
+                    "index": 71
+                },
+                {
+                    "text": "and neither did I.",
+                    "startTime": 131.12,
+                    "endTime": 131.95,
+                    "index": 72
+                }
+            ]
+        },
+        {
+            "index": 20,
+            "startTime": 133.66,
+            "endTime": 136.55,
+            "chunks": [
+                {
+                    "text": "My heart stopped,",
+                    "startTime": 133.66,
+                    "endTime": 135.01,
+                    "index": 73
+                },
+                {
+                    "text": "and my eyes closed shut.",
+                    "startTime": 135.14,
+                    "endTime": 136.55,
+                    "index": 74
+                }
+            ]
+        },
+        {
+            "index": 21,
+            "startTime": 138.07,
+            "endTime": 144.37,
+            "chunks": [
+                {
+                    "text": "So,",
+                    "startTime": 138.07,
+                    "endTime": 138.92,
+                    "index": 75
+                },
+                {
+                    "text": "like this, I,",
+                    "startTime": 139.01,
+                    "endTime": 141.02,
+                    "index": 76
+                },
+                {
+                    "text": "we,",
+                    "startTime": 141.63,
+                    "endTime": 142.25,
+                    "index": 77
+                },
+                {
+                    "text": "all lost our names.",
+                    "startTime": 143.43,
+                    "endTime": 144.37,
+                    "index": 78
+                }
+            ]
+        },
+        {
+            "index": 22,
+            "startTime": 145.86,
+            "endTime": 147.17,
+            "chunks": [
+                {
+                    "text": "We became like ghosts.",
+                    "startTime": 145.86,
+                    "endTime": 147.17,
+                    "index": 79
+                }
+            ]
+        },
+        {
+            "index": 23,
+            "startTime": 149.95,
+            "endTime": 152.57,
+            "chunks": [
+                {
+                    "text": "But,",
+                    "startTime": 149.95,
+                    "endTime": 150.2,
+                    "index": 80
+                },
+                {
+                    "text": "I had one sanctuary,",
+                    "startTime": 150.21,
+                    "endTime": 151.58,
+                    "index": 81
+                },
+                {
+                    "text": "and that was music.",
+                    "startTime": 151.65,
+                    "endTime": 152.57,
+                    "index": 82
+                }
+            ]
+        },
+        {
+            "index": 24,
+            "startTime": 153.71,
+            "endTime": 158.64,
+            "chunks": [
+                {
+                    "text": "There was a small voice",
+                    "startTime": 153.71,
+                    "endTime": 154.96,
+                    "index": 83
+                },
+                {
+                    "text": "inside of me",
+                    "startTime": 154.97,
+                    "endTime": 155.58,
+                    "index": 84
+                },
+                {
+                    "text": "that said,",
+                    "startTime": 155.59,
+                    "endTime": 156.34,
+                    "index": 85
+                },
+                {
+                    "text": "\"Wake up, man,",
+                    "startTime": 156.83,
+                    "endTime": 157.68,
+                    "index": 86
+                },
+                {
+                    "text": "and listen to yourself.\"",
+                    "startTime": 157.69,
+                    "endTime": 158.64,
+                    "index": 87
+                }
+            ]
+        },
+        {
+            "index": 25,
+            "startTime": 159.96,
+            "endTime": 164.11,
+            "chunks": [
+                {
+                    "text": "But,",
+                    "startTime": 159.96,
+                    "endTime": 160.18,
+                    "index": 88
+                },
+                {
+                    "text": "it took me",
+                    "startTime": 160.19,
+                    "endTime": 160.81,
+                    "index": 89
+                },
+                {
+                    "text": "quite a long time",
+                    "startTime": 160.82,
+                    "endTime": 161.67,
+                    "index": 90
+                },
+                {
+                    "text": "to hear music",
+                    "startTime": 161.68,
+                    "endTime": 163.16,
+                    "index": 91
+                },
+                {
+                    "text": "calling my real name.",
+                    "startTime": 163.17,
+                    "endTime": 164.11,
+                    "index": 92
+                }
+            ]
+        },
+        {
+            "index": 26,
+            "startTime": 165.74,
+            "endTime": 170.05,
+            "chunks": [
+                {
+                    "text": "Even after making the decision",
+                    "startTime": 165.74,
+                    "endTime": 167.24,
+                    "index": 93
+                },
+                {
+                    "text": "to join BTS,",
+                    "startTime": 167.25,
+                    "endTime": 168.53,
+                    "index": 94
+                },
+                {
+                    "text": "there were a lot of hurdles.",
+                    "startTime": 168.62,
+                    "endTime": 170.05,
+                    "index": 95
+                }
+            ]
+        },
+        {
+            "index": 27,
+            "startTime": 170.68,
+            "endTime": 174.61,
+            "chunks": [
+                {
+                    "text": "Some people might not believe,",
+                    "startTime": 170.68,
+                    "endTime": 171.97,
+                    "index": 96
+                },
+                {
+                    "text": "but most people thought",
+                    "startTime": 171.98,
+                    "endTime": 173.58,
+                    "index": 97
+                },
+                {
+                    "text": "we were hopeless.",
+                    "startTime": 173.59,
+                    "endTime": 174.61,
+                    "index": 98
+                }
+            ]
+        },
+        {
+            "index": 28,
+            "startTime": 175.84,
+            "endTime": 177.6,
+            "chunks": [
+                {
+                    "text": "And, sometimes,",
+                    "startTime": 175.84,
+                    "endTime": 176.73,
+                    "index": 99
+                },
+                {
+                    "text": "I just wanted to quit.",
+                    "startTime": 176.8,
+                    "endTime": 177.6,
+                    "index": 100
+                }
+            ]
+        },
+        {
+            "index": 29,
+            "startTime": 179.77,
+            "endTime": 182.68,
+            "chunks": [
+                {
+                    "text": "But,",
+                    "startTime": 179.77,
+                    "endTime": 180,
+                    "index": 101
+                },
+                {
+                    "text": "I think",
+                    "startTime": 180.01,
+                    "endTime": 180.32,
+                    "index": 102
+                },
+                {
+                    "text": "I was very lucky",
+                    "startTime": 180.33,
+                    "endTime": 181.14,
+                    "index": 103
+                },
+                {
+                    "text": "that I didn't give it all up.",
+                    "startTime": 181.15,
+                    "endTime": 182.68,
+                    "index": 104
+                }
+            ]
+        },
+        {
+            "index": 30,
+            "startTime": 185.81,
+            "endTime": 191.8,
+            "chunks": [
+                {
+                    "text": "And,",
+                    "startTime": 185.81,
+                    "endTime": 186,
+                    "index": 105
+                },
+                {
+                    "text": "I'm sure",
+                    "startTime": 186.01,
+                    "endTime": 186.9,
+                    "index": 106
+                },
+                {
+                    "text": "that I and we",
+                    "startTime": 186.99,
+                    "endTime": 189.18,
+                    "index": 107
+                },
+                {
+                    "text": "will keep stumbling",
+                    "startTime": 189.39,
+                    "endTime": 190.62,
+                    "index": 108
+                },
+                {
+                    "text": "and falling like this.",
+                    "startTime": 190.77,
+                    "endTime": 191.8,
+                    "index": 109
+                }
+            ]
+        },
+        {
+            "index": 31,
+            "startTime": 194.55,
+            "endTime": 204.77,
+            "chunks": [
+                {
+                    "text": "BTS has become artists",
+                    "startTime": 194.55,
+                    "endTime": 196.72,
+                    "index": 110
+                },
+                {
+                    "text": "performing in those huge stadiums",
+                    "startTime": 196.79,
+                    "endTime": 198.47,
+                    "index": 111
+                },
+                {
+                    "text": "and selling millions of albums",
+                    "startTime": 198.48,
+                    "endTime": 200.1,
+                    "index": 112
+                },
+                {
+                    "text": "right now,",
+                    "startTime": 200.11,
+                    "endTime": 200.74,
+                    "index": 113
+                },
+                {
+                    "text": "but I am still an ordinary 24-year-old guy.",
+                    "startTime": 200.82,
+                    "endTime": 204.77,
+                    "index": 114
+                }
+            ]
+        },
+        {
+            "index": 32,
+            "startTime": 206.49,
+            "endTime": 221.14,
+            "chunks": [
+                {
+                    "text": "If there's anything",
+                    "startTime": 206.49,
+                    "endTime": 207.5,
+                    "index": 115
+                },
+                {
+                    "text": "that I've achieved,",
+                    "startTime": 207.51,
+                    "endTime": 208.48,
+                    "index": 116
+                },
+                {
+                    "text": "it was only possible",
+                    "startTime": 208.87,
+                    "endTime": 210.22,
+                    "index": 117
+                },
+                {
+                    "text": "that I have",
+                    "startTime": 210.67,
+                    "endTime": 211.16,
+                    "index": 118
+                },
+                {
+                    "text": "my other BTS members right",
+                    "startTime": 211.17,
+                    "endTime": 213.5,
+                    "index": 119
+                },
+                {
+                    "text": "by my side,",
+                    "startTime": 213.51,
+                    "endTime": 214.4,
+                    "index": 120
+                },
+                {
+                    "text": "and because of the love and support",
+                    "startTime": 215.15,
+                    "endTime": 217.9,
+                    "index": 121
+                },
+                {
+                    "text": "that our ARMY fans",
+                    "startTime": 218.37,
+                    "endTime": 219.66,
+                    "index": 122
+                },
+                {
+                    "text": "all over the world made for us.",
+                    "startTime": 219.67,
+                    "endTime": 221.14,
+                    "index": 123
+                }
+            ]
+        },
+        {
+            "index": 33,
+            "startTime": 223.16,
+            "endTime": 225.31,
+            "chunks": [
+                {
+                    "text": "And maybe I made a mistake yesterday.",
+                    "startTime": 223.16,
+                    "endTime": 225.31,
+                    "index": 124
+                }
+            ]
+        },
+        {
+            "index": 34,
+            "startTime": 226.57,
+            "endTime": 228.91,
+            "chunks": [
+                {
+                    "text": "But yesterday's me is still me.",
+                    "startTime": 226.57,
+                    "endTime": 228.91,
+                    "index": 125
+                }
+            ]
+        },
+        {
+            "index": 35,
+            "startTime": 230.66,
+            "endTime": 236.27,
+            "chunks": [
+                {
+                    "text": "Today,",
+                    "startTime": 230.66,
+                    "endTime": 231.38,
+                    "index": 126
+                },
+                {
+                    "text": "I am",
+                    "startTime": 232.16,
+                    "endTime": 232.61,
+                    "index": 127
+                },
+                {
+                    "text": "who I am with all of",
+                    "startTime": 232.62,
+                    "endTime": 234.65,
+                    "index": 128
+                },
+                {
+                    "text": "my faults and my mistakes.",
+                    "startTime": 234.66,
+                    "endTime": 236.27,
+                    "index": 129
+                }
+            ]
+        },
+        {
+            "index": 36,
+            "startTime": 237.94,
+            "endTime": 244.41,
+            "chunks": [
+                {
+                    "text": "Tomorrow,",
+                    "startTime": 237.94,
+                    "endTime": 238.74,
+                    "index": 130
+                },
+                {
+                    "text": "I might be",
+                    "startTime": 239.74,
+                    "endTime": 240.64,
+                    "index": 131
+                },
+                {
+                    "text": "a tiny bit wiser,",
+                    "startTime": 241.26,
+                    "endTime": 242.61,
+                    "index": 132
+                },
+                {
+                    "text": "and that would be me too.",
+                    "startTime": 243.31,
+                    "endTime": 244.41,
+                    "index": 133
+                }
+            ]
+        },
+        {
+            "index": 37,
+            "startTime": 246.32,
+            "endTime": 253.46,
+            "chunks": [
+                {
+                    "text": "These faults and mistakes are",
+                    "startTime": 246.32,
+                    "endTime": 249.01,
+                    "index": 134
+                },
+                {
+                    "text": "what I am,",
+                    "startTime": 249.02,
+                    "endTime": 249.83,
+                    "index": 135
+                },
+                {
+                    "text": "making up the brightest stars",
+                    "startTime": 250.3,
+                    "endTime": 251.83,
+                    "index": 136
+                },
+                {
+                    "text": "in the constellation of my life.",
+                    "startTime": 251.88,
+                    "endTime": 253.46,
+                    "index": 137
+                }
+            ]
+        },
+        {
+            "index": 38,
+            "startTime": 255.28,
+            "endTime": 262.26,
+            "chunks": [
+                {
+                    "text": "I have come to love myself for",
+                    "startTime": 255.28,
+                    "endTime": 257.57,
+                    "index": 138
+                },
+                {
+                    "text": "who I am,",
+                    "startTime": 257.58,
+                    "endTime": 258.55,
+                    "index": 139
+                },
+                {
+                    "text": "for who I was,",
+                    "startTime": 259.23,
+                    "endTime": 260.37,
+                    "index": 140
+                },
+                {
+                    "text": "and for",
+                    "startTime": 260.9,
+                    "endTime": 261.33,
+                    "index": 141
+                },
+                {
+                    "text": "who I hope to become.",
+                    "startTime": 261.34,
+                    "endTime": 262.26,
+                    "index": 142
+                }
+            ]
+        },
+        {
+            "index": 39,
+            "startTime": 265.2,
+            "endTime": 267.04,
+            "chunks": [
+                {
+                    "text": "I would like to say the one last thing.",
+                    "startTime": 265.2,
+                    "endTime": 267.04,
+                    "index": 143
+                }
+            ]
+        },
+        {
+            "index": 40,
+            "startTime": 269.11,
+            "endTime": 283.76,
+            "chunks": [
+                {
+                    "text": "After releasing our LOVE YOURSELF albums,",
+                    "startTime": 269.11,
+                    "endTime": 271.82,
+                    "index": 144
+                },
+                {
+                    "text": "and launching the LOVE MYSELF Campaign,",
+                    "startTime": 271.91,
+                    "endTime": 273.82,
+                    "index": 145
+                },
+                {
+                    "text": "we started to hear remarkable stories",
+                    "startTime": 273.93,
+                    "endTime": 276.12,
+                    "index": 146
+                },
+                {
+                    "text": "from our fans",
+                    "startTime": 276.13,
+                    "endTime": 276.9,
+                    "index": 147
+                },
+                {
+                    "text": "all over the world—",
+                    "startTime": 276.91,
+                    "endTime": 277.84,
+                    "index": 148
+                },
+                {
+                    "text": "how our message helped",
+                    "startTime": 278.09,
+                    "endTime": 279.48,
+                    "index": 149
+                },
+                {
+                    "text": "them overcome their hardships in life",
+                    "startTime": 279.49,
+                    "endTime": 282.24,
+                    "index": 150
+                },
+                {
+                    "text": "and start loving themselves.",
+                    "startTime": 282.35,
+                    "endTime": 283.76,
+                    "index": 151
+                }
+            ]
+        },
+        {
+            "index": 41,
+            "startTime": 285.01,
+            "endTime": 288.32,
+            "chunks": [
+                {
+                    "text": "Those stories constantly",
+                    "startTime": 285.01,
+                    "endTime": 286.42,
+                    "index": 152
+                },
+                {
+                    "text": "remind us of our responsibilities.",
+                    "startTime": 286.43,
+                    "endTime": 288.32,
+                    "index": 153
+                }
+            ]
+        },
+        {
+            "index": 42,
+            "startTime": 290.44,
+            "endTime": 293.67,
+            "chunks": [
+                {
+                    "text": "So,",
+                    "startTime": 290.44,
+                    "endTime": 291.27,
+                    "index": 154
+                },
+                {
+                    "text": "let's take all one more step.",
+                    "startTime": 291.84,
+                    "endTime": 293.67,
+                    "index": 155
+                }
+            ]
+        },
+        {
+            "index": 43,
+            "startTime": 295.13,
+            "endTime": 302.4533333333333,
+            "chunks": [
+                {
+                    "text": "We have learned to love ourselves,",
+                    "startTime": 295.13,
+                    "endTime": 297.36,
+                    "index": 156
+                },
+                {
+                    "text": "so now I urge you",
+                    "startTime": 298.08,
+                    "endTime": 299.85,
+                    "index": 157
+                },
+                {
+                    "text": "to \"Speak yourself.\"",
+                    "startTime": 299.86,
+                    "endTime": 302.4533333333333,
+                    "index": 158
+                }
+            ]
+        },
+        {
+            "index": 44,
+            "startTime": 302.4533333333333,
+            "endTime": 313.92,
+            "chunks": [
+                {
+                    "text": "I would like to ask all of you,",
+                    "startTime": 302.4533333333333,
+                    "endTime": 307.03,
+                    "index": 159
+                },
+                {
+                    "text": "\"What is your name? What excites you",
+                    "startTime": 308.6,
+                    "endTime": 312.75,
+                    "index": 160
+                },
+                {
+                    "text": "and makes",
+                    "startTime": 312.88,
+                    "endTime": 313.28,
+                    "index": 161
+                },
+                {
+                    "text": "your heart beat?\"",
+                    "startTime": 313.29,
+                    "endTime": 313.92,
+                    "index": 162
+                }
+            ]
+        },
+        {
+            "index": 45,
+            "startTime": 315.49,
+            "endTime": 316.37,
+            "chunks": [
+                {
+                    "text": "Tell me your story.",
+                    "startTime": 315.49,
+                    "endTime": 316.37,
+                    "index": 163
+                }
+            ]
+        },
+        {
+            "index": 46,
+            "startTime": 317.87,
+            "endTime": 319.52,
+            "chunks": [
+                {
+                    "text": "I want to hear your voice.",
+                    "startTime": 317.87,
+                    "endTime": 319.52,
+                    "index": 164
+                }
+            ]
+        },
+        {
+            "index": 47,
+            "startTime": 319.65,
+            "endTime": 321.49,
+            "chunks": [
+                {
+                    "text": "And I want to hear your conviction.",
+                    "startTime": 319.65,
+                    "endTime": 321.49,
+                    "index": 165
+                }
+            ]
+        },
+        {
+            "index": 48,
+            "startTime": 323.15,
+            "endTime": 331.17,
+            "chunks": [
+                {
+                    "text": "No matter",
+                    "startTime": 323.15,
+                    "endTime": 323.58,
+                    "index": 166
+                },
+                {
+                    "text": "who you are,",
+                    "startTime": 323.59,
+                    "endTime": 324.58,
+                    "index": 167
+                },
+                {
+                    "text": "where you're from,",
+                    "startTime": 324.73,
+                    "endTime": 325.68,
+                    "index": 168
+                },
+                {
+                    "text": "your skin color,",
+                    "startTime": 326.27,
+                    "endTime": 327.38,
+                    "index": 169
+                },
+                {
+                    "text": "your gender identity,",
+                    "startTime": 327.87,
+                    "endTime": 329.03,
+                    "index": 170
+                },
+                {
+                    "text": "just speak yourself.",
+                    "startTime": 330.27,
+                    "endTime": 331.17,
+                    "index": 171
+                }
+            ]
+        },
+        {
+            "index": 49,
+            "startTime": 333.08,
+            "endTime": 336.73,
+            "chunks": [
+                {
+                    "text": "Find your name",
+                    "startTime": 333.08,
+                    "endTime": 334.29,
+                    "index": 172
+                },
+                {
+                    "text": "and find your voice",
+                    "startTime": 334.38,
+                    "endTime": 335.64,
+                    "index": 173
+                },
+                {
+                    "text": "by speaking yourself.",
+                    "startTime": 335.76,
+                    "endTime": 336.73,
+                    "index": 174
+                }
+            ]
+        },
+        {
+            "index": 50,
+            "startTime": 339.07,
+            "endTime": 343.526,
+            "chunks": [
+                {
+                    "text": "I'm Kim Nam-joon",
+                    "startTime": 339.07,
+                    "endTime": 340.28,
+                    "index": 175
+                },
+                {
+                    "text": "and also RM of BTS.",
+                    "startTime": 340.77,
+                    "endTime": 343.526,
+                    "index": 176
+                }
+            ]
+        },
+        {
+            "index": 51,
+            "startTime": 343.526,
+            "endTime": 348.56,
+            "chunks": [
+                {
+                    "text": "I am an idol",
+                    "startTime": 343.526,
+                    "endTime": 345.36,
+                    "index": 177
+                },
+                {
+                    "text": "and I am an artist",
+                    "startTime": 346.06,
+                    "endTime": 347.09,
+                    "index": 178
+                },
+                {
+                    "text": "from a small town in Korea.",
+                    "startTime": 347.1,
+                    "endTime": 348.56,
+                    "index": 179
+                }
+            ]
+        },
+        {
+            "index": 52,
+            "startTime": 350.14,
+            "endTime": 354.8,
+            "chunks": [
+                {
+                    "text": "Like most people",
+                    "startTime": 350.14,
+                    "endTime": 351.05,
+                    "index": 180
+                },
+                {
+                    "text": "I've made many and plenty mistakes",
+                    "startTime": 351.91,
+                    "endTime": 354.25,
+                    "index": 181
+                },
+                {
+                    "text": "in my life.",
+                    "startTime": 354.26,
+                    "endTime": 354.8,
+                    "index": 182
+                }
+            ]
+        },
+        {
+            "index": 53,
+            "startTime": 356.6,
+            "endTime": 363.67,
+            "chunks": [
+                {
+                    "text": "I have many faults,",
+                    "startTime": 356.6,
+                    "endTime": 357.97,
+                    "index": 183
+                },
+                {
+                    "text": "and I have many more fears,",
+                    "startTime": 358.44,
+                    "endTime": 360.13,
+                    "index": 184
+                },
+                {
+                    "text": "but I am going to embrace myself",
+                    "startTime": 360.81,
+                    "endTime": 362.54,
+                    "index": 185
+                },
+                {
+                    "text": "as hard",
+                    "startTime": 362.63,
+                    "endTime": 363.08,
+                    "index": 186
+                },
+                {
+                    "text": "as I can.",
+                    "startTime": 363.09,
+                    "endTime": 363.67,
+                    "index": 187
+                }
+            ]
+        },
+        {
+            "index": 54,
+            "startTime": 364.5,
+            "endTime": 368.31,
+            "chunks": [
+                {
+                    "text": "And I am starting to love myself gradually,",
+                    "startTime": 364.5,
+                    "endTime": 367.31,
+                    "index": 188
+                },
+                {
+                    "text": "just little by little.",
+                    "startTime": 367.4,
+                    "endTime": 368.31,
+                    "index": 189
+                }
+            ]
+        },
+        {
+            "index": 55,
+            "startTime": 370.83,
+            "endTime": 371.7,
+            "chunks": [
+                {
+                    "text": "What is your name?",
+                    "startTime": 370.83,
+                    "endTime": 371.7,
+                    "index": 190
+                }
+            ]
+        },
+        {
+            "index": 56,
+            "startTime": 373.58,
+            "endTime": 374.52,
+            "chunks": [
+                {
+                    "text": "Speak yourself.",
+                    "startTime": 373.58,
+                    "endTime": 374.52,
+                    "index": 191
+                }
+            ]
+        },
+        {
+            "index": 57,
+            "startTime": 375.79,
+            "endTime": 376.54,
+            "chunks": [
+                {
+                    "text": "Thank you",
+                    "startTime": 375.79,
+                    "endTime": 376.16,
+                    "index": 192
+                },
+                {
+                    "text": "very much.",
+                    "startTime": 376.17,
+                    "endTime": 376.54,
+                    "index": 193
+                }
+            ]
+        }
+    ]
+}
