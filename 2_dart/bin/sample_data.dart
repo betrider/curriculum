@@ -1,5 +1,8 @@
 // ignore_for_file: unused_field, unused_element, unnecessary_getters_setters
 
+import 'dart:convert';
+import 'dart:isolate';
+
 /// 열거형(요일)
 enum DayOfWeek {
   /// 월요일
@@ -157,9 +160,21 @@ Future<int> sumStream(Stream<int> stream) async {
   return sum;
 }
 
-/// isolate 예제
+/// isolate 예제1
 void entryPointFunction(var msg) {
   print('the message is :$msg');
+}
+
+/// isolate 예제2
+void spawnIsolate(SendPort port) {
+  port.send("Hello!");
+}
+
+/// isolate 예제3
+Future<Map<String, dynamic>> readAndParseJson() async {
+  String jsonString = '{"name": "John", "age": 30, "city": "New York"}';
+  final jsonData = jsonDecode(jsonString) as Map<String, dynamic>;
+  return jsonData;
 }
 
 /// serialize 예제

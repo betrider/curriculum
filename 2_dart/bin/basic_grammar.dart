@@ -603,15 +603,28 @@ void asyncFunction() async {
 }
 
 /// 14.isolate(격리)
-void isolateFunction() {
-  /// isolate(격리)
-  ///
-  /// 앱 내에서 모든 다트 코드는 격리되어 실행됩니다.
-  /// 앱이 하나의(main isolate)만 사용합니다.
-  /// 추가로 isolate를 만들어 여러 프로세서 코어에서 병렬로 코드를 실행할 수 있습니다.(다중 코어 활용)
+///
+/// 앱 내에서 모든 다트 코드는 격리되어 실행됩니다.
+/// 앱이 하나의(main isolate)만 사용합니다.
+/// 추가로 isolate를 만들어 여러 프로세서 코어에서 병렬로 코드를 실행할 수 있습니다.(다중 코어 활용)
+void isolateFunction() async {
+  
+  // 예제1
   Isolate.spawn(entryPointFunction, 'Hello!!');
   Isolate.spawn(entryPointFunction, 'Whats up!!');
   Isolate.spawn(entryPointFunction, 'Welcome!!');
+
+  // 예제2
+  var port = ReceivePort();
+  port.listen((msg) {
+    print("Received message from isolate $msg");
+  });
+  var isolate = await Isolate.spawn(spawnIsolate, port.sendPort);
+  print(isolate.runtimeType);
+
+  // 예제3
+  final jsonData = await Isolate.run(readAndParseJson);
+  print('Number of JSON keys: ${jsonData.length}');
 }
 
 /// 15.null safety(널 안정성)
