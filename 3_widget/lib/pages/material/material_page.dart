@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_widget/context_extension.dart';
 import 'package:flutter_widget/main.dart';
 
 class MaterialComponentsPage extends StatelessWidget {
@@ -16,39 +17,39 @@ class MaterialComponentsPage extends StatelessWidget {
         crossAxisCount: 2,
         children: [
           MyCardWidget(
-            title: 'Actions',
+            title: 'ActionsExample',
             onTap: () {
-              // ...
+              context.pushRelative('ActionsExample');
             },
           ),
           MyCardWidget(
-            title: 'Communication',
+            title: 'CommunicationExample',
             onTap: () {
-              // ...
+              context.pushRelative('CommunicationExample');
             },
           ),
           MyCardWidget(
-            title: 'Containment',
+            title: 'ContainmentExample',
             onTap: () {
-              // ...
+              context.pushRelative('ContainmentExample');
             },
           ),
           MyCardWidget(
-            title: 'Navigation',
+            title: 'NavigationExample',
             onTap: () {
-              // ...
+              context.pushRelative('NavigationExample');
             },
           ),
           MyCardWidget(
-            title: 'Selection',
+            title: 'SelectionExample',
             onTap: () {
-              // ...
+              context.pushRelative('SelectionExample');
             },
           ),
           MyCardWidget(
-            title: 'Text Inputs',
+            title: 'TextInpusExample',
             onTap: () {
-              // ...
+              context.pushRelative('TextInpusExample');
             },
           ),
         ],

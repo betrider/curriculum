@@ -96,6 +96,12 @@ import 'package:flutter_widget/pages/layout/example/sliverWidgets/nested_scroll_
 import 'package:flutter_widget/pages/layout/example/sliverWidgets/nested_scroll_view_example2.dart';
 import 'package:flutter_widget/pages/layout/example/sliverWidgets/sliver_widgets.dart';
 import 'package:flutter_widget/pages/layout/layout_page.dart';
+import 'package:flutter_widget/pages/material/example/actions_example.dart';
+import 'package:flutter_widget/pages/material/example/communication_example.dart';
+import 'package:flutter_widget/pages/material/example/containment_example.dart';
+import 'package:flutter_widget/pages/material/example/navigation_example.dart';
+import 'package:flutter_widget/pages/material/example/selection_example.dart';
+import 'package:flutter_widget/pages/material/example/text_inputs_example.dart';
 import 'package:flutter_widget/pages/material/material_page.dart';
 import 'package:flutter_widget/pages/others/others_page.dart';
 import 'package:flutter_widget/pages/paintingAndEffects/example/backdrop_filter_example.dart';
@@ -569,6 +575,32 @@ final router = GoRouter(
         GoRoute(
           path: 'material',
           builder: (_, __) => const MaterialComponentsPage(),
+          routes: [
+            GoRoute(
+              path: 'ActionsExample',
+              builder: (_, __) => const ActionsExample(),
+            ),
+            GoRoute(
+              path: 'CommunicationExample',
+              builder: (_, __) => const CommunicationExample(),
+            ),
+            GoRoute(
+              path: 'ContainmentExample',
+              builder: (_, __) => const ContainmentExample(),
+            ),
+            GoRoute(
+              path: 'NavigationExample',
+              builder: (_, __) => const NavigationExample(),
+            ),
+            GoRoute(
+              path: 'SelectionExample',
+              builder: (_, __) => const SelectionExample(),
+            ),
+            GoRoute(
+              path: 'TextInpusExample',
+              builder: (_, __) => const TextInpusExample(),
+            ),
+          ],
         ),
         GoRoute(
           path: 'others',
