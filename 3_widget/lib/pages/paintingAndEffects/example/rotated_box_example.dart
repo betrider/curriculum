@@ -7,7 +7,10 @@ class RotatedBoxExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('RotatedBoxExample')),
+      appBar: AppBar(
+        title: const Text('RotatedBoxExample'),
+        centerTitle: true,
+      ),
       body: const Center(
         child: RotatedBox(
           quarterTurns: 3,

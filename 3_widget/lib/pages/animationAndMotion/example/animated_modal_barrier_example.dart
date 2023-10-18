@@ -67,7 +67,10 @@ class _AnimatedModalBarrierExampleState extends State<AnimatedModalBarrierExampl
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('AnimatedModalBarrierExample')),
+      appBar: AppBar(
+        title: const Text('AnimatedModalBarrierExample'),
+        centerTitle: true,
+      ),
       body: Builder(
         builder: (context) => Center(
           child: Padding(

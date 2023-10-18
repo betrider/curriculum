@@ -7,15 +7,20 @@ class DefaultTextStyleExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('DefaultTextStyleExample')),
+      appBar: AppBar(
+        title: const Text('DefaultTextStyleExample'),
+        centerTitle: true,
+      ),
       // Inherit MaterialApp text theme and override font size and font weight.
-      body: DefaultTextStyle.merge(
-        style: const TextStyle(
-          fontSize: 24,
-          fontWeight: FontWeight.bold,
-        ),
-        child: const Center(
-          child: Text('Flutter'),
+      body: Center(
+        child: DefaultTextStyle.merge(
+          style: const TextStyle(
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+          ),
+          child: const Center(
+            child: Text('Flutter'),
+          ),
         ),
       ),
     );

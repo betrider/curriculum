@@ -7,7 +7,10 @@ class OpacityExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('OpacityExample')),
+      appBar: AppBar(
+        title: const Text('OpacityExample'),
+        centerTitle: true,
+      ),
       body: Column(
         children: [
           Image.network(

@@ -10,11 +10,13 @@ class ElevatedButtonExample extends StatefulWidget {
 class _ElevatedButtonExampleState extends State<ElevatedButtonExample> {
   @override
   Widget build(BuildContext context) {
-    final ButtonStyle style =
-        ElevatedButton.styleFrom(textStyle: const TextStyle(fontSize: 20));
+    final ButtonStyle style = ElevatedButton.styleFrom(textStyle: const TextStyle(fontSize: 20));
 
     return Scaffold(
-      appBar: AppBar(title: const Text('ElevatedButtonExample')),
+      appBar: AppBar(
+        title: const Text('ElevatedButtonExample'),
+        centerTitle: true,
+      ),
       body: Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,

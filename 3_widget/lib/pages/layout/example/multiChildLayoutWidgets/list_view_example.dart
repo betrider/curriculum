@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
 
 class ListViewExample extends StatelessWidget {
-  ListViewExample({super.key});
+  const ListViewExample({super.key});
 
-  final List<String> entries = <String>['A', 'B', 'C'];
-  final List<int> colorCodes = <int>[600, 500, 100];
+  static const List<String> entries = <String>['A', 'B', 'C'];
+  static const List<int> colorCodes = <int>[600, 500, 100];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('ListViewExample')),
+      appBar: AppBar(
+        title: const Text('ListViewExample'),
+        centerTitle: true,
+      ),
       body: ListView.separated(
         padding: const EdgeInsets.all(8),
         itemCount: entries.length,

@@ -7,7 +7,10 @@ class DecoratedBoxExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('DecoratedBoxExample')),
+      appBar: AppBar(
+        title: const Text('DecoratedBoxExample'),
+        centerTitle: true,
+      ),
       body: const Center(
         child: DecoratedBox(
           decoration: BoxDecoration(

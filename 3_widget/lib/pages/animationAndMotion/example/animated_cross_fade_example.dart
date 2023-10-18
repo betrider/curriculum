@@ -30,7 +30,10 @@ class AnimatedCrossFadeExampleState extends State<AnimatedCrossFadeExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('AnimatedCrossFadeExample')),
+      appBar: AppBar(
+        title: const Text('AnimatedCrossFadeExample'),
+        centerTitle: true,
+      ),
       body: Center(
         child: AnimatedCrossFade(
           crossFadeState: _crossFadeState,

@@ -17,7 +17,10 @@ class ImplicitlyAnimatedWidgetExampleState extends State<ImplicitlyAnimatedWidge
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('ImplicitlyAnimatedWidgetExample')),
+      appBar: AppBar(
+        title: const Text('ImplicitlyAnimatedWidgetExample'),
+        centerTitle: true,
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: rotate,
         child: const Icon(Icons.rotate_right),

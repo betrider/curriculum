@@ -4,14 +4,12 @@ class RotationTransitionExample extends StatefulWidget {
   const RotationTransitionExample({super.key});
 
   @override
-  State<RotationTransitionExample> createState() =>
-      _RotationTransitionExampleState();
+  State<RotationTransitionExample> createState() => _RotationTransitionExampleState();
 }
 
 /// [AnimationController]s can be created with `vsync: this` because of
 /// [TickerProviderStateMixin].
-class _RotationTransitionExampleState extends State<RotationTransitionExample>
-    with TickerProviderStateMixin {
+class _RotationTransitionExampleState extends State<RotationTransitionExample> with TickerProviderStateMixin {
   late final AnimationController _controller = AnimationController(
     duration: const Duration(seconds: 2),
     vsync: this,
@@ -30,7 +28,10 @@ class _RotationTransitionExampleState extends State<RotationTransitionExample>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('RotationTransitionExample')),
+      appBar: AppBar(
+        title: const Text('RotationTransitionExample'),
+        centerTitle: true,
+      ),
       body: Center(
         child: RotationTransition(
           turns: _animation,

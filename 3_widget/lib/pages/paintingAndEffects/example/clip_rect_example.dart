@@ -8,7 +8,10 @@ class ClipRectExample extends StatelessWidget {
   Widget build(BuildContext context) {
     String imageUrl = 'https://images.unsplash.com/photo-1565898835704-3d6be4a2c98c?fit=crop&w=200&q=60';
     return Scaffold(
-      appBar: AppBar(title: const Text('ClipRectExample')),
+      appBar: AppBar(
+        title: const Text('ClipRectExample'),
+        centerTitle: true,
+      ),
       body: Center(
         child: ClipRect(
           child: Align(

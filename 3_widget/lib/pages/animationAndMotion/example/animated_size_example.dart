@@ -21,7 +21,10 @@ class _AnimatedSizeExampleState extends State<AnimatedSizeExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('AnimatedSizeExample')),
+      appBar: AppBar(
+        title: const Text('AnimatedSizeExample'),
+        centerTitle: true,
+      ),
       body: GestureDetector(
         onTap: () => _updateSize(),
         child: ColoredBox(

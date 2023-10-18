@@ -74,6 +74,7 @@ class _AnimatedListExampleState extends State<AnimatedListExample> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('AnimatedListExample'),
+        centerTitle: true,
         actions: <Widget>[
           IconButton(
             icon: const Icon(Icons.add_circle),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class MaterialAndCupertino extends StatelessWidget {
-  const MaterialAndCupertino({super.key});
+class SingleChildLayoutWidgets extends StatelessWidget {
+  const SingleChildLayoutWidgets({super.key});
 
   @override
   Widget build(BuildContext context) {

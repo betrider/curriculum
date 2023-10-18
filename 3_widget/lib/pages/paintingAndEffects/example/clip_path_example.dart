@@ -8,7 +8,10 @@ class ClipPathExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('ClipPathExample')),
+      appBar: AppBar(
+        title: const Text('ClipPathExample'),
+        centerTitle: true,
+      ),
       body: Center(
         child: ClipPath(
           clipper: BottomWaveClipper(),

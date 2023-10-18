@@ -18,7 +18,10 @@ class _ReorderableListViewExampleState extends State<ReorderableExample> {
     final Color evenItemColor = colorScheme.primary.withOpacity(0.15);
 
     return Scaffold(
-      appBar: AppBar(title: const Text('ReorderableExample')),
+      appBar: AppBar(
+        title: const Text('ReorderableExample'),
+        centerTitle: true,
+      ),
       body: ReorderableListView(
         padding: const EdgeInsets.symmetric(horizontal: 40),
         children: <Widget>[

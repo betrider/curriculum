@@ -6,7 +6,10 @@ class ImageExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('ImageExample')),
+      appBar: AppBar(
+        title: const Text('ImageExample'),
+        centerTitle: true,
+      ),
       body: Center(
         child: Column(
           children: [

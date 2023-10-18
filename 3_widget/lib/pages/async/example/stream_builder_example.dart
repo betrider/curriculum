@@ -26,7 +26,10 @@ class _StreamBuilderExampleState extends State<StreamBuilderExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('StreamBuilderExample')),
+      appBar: AppBar(
+        title: const Text('StreamBuilderExample'),
+        centerTitle: true,
+      ),
       body: DefaultTextStyle(
         style: Theme.of(context).textTheme.displayMedium!,
         textAlign: TextAlign.center,
@@ -105,7 +108,7 @@ class _StreamBuilderExampleState extends State<StreamBuilderExample> {
                     ];
                 }
               }
-    
+
               return Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: children,

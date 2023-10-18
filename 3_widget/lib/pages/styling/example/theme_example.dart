@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 /// 하위 위젯에 테마를 적용합니다. 테마는 애플리케이션의 색상과 인쇄체 선택을 설명합니다.
 class ThemeExample extends StatelessWidget {
-
   const ThemeExample({super.key});
 
   @override
@@ -27,6 +26,7 @@ class ThemeExample extends StatelessWidget {
                   color: Theme.of(context).colorScheme.onSecondary,
                 ),
           ),
+          centerTitle: true,
           backgroundColor: Theme.of(context).colorScheme.secondary,
         ),
         body: Center(

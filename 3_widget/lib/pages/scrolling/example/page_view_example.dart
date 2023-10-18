@@ -8,7 +8,10 @@ class PageViewExample extends StatelessWidget {
   Widget build(BuildContext context) {
     final PageController controller = PageController();
     return Scaffold(
-      appBar: AppBar(title: const Text('PageViewExample')),
+      appBar: AppBar(
+        title: const Text('PageViewExample'),
+        centerTitle: true,
+      ),
       body: PageView(
         /// [PageView.scrollDirection] defaults to [Axis.horizontal].
         /// Use [Axis.vertical] to scroll vertically.

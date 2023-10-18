@@ -13,7 +13,10 @@ class _LongPressDraggableExampleState extends State<LongPressDraggableExample> {
     bool isDropped = false;
     String color = "red";
     return Scaffold(
-      appBar: AppBar(title: const Text('LongPressDraggableExample')),
+      appBar: AppBar(
+        title: const Text('LongPressDraggableExample'),
+        centerTitle: true,
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

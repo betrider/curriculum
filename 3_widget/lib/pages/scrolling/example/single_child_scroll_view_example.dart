@@ -7,7 +7,10 @@ class SingleChildScrollViewExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('SingleChildScrollViewExample')),
+      appBar: AppBar(
+        title: const Text('SingleChildScrollViewExample'),
+        centerTitle: true,
+      ),
       body: DefaultTextStyle(
         style: Theme.of(context).textTheme.bodyMedium!,
         child: LayoutBuilder(

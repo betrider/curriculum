@@ -7,8 +7,7 @@ class SlideTransitionExample extends StatefulWidget {
   State<SlideTransitionExample> createState() => _SlideTransitionExampleState();
 }
 
-class _SlideTransitionExampleState extends State<SlideTransitionExample>
-    with SingleTickerProviderStateMixin {
+class _SlideTransitionExampleState extends State<SlideTransitionExample> with SingleTickerProviderStateMixin {
   late final AnimationController _controller = AnimationController(
     duration: const Duration(seconds: 2),
     vsync: this,
@@ -30,7 +29,10 @@ class _SlideTransitionExampleState extends State<SlideTransitionExample>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('SlideTransitionExample')),
+      appBar: AppBar(
+        title: const Text('SlideTransitionExample'),
+        centerTitle: true,
+      ),
       body: SlideTransition(
         position: _offsetAnimation,
         child: const Padding(

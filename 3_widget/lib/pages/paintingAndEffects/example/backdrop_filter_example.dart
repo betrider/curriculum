@@ -9,7 +9,10 @@ class BackdropFilterExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('BackdropFilterExample')),
+      appBar: AppBar(
+        title: const Text('BackdropFilterExample'),
+        centerTitle: true,
+      ),
       body: Stack(
         fit: StackFit.expand,
         children: <Widget>[

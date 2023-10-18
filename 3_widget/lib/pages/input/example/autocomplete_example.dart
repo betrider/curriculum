@@ -12,7 +12,10 @@ class AutocompleteBasicExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('AutocompleteBasicExample')),
+      appBar: AppBar(
+        title: const Text('AutocompleteBasicExample'),
+        centerTitle: true,
+      ),
       body: Autocomplete<String>(
         optionsBuilder: (TextEditingValue textEditingValue) {
           if (textEditingValue.text == '') {

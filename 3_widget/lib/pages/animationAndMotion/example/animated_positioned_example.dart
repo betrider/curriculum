@@ -13,7 +13,10 @@ class _AnimatedPositionedExampleState extends State<AnimatedPositionedExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('AnimatedPositionedExample')),
+      appBar: AppBar(
+        title: const Text('AnimatedPositionedExample'),
+        centerTitle: true,
+      ),
       body: SizedBox(
         width: 200,
         height: 350,

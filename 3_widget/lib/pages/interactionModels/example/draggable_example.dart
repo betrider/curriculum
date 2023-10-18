@@ -13,7 +13,10 @@ class _DraggableExampleState extends State<DraggableExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('DraggableExample')),
+      appBar: AppBar(
+        title: const Text('DraggableExample'),
+        centerTitle: true,
+      ),
       body: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[

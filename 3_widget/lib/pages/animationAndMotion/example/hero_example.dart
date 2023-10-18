@@ -6,7 +6,10 @@ class HeroExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('HeroExample')),
+      appBar: AppBar(
+        title: const Text('HeroExample'),
+        centerTitle: true,
+      ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[

@@ -48,7 +48,10 @@ class _DecoratedBoxTransitionExampleState extends State<DecoratedBoxTransitionEx
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('DecoratedBoxTransitionExample')),
+      appBar: AppBar(
+        title: const Text('DecoratedBoxTransitionExample'),
+        centerTitle: true,
+      ),
       body: ColoredBox(
         color: Colors.white,
         child: Center(

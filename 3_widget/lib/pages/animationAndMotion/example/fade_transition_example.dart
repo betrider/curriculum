@@ -9,8 +9,7 @@ class FadeTransitionExample extends StatefulWidget {
 
 /// [AnimationController]s can be created with `vsync: this` because of
 /// [TickerProviderStateMixin].
-class _FadeTransitionExampleState extends State<FadeTransitionExample>
-    with TickerProviderStateMixin {
+class _FadeTransitionExampleState extends State<FadeTransitionExample> with TickerProviderStateMixin {
   late final AnimationController _controller = AnimationController(
     duration: const Duration(seconds: 2),
     vsync: this,
@@ -29,7 +28,10 @@ class _FadeTransitionExampleState extends State<FadeTransitionExample>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('FadeTransitionExample')),
+      appBar: AppBar(
+        title: const Text('FadeTransitionExample'),
+        centerTitle: true,
+      ),
       body: ColoredBox(
         color: Colors.white,
         child: FadeTransition(

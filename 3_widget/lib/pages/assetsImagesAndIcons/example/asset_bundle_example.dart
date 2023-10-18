@@ -9,11 +9,17 @@ class AssetBundleExample extends StatelessWidget {
     // bundle.loadString('asset/configure.json');
 
     return Scaffold(
-      appBar: AppBar(title: const Text('AssetBundleExample')),
-      body: const Column(
-        children: [
-          Image(image: AssetImage('assets/images/hamilton.jpeg')),
-        ],
+      appBar: AppBar(
+        title: const Text('AssetBundleExample'),
+        centerTitle: true,
+      ),
+      body: const Center(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Image(image: AssetImage('assets/images/hamilton.jpeg')),
+          ],
+        ),
       ),
     );
   }

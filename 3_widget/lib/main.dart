@@ -1,18 +1,106 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widget/pages/accessibility/accessibility.dart';
-import 'package:flutter_widget/pages/animationAndMotion/animation_and_motion.dart';
-import 'package:flutter_widget/pages/assetsImagesAndIcons/assets_images_and_icons.dart';
-import 'package:flutter_widget/pages/async/async.dart';
-import 'package:flutter_widget/pages/basics/basics.dart';
-import 'package:flutter_widget/pages/input/input.dart';
-import 'package:flutter_widget/pages/interactionModels/interaction_models.dart';
-import 'package:flutter_widget/pages/layout/layout.dart';
-import 'package:flutter_widget/pages/materialAndCupertino/material_and_cupertino.dart';
-import 'package:flutter_widget/pages/others/others.dart';
-import 'package:flutter_widget/pages/paintingAndEffects/painting_and_effects.dart';
-import 'package:flutter_widget/pages/scrolling/scrolling.dart';
-import 'package:flutter_widget/pages/styling/styling.dart';
-import 'package:flutter_widget/pages/text/text.dart';
+import 'package:flutter_widget/pages/accessibility/accessibility_page.dart';
+import 'package:flutter_widget/pages/accessibility/example/exclude_semantics_example.dart';
+import 'package:flutter_widget/pages/accessibility/example/merge_semantics_example.dart';
+import 'package:flutter_widget/pages/accessibility/example/semantics_example.dart';
+import 'package:flutter_widget/pages/animationAndMotion/animation_and_motion_page.dart';
+import 'package:flutter_widget/pages/animationAndMotion/example/animated_align_example.dart';
+import 'package:flutter_widget/pages/animationAndMotion/example/animated_builder_example.dart';
+import 'package:flutter_widget/pages/animationAndMotion/example/animated_container_example.dart';
+import 'package:flutter_widget/pages/animationAndMotion/example/animated_cross_fade_example.dart';
+import 'package:flutter_widget/pages/animationAndMotion/example/animated_default_text_style_example.dart';
+import 'package:flutter_widget/pages/animationAndMotion/example/animated_list_example.dart';
+import 'package:flutter_widget/pages/animationAndMotion/example/animated_list_state_example.dart';
+import 'package:flutter_widget/pages/animationAndMotion/example/animated_modal_barrier_example.dart';
+import 'package:flutter_widget/pages/animationAndMotion/example/animated_opacity_example.dart';
+import 'package:flutter_widget/pages/animationAndMotion/example/animated_physical_model_example.dart';
+import 'package:flutter_widget/pages/animationAndMotion/example/animated_positioned_example.dart';
+import 'package:flutter_widget/pages/animationAndMotion/example/animated_size_example.dart';
+import 'package:flutter_widget/pages/animationAndMotion/example/animated_widget_example.dart';
+import 'package:flutter_widget/pages/animationAndMotion/example/decorated_box_transition_example.dart';
+import 'package:flutter_widget/pages/animationAndMotion/example/fade_transition_example.dart';
+import 'package:flutter_widget/pages/animationAndMotion/example/hero_example.dart';
+import 'package:flutter_widget/pages/animationAndMotion/example/implicitly_animated_widget_example.dart';
+import 'package:flutter_widget/pages/animationAndMotion/example/positioned_transition_example.dart';
+import 'package:flutter_widget/pages/animationAndMotion/example/rotation_transition_example.dart';
+import 'package:flutter_widget/pages/animationAndMotion/example/scale_transition_example.dart';
+import 'package:flutter_widget/pages/animationAndMotion/example/size_transition_example.dart';
+import 'package:flutter_widget/pages/animationAndMotion/example/slide_transition_example.dart';
+import 'package:flutter_widget/pages/assetsImagesAndIcons/assets_images_and_icons_page.dart';
+import 'package:flutter_widget/pages/assetsImagesAndIcons/example/asset_bundle_example.dart';
+import 'package:flutter_widget/pages/assetsImagesAndIcons/example/raw_image_example.dart';
+import 'package:flutter_widget/pages/async/async_page.dart';
+import 'package:flutter_widget/pages/async/example/future_builder_example.dart';
+import 'package:flutter_widget/pages/async/example/stream_builder_example.dart';
+import 'package:flutter_widget/pages/basics/basics_page.dart';
+import 'package:flutter_widget/pages/basics/example/app_bar_example.dart';
+import 'package:flutter_widget/pages/basics/example/column_example.dart';
+import 'package:flutter_widget/pages/basics/example/container_example.dart';
+import 'package:flutter_widget/pages/basics/example/elevated_button_example.dart';
+import 'package:flutter_widget/pages/basics/example/flutter_logo_example.dart';
+import 'package:flutter_widget/pages/basics/example/icon_example.dart';
+import 'package:flutter_widget/pages/basics/example/image_example.dart';
+import 'package:flutter_widget/pages/basics/example/outlined_button_example.dart';
+import 'package:flutter_widget/pages/basics/example/placeholder_example.dart';
+import 'package:flutter_widget/pages/basics/example/row_example.dart';
+import 'package:flutter_widget/pages/basics/example/scaffold_example.dart';
+import 'package:flutter_widget/pages/basics/example/text_button_example.dart';
+import 'package:flutter_widget/pages/basics/example/text_example.dart';
+import 'package:flutter_widget/pages/cupertino/cupertino_page.dart';
+import 'package:flutter_widget/pages/input/example/autocomplete_example.dart';
+import 'package:flutter_widget/pages/input/example/form_example.dart';
+import 'package:flutter_widget/pages/input/example/form_field_example.dart';
+import 'package:flutter_widget/pages/input/example/raw_keyboard_listener.dart';
+import 'package:flutter_widget/pages/input/input_page.dart';
+import 'package:flutter_widget/pages/interactionModels/example/absorb_pointer_example.dart';
+import 'package:flutter_widget/pages/interactionModels/example/dismissible_example.dart';
+import 'package:flutter_widget/pages/interactionModels/example/drag_target_example.dart';
+import 'package:flutter_widget/pages/interactionModels/example/draggable_example.dart';
+import 'package:flutter_widget/pages/interactionModels/example/draggable_scrollable_sheet_example.dart';
+import 'package:flutter_widget/pages/interactionModels/example/gesture_detector_example.dart';
+import 'package:flutter_widget/pages/interactionModels/example/ignore_pointer_example.dart';
+import 'package:flutter_widget/pages/interactionModels/example/interactive_viewer_example.dart';
+import 'package:flutter_widget/pages/interactionModels/example/long_press_draggable_example.dart';
+import 'package:flutter_widget/pages/interactionModels/example/scrollable_example.dart';
+import 'package:flutter_widget/pages/interactionModels/interaction_models_page.dart';
+import 'package:flutter_widget/pages/layout/example/multiChildLayoutWidgets/grid_view_example.dart';
+import 'package:flutter_widget/pages/layout/example/multiChildLayoutWidgets/list_view_example.dart';
+import 'package:flutter_widget/pages/layout/example/multiChildLayoutWidgets/multi_child_layout_widgets.dart';
+import 'package:flutter_widget/pages/layout/example/singleChildLayoutWidgets/padding_example.dart';
+import 'package:flutter_widget/pages/layout/example/singleChildLayoutWidgets/single_child_layout_widgets.dart';
+import 'package:flutter_widget/pages/layout/example/singleChildLayoutWidgets/transform_example.dart';
+import 'package:flutter_widget/pages/layout/example/sliverWidgets/custom_scroll_view_example.dart';
+import 'package:flutter_widget/pages/layout/example/sliverWidgets/nested_scroll_view_example.dart';
+import 'package:flutter_widget/pages/layout/example/sliverWidgets/sliver_widgets.dart';
+import 'package:flutter_widget/pages/layout/layout_page.dart';
+import 'package:flutter_widget/pages/material/material_page.dart';
+import 'package:flutter_widget/pages/others/others_page.dart';
+import 'package:flutter_widget/pages/paintingAndEffects/example/backdrop_filter_example.dart';
+import 'package:flutter_widget/pages/paintingAndEffects/example/clip_oval_example.dart';
+import 'package:flutter_widget/pages/paintingAndEffects/example/clip_path_example.dart';
+import 'package:flutter_widget/pages/paintingAndEffects/example/clip_r_rect_example.dart';
+import 'package:flutter_widget/pages/paintingAndEffects/example/clip_rect_example.dart';
+import 'package:flutter_widget/pages/paintingAndEffects/example/color_filter_example.dart';
+import 'package:flutter_widget/pages/paintingAndEffects/example/custom_paint_example.dart';
+import 'package:flutter_widget/pages/paintingAndEffects/example/decorated_box_example.dart';
+import 'package:flutter_widget/pages/paintingAndEffects/example/fractional_translation_example.dart';
+import 'package:flutter_widget/pages/paintingAndEffects/example/opacity_example.dart';
+import 'package:flutter_widget/pages/paintingAndEffects/example/rotated_box_example.dart';
+import 'package:flutter_widget/pages/paintingAndEffects/painting_and_effects_page.dart';
+import 'package:flutter_widget/pages/scrolling/example/notification_listener_example.dart';
+import 'package:flutter_widget/pages/scrolling/example/page_view_example.dart';
+import 'package:flutter_widget/pages/scrolling/example/refresh_indicator_example.dart';
+import 'package:flutter_widget/pages/scrolling/example/reorderable_list_view_example.dart';
+import 'package:flutter_widget/pages/scrolling/example/scroll_configuration_example.dart';
+import 'package:flutter_widget/pages/scrolling/example/scrollbar_example.dart';
+import 'package:flutter_widget/pages/scrolling/example/single_child_scroll_view_example.dart';
+import 'package:flutter_widget/pages/scrolling/scrolling_page.dart';
+import 'package:flutter_widget/pages/styling/example/media_query_example.dart';
+import 'package:flutter_widget/pages/styling/example/theme_example.dart';
+import 'package:flutter_widget/pages/styling/styling_page.dart';
+import 'package:flutter_widget/pages/text/example/default_text_style_example.dart';
+import 'package:flutter_widget/pages/text/example/rich_text_example.dart';
+import 'package:flutter_widget/pages/text/text_page.dart';
 import 'package:go_router/go_router.dart';
 import 'package:random_color/random_color.dart';
 
@@ -27,59 +115,455 @@ final router = GoRouter(
       routes: [
         GoRoute(
           path: 'accessibility',
-          builder: (_, __) => const AccessibilityWidget(),
+          builder: (_, __) => const AccessibilityPage(),
+          routes: [
+            GoRoute(
+              path: 'ExcludeSemanticsExample',
+              builder: (_, __) => const ExcludeSemanticsExample(),
+            ),
+            GoRoute(
+              path: 'MergeSemanticsExample',
+              builder: (_, __) => const MergeSemanticsExample(),
+            ),
+            GoRoute(
+              path: 'SemanticsExample',
+              builder: (_, __) => const SemanticsExample(),
+            ),
+          ],
         ),
         GoRoute(
           path: 'animation',
-          builder: (_, __) => const AnimationAndMotionWidget(),
+          builder: (_, __) => const AnimationAndMotionPage(),
+          routes: [
+            GoRoute(
+              path: 'AnimatedAlignExample',
+              builder: (_, __) => const AnimatedAlignExample(),
+            ),
+            GoRoute(
+              path: 'AnimatedBuilderExample',
+              builder: (_, __) => const AnimatedBuilderExample(),
+            ),
+            GoRoute(
+              path: 'AnimatedContainerExample',
+              builder: (_, __) => const AnimatedContainerExample(),
+            ),
+            GoRoute(
+              path: 'AnimatedCrossFadeExample',
+              builder: (_, __) => const AnimatedCrossFadeExample(),
+            ),
+            GoRoute(
+              path: 'AnimatedDefaultTextStyleExample',
+              builder: (_, __) => const AnimatedDefaultTextStyleExample(),
+            ),
+            GoRoute(
+              path: 'AnimatedListExample',
+              builder: (_, __) => const AnimatedListExample(),
+            ),
+            GoRoute(
+              path: 'AnimatedListStateExample',
+              builder: (_, __) => const AnimatedListStateExample(),
+            ),
+            GoRoute(
+              path: 'AnimatedModalBarrierExample',
+              builder: (_, __) => const AnimatedModalBarrierExample(),
+            ),
+            GoRoute(
+              path: 'AnimatedOpacityExample',
+              builder: (_, __) => const AnimatedOpacityExample(),
+            ),
+            GoRoute(
+              path: 'AnimatedPhysicalModelExample',
+              builder: (_, __) => const AnimatedPhysicalModelExample(),
+            ),
+            GoRoute(
+              path: 'AnimatedPositionedExample',
+              builder: (_, __) => const AnimatedPositionedExample(),
+            ),
+            GoRoute(
+              path: 'AnimatedSizeExample',
+              builder: (_, __) => const AnimatedSizeExample(),
+            ),
+            GoRoute(
+              path: 'AnimatedWidgetExample',
+              builder: (_, __) => const AnimatedWidgetExample(),
+            ),
+            GoRoute(
+              path: 'DecoratedBoxTransitionExample',
+              builder: (_, __) => const DecoratedBoxTransitionExample(),
+            ),
+            GoRoute(
+              path: 'FadeTransitionExample',
+              builder: (_, __) => const FadeTransitionExample(),
+            ),
+            GoRoute(
+              path: 'HeroExample',
+              builder: (_, __) => const HeroExample(),
+            ),
+            GoRoute(
+              path: 'ImplicitlyAnimatedWidgetExample',
+              builder: (_, __) => const ImplicitlyAnimatedWidgetExample(),
+            ),
+            GoRoute(
+              path: 'PositionedTransitionExample',
+              builder: (_, __) => const PositionedTransitionExample(),
+            ),
+            GoRoute(
+              path: 'RotationTransitionExample',
+              builder: (_, __) => const RotationTransitionExample(),
+            ),
+            GoRoute(
+              path: 'ScaleTransitionExample',
+              builder: (_, __) => const ScaleTransitionExample(),
+            ),
+            GoRoute(
+              path: 'SizeTransitionExample',
+              builder: (_, __) => const SizeTransitionExample(),
+            ),
+            GoRoute(
+              path: 'SlideTransitionExample',
+              builder: (_, __) => const SlideTransitionExample(),
+            ),
+          ],
         ),
         GoRoute(
           path: 'assets',
-          builder: (_, __) => const AssetsImagesAndIconsWidget(),
+          builder: (_, __) => const AssetsImagesAndIconsPage(),
+          routes: [
+            GoRoute(
+              path: 'AssetBundleExample',
+              builder: (_, __) => const AssetBundleExample(),
+            ),
+            GoRoute(
+              path: 'IconExample',
+              builder: (_, __) => const IconExample(),
+            ),
+            GoRoute(
+              path: 'ImageExample',
+              builder: (_, __) => const ImageExample(),
+            ),
+            GoRoute(
+              path: 'RawImageExample',
+              builder: (_, __) => const RawImageExample(),
+            ),
+          ],
         ),
         GoRoute(
           path: 'async',
-          builder: (_, __) => const AsyncWidget(),
+          builder: (_, __) => const AsyncPage(),
+          routes: [
+            GoRoute(
+              path: 'FutureBuilderExample',
+              builder: (_, __) => const FutureBuilderExample(),
+            ),
+            GoRoute(
+              path: 'StreamBuilderExample',
+              builder: (_, __) => const StreamBuilderExample(),
+            ),
+          ],
         ),
         GoRoute(
           path: 'basics',
-          builder: (_, __) => const BasicsWidget(),
+          builder: (_, __) => const BasicsPage(),
+          routes: [
+            GoRoute(
+              path: 'AppBarExample',
+              builder: (_, __) => const AppBarExample(),
+            ),
+            GoRoute(
+              path: 'ColumnExample',
+              builder: (_, __) => const ColumnExample(),
+            ),
+            GoRoute(
+              path: 'ContainerExample',
+              builder: (_, __) => const ContainerExample(),
+            ),
+            GoRoute(
+              path: 'ElevatedButtonExample',
+              builder: (_, __) => const ElevatedButtonExample(),
+            ),
+            GoRoute(
+              path: 'FlutterLogoExample',
+              builder: (_, __) => const FlutterLogoExample(),
+            ),
+            GoRoute(
+              path: 'IconExample',
+              builder: (_, __) => const IconExample(),
+            ),
+            GoRoute(
+              path: 'ImageExample',
+              builder: (_, __) => const ImageExample(),
+            ),
+            GoRoute(
+              path: 'OutlinedButtonExample',
+              builder: (_, __) => const OutlinedButtonExample(),
+            ),
+            GoRoute(
+              path: 'PlaceholderExample',
+              builder: (_, __) => const PlaceholderExample(),
+            ),
+            GoRoute(
+              path: 'RowExample',
+              builder: (_, __) => const RowExample(),
+            ),
+            GoRoute(
+              path: 'ScaffoldExample',
+              builder: (_, __) => const ScaffoldExample(),
+            ),
+            GoRoute(
+              path: 'TextButtonExample',
+              builder: (_, __) => const TextButtonExample(),
+            ),
+            GoRoute(
+              path: 'TextExample',
+              builder: (_, __) => const TextExample(),
+            ),
+          ],
         ),
         GoRoute(
-          path: 'materialAndCupertino',
-          builder: (_, __) => const MaterialAndCupertino(),
+          path: 'cupertino',
+          builder: (_, __) => const CupertinoComponentsPage(),
         ),
         GoRoute(
           path: 'input',
-          builder: (_, __) => const InputWidget(),
+          builder: (_, __) => const InputPage(),
+          routes: [
+            GoRoute(
+              path: 'AutocompleteBasicExample',
+              builder: (_, __) => const AutocompleteBasicExample(),
+            ),
+            GoRoute(
+              path: 'FormExample',
+              builder: (_, __) => const FormExample(),
+            ),
+            GoRoute(
+              path: 'FormFieldExample',
+              builder: (_, __) => const FormFieldExample(),
+            ),
+            GoRoute(
+              path: 'KeyboardListenerExample',
+              builder: (_, __) => const KeyboardListenerExample(),
+            ),
+          ],
         ),
         GoRoute(
           path: 'interaction',
-          builder: (_, __) => const InteractionModelsWidget(),
+          builder: (_, __) => const InteractionModelsPage(),
+          routes: [
+            GoRoute(
+              path: 'AbsorbPointerExample',
+              builder: (_, __) => const AbsorbPointerExample(),
+            ),
+            GoRoute(
+              path: 'DismissibleExample',
+              builder: (_, __) => const DismissibleExample(),
+            ),
+            GoRoute(
+              path: 'DragTargetExample',
+              builder: (_, __) => const DragTargetExample(),
+            ),
+            GoRoute(
+              path: 'DraggableExample',
+              builder: (_, __) => const DraggableExample(),
+            ),
+            GoRoute(
+              path: 'DraggableScrollableSheetExample',
+              builder: (_, __) => const DraggableScrollableSheetExample(),
+            ),
+            GoRoute(
+              path: 'GestureDetectorExample',
+              builder: (_, __) => const GestureDetectorExample(),
+            ),
+            GoRoute(
+              path: 'IgnorePointerExample',
+              builder: (_, __) => const IgnorePointerExample(),
+            ),
+            GoRoute(
+              path: 'InteractiveViewerExample',
+              builder: (_, __) => const InteractiveViewerExample(),
+            ),
+            GoRoute(
+              path: 'LongPressDraggableExample',
+              builder: (_, __) => const LongPressDraggableExample(),
+            ),
+            GoRoute(
+              path: 'ScrollableExample',
+              builder: (_, __) => const ScrollableExample(),
+            ),
+          ],
         ),
         GoRoute(
           path: 'layout',
-          builder: (_, __) => const LayoutWidget(),
+          builder: (_, __) => const LayoutPage(),
+          routes: [
+            GoRoute(
+              path: 'MultiChildLayoutWidgets',
+              builder: (_, __) => const MultiChildLayoutWidgets(),
+            ),
+            GoRoute(
+              path: 'SingleChildLayoutWidgets',
+              builder: (_, __) => const SingleChildLayoutWidgets(),
+            ),
+            GoRoute(
+              path: 'SliverWidgets',
+              builder: (_, __) => const SliverWidgets(),
+            ),
+          ],
         ),
         GoRoute(
-          path: 'painting',
-          builder: (_, __) => const PaintingAndEffectsWidget(),
-        ),
-        GoRoute(
-          path: 'scrolling',
-          builder: (_, __) => const ScrollingWidget(),
-        ),
-        GoRoute(
-          path: 'styling',
-          builder: (_, __) => const StylingWidget(),
-        ),
-        GoRoute(
-          path: 'text',
-          builder: (_, __) => const TextWidget(),
+          path: 'material',
+          builder: (_, __) => const MaterialComponentsPage(),
         ),
         GoRoute(
           path: 'others',
-          builder: (_, __) => const OthersWidget(),
+          builder: (_, __) => const OthersPage(),
+        ),
+        GoRoute(
+          path: 'painting',
+          builder: (_, __) => const PaintingAndEffectsPage(),
+          routes: [
+            GoRoute(
+              path: 'BackdropFilterExample',
+              builder: (_, __) => const BackdropFilterExample(),
+            ),
+            GoRoute(
+              path: 'ClipOvalExample',
+              builder: (_, __) => const ClipOvalExample(),
+            ),
+            GoRoute(
+              path: 'ClipPathExample',
+              builder: (_, __) => const ClipPathExample(),
+            ),
+            GoRoute(
+              path: 'ClipRRectExample',
+              builder: (_, __) => const ClipRRectExample(),
+            ),
+            GoRoute(
+              path: 'ClipRectExample',
+              builder: (_, __) => const ClipRectExample(),
+            ),
+            GoRoute(
+              path: 'ColorFilteredExample',
+              builder: (_, __) => const ColorFilteredExample(),
+            ),
+            GoRoute(
+              path: 'CustomPaintExample',
+              builder: (_, __) => const CustomPaintExample(),
+            ),
+            GoRoute(
+              path: 'DecoratedBoxExample',
+              builder: (_, __) => const DecoratedBoxExample(),
+            ),
+            GoRoute(
+              path: 'FractionalTranslationExample',
+              builder: (_, __) => const FractionalTranslationExample(),
+            ),
+            GoRoute(
+              path: 'OpacityExample',
+              builder: (_, __) => const OpacityExample(),
+            ),
+            GoRoute(
+              path: 'RotatedBoxExample',
+              builder: (_, __) => const RotatedBoxExample(),
+            ),
+            GoRoute(
+              path: 'TransformExample',
+              builder: (_, __) => const TransformExample(),
+            ),
+          ],
+        ),
+        GoRoute(
+          path: 'scrolling',
+          builder: (_, __) => const ScrollingPage(),
+          routes: [
+            GoRoute(
+              path: 'CustomScrollViewExample',
+              builder: (_, __) => const CustomScrollViewExample(),
+            ),
+            GoRoute(
+              path: 'DraggableScrollableSheetExample',
+              builder: (_, __) => const DraggableScrollableSheetExample(),
+            ),
+            GoRoute(
+              path: 'GridViewExample',
+              builder: (_, __) => const GridViewExample(),
+            ),
+            GoRoute(
+              path: 'ListViewExample',
+              builder: (_, __) => const ListViewExample(),
+            ),
+            GoRoute(
+              path: 'NestedScrollViewExample',
+              builder: (_, __) => const NestedScrollViewExample(),
+            ),
+            GoRoute(
+              path: 'NotificationListenerExample',
+              builder: (_, __) => const NotificationListenerExample(),
+            ),
+            GoRoute(
+              path: 'PageViewExample',
+              builder: (_, __) => const PageViewExample(),
+            ),
+            GoRoute(
+              path: 'RefreshIndicatorExample',
+              builder: (_, __) => const RefreshIndicatorExample(),
+            ),
+            GoRoute(
+              path: 'ReorderableExample',
+              builder: (_, __) => const ReorderableExample(),
+            ),
+            GoRoute(
+              path: 'ScrollConfigurationExample',
+              builder: (_, __) => const ScrollConfigurationExample(),
+            ),
+            GoRoute(
+              path: 'ScrollableExample',
+              builder: (_, __) => const ScrollableExample(),
+            ),
+            GoRoute(
+              path: 'ScrollbarExample',
+              builder: (_, __) => const ScrollbarExample(),
+            ),
+            GoRoute(
+              path: 'SingleChildScrollViewExample',
+              builder: (_, __) => const SingleChildScrollViewExample(),
+            ),
+          ],
+        ),
+        GoRoute(
+          path: 'styling',
+          builder: (_, __) => const StylingPage(),
+          routes: [
+            GoRoute(
+              path: 'MediaQueryExample',
+              builder: (_, __) => const MediaQueryExample(),
+            ),
+            GoRoute(
+              path: 'PaddingExample',
+              builder: (_, __) => const PaddingExample(),
+            ),
+            GoRoute(
+              path: 'ThemeExample',
+              builder: (_, __) => const ThemeExample(),
+            ),
+          ],
+        ),
+        GoRoute(
+          path: 'text',
+          builder: (_, __) => const TextPage(),
+          routes: [
+            GoRoute(
+              path: 'DefaultTextStyleExample',
+              builder: (_, __) => const DefaultTextStyleExample(),
+            ),
+            GoRoute(
+              path: 'RichTextExample',
+              builder: (_, __) => const RichTextExample(),
+            ),
+            GoRoute(
+              path: 'TextExample',
+              builder: (_, __) => const TextExample(),
+            ),
+          ],
         ),
       ],
     ),
@@ -93,7 +577,6 @@ class MainScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var randomColor = RandomColor();
     return Scaffold(
       appBar: AppBar(title: const Text('Main Screen')),
       body: GridView.count(
@@ -103,247 +586,132 @@ class MainScreen extends StatelessWidget {
         mainAxisSpacing: 4,
         crossAxisCount: 2,
         children: [
-          InkWell(
-            onTap: (){
+          MyCardWidget(
+            title: '접근성',
+            onTap: () {
               context.push('/accessibility');
             },
-            child: Container(
-              padding: const EdgeInsets.all(20),
-              decoration: BoxDecoration(border: Border.all(color: randomColor.randomColor(), width: 2)),
-              child: const Center(
-                child: Text(
-                  'Accessibility',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 24),
-                ),
-              ),
-            ),
           ),
-          InkWell(
-            onTap: (){
+          MyCardWidget(
+            title: '애니메이션',
+            onTap: () {
               context.push('/animation');
             },
-            child: Container(
-              padding: const EdgeInsets.all(20),
-              decoration: BoxDecoration(border: Border.all(color: randomColor.randomColor(), width: 2)),
-              child: const Center(
-                child: Text(
-                  'Animation and motion widgets',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 24),
-                ),
-              ),
-            ),
           ),
-          InkWell(
-            onTap: (){
+          MyCardWidget(
+            title: '자산',
+            onTap: () {
               context.push('/assets');
             },
-            child: Container(
-              padding: const EdgeInsets.all(20),
-              decoration: BoxDecoration(border: Border.all(color: randomColor.randomColor(), width: 2)),
-              child: const Center(
-                child: Text(
-                  'Assets, Images, and Icons',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 24),
-                ),
-              ),
-            ),
           ),
-          InkWell(
-            onTap: (){
+          MyCardWidget(
+            title: '비동기',
+            onTap: () {
               context.push('/async');
             },
-            child: Container(
-              padding: const EdgeInsets.all(20),
-              decoration: BoxDecoration(border: Border.all(color: randomColor.randomColor(), width: 2)),
-              child: const Center(
-                child: Text(
-                  'Async',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 24),
-                ),
-              ),
-            ),
           ),
-          InkWell(
-            onTap: (){
+          MyCardWidget(
+            title: '기초',
+            onTap: () {
               context.push('/basics');
             },
-            child: Container(
-              padding: const EdgeInsets.all(20),
-              decoration: BoxDecoration(border: Border.all(color: randomColor.randomColor(), width: 2)),
-              child: const Center(
-                child: Text(
-                  'Basics',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 24),
-                ),
-              ),
-            ),
           ),
-          InkWell(
-            onTap: (){
-              context.push('/cupertino');
-            },
-            child: Container(
-              padding: const EdgeInsets.all(20),
-              decoration: BoxDecoration(border: Border.all(color: randomColor.randomColor(), width: 2)),
-              child: const Center(
-                child: Text(
-                  'Cupertino (iOS-style widgets)',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 24),
-                ),
-              ),
-            ),
-          ),
-          InkWell(
-            onTap: (){
-              context.push('/input');
-            },
-            child: Container(
-              padding: const EdgeInsets.all(20),
-              decoration: BoxDecoration(border: Border.all(color: randomColor.randomColor(), width: 2)),
-              child: const Center(
-                child: Text(
-                  'Input',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 24),
-                ),
-              ),
-            ),
-          ),
-          InkWell(
-            onTap: (){
-              context.push('/interaction');
-            },
-            child: Container(
-              padding: const EdgeInsets.all(20),
-              decoration: BoxDecoration(border: Border.all(color: randomColor.randomColor(), width: 2)),
-              child: const Center(
-                child: Text(
-                  'Interaction Models',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 24),
-                ),
-              ),
-            ),
-          ),
-          InkWell(
-            onTap: (){
-              context.push('/layout');
-            },
-            child: Container(
-              padding: const EdgeInsets.all(20),
-              decoration: BoxDecoration(border: Border.all(color: randomColor.randomColor(), width: 2)),
-              child: const Center(
-                child: Text(
-                  'Layout',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 24),
-                ),
-              ),
-            ),
-          ),
-          InkWell(
-            onTap: (){
+          MyCardWidget(
+            title: '머티리얼',
+            onTap: () {
               context.push('/material');
             },
-            child: Container(
-              padding: const EdgeInsets.all(20),
-              decoration: BoxDecoration(border: Border.all(color: randomColor.randomColor(), width: 2)),
-              child: const Center(
-                child: Text(
-                  'Material Components',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 24),
-                ),
-              ),
-            ),
           ),
-          InkWell(
-            onTap: (){
+          MyCardWidget(
+            title: '쿠퍼티노',
+            onTap: () {
+              context.push('/cupertino');
+            },
+          ),
+          MyCardWidget(
+            title: '입력',
+            onTap: () {
+              context.push('/input');
+            },
+          ),
+          MyCardWidget(
+            title: '상호작용',
+            onTap: () {
+              context.push('/interaction');
+            },
+          ),
+          MyCardWidget(
+            title: '구성',
+            onTap: () {
+              context.push('/layout');
+            },
+          ),
+          MyCardWidget(
+            title: '그리기',
+            onTap: () {
               context.push('/painting');
             },
-            child: Container(
-              padding: const EdgeInsets.all(20),
-              decoration: BoxDecoration(border: Border.all(color: randomColor.randomColor(), width: 2)),
-              child: const Center(
-                child: Text(
-                  'Painting and effects',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 24),
-                ),
-              ),
-            ),
           ),
-          InkWell(
-            onTap: (){
+          MyCardWidget(
+            title: '스크롤',
+            onTap: () {
               context.push('/scrolling');
             },
-            child: Container(
-              padding: const EdgeInsets.all(20),
-              decoration: BoxDecoration(border: Border.all(color: randomColor.randomColor(), width: 2)),
-              child: const Center(
-                child: Text(
-                  'Scrolling',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 24),
-                ),
-              ),
-            ),
           ),
-          InkWell(
-            onTap: (){
+          MyCardWidget(
+            title: '스타일링',
+            onTap: () {
               context.push('/styling');
             },
-            child: Container(
-              padding: const EdgeInsets.all(20),
-              decoration: BoxDecoration(border: Border.all(color: randomColor.randomColor(), width: 2)),
-              child: const Center(
-                child: Text(
-                  'Styling',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 24),
-                ),
-              ),
-            ),
           ),
-          InkWell(
-            onTap: (){
+          MyCardWidget(
+            title: '텍스트',
+            onTap: () {
               context.push('/text');
             },
-            child: Container(
-              padding: const EdgeInsets.all(20),
-              decoration: BoxDecoration(border: Border.all(color: randomColor.randomColor(), width: 2)),
-              child: const Center(
-                child: Text(
-                  'Text',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 24),
-                ),
-              ),
-            ),
           ),
-          InkWell(
-            onTap: (){
+          MyCardWidget(
+            title: '기타',
+            onTap: () {
               context.push('/others');
             },
-            child: Container(
-              padding: const EdgeInsets.all(20),
-              decoration: BoxDecoration(border: Border.all(color: randomColor.randomColor(), width: 2)),
-              child: const Center(
-                child: Text(
-                  'Others',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 24),
-                ),
-              ),
-            ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class MyCardWidget extends StatelessWidget {
+  const MyCardWidget({
+    super.key,
+    required this.title,
+    required this.onTap,
+  });
+
+  final String title;
+  final void Function() onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    var randomColor = RandomColor();
+    return InkWell(
+      onTap: onTap,
+      child: Card(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(16.0),
+          side: BorderSide(
+            color: randomColor.randomColor(colorBrightness: ColorBrightness.light),
+          ),
+        ),
+        elevation: 4.0, //그림자 깊이
+        child: Center(
+          child: Text(
+            title,
+            textAlign: TextAlign.center,
+            style: const TextStyle(fontSize: 24),
+          ),
+        ),
       ),
     );
   }

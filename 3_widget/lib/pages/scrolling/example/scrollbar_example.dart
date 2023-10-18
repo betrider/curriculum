@@ -14,7 +14,10 @@ class _ScrollbarExampleState extends State<ScrollbarExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('ScrollbarExample')),
+      appBar: AppBar(
+        title: const Text('ScrollbarExample'),
+        centerTitle: true,
+      ),
       body: LayoutBuilder(
         builder: (BuildContext context, BoxConstraints constraints) {
           return Row(

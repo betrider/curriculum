@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class AssetsImagesAndIconsWidget extends StatelessWidget {
-  const AssetsImagesAndIconsWidget({
+class OthersPage extends StatelessWidget {
+  const OthersPage({
     super.key,
   });
 
@@ -9,7 +9,7 @@ class AssetsImagesAndIconsWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('자산'),
+        title: const Text('기타'),
         centerTitle: true,
       ),
     );

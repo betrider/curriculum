@@ -6,7 +6,10 @@ class TextExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('TextExample')),
+      appBar: AppBar(
+        title: const Text('TextExample'),
+        centerTitle: true,
+      ),
       body: Center(
         child: Column(
           children: [
@@ -16,6 +19,7 @@ class TextExample extends StatelessWidget {
               overflow: TextOverflow.ellipsis,
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
+
             /// Text의 기본 스타일이 적용되어있음
             const Text.rich(
               TextSpan(
@@ -26,6 +30,7 @@ class TextExample extends StatelessWidget {
                 ],
               ),
             ),
+
             /// 기본 스타일이 적용되지 않음
             RichText(
               text: TextSpan(

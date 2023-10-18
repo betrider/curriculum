@@ -6,9 +6,13 @@ class ImageExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('ImageExample')),
-      body: Center(
+      appBar: AppBar(
+        title: const Text('ImageExample'),
+        centerTitle: true,
+      ),
+      body: SingleChildScrollView(
         child: Column(
+          mainAxisSize: MainAxisSize.min,
           children: [
             const Image(image: NetworkImage('https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg')),
             Image.network('https://flutter.github.io/assets-for-api-docs/assets/widgets/owl-2.jpg')

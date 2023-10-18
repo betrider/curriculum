@@ -8,6 +8,7 @@ class AppBarExample extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('AppBarExample'),
+        centerTitle: true,
         actions: <Widget>[
           IconButton(
             icon: const Icon(Icons.add_alert),

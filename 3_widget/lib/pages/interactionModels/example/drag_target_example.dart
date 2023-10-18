@@ -13,7 +13,10 @@ class _DragTargetExampleState extends State<DragTargetExample> {
     bool isDropped = false;
     String color = "red";
     return Scaffold(
-      appBar: AppBar(title: const Text('DragTargetExample')),
+      appBar: AppBar(
+        title: const Text('DragTargetExample'),
+        centerTitle: true,
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

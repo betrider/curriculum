@@ -9,8 +9,7 @@ class SizeTransitionExample extends StatefulWidget {
 
 /// [AnimationController]s can be created with `vsync: this` because of
 /// [TickerProviderStateMixin].
-class _SizeTransitionExampleState extends State<SizeTransitionExample>
-    with TickerProviderStateMixin {
+class _SizeTransitionExampleState extends State<SizeTransitionExample> with TickerProviderStateMixin {
   late final AnimationController _controller = AnimationController(
     duration: const Duration(seconds: 3),
     vsync: this,
@@ -29,7 +28,10 @@ class _SizeTransitionExampleState extends State<SizeTransitionExample>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('SizeTransitionExample')),
+      appBar: AppBar(
+        title: const Text('SizeTransitionExample'),
+        centerTitle: true,
+      ),
       body: SizeTransition(
         sizeFactor: _animation,
         axis: Axis.horizontal,

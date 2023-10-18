@@ -6,7 +6,10 @@ class PlaceholderExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('PlaceholderExample')),
+      appBar: AppBar(
+        title: const Text('PlaceholderExample'),
+        centerTitle: true,
+      ),
       body: const Placeholder(),
     );
   }

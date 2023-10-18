@@ -20,7 +20,10 @@ class _FutureBuilderExampleState extends State<FutureBuilderExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('FutureBuilderExample')),
+      appBar: AppBar(
+        title: const Text('FutureBuilderExample'),
+        centerTitle: true,
+      ),
       body: DefaultTextStyle(
         style: Theme.of(context).textTheme.displayMedium!,
         textAlign: TextAlign.center,
@@ -96,10 +99,7 @@ class AudioScriptModel {
   factory AudioScriptModel.fromMap(String jsonString) {
     var map = json.decode(jsonString);
     return AudioScriptModel(
-      sentences: map["sentences"] == null
-          ? []
-          : List<Sentence>.from(
-              map["sentences"].map((x) => Sentence.fromMap(x))),
+      sentences: map["sentences"] == null ? [] : List<Sentence>.from(map["sentences"].map((x) => Sentence.fromMap(x))),
     );
   }
 }

@@ -14,7 +14,10 @@ class _NotificationListenerExampleState extends State<NotificationListenerExampl
   Widget build(BuildContext context) {
     return Scaffold(
       // creating appbar
-      appBar: AppBar(title: const Text('NotificationListenerExample')),
+      appBar: AppBar(
+        title: const Text('NotificationListenerExample'),
+        centerTitle: true,
+      ),
 
       // Creating a container and giving it some styling properties
       body: Column(

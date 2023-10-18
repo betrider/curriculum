@@ -11,8 +11,7 @@ class AnimatedBuilderExample extends StatefulWidget {
 
 /// AnimationControllers can be created with `vsync: this` because of
 /// TickerProviderStateMixin.
-class _AnimatedBuilderExampleState extends State<AnimatedBuilderExample>
-    with TickerProviderStateMixin {
+class _AnimatedBuilderExampleState extends State<AnimatedBuilderExample> with TickerProviderStateMixin {
   late final AnimationController _controller = AnimationController(
     duration: const Duration(seconds: 10),
     vsync: this,
@@ -27,7 +26,10 @@ class _AnimatedBuilderExampleState extends State<AnimatedBuilderExample>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('AnimatedBuilderExample')),
+      appBar: AppBar(
+        title: const Text('AnimatedBuilderExample'),
+        centerTitle: true,
+      ),
       body: AnimatedBuilder(
         animation: _controller,
         child: Container(

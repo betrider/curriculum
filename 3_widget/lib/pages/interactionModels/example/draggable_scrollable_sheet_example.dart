@@ -6,7 +6,10 @@ class DraggableScrollableSheetExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('DraggableScrollableSheetExample')),
+      appBar: AppBar(
+        title: const Text('DraggableScrollableSheetExample'),
+        centerTitle: true,
+      ),
       body: SizedBox.expand(
         child: DraggableScrollableSheet(
           builder: (BuildContext context, ScrollController scrollController) {

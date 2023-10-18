@@ -6,7 +6,10 @@ class FractionalTranslationExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('FractionalTranslationExample')),
+      appBar: AppBar(
+        title: const Text('FractionalTranslationExample'),
+        centerTitle: true,
+      ),
       body: Center(
         child: Container(
           color: Colors.black26,

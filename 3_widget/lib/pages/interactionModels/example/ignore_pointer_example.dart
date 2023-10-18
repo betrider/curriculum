@@ -18,7 +18,10 @@ class _IgnorePointerExampleState extends State<IgnorePointerExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('IgnorePointerExample')),
+      appBar: AppBar(
+        title: const Text('IgnorePointerExample'),
+        centerTitle: true,
+      ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[

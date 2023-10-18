@@ -6,7 +6,10 @@ class InteractiveViewerExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('InteractiveViewerExample')),
+      appBar: AppBar(
+        title: const Text('InteractiveViewerExample'),
+        centerTitle: true,
+      ),
       body: Center(
         child: InteractiveViewer(
           boundaryMargin: const EdgeInsets.all(20.0),

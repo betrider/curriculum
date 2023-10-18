@@ -6,7 +6,10 @@ class ContainerExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('ContainerExample')),
+      appBar: AppBar(
+        title: const Text('ContainerExample'),
+        centerTitle: true,
+      ),
       body: Container(
         constraints: BoxConstraints.expand(
           height: Theme.of(context).textTheme.headlineMedium!.fontSize! * 1.1 + 200.0,

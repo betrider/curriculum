@@ -27,7 +27,10 @@ class _PositionedTransitionExampleState extends State<PositionedTransitionExampl
     const double bigLogo = 200;
 
     return Scaffold(
-      appBar: AppBar(title: const Text('PositionedTransitionExample')),
+      appBar: AppBar(
+        title: const Text('PositionedTransitionExample'),
+        centerTitle: true,
+      ),
       body: LayoutBuilder(
         builder: (BuildContext context, BoxConstraints constraints) {
           final Size biggest = constraints.biggest;

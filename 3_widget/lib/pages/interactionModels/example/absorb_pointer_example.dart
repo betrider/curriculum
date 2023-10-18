@@ -6,7 +6,10 @@ class AbsorbPointerExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('AbsorbPointerExample')),
+      appBar: AppBar(
+        title: const Text('AbsorbPointerExample'),
+        centerTitle: true,
+      ),
       body: Stack(
         alignment: AlignmentDirectional.center,
         children: <Widget>[
