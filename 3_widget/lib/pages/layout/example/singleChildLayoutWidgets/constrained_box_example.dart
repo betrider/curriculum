@@ -6,7 +6,10 @@ class ConstrainedBoxExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('ConstrainedBoxExample')),
+      appBar: AppBar(
+        title: const Text('ConstrainedBoxExample'),
+        centerTitle: true,
+      ),
       body: Center(
         child: ConstrainedBox(
           constraints: const BoxConstraints(maxWidth: 40, maxHeight: 40),

@@ -7,7 +7,10 @@ class CustomSingleChildLayoutExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('CustomSingleChildLayoutExample')),
+      appBar: AppBar(
+        title: const Text('CustomSingleChildLayoutExample'),
+        centerTitle: true,
+      ),
       body: Column(
         children: [
           CustomSingleChildLayout(

@@ -6,7 +6,10 @@ class ContainerExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('ContainerExample')),
+      appBar: AppBar(
+        title: const Text('ContainerExample'),
+        centerTitle: true,
+      ),
       body: Center(
         child: Container(
           margin: const EdgeInsets.all(10.0),

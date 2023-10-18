@@ -9,7 +9,10 @@ class NestedScrollViewExample2 extends StatelessWidget {
     return DefaultTabController(
       length: tabs.length,
       child: Scaffold(
-        appBar: AppBar(title: const Text('NestedScrollViewExample2')),
+        appBar: AppBar(
+          title: const Text('NestedScrollViewExample2'),
+          centerTitle: true,
+        ),
         body: CustomScrollView(
           slivers: [
             // A flexible app bar

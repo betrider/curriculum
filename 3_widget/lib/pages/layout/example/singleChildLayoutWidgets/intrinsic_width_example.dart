@@ -6,7 +6,10 @@ class IntrinsicWidthExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('IntrinsicWidthExample')),
+      appBar: AppBar(
+        title: const Text('IntrinsicWidthExample'),
+        centerTitle: true,
+      ),
       body: Center(
         child: IntrinsicWidth(
           child: Container(

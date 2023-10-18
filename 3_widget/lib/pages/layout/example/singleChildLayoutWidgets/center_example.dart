@@ -6,10 +6,13 @@ class CenterExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('CenterExample')),
+      appBar: AppBar(
+        title: const Text('CenterExample'),
+        centerTitle: true,
+      ),
       body: const Center(
-        heightFactor: 1,
-        widthFactor: 1,
+        // heightFactor: 1,
+        // widthFactor: 1,
         child: SizedBox(
           width: 200,
           height: 200,

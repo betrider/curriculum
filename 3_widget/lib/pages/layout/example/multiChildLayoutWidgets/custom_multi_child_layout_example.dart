@@ -10,7 +10,10 @@ class CustomMultiChildLayoutExample extends StatelessWidget {
       // see the layout change.
       textDirection: TextDirection.ltr,
       child: Scaffold(
-        appBar: AppBar(title: const Text('CustomMultiChildLayoutExample')),
+        appBar: AppBar(
+          title: const Text('CustomMultiChildLayoutExample'),
+          centerTitle: true,
+        ),
         body: const CustomMultiChildLayoutExample2(),
       ),
     );

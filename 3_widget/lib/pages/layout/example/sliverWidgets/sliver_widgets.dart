@@ -1,10 +1,44 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_widget/context_extension.dart';
+import 'package:flutter_widget/main.dart';
 
 class SliverWidgets extends StatelessWidget {
   const SliverWidgets({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('SliverWidgets'),
+        centerTitle: true,
+      ),
+      body: GridView.count(
+        primary: false,
+        padding: const EdgeInsets.all(4),
+        crossAxisSpacing: 4,
+        mainAxisSpacing: 4,
+        crossAxisCount: 2,
+        children: [
+          MyCardWidget(
+            title: 'CustomScrollViewExample',
+            onTap: () {
+              context.pushRelative('CustomScrollViewExample');
+            },
+          ),
+          MyCardWidget(
+            title: 'NestedScrollViewExample',
+            onTap: () {
+              context.pushRelative('NestedScrollViewExample');
+            },
+          ),
+          MyCardWidget(
+            title: 'NestedScrollViewExample2',
+            onTap: () {
+              context.pushRelative('NestedScrollViewExample2');
+            },
+          ),
+        ],
+      ),
+    );
   }
 }

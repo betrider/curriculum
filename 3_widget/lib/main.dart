@@ -63,14 +63,37 @@ import 'package:flutter_widget/pages/interactionModels/example/interactive_viewe
 import 'package:flutter_widget/pages/interactionModels/example/long_press_draggable_example.dart';
 import 'package:flutter_widget/pages/interactionModels/example/scrollable_example.dart';
 import 'package:flutter_widget/pages/interactionModels/interaction_models_page.dart';
+import 'package:flutter_widget/pages/layout/example/multiChildLayoutWidgets/custom_multi_child_layout_example.dart';
+import 'package:flutter_widget/pages/layout/example/multiChildLayoutWidgets/flow_example.dart';
 import 'package:flutter_widget/pages/layout/example/multiChildLayoutWidgets/grid_view_example.dart';
+import 'package:flutter_widget/pages/layout/example/multiChildLayoutWidgets/indexed_stack_example.dart';
+import 'package:flutter_widget/pages/layout/example/multiChildLayoutWidgets/layout_builder_example.dart';
 import 'package:flutter_widget/pages/layout/example/multiChildLayoutWidgets/list_view_example.dart';
 import 'package:flutter_widget/pages/layout/example/multiChildLayoutWidgets/multi_child_layout_widgets.dart';
+import 'package:flutter_widget/pages/layout/example/multiChildLayoutWidgets/stack_example.dart';
+import 'package:flutter_widget/pages/layout/example/multiChildLayoutWidgets/table_example.dart';
+import 'package:flutter_widget/pages/layout/example/multiChildLayoutWidgets/wrap_example.dart';
+import 'package:flutter_widget/pages/layout/example/singleChildLayoutWidgets/align_example.dart';
+import 'package:flutter_widget/pages/layout/example/singleChildLayoutWidgets/aspect_ratio_example.dart';
+import 'package:flutter_widget/pages/layout/example/singleChildLayoutWidgets/baseline_example.dart';
+import 'package:flutter_widget/pages/layout/example/singleChildLayoutWidgets/center_example.dart';
+import 'package:flutter_widget/pages/layout/example/singleChildLayoutWidgets/constrained_box_example.dart';
+import 'package:flutter_widget/pages/layout/example/singleChildLayoutWidgets/custom_single_child_layout_example.dart';
+import 'package:flutter_widget/pages/layout/example/singleChildLayoutWidgets/expanded_example.dart';
+import 'package:flutter_widget/pages/layout/example/singleChildLayoutWidgets/fitted_box_example.dart';
+import 'package:flutter_widget/pages/layout/example/singleChildLayoutWidgets/fractionally_sized_box_example.dart';
+import 'package:flutter_widget/pages/layout/example/singleChildLayoutWidgets/intrinsic_height_example.dart';
+import 'package:flutter_widget/pages/layout/example/singleChildLayoutWidgets/intrinsic_width_example.dart';
+import 'package:flutter_widget/pages/layout/example/singleChildLayoutWidgets/limited_box_example.dart';
+import 'package:flutter_widget/pages/layout/example/singleChildLayoutWidgets/overflow_box_example.dart';
 import 'package:flutter_widget/pages/layout/example/singleChildLayoutWidgets/padding_example.dart';
 import 'package:flutter_widget/pages/layout/example/singleChildLayoutWidgets/single_child_layout_widgets.dart';
+import 'package:flutter_widget/pages/layout/example/singleChildLayoutWidgets/sized_box_example.dart';
+import 'package:flutter_widget/pages/layout/example/singleChildLayoutWidgets/sized_overflow_box_example.dart';
 import 'package:flutter_widget/pages/layout/example/singleChildLayoutWidgets/transform_example.dart';
 import 'package:flutter_widget/pages/layout/example/sliverWidgets/custom_scroll_view_example.dart';
 import 'package:flutter_widget/pages/layout/example/sliverWidgets/nested_scroll_view_example.dart';
+import 'package:flutter_widget/pages/layout/example/sliverWidgets/nested_scroll_view_example2.dart';
 import 'package:flutter_widget/pages/layout/example/sliverWidgets/sliver_widgets.dart';
 import 'package:flutter_widget/pages/layout/layout_page.dart';
 import 'package:flutter_widget/pages/material/material_page.dart';
@@ -398,14 +421,148 @@ final router = GoRouter(
             GoRoute(
               path: 'MultiChildLayoutWidgets',
               builder: (_, __) => const MultiChildLayoutWidgets(),
+              routes: [
+                GoRoute(
+                  path: 'ColumnExample',
+                  builder: (_, __) => const ColumnExample(),
+                ),
+                GoRoute(
+                  path: 'CustomMultiChildLayoutExample',
+                  builder: (_, __) => const CustomMultiChildLayoutExample(),
+                ),
+                GoRoute(
+                  path: 'FlowExample',
+                  builder: (_, __) => const FlowExample(),
+                ),
+                GoRoute(
+                  path: 'GridViewExample',
+                  builder: (_, __) => const GridViewExample(),
+                ),
+                GoRoute(
+                  path: 'IndexedStackExample',
+                  builder: (_, __) => const IndexedStackExample(),
+                ),
+                GoRoute(
+                  path: 'LayoutBuilderExample',
+                  builder: (_, __) => const LayoutBuilderExample(),
+                ),
+                GoRoute(
+                  path: 'ListViewExample',
+                  builder: (_, __) => const ListViewExample(),
+                ),
+                GoRoute(
+                  path: 'RowExample',
+                  builder: (_, __) => const RowExample(),
+                ),
+                GoRoute(
+                  path: 'StackExample',
+                  builder: (_, __) => const StackExample(),
+                ),
+                GoRoute(
+                  path: 'TableExample',
+                  builder: (_, __) => const TableExample(),
+                ),
+                GoRoute(
+                  path: 'WrapExample',
+                  builder: (_, __) => const WrapExample(),
+                ),
+              ],
             ),
             GoRoute(
               path: 'SingleChildLayoutWidgets',
               builder: (_, __) => const SingleChildLayoutWidgets(),
+              routes: [
+                GoRoute(
+                  path: 'AlignExample',
+                  builder: (_, __) => const AlignExample(),
+                ),
+                GoRoute(
+                  path: 'AspectRatioExample',
+                  builder: (_, __) => const AspectRatioExample(),
+                ),
+                GoRoute(
+                  path: 'BaselineExample',
+                  builder: (_, __) => const BaselineExample(),
+                ),
+                GoRoute(
+                  path: 'CenterExample',
+                  builder: (_, __) => const CenterExample(),
+                ),
+                GoRoute(
+                  path: 'ConstrainedBoxExample',
+                  builder: (_, __) => const ConstrainedBoxExample(),
+                ),
+                GoRoute(
+                  path: 'ContainerExample',
+                  builder: (_, __) => const ContainerExample(),
+                ),
+                GoRoute(
+                  path: 'CustomSingleChildLayoutExample',
+                  builder: (_, __) => CustomSingleChildLayoutExample(),
+                ),
+                GoRoute(
+                  path: 'ExpandedExample',
+                  builder: (_, __) => const ExpandedExample(),
+                ),
+                GoRoute(
+                  path: 'FittedBoxExample',
+                  builder: (_, __) => const FittedBoxExample(),
+                ),
+                GoRoute(
+                  path: 'FractionallySizedBoxExample',
+                  builder: (_, __) => const FractionallySizedBoxExample(),
+                ),
+                GoRoute(
+                  path: 'IntrinsicHeightExample',
+                  builder: (_, __) => const IntrinsicHeightExample(),
+                ),
+                GoRoute(
+                  path: 'IntrinsicWidthExample',
+                  builder: (_, __) => const IntrinsicWidthExample(),
+                ),
+                GoRoute(
+                  path: 'LimitedBoxExample',
+                  builder: (_, __) => const LimitedBoxExample(),
+                ),
+                GoRoute(
+                  path: 'OverflowBoxExample',
+                  builder: (_, __) => const OverflowBoxExample(),
+                ),
+                GoRoute(
+                  path: 'PaddingExample',
+                  builder: (_, __) => const PaddingExample(),
+                ),
+                GoRoute(
+                  path: 'SizedBoxExample',
+                  builder: (_, __) => const SizedBoxExample(),
+                ),
+                GoRoute(
+                  path: 'SizedOverflowBoxExample',
+                  builder: (_, __) => const SizedOverflowBoxExample(),
+                ),
+                GoRoute(
+                  path: 'TransformExample',
+                  builder: (_, __) => const TransformExample(),
+                ),
+              ],
             ),
             GoRoute(
               path: 'SliverWidgets',
               builder: (_, __) => const SliverWidgets(),
+              routes: [
+                GoRoute(
+                  path: 'CustomScrollViewExample',
+                  builder: (_, __) => const CustomScrollViewExample(),
+                ),
+                GoRoute(
+                  path: 'NestedScrollViewExample',
+                  builder: (_, __) => const NestedScrollViewExample(),
+                ),
+                GoRoute(
+                  path: 'NestedScrollViewExample2',
+                  builder: (_, __) => const NestedScrollViewExample2(),
+                ),
+              ],
             ),
           ],
         ),

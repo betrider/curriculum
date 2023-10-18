@@ -6,7 +6,10 @@ class WrapExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('WrapExample')),
+      appBar: AppBar(
+        title: const Text('WrapExample'),
+        centerTitle: true,
+      ),
       body: Center(
         child: Wrap(
           spacing: 8.0, // gap between adjacent chips
