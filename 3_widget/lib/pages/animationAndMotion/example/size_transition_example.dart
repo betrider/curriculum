@@ -28,10 +28,6 @@ class _SizeTransitionExampleState extends State<SizeTransitionExample> with Tick
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('SizeTransitionExample'),
-        centerTitle: true,
-      ),
       body: SizeTransition(
         sizeFactor: _animation,
         axis: Axis.horizontal,

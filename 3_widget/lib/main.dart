@@ -96,16 +96,16 @@ import 'package:flutter_widget/pages/layout/example/sliverWidgets/nested_scroll_
 import 'package:flutter_widget/pages/layout/example/sliverWidgets/nested_scroll_view_example2.dart';
 import 'package:flutter_widget/pages/layout/example/sliverWidgets/sliver_widgets.dart';
 import 'package:flutter_widget/pages/layout/layout_page.dart';
-import 'package:flutter_widget/pages/material/actions/actions_example.dart';
+import 'package:flutter_widget/pages/material/actions/actions_page.dart';
 import 'package:flutter_widget/pages/material/actions/example/common_buttons_example.dart';
 import 'package:flutter_widget/pages/material/actions/example/fab_example.dart';
 import 'package:flutter_widget/pages/material/actions/example/icon_button_example.dart';
 import 'package:flutter_widget/pages/material/actions/example/segmented_button_example.dart';
-import 'package:flutter_widget/pages/material/communication/communication_example.dart';
+import 'package:flutter_widget/pages/material/communication/communication_page.dart';
 import 'package:flutter_widget/pages/material/communication/example/badge_example.dart';
 import 'package:flutter_widget/pages/material/communication/example/progress_indicator_example.dart';
 import 'package:flutter_widget/pages/material/communication/example/snackbar_example.dart';
-import 'package:flutter_widget/pages/material/containment/containment_example.dart';
+import 'package:flutter_widget/pages/material/containment/containment_page.dart';
 import 'package:flutter_widget/pages/material/containment/example/bottom_sheet_example.dart';
 import 'package:flutter_widget/pages/material/containment/example/card_example.dart';
 import 'package:flutter_widget/pages/material/containment/example/dialog_example.dart';
@@ -117,7 +117,7 @@ import 'package:flutter_widget/pages/material/navigation/example/navigation_bar_
 import 'package:flutter_widget/pages/material/navigation/example/navigation_drawer_example.dart';
 import 'package:flutter_widget/pages/material/navigation/example/navigation_rail_example.dart';
 import 'package:flutter_widget/pages/material/navigation/example/tab_bar_example.dart';
-import 'package:flutter_widget/pages/material/navigation/navigation_example.dart';
+import 'package:flutter_widget/pages/material/navigation/navigation_page.dart';
 import 'package:flutter_widget/pages/material/selection/example/checkbox_example.dart';
 import 'package:flutter_widget/pages/material/selection/example/chip_example.dart';
 import 'package:flutter_widget/pages/material/selection/example/date_picker_example.dart';
@@ -126,9 +126,9 @@ import 'package:flutter_widget/pages/material/selection/example/radio_button_exa
 import 'package:flutter_widget/pages/material/selection/example/slider_example.dart';
 import 'package:flutter_widget/pages/material/selection/example/switch_example.dart';
 import 'package:flutter_widget/pages/material/selection/example/time_picker_example.dart';
-import 'package:flutter_widget/pages/material/selection/selection_example.dart';
+import 'package:flutter_widget/pages/material/selection/selection_page.dart';
 import 'package:flutter_widget/pages/material/textInputs/example/text_field_example.dart';
-import 'package:flutter_widget/pages/material/textInputs/text_inputs_example.dart';
+import 'package:flutter_widget/pages/material/textInputs/text_inputs_page.dart';
 import 'package:flutter_widget/pages/others/others_page.dart';
 import 'package:flutter_widget/pages/paintingAndEffects/example/backdrop_filter_example.dart';
 import 'package:flutter_widget/pages/paintingAndEffects/example/clip_oval_example.dart';
@@ -158,6 +158,7 @@ import 'package:flutter_widget/pages/text/example/rich_text_example.dart';
 import 'package:flutter_widget/pages/text/text_page.dart';
 import 'package:go_router/go_router.dart';
 import 'package:random_color/random_color.dart';
+import 'package:widget_with_codeview/widget_with_codeview.dart';
 
 /// 참조 링크 : https://docs.flutter.dev/ui/widgets
 void main() => runApp(
@@ -181,15 +182,24 @@ final router = GoRouter(
           routes: [
             GoRoute(
               path: 'ExcludeSemanticsExample',
-              builder: (_, __) => const ExcludeSemanticsExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: ExcludeSemanticsExample(),
+              ),
             ),
             GoRoute(
               path: 'MergeSemanticsExample',
-              builder: (_, __) => const MergeSemanticsExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: MergeSemanticsExample(),
+              ),
             ),
             GoRoute(
               path: 'SemanticsExample',
-              builder: (_, __) => const SemanticsExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: SemanticsExample(),
+              ),
             ),
           ],
         ),
@@ -199,91 +209,157 @@ final router = GoRouter(
           routes: [
             GoRoute(
               path: 'AnimatedAlignExample',
-              builder: (_, __) => const AnimatedAlignExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: AnimatedAlignExample(),
+              ),
             ),
             GoRoute(
               path: 'AnimatedBuilderExample',
-              builder: (_, __) => const AnimatedBuilderExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: AnimatedBuilderExample(),
+              ),
             ),
             GoRoute(
               path: 'AnimatedContainerExample',
-              builder: (_, __) => const AnimatedContainerExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: AnimatedContainerExample(),
+              ),
             ),
             GoRoute(
               path: 'AnimatedCrossFadeExample',
-              builder: (_, __) => const AnimatedCrossFadeExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: AnimatedCrossFadeExample(),
+              ),
             ),
             GoRoute(
               path: 'AnimatedDefaultTextStyleExample',
-              builder: (_, __) => const AnimatedDefaultTextStyleExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: AnimatedDefaultTextStyleExample(),
+              ),
             ),
             GoRoute(
               path: 'AnimatedListExample',
-              builder: (_, __) => const AnimatedListExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: AnimatedListExample(),
+              ),
             ),
             GoRoute(
               path: 'AnimatedListStateExample',
-              builder: (_, __) => const AnimatedListStateExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: AnimatedListStateExample(),
+              ),
             ),
             GoRoute(
               path: 'AnimatedModalBarrierExample',
-              builder: (_, __) => const AnimatedModalBarrierExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: AnimatedModalBarrierExample(),
+              ),
             ),
             GoRoute(
               path: 'AnimatedOpacityExample',
-              builder: (_, __) => const AnimatedOpacityExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: AnimatedOpacityExample(),
+              ),
             ),
             GoRoute(
               path: 'AnimatedPhysicalModelExample',
-              builder: (_, __) => const AnimatedPhysicalModelExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: AnimatedPhysicalModelExample(),
+              ),
             ),
             GoRoute(
               path: 'AnimatedPositionedExample',
-              builder: (_, __) => const AnimatedPositionedExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: AnimatedPositionedExample(),
+              ),
             ),
             GoRoute(
               path: 'AnimatedSizeExample',
-              builder: (_, __) => const AnimatedSizeExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: AnimatedSizeExample(),
+              ),
             ),
             GoRoute(
               path: 'AnimatedWidgetExample',
-              builder: (_, __) => const AnimatedWidgetExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: AnimatedWidgetExample(),
+              ),
             ),
             GoRoute(
               path: 'DecoratedBoxTransitionExample',
-              builder: (_, __) => const DecoratedBoxTransitionExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: DecoratedBoxTransitionExample(),
+              ),
             ),
             GoRoute(
               path: 'FadeTransitionExample',
-              builder: (_, __) => const FadeTransitionExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: FadeTransitionExample(),
+              ),
             ),
             GoRoute(
               path: 'HeroExample',
-              builder: (_, __) => const HeroExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: HeroExample(),
+              ),
             ),
             GoRoute(
               path: 'ImplicitlyAnimatedWidgetExample',
-              builder: (_, __) => const ImplicitlyAnimatedWidgetExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: ImplicitlyAnimatedWidgetExample(),
+              ),
             ),
             GoRoute(
               path: 'PositionedTransitionExample',
-              builder: (_, __) => const PositionedTransitionExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: PositionedTransitionExample(),
+              ),
             ),
             GoRoute(
               path: 'RotationTransitionExample',
-              builder: (_, __) => const RotationTransitionExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: RotationTransitionExample(),
+              ),
             ),
             GoRoute(
               path: 'ScaleTransitionExample',
-              builder: (_, __) => const ScaleTransitionExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: ScaleTransitionExample(),
+              ),
             ),
             GoRoute(
               path: 'SizeTransitionExample',
-              builder: (_, __) => const SizeTransitionExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: SizeTransitionExample(),
+              ),
             ),
             GoRoute(
               path: 'SlideTransitionExample',
-              builder: (_, __) => const SlideTransitionExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: SlideTransitionExample(),
+              ),
             ),
           ],
         ),
@@ -293,19 +369,31 @@ final router = GoRouter(
           routes: [
             GoRoute(
               path: 'AssetBundleExample',
-              builder: (_, __) => const AssetBundleExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: AssetBundleExample(),
+              ),
             ),
             GoRoute(
               path: 'IconExample',
-              builder: (_, __) => const IconExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: IconExample(),
+              ),
             ),
             GoRoute(
               path: 'ImageExample',
-              builder: (_, __) => const ImageExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: ImageExample(),
+              ),
             ),
             GoRoute(
               path: 'RawImageExample',
-              builder: (_, __) => const RawImageExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: RawImageExample(),
+              ),
             ),
           ],
         ),
@@ -315,11 +403,17 @@ final router = GoRouter(
           routes: [
             GoRoute(
               path: 'FutureBuilderExample',
-              builder: (_, __) => const FutureBuilderExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: FutureBuilderExample(),
+              ),
             ),
             GoRoute(
               path: 'StreamBuilderExample',
-              builder: (_, __) => const StreamBuilderExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: StreamBuilderExample(),
+              ),
             ),
           ],
         ),
@@ -329,55 +423,94 @@ final router = GoRouter(
           routes: [
             GoRoute(
               path: 'AppBarExample',
-              builder: (_, __) => const AppBarExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: AppBarExample(),
+              ),
             ),
             GoRoute(
               path: 'ColumnExample',
-              builder: (_, __) => const ColumnExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: ColumnExample(),
+              ),
             ),
             GoRoute(
               path: 'ContainerExample',
-              builder: (_, __) => const ContainerExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: ContainerExample(),
+              ),
             ),
             GoRoute(
               path: 'ElevatedButtonExample',
-              builder: (_, __) => const ElevatedButtonExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: ElevatedButtonExample(),
+              ),
             ),
             GoRoute(
               path: 'FlutterLogoExample',
-              builder: (_, __) => const FlutterLogoExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: FlutterLogoExample(),
+              ),
             ),
             GoRoute(
               path: 'IconExample',
-              builder: (_, __) => const IconExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: IconExample(),
+              ),
             ),
             GoRoute(
               path: 'ImageExample',
-              builder: (_, __) => const ImageExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: ImageExample(),
+              ),
             ),
             GoRoute(
               path: 'OutlinedButtonExample',
-              builder: (_, __) => const OutlinedButtonExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: OutlinedButtonExample(),
+              ),
             ),
             GoRoute(
               path: 'PlaceholderExample',
-              builder: (_, __) => const PlaceholderExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: PlaceholderExample(),
+              ),
             ),
             GoRoute(
               path: 'RowExample',
-              builder: (_, __) => const RowExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: RowExample(),
+              ),
             ),
             GoRoute(
               path: 'ScaffoldExample',
-              builder: (_, __) => const ScaffoldExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: ScaffoldExample(),
+              ),
             ),
             GoRoute(
               path: 'TextButtonExample',
-              builder: (_, __) => const TextButtonExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: TextButtonExample(),
+              ),
             ),
             GoRoute(
               path: 'TextExample',
-              builder: (_, __) => const TextExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: TextExample(),
+              ),
             ),
           ],
         ),
@@ -391,19 +524,31 @@ final router = GoRouter(
           routes: [
             GoRoute(
               path: 'AutocompleteBasicExample',
-              builder: (_, __) => const AutocompleteBasicExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: AutocompleteBasicExample(),
+              ),
             ),
             GoRoute(
               path: 'FormExample',
-              builder: (_, __) => const FormExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: FormExample(),
+              ),
             ),
             GoRoute(
               path: 'FormFieldExample',
-              builder: (_, __) => const FormFieldExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: FormFieldExample(),
+              ),
             ),
             GoRoute(
               path: 'KeyboardListenerExample',
-              builder: (_, __) => const KeyboardListenerExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: KeyboardListenerExample(),
+              ),
             ),
           ],
         ),
@@ -413,43 +558,73 @@ final router = GoRouter(
           routes: [
             GoRoute(
               path: 'AbsorbPointerExample',
-              builder: (_, __) => const AbsorbPointerExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: AbsorbPointerExample(),
+              ),
             ),
             GoRoute(
               path: 'DismissibleExample',
-              builder: (_, __) => const DismissibleExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: DismissibleExample(),
+              ),
             ),
             GoRoute(
               path: 'DragTargetExample',
-              builder: (_, __) => const DragTargetExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: DragTargetExample(),
+              ),
             ),
             GoRoute(
               path: 'DraggableExample',
-              builder: (_, __) => const DraggableExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: DraggableExample(),
+              ),
             ),
             GoRoute(
               path: 'DraggableScrollableSheetExample',
-              builder: (_, __) => const DraggableScrollableSheetExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: DraggableScrollableSheetExample(),
+              ),
             ),
             GoRoute(
               path: 'GestureDetectorExample',
-              builder: (_, __) => const GestureDetectorExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: GestureDetectorExample(),
+              ),
             ),
             GoRoute(
               path: 'IgnorePointerExample',
-              builder: (_, __) => const IgnorePointerExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: IgnorePointerExample(),
+              ),
             ),
             GoRoute(
               path: 'InteractiveViewerExample',
-              builder: (_, __) => const InteractiveViewerExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: InteractiveViewerExample(),
+              ),
             ),
             GoRoute(
               path: 'LongPressDraggableExample',
-              builder: (_, __) => const LongPressDraggableExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: LongPressDraggableExample(),
+              ),
             ),
             GoRoute(
               path: 'ScrollableExample',
-              builder: (_, __) => const ScrollableExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: ScrollableExample(),
+              ),
             ),
           ],
         ),
@@ -463,47 +638,80 @@ final router = GoRouter(
               routes: [
                 GoRoute(
                   path: 'ColumnExample',
-                  builder: (_, __) => const ColumnExample(),
+                  builder: (_, __) => const CustomWidgetCodeView(
+                    filePath: '',
+                    child: ColumnExample(),
+                  ),
                 ),
                 GoRoute(
                   path: 'CustomMultiChildLayoutExample',
-                  builder: (_, __) => const CustomMultiChildLayoutExample(),
+                  builder: (_, __) => const CustomWidgetCodeView(
+                    filePath: '',
+                    child: CustomMultiChildLayoutExample(),
+                  ),
                 ),
                 GoRoute(
                   path: 'FlowExample',
-                  builder: (_, __) => const FlowExample(),
+                  builder: (_, __) => const CustomWidgetCodeView(
+                    filePath: '',
+                    child: FlowExample(),
+                  ),
                 ),
                 GoRoute(
                   path: 'GridViewExample',
-                  builder: (_, __) => const GridViewExample(),
+                  builder: (_, __) => const CustomWidgetCodeView(
+                    filePath: '',
+                    child: GridViewExample(),
+                  ),
                 ),
                 GoRoute(
                   path: 'IndexedStackExample',
-                  builder: (_, __) => const IndexedStackExample(),
+                  builder: (_, __) => const CustomWidgetCodeView(
+                    filePath: '',
+                    child: IndexedStackExample(),
+                  ),
                 ),
                 GoRoute(
                   path: 'LayoutBuilderExample',
-                  builder: (_, __) => const LayoutBuilderExample(),
+                  builder: (_, __) => const CustomWidgetCodeView(
+                    filePath: '',
+                    child: LayoutBuilderExample(),
+                  ),
                 ),
                 GoRoute(
                   path: 'ListViewExample',
-                  builder: (_, __) => const ListViewExample(),
+                  builder: (_, __) => const CustomWidgetCodeView(
+                    filePath: '',
+                    child: ListViewExample(),
+                  ),
                 ),
                 GoRoute(
                   path: 'RowExample',
-                  builder: (_, __) => const RowExample(),
+                  builder: (_, __) => const CustomWidgetCodeView(
+                    filePath: '',
+                    child: RowExample(),
+                  ),
                 ),
                 GoRoute(
                   path: 'StackExample',
-                  builder: (_, __) => const StackExample(),
+                  builder: (_, __) => const CustomWidgetCodeView(
+                    filePath: '',
+                    child: StackExample(),
+                  ),
                 ),
                 GoRoute(
                   path: 'TableExample',
-                  builder: (_, __) => const TableExample(),
+                  builder: (_, __) => const CustomWidgetCodeView(
+                    filePath: '',
+                    child: TableExample(),
+                  ),
                 ),
                 GoRoute(
                   path: 'WrapExample',
-                  builder: (_, __) => const WrapExample(),
+                  builder: (_, __) => const CustomWidgetCodeView(
+                    filePath: '',
+                    child: WrapExample(),
+                  ),
                 ),
               ],
             ),
@@ -513,75 +721,129 @@ final router = GoRouter(
               routes: [
                 GoRoute(
                   path: 'AlignExample',
-                  builder: (_, __) => const AlignExample(),
+                  builder: (_, __) => const CustomWidgetCodeView(
+                    filePath: '',
+                    child: AlignExample(),
+                  ),
                 ),
                 GoRoute(
                   path: 'AspectRatioExample',
-                  builder: (_, __) => const AspectRatioExample(),
+                  builder: (_, __) => const CustomWidgetCodeView(
+                    filePath: '',
+                    child: AspectRatioExample(),
+                  ),
                 ),
                 GoRoute(
                   path: 'BaselineExample',
-                  builder: (_, __) => const BaselineExample(),
+                  builder: (_, __) => const CustomWidgetCodeView(
+                    filePath: '',
+                    child: BaselineExample(),
+                  ),
                 ),
                 GoRoute(
                   path: 'CenterExample',
-                  builder: (_, __) => const CenterExample(),
+                  builder: (_, __) => const CustomWidgetCodeView(
+                    filePath: '',
+                    child: CenterExample(),
+                  ),
                 ),
                 GoRoute(
                   path: 'ConstrainedBoxExample',
-                  builder: (_, __) => const ConstrainedBoxExample(),
+                  builder: (_, __) => const CustomWidgetCodeView(
+                    filePath: '',
+                    child: ConstrainedBoxExample(),
+                  ),
                 ),
                 GoRoute(
                   path: 'ContainerExample',
-                  builder: (_, __) => const ContainerExample(),
+                  builder: (_, __) => const CustomWidgetCodeView(
+                    filePath: '',
+                    child: ContainerExample(),
+                  ),
                 ),
                 GoRoute(
                   path: 'CustomSingleChildLayoutExample',
-                  builder: (_, __) => CustomSingleChildLayoutExample(),
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: '',
+                    child: CustomSingleChildLayoutExample(),
+                  ),
                 ),
                 GoRoute(
                   path: 'ExpandedExample',
-                  builder: (_, __) => const ExpandedExample(),
+                  builder: (_, __) => const CustomWidgetCodeView(
+                    filePath: '',
+                    child: ExpandedExample(),
+                  ),
                 ),
                 GoRoute(
                   path: 'FittedBoxExample',
-                  builder: (_, __) => const FittedBoxExample(),
+                  builder: (_, __) => const CustomWidgetCodeView(
+                    filePath: '',
+                    child: FittedBoxExample(),
+                  ),
                 ),
                 GoRoute(
                   path: 'FractionallySizedBoxExample',
-                  builder: (_, __) => const FractionallySizedBoxExample(),
+                  builder: (_, __) => const CustomWidgetCodeView(
+                    filePath: '',
+                    child: FractionallySizedBoxExample(),
+                  ),
                 ),
                 GoRoute(
                   path: 'IntrinsicHeightExample',
-                  builder: (_, __) => const IntrinsicHeightExample(),
+                  builder: (_, __) => const CustomWidgetCodeView(
+                    filePath: '',
+                    child: IntrinsicHeightExample(),
+                  ),
                 ),
                 GoRoute(
                   path: 'IntrinsicWidthExample',
-                  builder: (_, __) => const IntrinsicWidthExample(),
+                  builder: (_, __) => const CustomWidgetCodeView(
+                    filePath: '',
+                    child: IntrinsicWidthExample(),
+                  ),
                 ),
                 GoRoute(
                   path: 'LimitedBoxExample',
-                  builder: (_, __) => const LimitedBoxExample(),
+                  builder: (_, __) => const CustomWidgetCodeView(
+                    filePath: '',
+                    child: LimitedBoxExample(),
+                  ),
                 ),
                 GoRoute(
                   path: 'OverflowBoxExample',
-                  builder: (_, __) => const OverflowBoxExample(),
+                  builder: (_, __) => const CustomWidgetCodeView(
+                    filePath: '',
+                    child: OverflowBoxExample(),
+                  ),
                 ),
                 GoRoute(
                   path: 'PaddingExample',
-                  builder: (_, __) => const PaddingExample(),
+                  builder: (_, __) => const CustomWidgetCodeView(
+                    filePath: '',
+                    child: PaddingExample(),
+                  ),
                 ),
                 GoRoute(
                   path: 'SizedBoxExample',
-                  builder: (_, __) => const SizedBoxExample(),
+                  builder: (_, __) => const CustomWidgetCodeView(
+                    filePath: '',
+                    child: SizedBoxExample(),
+                  ),
                 ),
                 GoRoute(
                   path: 'SizedOverflowBoxExample',
-                  builder: (_, __) => const SizedOverflowBoxExample(),
+                  builder: (_, __) => const CustomWidgetCodeView(
+                    filePath: '',
+                    child: SizedOverflowBoxExample(),
+                  ),
                 ),
                 GoRoute(
                   path: 'TransformExample',
-                  builder: (_, __) => const TransformExample(),
+                  builder: (_, __) => const CustomWidgetCodeView(
+                    filePath: '',
+                    child: TransformExample(),
+                  ),
                 ),
               ],
             ),
@@ -591,15 +853,24 @@ final router = GoRouter(
               routes: [
                 GoRoute(
                   path: 'CustomScrollViewExample',
-                  builder: (_, __) => const CustomScrollViewExample(),
+                  builder: (_, __) => const CustomWidgetCodeView(
+                    filePath: '',
+                    child: CustomScrollViewExample(),
+                  ),
                 ),
                 GoRoute(
                   path: 'NestedScrollViewExample',
-                  builder: (_, __) => const NestedScrollViewExample(),
+                  builder: (_, __) => const CustomWidgetCodeView(
+                    filePath: '',
+                    child: NestedScrollViewExample(),
+                  ),
                 ),
                 GoRoute(
                   path: 'NestedScrollViewExample2',
-                  builder: (_, __) => const NestedScrollViewExample2(),
+                  builder: (_, __) => const CustomWidgetCodeView(
+                    filePath: '',
+                    child: NestedScrollViewExample2(),
+                  ),
                 ),
               ],
             ),
@@ -611,145 +882,226 @@ final router = GoRouter(
           routes: [
             GoRoute(
               path: 'ActionsExample',
-              builder: (_, __) => const ActionsExample(),
+              builder: (_, __) => const ActionsPage(),
               routes: [
                 GoRoute(
                   path: 'CommonButtonsExample',
-                  builder: (_, __) => const CommonButtonsExample(),
+                  builder: (_, __) => const CustomWidgetCodeView(
+                    filePath: '',
+                    child: CommonButtonsExample(),
+                  ),
                 ),
                 GoRoute(
                   path: 'FABExample',
-                  builder: (_, __) => const FABExample(),
+                  builder: (_, __) => const CustomWidgetCodeView(
+                    filePath: '',
+                    child: FABExample(),
+                  ),
                 ),
                 GoRoute(
                   path: 'IconButtonExample',
-                  builder: (_, __) => const IconButtonExample(),
+                  builder: (_, __) => const CustomWidgetCodeView(
+                    filePath: '',
+                    child: IconButtonExample(),
+                  ),
                 ),
                 GoRoute(
                   path: 'SegmentedButtonExample',
-                  builder: (_, __) => const SegmentedButtonExample(),
+                  builder: (_, __) => const CustomWidgetCodeView(
+                    filePath: '',
+                    child: SegmentedButtonExample(),
+                  ),
                 ),
               ],
             ),
             GoRoute(
               path: 'CommunicationExample',
-              builder: (_, __) => const CommunicationExample(),
+              builder: (_, __) => const CommunicationPage(),
               routes: [
                 GoRoute(
                   path: 'BadgeExample',
-                  builder: (_, __) => const BadgeExample(),
+                  builder: (_, __) => const CustomWidgetCodeView(
+                    filePath: '',
+                    child: BadgeExample(),
+                  ),
                 ),
                 GoRoute(
                   path: 'ProgressIndicatorExample',
-                  builder: (_, __) => const ProgressIndicatorExample(),
+                  builder: (_, __) => const CustomWidgetCodeView(
+                    filePath: '',
+                    child: ProgressIndicatorExample(),
+                  ),
                 ),
                 GoRoute(
                   path: 'SnackBarExample',
-                  builder: (_, __) => const SnackBarExample(),
+                  builder: (_, __) => const CustomWidgetCodeView(
+                    filePath: '',
+                    child: SnackBarExample(),
+                  ),
                 ),
               ],
             ),
             GoRoute(
               path: 'ContainmentExample',
-              builder: (_, __) => const ContainmentExample(),
+              builder: (_, __) => const ContainmentPage(),
               routes: [
                 GoRoute(
-                  path: 'BottomSheetExampleApp',
-                  builder: (_, __) => const BottomSheetExampleApp(),
+                  path: 'BottomSheetExample',
+                  builder: (_, __) => const CustomWidgetCodeView(
+                    filePath: 'lib/pages/material/containment/example/bottom_sheet_example.dart',
+                    child: BottomSheetExample(),
+                  ),
                 ),
                 GoRoute(
                   path: 'CardExample',
-                  builder: (_, __) => const CardExample(),
+                  builder: (_, __) => const CustomWidgetCodeView(
+                    filePath: '',
+                    child: CardExample(),
+                  ),
                 ),
                 GoRoute(
                   path: 'DialogExample',
-                  builder: (_, __) => const DialogExample(),
+                  builder: (_, __) => const CustomWidgetCodeView(
+                    filePath: '',
+                    child: DialogExample(),
+                  ),
                 ),
                 GoRoute(
                   path: 'DividerExample',
-                  builder: (_, __) => const DividerExample(),
+                  builder: (_, __) => const CustomWidgetCodeView(
+                    filePath: '',
+                    child: DividerExample(),
+                  ),
                 ),
                 GoRoute(
                   path: 'ListTileExample',
-                  builder: (_, __) => const ListTileExample(),
+                  builder: (_, __) => const CustomWidgetCodeView(
+                    filePath: '',
+                    child: ListTileExample(),
+                  ),
                 ),
               ],
             ),
             GoRoute(
               path: 'NavigationExample',
-              builder: (_, __) => const NavigationExample(),
+              builder: (_, __) => const NavigationPage(),
               routes: [
                 GoRoute(
                   path: 'AppBarExample',
-                  builder: (_, __) => const AppBarExample(),
+                  builder: (_, __) => const CustomWidgetCodeView(
+                    filePath: '',
+                    child: AppBarExample(),
+                  ),
                 ),
                 GoRoute(
                   path: 'BottomAppBarExample',
-                  builder: (_, __) => const BottomAppBarExample(),
+                  builder: (_, __) => const CustomWidgetCodeView(
+                    filePath: '',
+                    child: BottomAppBarExample(),
+                  ),
                 ),
                 GoRoute(
                   path: 'NavigationBarExample',
-                  builder: (_, __) => const NavigationBarExample(),
+                  builder: (_, __) => const CustomWidgetCodeView(
+                    filePath: '',
+                    child: NavigationBarExample(),
+                  ),
                 ),
                 GoRoute(
                   path: 'NavigationDrawerExample',
-                  builder: (_, __) => const NavigationDrawerExample(),
+                  builder: (_, __) => const CustomWidgetCodeView(
+                    filePath: '',
+                    child: NavigationDrawerExample(),
+                  ),
                 ),
                 GoRoute(
                   path: 'NavigationRailExample',
-                  builder: (_, __) => const NavigationRailExample(),
+                  builder: (_, __) => const CustomWidgetCodeView(
+                    filePath: '',
+                    child: NavigationRailExample(),
+                  ),
                 ),
                 GoRoute(
                   path: 'TabBarExample',
-                  builder: (_, __) => const TabBarExample(),
+                  builder: (_, __) => const CustomWidgetCodeView(
+                    filePath: '',
+                    child: TabBarExample(),
+                  ),
                 ),
               ],
             ),
             GoRoute(
               path: 'SelectionExample',
-              builder: (_, __) => const SelectionExample(),
+              builder: (_, __) => const SelectionPage(),
               routes: [
                 GoRoute(
                   path: 'CheckboxExample',
-                  builder: (_, __) => const CheckboxExample(),
+                  builder: (_, __) => const CustomWidgetCodeView(
+                    filePath: '',
+                    child: CheckboxExample(),
+                  ),
                 ),
                 GoRoute(
                   path: 'ChipExample',
-                  builder: (_, __) => const ChipExample(),
+                  builder: (_, __) => const CustomWidgetCodeView(
+                    filePath: '',
+                    child: ChipExample(),
+                  ),
                 ),
                 GoRoute(
                   path: 'DatePickerExample',
-                  builder: (_, __) => const DatePickerExample(),
+                  builder: (_, __) => const CustomWidgetCodeView(
+                    filePath: '',
+                    child: DatePickerExample(),
+                  ),
                 ),
                 GoRoute(
                   path: 'PopupMenuExample',
-                  builder: (_, __) => const PopupMenuExample(),
+                  builder: (_, __) => const CustomWidgetCodeView(
+                    filePath: '',
+                    child: PopupMenuExample(),
+                  ),
                 ),
                 GoRoute(
                   path: 'RadioExample',
-                  builder: (_, __) => const RadioExample(),
+                  builder: (_, __) => const CustomWidgetCodeView(
+                    filePath: '',
+                    child: RadioExample(),
+                  ),
                 ),
                 GoRoute(
                   path: 'SliderExample',
-                  builder: (_, __) => const SliderExample(),
+                  builder: (_, __) => const CustomWidgetCodeView(
+                    filePath: '',
+                    child: SliderExample(),
+                  ),
                 ),
                 GoRoute(
                   path: 'SwitchExample',
-                  builder: (_, __) => const SwitchExample(),
+                  builder: (_, __) => const CustomWidgetCodeView(
+                    filePath: '',
+                    child: SwitchExample(),
+                  ),
                 ),
                 GoRoute(
                   path: 'TimePickerExample',
-                  builder: (_, __) => const TimePickerExample(),
+                  builder: (_, __) => const CustomWidgetCodeView(
+                    filePath: '',
+                    child: TimePickerExample(),
+                  ),
                 ),
               ],
             ),
             GoRoute(
               path: 'TextInpusExample',
-              builder: (_, __) => const TextInpusExample(),
+              builder: (_, __) => const TextInpusPage(),
               routes: [
                 GoRoute(
                   path: 'TextFieldExample',
-                  builder: (_, __) => const TextFieldExample(),
+                  builder: (_, __) => const CustomWidgetCodeView(
+                    filePath: '',
+                    child: TextFieldExample(),
+                  ),
                 ),
               ],
             ),
@@ -765,51 +1117,87 @@ final router = GoRouter(
           routes: [
             GoRoute(
               path: 'BackdropFilterExample',
-              builder: (_, __) => const BackdropFilterExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: BackdropFilterExample(),
+              ),
             ),
             GoRoute(
               path: 'ClipOvalExample',
-              builder: (_, __) => const ClipOvalExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: ClipOvalExample(),
+              ),
             ),
             GoRoute(
               path: 'ClipPathExample',
-              builder: (_, __) => const ClipPathExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: ClipPathExample(),
+              ),
             ),
             GoRoute(
               path: 'ClipRRectExample',
-              builder: (_, __) => const ClipRRectExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: ClipRRectExample(),
+              ),
             ),
             GoRoute(
               path: 'ClipRectExample',
-              builder: (_, __) => const ClipRectExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: ClipRectExample(),
+              ),
             ),
             GoRoute(
               path: 'ColorFilteredExample',
-              builder: (_, __) => const ColorFilteredExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: ColorFilteredExample(),
+              ),
             ),
             GoRoute(
               path: 'CustomPaintExample',
-              builder: (_, __) => const CustomPaintExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: CustomPaintExample(),
+              ),
             ),
             GoRoute(
               path: 'DecoratedBoxExample',
-              builder: (_, __) => const DecoratedBoxExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: DecoratedBoxExample(),
+              ),
             ),
             GoRoute(
               path: 'FractionalTranslationExample',
-              builder: (_, __) => const FractionalTranslationExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: FractionalTranslationExample(),
+              ),
             ),
             GoRoute(
               path: 'OpacityExample',
-              builder: (_, __) => const OpacityExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: OpacityExample(),
+              ),
             ),
             GoRoute(
               path: 'RotatedBoxExample',
-              builder: (_, __) => const RotatedBoxExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: RotatedBoxExample(),
+              ),
             ),
             GoRoute(
               path: 'TransformExample',
-              builder: (_, __) => const TransformExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: TransformExample(),
+              ),
             ),
           ],
         ),
@@ -819,55 +1207,94 @@ final router = GoRouter(
           routes: [
             GoRoute(
               path: 'CustomScrollViewExample',
-              builder: (_, __) => const CustomScrollViewExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: CustomScrollViewExample(),
+              ),
             ),
             GoRoute(
               path: 'DraggableScrollableSheetExample',
-              builder: (_, __) => const DraggableScrollableSheetExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: DraggableScrollableSheetExample(),
+              ),
             ),
             GoRoute(
               path: 'GridViewExample',
-              builder: (_, __) => const GridViewExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: GridViewExample(),
+              ),
             ),
             GoRoute(
               path: 'ListViewExample',
-              builder: (_, __) => const ListViewExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: ListViewExample(),
+              ),
             ),
             GoRoute(
               path: 'NestedScrollViewExample',
-              builder: (_, __) => const NestedScrollViewExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: NestedScrollViewExample(),
+              ),
             ),
             GoRoute(
               path: 'NotificationListenerExample',
-              builder: (_, __) => const NotificationListenerExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: NotificationListenerExample(),
+              ),
             ),
             GoRoute(
               path: 'PageViewExample',
-              builder: (_, __) => const PageViewExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: PageViewExample(),
+              ),
             ),
             GoRoute(
               path: 'RefreshIndicatorExample',
-              builder: (_, __) => const RefreshIndicatorExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: RefreshIndicatorExample(),
+              ),
             ),
             GoRoute(
               path: 'ReorderableExample',
-              builder: (_, __) => const ReorderableExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: ReorderableExample(),
+              ),
             ),
             GoRoute(
               path: 'ScrollConfigurationExample',
-              builder: (_, __) => const ScrollConfigurationExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: ScrollConfigurationExample(),
+              ),
             ),
             GoRoute(
               path: 'ScrollableExample',
-              builder: (_, __) => const ScrollableExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: ScrollableExample(),
+              ),
             ),
             GoRoute(
               path: 'ScrollbarExample',
-              builder: (_, __) => const ScrollbarExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: ScrollbarExample(),
+              ),
             ),
             GoRoute(
               path: 'SingleChildScrollViewExample',
-              builder: (_, __) => const SingleChildScrollViewExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: SingleChildScrollViewExample(),
+              ),
             ),
           ],
         ),
@@ -877,15 +1304,24 @@ final router = GoRouter(
           routes: [
             GoRoute(
               path: 'MediaQueryExample',
-              builder: (_, __) => const MediaQueryExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: MediaQueryExample(),
+              ),
             ),
             GoRoute(
               path: 'PaddingExample',
-              builder: (_, __) => const PaddingExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: PaddingExample(),
+              ),
             ),
             GoRoute(
               path: 'ThemeExample',
-              builder: (_, __) => const ThemeExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: ThemeExample(),
+              ),
             ),
           ],
         ),
@@ -895,15 +1331,24 @@ final router = GoRouter(
           routes: [
             GoRoute(
               path: 'DefaultTextStyleExample',
-              builder: (_, __) => const DefaultTextStyleExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: DefaultTextStyleExample(),
+              ),
             ),
             GoRoute(
               path: 'RichTextExample',
-              builder: (_, __) => const RichTextExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: RichTextExample(),
+              ),
             ),
             GoRoute(
               path: 'TextExample',
-              builder: (_, __) => const TextExample(),
+              builder: (_, __) => const CustomWidgetCodeView(
+                filePath: '',
+                child: TextExample(),
+              ),
             ),
           ],
         ),
@@ -1069,5 +1514,36 @@ class EffectlessScrollBehavior extends ScrollBehavior {
   @override
   Widget buildOverscrollIndicator(BuildContext context, Widget child, ScrollableDetails details) {
     return child;
+  }
+}
+
+class CustomWidgetCodeView extends StatelessWidget {
+  const CustomWidgetCodeView({
+    Key? key,
+    required this.filePath,
+    required this.child,
+  }) : super(key: key);
+
+  final String filePath;
+  final Widget child;
+
+  @override
+  Widget build(BuildContext context) {
+    return Theme(
+      data: Theme.of(context).copyWith(
+        primaryColor: Colors.purple[300],
+        tabBarTheme: Theme.of(context).tabBarTheme.copyWith(indicatorColor: Colors.purple[50]),
+      ),
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text(child.toString()),
+          centerTitle: true,
+        ),
+        body: WidgetWithCodeView(
+          filePath: filePath,
+          child: child,
+        ),
+      ),
+    );
   }
 }

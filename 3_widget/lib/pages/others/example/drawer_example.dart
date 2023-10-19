@@ -9,8 +9,7 @@ class DrawerExample extends StatefulWidget {
 
 class _DrawerExampleState extends State<DrawerExample> {
   int _selectedIndex = 0;
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+  static const TextStyle optionStyle = TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
     Text(
       'Index 0: Home',
@@ -35,7 +34,6 @@ class _DrawerExampleState extends State<DrawerExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('DrawerExample')),
       body: Center(
         child: _widgetOptions[_selectedIndex],
       ),

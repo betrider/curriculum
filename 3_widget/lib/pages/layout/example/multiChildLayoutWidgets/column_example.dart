@@ -5,12 +5,8 @@ class ColumnExample extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('ColumnExample'),
-        centerTitle: true,
-      ),
-      body: const Column(
+    return const Scaffold(
+      body: Column(
         //       crossAxisAlignment: CrossAxisAlignment.start,
         // mainAxisSize: MainAxisSize.min,
         children: <Widget>[

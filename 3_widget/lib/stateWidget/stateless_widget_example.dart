@@ -5,9 +5,8 @@ class StatelessWidgetExample extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('StatelessWidgetExample')),
-      body: const Placeholder()
+    return const Scaffold(
+      body: Placeholder(),
     );
   }
 }

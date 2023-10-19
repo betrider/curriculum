@@ -6,10 +6,6 @@ class AlignExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('AlignExample'),
-        centerTitle: true,
-      ),
       body: Center(
         child: Container(
           height: 120.0,

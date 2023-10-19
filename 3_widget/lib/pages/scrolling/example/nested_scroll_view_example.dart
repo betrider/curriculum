@@ -10,7 +10,6 @@ class NestedScrollViewExample extends StatelessWidget {
     return DefaultTabController(
       length: tabs.length, // This is the number of tabs.
       child: Scaffold(
-        appBar: AppBar(title: const Text('NestedScrollViewExample')),
         body: NestedScrollView(
           headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
             // These are the slivers that show up in the "outer" scroll view.

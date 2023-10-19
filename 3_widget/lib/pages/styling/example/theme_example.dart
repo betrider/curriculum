@@ -19,16 +19,6 @@ class ThemeExample extends StatelessWidget {
         ),
       ),
       child: Scaffold(
-        appBar: AppBar(
-          title: Text(
-            'ThemeExample',
-            style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                  color: Theme.of(context).colorScheme.onSecondary,
-                ),
-          ),
-          centerTitle: true,
-          backgroundColor: Theme.of(context).colorScheme.secondary,
-        ),
         body: Center(
           child: Container(
             padding: const EdgeInsets.symmetric(

@@ -14,10 +14,6 @@ class _RefreshIndicatorExampleState extends State<RefreshIndicatorExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('RefreshIndicatorExample'),
-        centerTitle: true,
-      ),
       body: RefreshIndicator(
         key: _refreshIndicatorKey,
         color: Colors.white,

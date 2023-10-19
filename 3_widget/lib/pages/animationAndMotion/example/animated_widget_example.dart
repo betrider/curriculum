@@ -40,10 +40,6 @@ class AnimatedWidgetExample2 extends AnimatedWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('AnimatedWidgetExample'),
-        centerTitle: true,
-      ),
       body: Transform.rotate(
         angle: _progress.value * 2.0 * pi,
         child: Container(width: 200.0, height: 200.0, color: Colors.green),

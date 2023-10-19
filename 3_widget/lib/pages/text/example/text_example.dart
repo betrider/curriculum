@@ -6,9 +6,8 @@ class TextExample extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('TextExample')),
-      body: const Column(
+    return const Scaffold(
+      body: Column(
         children: [
           Text(
             'Hello, How are you?',

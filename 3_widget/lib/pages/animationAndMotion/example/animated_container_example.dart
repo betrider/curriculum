@@ -13,10 +13,6 @@ class _AnimatedContainerExampleState extends State<AnimatedContainerExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('AnimatedContainerExample'),
-        centerTitle: true,
-      ),
       body: GestureDetector(
         onTap: () {
           setState(() {

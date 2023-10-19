@@ -10,8 +10,6 @@ class TabBarExample extends StatelessWidget {
       length: 3,
       child: Scaffold(
         appBar: AppBar(
-          title: const Text('TabBarExample'),
-          centerTitle: true,
           bottom: const TabBar(
             tabs: <Widget>[
               Tab(

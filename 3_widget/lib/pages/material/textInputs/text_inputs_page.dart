@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_widget/context_extension.dart';
 import 'package:flutter_widget/main.dart';
 
-class TextInpusExample extends StatelessWidget {
-  const TextInpusExample({super.key});
+class TextInpusPage extends StatelessWidget {
+  const TextInpusPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('TextInpusExample'),
+        title: const Text('TextInpusPage'),
         centerTitle: true,
       ),
       body: GridView.count(

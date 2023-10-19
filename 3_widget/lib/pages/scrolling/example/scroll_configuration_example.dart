@@ -7,10 +7,6 @@ class ScrollConfigurationExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('ScrollConfigurationExample'),
-        centerTitle: true,
-      ),
       body: ScrollConfiguration(
         behavior: MyBehavior(),
         child: ListView(

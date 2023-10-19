@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_widget/context_extension.dart';
 import 'package:flutter_widget/main.dart';
 
-class ActionsExample extends StatelessWidget {
-  const ActionsExample({super.key});
+class ActionsPage extends StatelessWidget {
+  const ActionsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('ActionsExample'),
+        title: const Text('ActionsPage'),
         centerTitle: true,
       ),
       body: GridView.count(

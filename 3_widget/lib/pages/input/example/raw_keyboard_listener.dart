@@ -14,10 +14,6 @@ class KeyboardListenerExampleState extends State<KeyboardListenerExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('KeyboardListenerExample'),
-        centerTitle: true,
-      ),
       body: RawKeyboardListener(
         focusNode: FocusNode(),
         onKey: (RawKeyEvent event) {

@@ -28,9 +28,8 @@ class _StatefulWidgetExampleState extends State<StatefulWidgetExample> {
   @override
   Widget build(BuildContext context) {
     print('3.build');
-    return Scaffold(
-      appBar: AppBar(title: const Text('StatefulWidgetExample')),
-      body: const Placeholder(),
+    return const Scaffold(
+      body: Placeholder(),
     );
   }
 

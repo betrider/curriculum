@@ -4,12 +4,8 @@ class TextFieldExample extends StatelessWidget {
   const TextFieldExample({super.key});
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('TextFieldExample'),
-        centerTitle: true,
-      ),
-      body: const Center(
+    return const Scaffold(
+      body: Center(
         child: ObscuredTextFieldSample(),
       ),
     );

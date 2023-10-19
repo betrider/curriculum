@@ -15,12 +15,6 @@ class AnimatedDefaultTextStyleExampleState extends State<AnimatedDefaultTextStyl
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("AnimatedDefaultTextStyleExample"),
-        centerTitle: true,
-        automaticallyImplyLeading: false,
-        backgroundColor: Colors.cyan,
-      ),
       body: Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,

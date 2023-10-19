@@ -5,16 +5,12 @@ class CustomMultiChildLayoutExample extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Directionality(
+    return const Directionality(
       // TRY THIS: Try changing the direction here and hot-reloading to
       // see the layout change.
       textDirection: TextDirection.ltr,
       child: Scaffold(
-        appBar: AppBar(
-          title: const Text('CustomMultiChildLayoutExample'),
-          centerTitle: true,
-        ),
-        body: const CustomMultiChildLayoutExample2(),
+        body: CustomMultiChildLayoutExample2(),
       ),
     );
   }

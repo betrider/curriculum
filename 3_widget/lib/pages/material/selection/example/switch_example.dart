@@ -13,10 +13,6 @@ class _SwitchExampleState extends State<SwitchExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('SwitchExample'),
-        centerTitle: true,
-      ),
       body: Center(
         child: Switch(
           // This bool value toggles the switch.

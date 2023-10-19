@@ -28,10 +28,6 @@ class _RotationTransitionExampleState extends State<RotationTransitionExample> w
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('RotationTransitionExample'),
-        centerTitle: true,
-      ),
       body: Center(
         child: RotationTransition(
           turns: _animation,

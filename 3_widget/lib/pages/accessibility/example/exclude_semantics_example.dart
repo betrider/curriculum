@@ -5,12 +5,8 @@ class ExcludeSemanticsExample extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('ExcludeSemanticsExample'),
-        centerTitle: true,
-      ),
-      body: const Placeholder(),
+    return const Scaffold(
+      body: Placeholder(),
     );
   }
 }

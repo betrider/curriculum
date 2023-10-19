@@ -28,10 +28,6 @@ class _ScaleTransitionExampleState extends State<ScaleTransitionExample> with Ti
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('ScaleTransitionExample'),
-        centerTitle: true,
-      ),
       body: Center(
         child: ScaleTransition(
           scale: _animation,

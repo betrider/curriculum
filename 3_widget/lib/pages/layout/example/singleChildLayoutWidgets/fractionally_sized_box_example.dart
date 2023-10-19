@@ -6,10 +6,6 @@ class FractionallySizedBoxExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('FractionallySizedBoxExample'),
-        centerTitle: true,
-      ),
       body: Center(
         child: SizedBox.expand(
           child: FractionallySizedBox(

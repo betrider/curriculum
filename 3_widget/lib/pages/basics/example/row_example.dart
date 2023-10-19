@@ -5,12 +5,8 @@ class RowExample extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('RowExample'),
-        centerTitle: true,
-      ),
-      body: const Row(
+    return const Scaffold(
+      body: Row(
         children: <Widget>[
           Expanded(
             child: Text('Deliver features faster', textAlign: TextAlign.center),

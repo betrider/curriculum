@@ -5,12 +5,8 @@ class BadgeExample extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('BadgeExample'),
-        centerTitle: true,
-      ),
-      body: const Center(
+    return const Scaffold(
+      body: Center(
         child: Badge(
           label: Text('5'),
           child: Icon(Icons.notifications),

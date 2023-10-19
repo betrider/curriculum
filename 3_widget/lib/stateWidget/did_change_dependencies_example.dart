@@ -24,7 +24,6 @@ class ParentWidgetState extends State<DidChangeDependenciesExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('DidChangeDependenciesExample')),
       body: Provider.value(
         value: _counter,
         updateShouldNotify: (oldValue, newValue) => true,

@@ -13,10 +13,6 @@ class _AnimatedAlignExampleState extends State<AnimatedAlignExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('AnimatedAlignExample'),
-        centerTitle: true,
-      ),
       body: GestureDetector(
         onTap: () {
           setState(() {

@@ -13,10 +13,6 @@ class _SliderExampleState extends State<SliderExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('SliderExample'),
-        centerTitle: true,
-      ),
       body: Slider(
         value: _currentSliderValue,
         max: 100,

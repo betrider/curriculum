@@ -5,12 +5,8 @@ class PaddingExample extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('PaddingExample'),
-        centerTitle: true,
-      ),
-      body: const Center(
+    return const Scaffold(
+      body: Center(
         child: Card(
           child: Padding(
             padding: EdgeInsets.all(16.0),

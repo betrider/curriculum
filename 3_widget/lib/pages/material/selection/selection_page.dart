@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_widget/context_extension.dart';
 import 'package:flutter_widget/main.dart';
 
-class SelectionExample extends StatelessWidget {
-  const SelectionExample({super.key});
+class SelectionPage extends StatelessWidget {
+  const SelectionPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('SelectionExample'),
+        title: const Text('SelectionPage'),
         centerTitle: true,
       ),
       body: GridView.count(

@@ -5,12 +5,8 @@ class CommonButtonsExample extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('CommonButtonsExample'),
-        centerTitle: true,
-      ),
-      body: const Padding(
+    return const Scaffold(
+      body: Padding(
         padding: EdgeInsets.all(4.0),
         child: Row(
           children: <Widget>[
@@ -40,8 +36,7 @@ class ButtonTypesGroup extends StatelessWidget {
         children: <Widget>[
           ElevatedButton(onPressed: onPressed, child: const Text('Elevated')),
           FilledButton(onPressed: onPressed, child: const Text('Filled')),
-          FilledButton.tonal(
-              onPressed: onPressed, child: const Text('Filled Tonal')),
+          FilledButton.tonal(onPressed: onPressed, child: const Text('Filled Tonal')),
           OutlinedButton(onPressed: onPressed, child: const Text('Outlined')),
           TextButton(onPressed: onPressed, child: const Text('Text')),
         ],

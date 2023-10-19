@@ -9,10 +9,6 @@ class NestedScrollViewExample extends StatelessWidget {
     return DefaultTabController(
       length: tabs.length,
       child: Scaffold(
-        appBar: AppBar(
-          title: const Text('NestedScrollViewExample'),
-          centerTitle: true,
-        ),
         body: NestedScrollView(
           headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
             return <Widget>[

@@ -4,12 +4,10 @@ class ProgressIndicatorExample extends StatefulWidget {
   const ProgressIndicatorExample({super.key});
 
   @override
-  State<ProgressIndicatorExample> createState() =>
-      _ProgressIndicatorExampleState();
+  State<ProgressIndicatorExample> createState() => _ProgressIndicatorExampleState();
 }
 
-class _ProgressIndicatorExampleState extends State<ProgressIndicatorExample>
-    with TickerProviderStateMixin {
+class _ProgressIndicatorExampleState extends State<ProgressIndicatorExample> with TickerProviderStateMixin {
   late AnimationController controller;
 
   @override
@@ -35,10 +33,6 @@ class _ProgressIndicatorExampleState extends State<ProgressIndicatorExample>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('ProgressIndicatorExample'),
-        centerTitle: true,
-      ),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Column(

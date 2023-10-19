@@ -7,10 +7,6 @@ class MediaQueryExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('MediaQueryExample'),
-        centerTitle: true,
-      ),
       body: Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,

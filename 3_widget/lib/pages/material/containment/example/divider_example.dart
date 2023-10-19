@@ -6,10 +6,6 @@ class DividerExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('DividerExample'),
-        centerTitle: true,
-      ),
       body: Center(
         child: Column(
           children: <Widget>[

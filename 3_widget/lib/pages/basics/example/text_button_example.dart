@@ -6,10 +6,6 @@ class TextButtonExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('TextButtonExample'),
-        centerTitle: true,
-      ),
       body: Center(
         child: TextButton(
           onPressed: () {},

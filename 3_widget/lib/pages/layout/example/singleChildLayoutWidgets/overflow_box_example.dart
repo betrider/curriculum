@@ -6,10 +6,6 @@ class OverflowBoxExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('OverflowBoxExample'),
-        centerTitle: true,
-      ),
       body: Center(
         child: Container(
           width: 100,

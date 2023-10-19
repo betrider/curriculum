@@ -6,10 +6,6 @@ class FABExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('FABExample'),
-        centerTitle: true,
-      ),
       body: const Placeholder(),
       floatingActionButton: FloatingActionButton(
         child: const Text('Action'),

@@ -17,10 +17,6 @@ class _NavigationRailExampleState extends State<NavigationRailExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('NavigationRailExample'),
-        centerTitle: true,
-      ),
       body: Row(
         children: <Widget>[
           NavigationRail(
@@ -148,8 +144,7 @@ class _NavigationRailExampleState extends State<NavigationRailExample> {
                           showLeading = !showLeading;
                         });
                       },
-                      child:
-                          Text(showLeading ? 'Hide Leading' : 'Show Leading'),
+                      child: Text(showLeading ? 'Hide Leading' : 'Show Leading'),
                     ),
                     ElevatedButton(
                       onPressed: () {
@@ -157,8 +152,7 @@ class _NavigationRailExampleState extends State<NavigationRailExample> {
                           showTrailing = !showTrailing;
                         });
                       },
-                      child: Text(
-                          showTrailing ? 'Hide Trailing' : 'Show Trailing'),
+                      child: Text(showTrailing ? 'Hide Trailing' : 'Show Trailing'),
                     ),
                   ],
                 ),

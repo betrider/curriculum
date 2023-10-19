@@ -10,7 +10,6 @@ class ListViewExample extends StatelessWidget {
     final List<int> colorCodes = <int>[600, 500, 100];
 
     return Scaffold(
-      appBar: AppBar(title: const Text('ListViewExample')),
       body: Column(
         children: [
           Expanded(

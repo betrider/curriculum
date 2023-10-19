@@ -58,10 +58,6 @@ class _FlowExampleState extends State<FlowExample> with SingleTickerProviderStat
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('FlowExample'),
-        centerTitle: true,
-      ),
       body: Flow(
         delegate: FlowMenuDelegate(menuAnimation: menuAnimation),
         children: menuItems.map<Widget>((IconData icon) => flowMenuItem(icon)).toList(),

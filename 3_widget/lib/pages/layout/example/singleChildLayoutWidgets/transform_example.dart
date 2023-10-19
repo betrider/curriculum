@@ -8,10 +8,6 @@ class TransformExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('TransformExample'),
-        centerTitle: true,
-      ),
       body: Center(
         child: ColoredBox(
           color: Colors.black,

@@ -39,7 +39,6 @@ class _DidUpdateWidgetExampleState extends State<DidUpdateWidgetExample> with Si
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('DidUpdateWidgetExample')),
       body: Container(),
     ); // ...
   }

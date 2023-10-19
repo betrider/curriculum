@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_widget/context_extension.dart';
 import 'package:flutter_widget/main.dart';
 
-class NavigationExample extends StatelessWidget {
-  const NavigationExample({super.key});
+class NavigationPage extends StatelessWidget {
+  const NavigationPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('NavigationExample'),
+        title: const Text('NavigationPage'),
         centerTitle: true,
       ),
       body: GridView.count(

@@ -13,10 +13,6 @@ class _DismissibleExampleState extends State<DismissibleExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('DismissibleExample'),
-        centerTitle: true,
-      ),
       body: ListView.builder(
         itemCount: items.length,
         padding: const EdgeInsets.symmetric(vertical: 16),

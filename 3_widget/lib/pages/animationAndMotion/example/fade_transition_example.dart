@@ -28,10 +28,6 @@ class _FadeTransitionExampleState extends State<FadeTransitionExample> with Tick
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('FadeTransitionExample'),
-        centerTitle: true,
-      ),
       body: ColoredBox(
         color: Colors.white,
         child: FadeTransition(

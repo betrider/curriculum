@@ -8,10 +8,6 @@ class AnimatedListStateExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('AnimatedListStateExample'),
-        centerTitle: true,
-      ),
       body: AnimatedList(
         key: listKey,
         itemBuilder: (BuildContext context, int index, Animation<double> animation) {

@@ -6,10 +6,6 @@ class SnackBarExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('SnackBarExample'),
-        centerTitle: true,
-      ),
       body: Center(
         child: ElevatedButton(
           child: const Text('Show Snackbar'),

@@ -13,10 +13,6 @@ class _IconButtonExampleState extends State<IconButtonExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('IconButtonExample'),
-        centerTitle: true,
-      ),
       body: Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,

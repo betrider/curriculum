@@ -40,6 +40,7 @@ dependencies:
   image: ^4.1.3
   dotted_border: ^2.1.0
   provider: ^6.0.5
+  widget_with_codeview: ^3.1.0
 
 dev_dependencies:
   flutter_test:
@@ -98,6 +99,7 @@ flutter:
     - assets/images/lafayette.jpeg
     - assets/images/lena.png
     - assets/data.json
+    - lib/pages/material/containment/example/bottom_sheet_example.dart
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

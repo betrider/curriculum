@@ -9,10 +9,6 @@ class ListViewExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('ListViewExample'),
-        centerTitle: true,
-      ),
       body: ListView.separated(
         padding: const EdgeInsets.all(8),
         itemCount: entries.length,

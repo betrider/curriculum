@@ -7,10 +7,6 @@ class RichTextExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('RichTextExample'),
-        centerTitle: true,
-      ),
       body: Center(
         child: RichText(
           text: TextSpan(

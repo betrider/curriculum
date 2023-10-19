@@ -6,10 +6,6 @@ class FittedBoxExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('FittedBoxExample'),
-        centerTitle: true,
-      ),
       body: Container(
         height: 400,
         width: 300,

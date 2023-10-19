@@ -5,12 +5,8 @@ class ColumnExample extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('ColumnExample'),
-        centerTitle: true,
-      ),
-      body: const Column(
+    return const Scaffold(
+      body: Column(
         children: <Widget>[
           Text('Deliver features faster'),
           Text('Craft beautiful UIs'),

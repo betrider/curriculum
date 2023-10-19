@@ -67,10 +67,6 @@ class _DatePickerExampleState extends State<DatePickerExample> with RestorationM
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('DatePickerExample'),
-        centerTitle: true,
-      ),
       body: Center(
         child: OutlinedButton(
           onPressed: () {

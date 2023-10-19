@@ -6,10 +6,6 @@ class ChipExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('ChipExample'),
-        centerTitle: true,
-      ),
       body: Center(
         child: Chip(
           avatar: CircleAvatar(

@@ -6,12 +6,8 @@ class DecoratedBoxExample extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('DecoratedBoxExample'),
-        centerTitle: true,
-      ),
-      body: const Center(
+    return const Scaffold(
+      body: Center(
         child: DecoratedBox(
           decoration: BoxDecoration(
             gradient: RadialGradient(

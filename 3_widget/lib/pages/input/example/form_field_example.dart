@@ -19,10 +19,6 @@ class FormFieldExampleState extends State<FormFieldExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('FormFieldExample'),
-        centerTitle: true,
-      ),
       body: Form(
         key: _formKey,
         child: Column(

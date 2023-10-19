@@ -15,10 +15,6 @@ class _IndexedStackExampleState extends State<IndexedStackExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('IndexedStackExample'),
-        centerTitle: true,
-      ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[

@@ -15,10 +15,6 @@ class _RadioExampleState extends State<RadioExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('RadioExample'),
-        centerTitle: true,
-      ),
       body: Column(
         children: <Widget>[
           ListTile(

@@ -8,12 +8,8 @@ class AssetBundleExample extends StatelessWidget {
     // var bundle = DefaultAssetBundle.of(context);
     // bundle.loadString('asset/configure.json');
 
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('AssetBundleExample'),
-        centerTitle: true,
-      ),
-      body: const Center(
+    return const Scaffold(
+      body: Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [

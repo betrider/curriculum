@@ -6,10 +6,6 @@ class ExpandedExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('ExpandedExample'),
-        centerTitle: true,
-      ),
       body: Center(
         child: Row(
           children: <Widget>[

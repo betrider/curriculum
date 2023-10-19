@@ -13,10 +13,6 @@ class _NavigationBarExampleState extends State<NavigationBarExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('NavigationBarExample'),
-        centerTitle: true,
-      ),
       bottomNavigationBar: NavigationBar(
         onDestinationSelected: (int index) {
           setState(() {

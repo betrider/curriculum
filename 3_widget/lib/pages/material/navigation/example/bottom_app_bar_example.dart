@@ -33,11 +33,6 @@ class _BottomAppBarExampleState extends State<BottomAppBarExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        title: const Text('BottomAppBarExample'),
-        centerTitle: true,
-      ),
       body: ListView(
         padding: const EdgeInsets.only(bottom: 88),
         children: <Widget>[

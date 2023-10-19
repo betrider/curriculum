@@ -13,10 +13,6 @@ class _PopupMenuExampleState extends State<PopupMenuExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('PopupMenuExample'),
-        centerTitle: true,
-      ),
       body: Center(
         child: PopupMenuButton<SampleItem>(
           initialValue: selectedMenu,

@@ -17,10 +17,6 @@ class AnimatedOpacityExampleState extends State<AnimatedOpacityExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('AnimatedOpacityExample'),
-        centerTitle: true,
-      ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[

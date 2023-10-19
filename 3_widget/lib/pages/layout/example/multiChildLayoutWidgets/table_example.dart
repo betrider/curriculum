@@ -6,10 +6,6 @@ class TableExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('TableExample'),
-        centerTitle: true,
-      ),
       body: Table(
         border: TableBorder.all(),
         columnWidths: const <int, TableColumnWidth>{

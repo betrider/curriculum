@@ -7,8 +7,7 @@ class ListTileExample extends StatefulWidget {
   State<ListTileExample> createState() => _ListTileExampleState();
 }
 
-class _ListTileExampleState extends State<ListTileExample>
-    with TickerProviderStateMixin {
+class _ListTileExampleState extends State<ListTileExample> with TickerProviderStateMixin {
   late final AnimationController _fadeController;
   late final AnimationController _sizeController;
   late final Animation<double> _fadeAnimation;
@@ -48,10 +47,6 @@ class _ListTileExampleState extends State<ListTileExample>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('ListTileExample'),
-        centerTitle: true,
-      ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[

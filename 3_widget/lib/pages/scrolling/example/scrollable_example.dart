@@ -8,7 +8,6 @@ class ScrollableExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('ScrollableExample')),
         body: Scrollable(
       // Scrollable 위젯을 사용하여 스크롤 가능한 컨텐츠를 만듭니다.
       axisDirection: AxisDirection.down, // 스크롤 방향을 설정합니다.

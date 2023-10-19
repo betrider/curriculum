@@ -5,12 +5,8 @@ class IconExample extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('IconExample'),
-        centerTitle: true,
-      ),
-      body: const Column(
+    return const Scaffold(
+      body: Column(
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,

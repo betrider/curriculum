@@ -29,10 +29,6 @@ class _SlideTransitionExampleState extends State<SlideTransitionExample> with Si
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('SlideTransitionExample'),
-        centerTitle: true,
-      ),
       body: SlideTransition(
         position: _offsetAnimation,
         child: const Padding(

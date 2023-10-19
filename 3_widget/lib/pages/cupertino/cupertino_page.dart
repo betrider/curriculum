@@ -7,7 +7,10 @@ class CupertinoComponentsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Cupertino Components widgets')),
+      appBar: AppBar(
+        title: const Text('쿠퍼티노'),
+        centerTitle: true,
+      ),
       body: GridView.count(
         primary: false,
         padding: const EdgeInsets.all(4),

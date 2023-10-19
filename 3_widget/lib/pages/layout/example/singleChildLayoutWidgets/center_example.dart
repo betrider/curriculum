@@ -5,12 +5,8 @@ class CenterExample extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('CenterExample'),
-        centerTitle: true,
-      ),
-      body: const Center(
+    return const Scaffold(
+      body: Center(
         // heightFactor: 1,
         // widthFactor: 1,
         child: SizedBox(

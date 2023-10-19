@@ -13,10 +13,6 @@ class AnimatedPhysicalModelExampleState extends State<AnimatedPhysicalModelExamp
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('AnimatedPhysicalModelExample'),
-        centerTitle: true,
-      ),
       body: Center(
         child: AnimatedPhysicalModel(
           duration: const Duration(seconds: 1),

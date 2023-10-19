@@ -8,7 +8,10 @@ class MaterialComponentsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Material Components widgets')),
+      appBar: AppBar(
+        title: const Text('머티리얼'),
+        centerTitle: true,
+      ),
       body: GridView.count(
         primary: false,
         padding: const EdgeInsets.all(4),

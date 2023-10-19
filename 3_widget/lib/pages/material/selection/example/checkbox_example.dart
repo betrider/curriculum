@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class CheckboxExample extends StatefulWidget {
@@ -26,10 +25,6 @@ class _CheckboxExampleState extends State<CheckboxExample> {
     }
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('CheckboxExample'),
-        centerTitle: true,
-      ),
       body: Center(
         child: Checkbox(
           checkColor: Colors.white,

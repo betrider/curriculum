@@ -9,10 +9,6 @@ class ClipRRectExample extends StatelessWidget {
     String imageUrl = 'https://images.unsplash.com/photo-1565898835704-3d6be4a2c98c?fit=crop&w=200&q=60';
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('ClipRRectExample'),
-        centerTitle: true,
-      ),
       body: Center(
         child: ClipRRect(
           borderRadius: BorderRadius.circular(50),

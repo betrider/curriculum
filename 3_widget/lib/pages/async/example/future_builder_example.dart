@@ -20,10 +20,6 @@ class _FutureBuilderExampleState extends State<FutureBuilderExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('FutureBuilderExample'),
-        centerTitle: true,
-      ),
       body: DefaultTextStyle(
         style: Theme.of(context).textTheme.displayMedium!,
         textAlign: TextAlign.center,

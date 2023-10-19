@@ -26,10 +26,6 @@ class _AnimatedBuilderExampleState extends State<AnimatedBuilderExample> with Ti
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('AnimatedBuilderExample'),
-        centerTitle: true,
-      ),
       body: AnimatedBuilder(
         animation: _controller,
         child: Container(

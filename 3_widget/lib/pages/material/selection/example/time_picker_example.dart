@@ -112,10 +112,6 @@ class _TimePickerOptionsState extends State<TimePickerOptions> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('TimePickerExample'),
-        centerTitle: true,
-      ),
       body: Material(
         child: Column(
           children: <Widget>[
@@ -153,8 +149,7 @@ class _TimePickerOptionsState extends State<TimePickerOptions> {
                     value: orientation,
                     title: '$Orientation',
                     choiceLabels: <Orientation?, String>{
-                      for (final Orientation choice in Orientation.values)
-                        choice: choice.name,
+                      for (final Orientation choice in Orientation.values) choice: choice.name,
                       null: 'from MediaQuery',
                     },
                     onChanged: _orientationChanged,
@@ -225,8 +220,7 @@ class _TimePickerOptionsState extends State<TimePickerOptions> {
                       },
                     ),
                   ),
-                  if (selectedTime != null)
-                    Text('Selected time: ${selectedTime!.format(context)}'),
+                  if (selectedTime != null) Text('Selected time: ${selectedTime!.format(context)}'),
                 ],
               ),
             ),
@@ -348,8 +342,7 @@ class _RadioSelectionState<T extends Object?> extends State<RadioSelection<T>> {
             onChanged: widget.onChanged,
           ),
         ),
-        GestureDetector(
-            onTap: () => widget.onChanged(widget.value), child: widget.child),
+        GestureDetector(onTap: () => widget.onChanged(widget.value), child: widget.child),
       ],
     );
   }

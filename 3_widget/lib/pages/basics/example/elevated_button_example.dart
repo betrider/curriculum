@@ -13,10 +13,6 @@ class _ElevatedButtonExampleState extends State<ElevatedButtonExample> {
     final ButtonStyle style = ElevatedButton.styleFrom(textStyle: const TextStyle(fontSize: 20));
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('ElevatedButtonExample'),
-        centerTitle: true,
-      ),
       body: Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,

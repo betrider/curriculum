@@ -9,10 +9,6 @@ class CustomScrollViewExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('CustomScrollViewExample'),
-        centerTitle: true,
-      ),
       body: CustomScrollView(
         slivers: [
           // 1.SliverAppBar
