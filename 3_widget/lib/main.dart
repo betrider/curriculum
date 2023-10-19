@@ -96,13 +96,39 @@ import 'package:flutter_widget/pages/layout/example/sliverWidgets/nested_scroll_
 import 'package:flutter_widget/pages/layout/example/sliverWidgets/nested_scroll_view_example2.dart';
 import 'package:flutter_widget/pages/layout/example/sliverWidgets/sliver_widgets.dart';
 import 'package:flutter_widget/pages/layout/layout_page.dart';
-import 'package:flutter_widget/pages/material/example/actions_example.dart';
-import 'package:flutter_widget/pages/material/example/communication_example.dart';
-import 'package:flutter_widget/pages/material/example/containment_example.dart';
-import 'package:flutter_widget/pages/material/example/navigation_example.dart';
-import 'package:flutter_widget/pages/material/example/selection_example.dart';
-import 'package:flutter_widget/pages/material/example/text_inputs_example.dart';
+import 'package:flutter_widget/pages/material/actions/actions_example.dart';
+import 'package:flutter_widget/pages/material/actions/example/common_buttons_example.dart';
+import 'package:flutter_widget/pages/material/actions/example/fab_example.dart';
+import 'package:flutter_widget/pages/material/actions/example/icon_button_example.dart';
+import 'package:flutter_widget/pages/material/actions/example/segmented_button_example.dart';
+import 'package:flutter_widget/pages/material/communication/communication_example.dart';
+import 'package:flutter_widget/pages/material/communication/example/badge_example.dart';
+import 'package:flutter_widget/pages/material/communication/example/progress_indicator_example.dart';
+import 'package:flutter_widget/pages/material/communication/example/snackbar_example.dart';
+import 'package:flutter_widget/pages/material/containment/containment_example.dart';
+import 'package:flutter_widget/pages/material/containment/example/bottom_sheet_example.dart';
+import 'package:flutter_widget/pages/material/containment/example/card_example.dart';
+import 'package:flutter_widget/pages/material/containment/example/dialog_example.dart';
+import 'package:flutter_widget/pages/material/containment/example/divider_example.dart';
+import 'package:flutter_widget/pages/material/containment/example/list_tile_example.dart';
 import 'package:flutter_widget/pages/material/material_page.dart';
+import 'package:flutter_widget/pages/material/navigation/example/bottom_app_bar_example.dart';
+import 'package:flutter_widget/pages/material/navigation/example/navigation_bar_example.dart';
+import 'package:flutter_widget/pages/material/navigation/example/navigation_drawer_example.dart';
+import 'package:flutter_widget/pages/material/navigation/example/navigation_rail_example.dart';
+import 'package:flutter_widget/pages/material/navigation/example/tab_bar_example.dart';
+import 'package:flutter_widget/pages/material/navigation/navigation_example.dart';
+import 'package:flutter_widget/pages/material/selection/example/checkbox_example.dart';
+import 'package:flutter_widget/pages/material/selection/example/chip_example.dart';
+import 'package:flutter_widget/pages/material/selection/example/date_picker_example.dart';
+import 'package:flutter_widget/pages/material/selection/example/popup_menu_example.dart';
+import 'package:flutter_widget/pages/material/selection/example/radio_button_example.dart';
+import 'package:flutter_widget/pages/material/selection/example/slider_example.dart';
+import 'package:flutter_widget/pages/material/selection/example/switch_example.dart';
+import 'package:flutter_widget/pages/material/selection/example/time_picker_example.dart';
+import 'package:flutter_widget/pages/material/selection/selection_example.dart';
+import 'package:flutter_widget/pages/material/textInputs/example/text_field_example.dart';
+import 'package:flutter_widget/pages/material/textInputs/text_inputs_example.dart';
 import 'package:flutter_widget/pages/others/others_page.dart';
 import 'package:flutter_widget/pages/paintingAndEffects/example/backdrop_filter_example.dart';
 import 'package:flutter_widget/pages/paintingAndEffects/example/clip_oval_example.dart';
@@ -134,8 +160,15 @@ import 'package:go_router/go_router.dart';
 import 'package:random_color/random_color.dart';
 
 /// 참조 링크 : https://docs.flutter.dev/ui/widgets
-void main() => runApp(MaterialApp.router(routerConfig: router));
+void main() => runApp(
+      MaterialApp.router(
+        scrollBehavior: EffectlessScrollBehavior(),
+        routerConfig: router,
+        theme: ThemeData(useMaterial3: true),
+      ),
+    );
 
+/// 현재 로케이션 : GoRouterState.of(context).uri.path
 final router = GoRouter(
   routes: [
     GoRoute(
@@ -579,26 +612,146 @@ final router = GoRouter(
             GoRoute(
               path: 'ActionsExample',
               builder: (_, __) => const ActionsExample(),
+              routes: [
+                GoRoute(
+                  path: 'CommonButtonsExample',
+                  builder: (_, __) => const CommonButtonsExample(),
+                ),
+                GoRoute(
+                  path: 'FABExample',
+                  builder: (_, __) => const FABExample(),
+                ),
+                GoRoute(
+                  path: 'IconButtonExample',
+                  builder: (_, __) => const IconButtonExample(),
+                ),
+                GoRoute(
+                  path: 'SegmentedButtonExample',
+                  builder: (_, __) => const SegmentedButtonExample(),
+                ),
+              ],
             ),
             GoRoute(
               path: 'CommunicationExample',
               builder: (_, __) => const CommunicationExample(),
+              routes: [
+                GoRoute(
+                  path: 'BadgeExample',
+                  builder: (_, __) => const BadgeExample(),
+                ),
+                GoRoute(
+                  path: 'ProgressIndicatorExample',
+                  builder: (_, __) => const ProgressIndicatorExample(),
+                ),
+                GoRoute(
+                  path: 'SnackBarExample',
+                  builder: (_, __) => const SnackBarExample(),
+                ),
+              ],
             ),
             GoRoute(
               path: 'ContainmentExample',
               builder: (_, __) => const ContainmentExample(),
+              routes: [
+                GoRoute(
+                  path: 'BottomSheetExampleApp',
+                  builder: (_, __) => const BottomSheetExampleApp(),
+                ),
+                GoRoute(
+                  path: 'CardExample',
+                  builder: (_, __) => const CardExample(),
+                ),
+                GoRoute(
+                  path: 'DialogExample',
+                  builder: (_, __) => const DialogExample(),
+                ),
+                GoRoute(
+                  path: 'DividerExample',
+                  builder: (_, __) => const DividerExample(),
+                ),
+                GoRoute(
+                  path: 'ListTileExample',
+                  builder: (_, __) => const ListTileExample(),
+                ),
+              ],
             ),
             GoRoute(
               path: 'NavigationExample',
               builder: (_, __) => const NavigationExample(),
+              routes: [
+                GoRoute(
+                  path: 'AppBarExample',
+                  builder: (_, __) => const AppBarExample(),
+                ),
+                GoRoute(
+                  path: 'BottomAppBarExample',
+                  builder: (_, __) => const BottomAppBarExample(),
+                ),
+                GoRoute(
+                  path: 'NavigationBarExample',
+                  builder: (_, __) => const NavigationBarExample(),
+                ),
+                GoRoute(
+                  path: 'NavigationDrawerExample',
+                  builder: (_, __) => const NavigationDrawerExample(),
+                ),
+                GoRoute(
+                  path: 'NavigationRailExample',
+                  builder: (_, __) => const NavigationRailExample(),
+                ),
+                GoRoute(
+                  path: 'TabBarExample',
+                  builder: (_, __) => const TabBarExample(),
+                ),
+              ],
             ),
             GoRoute(
               path: 'SelectionExample',
               builder: (_, __) => const SelectionExample(),
+              routes: [
+                GoRoute(
+                  path: 'CheckboxExample',
+                  builder: (_, __) => const CheckboxExample(),
+                ),
+                GoRoute(
+                  path: 'ChipExample',
+                  builder: (_, __) => const ChipExample(),
+                ),
+                GoRoute(
+                  path: 'DatePickerExample',
+                  builder: (_, __) => const DatePickerExample(),
+                ),
+                GoRoute(
+                  path: 'PopupMenuExample',
+                  builder: (_, __) => const PopupMenuExample(),
+                ),
+                GoRoute(
+                  path: 'RadioExample',
+                  builder: (_, __) => const RadioExample(),
+                ),
+                GoRoute(
+                  path: 'SliderExample',
+                  builder: (_, __) => const SliderExample(),
+                ),
+                GoRoute(
+                  path: 'SwitchExample',
+                  builder: (_, __) => const SwitchExample(),
+                ),
+                GoRoute(
+                  path: 'TimePickerExample',
+                  builder: (_, __) => const TimePickerExample(),
+                ),
+              ],
             ),
             GoRoute(
               path: 'TextInpusExample',
               builder: (_, __) => const TextInpusExample(),
+              routes: [
+                GoRoute(
+                  path: 'TextFieldExample',
+                  builder: (_, __) => const TextFieldExample(),
+                ),
+              ],
             ),
           ],
         ),
@@ -767,7 +920,10 @@ class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Main Screen')),
+      appBar: AppBar(
+        title: const Text('Flutter Widgets'),
+        centerTitle: true,
+      ),
       body: GridView.count(
         primary: false,
         padding: const EdgeInsets.all(4),
@@ -895,13 +1051,23 @@ class MyCardWidget extends StatelessWidget {
         ),
         elevation: 4.0, //그림자 깊이
         child: Center(
-          child: Text(
-            title,
-            textAlign: TextAlign.center,
-            style: const TextStyle(fontSize: 24),
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Text(
+              title,
+              textAlign: TextAlign.center,
+              style: const TextStyle(fontSize: 20),
+            ),
           ),
         ),
       ),
     );
+  }
+}
+
+class EffectlessScrollBehavior extends ScrollBehavior {
+  @override
+  Widget buildOverscrollIndicator(BuildContext context, Widget child, ScrollableDetails details) {
+    return child;
   }
 }

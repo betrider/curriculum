@@ -2,16 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_widget/context_extension.dart';
 import 'package:flutter_widget/main.dart';
 
-class OthersPage extends StatelessWidget {
-  const OthersPage({
-    super.key,
-  });
+class TextInpusExample extends StatelessWidget {
+  const TextInpusExample({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('기타'),
+        title: const Text('TextInpusExample'),
         centerTitle: true,
       ),
       body: GridView.count(
@@ -22,21 +20,9 @@ class OthersPage extends StatelessWidget {
         crossAxisCount: 2,
         children: [
           MyCardWidget(
-            title: 'WidgetExample1',
+            title: 'TextFieldExample',
             onTap: () {
-              context.pushRelative('WidgetExample1');
-            },
-          ),
-          MyCardWidget(
-            title: 'WidgetExample2',
-            onTap: () {
-              context.pushRelative('WidgetExample2');
-            },
-          ),
-          MyCardWidget(
-            title: 'WidgetExample3',
-            onTap: () {
-              context.pushRelative('WidgetExample3');
+              context.pushRelative('TextFieldExample');
             },
           ),
         ],

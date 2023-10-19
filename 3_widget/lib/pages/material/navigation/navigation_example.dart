@@ -9,7 +9,7 @@ class NavigationExample extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('ActionsExample'),
+        title: const Text('NavigationExample'),
         centerTitle: true,
       ),
       body: GridView.count(
@@ -20,27 +20,39 @@ class NavigationExample extends StatelessWidget {
         crossAxisCount: 2,
         children: [
           MyCardWidget(
-            title: 'Actions',
+            title: 'AppBarExample',
             onTap: () {
-              context.pushRelative('Actions');
+              context.pushRelative('AppBarExample');
             },
           ),
           MyCardWidget(
-            title: 'Actions',
+            title: 'BottomAppBarExample',
             onTap: () {
-              context.pushRelative('Actions');
+              context.pushRelative('BottomAppBarExample');
             },
           ),
           MyCardWidget(
-            title: 'Actions',
+            title: 'NavigationBarExample',
             onTap: () {
-              context.pushRelative('Actions');
+              context.pushRelative('NavigationBarExample');
             },
           ),
           MyCardWidget(
-            title: 'Actions',
+            title: 'NavigationDrawerExample',
             onTap: () {
-              context.pushRelative('Actions');
+              context.pushRelative('NavigationDrawerExample');
+            },
+          ),
+          MyCardWidget(
+            title: 'NavigationRailExample',
+            onTap: () {
+              context.pushRelative('NavigationRailExample');
+            },
+          ),
+          MyCardWidget(
+            title: 'TabBarExample',
+            onTap: () {
+              context.pushRelative('TabBarExample');
             },
           ),
         ],

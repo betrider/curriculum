@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_widget/context_extension.dart';
 import 'package:flutter_widget/main.dart';
 
-class SelectionExample extends StatelessWidget {
-  const SelectionExample({super.key});
+class ActionsExample extends StatelessWidget {
+  const ActionsExample({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,27 +20,27 @@ class SelectionExample extends StatelessWidget {
         crossAxisCount: 2,
         children: [
           MyCardWidget(
-            title: 'Actions',
+            title: 'CommonButtonsExample',
             onTap: () {
-              context.pushRelative('Actions');
+              context.pushRelative('CommonButtonsExample');
             },
           ),
           MyCardWidget(
-            title: 'Actions',
+            title: 'FABExample',
             onTap: () {
-              context.pushRelative('Actions');
+              context.pushRelative('FABExample');
             },
           ),
           MyCardWidget(
-            title: 'Actions',
+            title: 'IconButtonExample',
             onTap: () {
-              context.pushRelative('Actions');
+              context.pushRelative('IconButtonExample');
             },
           ),
           MyCardWidget(
-            title: 'Actions',
+            title: 'SegmentedButtonExample',
             onTap: () {
-              context.pushRelative('Actions');
+              context.pushRelative('SegmentedButtonExample');
             },
           ),
         ],
