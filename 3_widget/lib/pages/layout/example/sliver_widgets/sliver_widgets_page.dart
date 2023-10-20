@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_widget/extensions.dart';
 import 'package:flutter_widget/main.dart';
 
-class SliverWidgets extends StatelessWidget {
-  const SliverWidgets({super.key});
+class SliverWidgetsPage extends StatelessWidget {
+  const SliverWidgetsPage({super.key});
 
   @override
   Widget build(BuildContext context) {

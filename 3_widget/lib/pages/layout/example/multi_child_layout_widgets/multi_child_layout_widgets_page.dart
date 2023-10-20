@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_widget/extensions.dart';
 import 'package:flutter_widget/main.dart';
 
-class MultiChildLayoutWidgets extends StatelessWidget {
-  const MultiChildLayoutWidgets({super.key});
+class MultiChildLayoutWidgetsPage extends StatelessWidget {
+  const MultiChildLayoutWidgetsPage({super.key});
 
   @override
   Widget build(BuildContext context) {

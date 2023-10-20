@@ -20,39 +20,39 @@ class MaterialComponentsPage extends StatelessWidget {
         crossAxisCount: 2,
         children: [
           MyCardWidget(
-            title: 'ActionsExample',
+            title: 'Actions',
             onTap: () {
-              context.pushRelative('ActionsExample');
+              context.pushRelative('Actions');
             },
           ),
           MyCardWidget(
-            title: 'CommunicationExample',
+            title: 'Communication',
             onTap: () {
-              context.pushRelative('CommunicationExample');
+              context.pushRelative('Communication');
             },
           ),
           MyCardWidget(
-            title: 'ContainmentExample',
+            title: 'Containment',
             onTap: () {
-              context.pushRelative('ContainmentExample');
+              context.pushRelative('Containment');
             },
           ),
           MyCardWidget(
-            title: 'NavigationExample',
+            title: 'Navigation',
             onTap: () {
-              context.pushRelative('NavigationExample');
+              context.pushRelative('Navigation');
             },
           ),
           MyCardWidget(
-            title: 'SelectionExample',
+            title: 'Selection',
             onTap: () {
-              context.pushRelative('SelectionExample');
+              context.pushRelative('Selection');
             },
           ),
           MyCardWidget(
-            title: 'TextInpusExample',
+            title: 'TextInpus',
             onTap: () {
-              context.pushRelative('TextInpusExample');
+              context.pushRelative('TextInpus');
             },
           ),
         ],

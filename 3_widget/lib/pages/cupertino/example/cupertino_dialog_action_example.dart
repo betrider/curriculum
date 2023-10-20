@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 
-class CupertinoAlertDialogExample extends StatelessWidget {
-  const CupertinoAlertDialogExample({super.key});
+class CupertinoDialogActionExample extends StatelessWidget {
+  const CupertinoDialogActionExample({super.key});
 
   // This shows a CupertinoModalPopup which hosts a CupertinoAlertDialog.
   void _showAlertDialog(BuildContext context) {

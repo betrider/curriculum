@@ -24,19 +24,19 @@ class LayoutPage extends StatelessWidget {
           MyCardWidget(
             title: 'MultiChildLayoutWidgets',
             onTap: () {
-              context.pushRelative('MultiChildLayoutWidgets');
+              context.pushRelative('multi_child_layout_widgets');
             },
           ),
           MyCardWidget(
             title: 'SingleChildLayoutWidgets',
             onTap: () {
-              context.pushRelative('SingleChildLayoutWidgets');
+              context.pushRelative('single_child_layout_widgets');
             },
           ),
           MyCardWidget(
             title: 'SliverWidgets',
             onTap: () {
-              context.pushRelative('SliverWidgets');
+              context.pushRelative('sliver_widgets');
             },
           ),
         ],

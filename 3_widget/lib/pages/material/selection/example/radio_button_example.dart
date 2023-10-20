@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 
 enum SingingCharacter { lafayette, jefferson }
 
-class RadioExample extends StatefulWidget {
-  const RadioExample({super.key});
+class RadioButtonExample extends StatefulWidget {
+  const RadioButtonExample({super.key});
 
   @override
-  State<RadioExample> createState() => _RadioExampleState();
+  State<RadioButtonExample> createState() => _RadioButtonExampleState();
 }
 
-class _RadioExampleState extends State<RadioExample> {
+class _RadioButtonExampleState extends State<RadioButtonExample> {
   SingingCharacter? _character = SingingCharacter.lafayette;
 
   @override

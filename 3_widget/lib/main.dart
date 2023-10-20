@@ -5,32 +5,32 @@ import 'package:flutter_widget/pages/accessibility/accessibility_page.dart';
 import 'package:flutter_widget/pages/accessibility/example/exclude_semantics_example.dart';
 import 'package:flutter_widget/pages/accessibility/example/merge_semantics_example.dart';
 import 'package:flutter_widget/pages/accessibility/example/semantics_example.dart';
-import 'package:flutter_widget/pages/animationAndMotion/animation_and_motion_page.dart';
-import 'package:flutter_widget/pages/animationAndMotion/example/animated_align_example.dart';
-import 'package:flutter_widget/pages/animationAndMotion/example/animated_builder_example.dart';
-import 'package:flutter_widget/pages/animationAndMotion/example/animated_container_example.dart';
-import 'package:flutter_widget/pages/animationAndMotion/example/animated_cross_fade_example.dart';
-import 'package:flutter_widget/pages/animationAndMotion/example/animated_default_text_style_example.dart';
-import 'package:flutter_widget/pages/animationAndMotion/example/animated_list_example.dart';
-import 'package:flutter_widget/pages/animationAndMotion/example/animated_list_state_example.dart';
-import 'package:flutter_widget/pages/animationAndMotion/example/animated_modal_barrier_example.dart';
-import 'package:flutter_widget/pages/animationAndMotion/example/animated_opacity_example.dart';
-import 'package:flutter_widget/pages/animationAndMotion/example/animated_physical_model_example.dart';
-import 'package:flutter_widget/pages/animationAndMotion/example/animated_positioned_example.dart';
-import 'package:flutter_widget/pages/animationAndMotion/example/animated_size_example.dart';
-import 'package:flutter_widget/pages/animationAndMotion/example/animated_widget_example.dart';
-import 'package:flutter_widget/pages/animationAndMotion/example/decorated_box_transition_example.dart';
-import 'package:flutter_widget/pages/animationAndMotion/example/fade_transition_example.dart';
-import 'package:flutter_widget/pages/animationAndMotion/example/hero_example.dart';
-import 'package:flutter_widget/pages/animationAndMotion/example/implicitly_animated_widget_example.dart';
-import 'package:flutter_widget/pages/animationAndMotion/example/positioned_transition_example.dart';
-import 'package:flutter_widget/pages/animationAndMotion/example/rotation_transition_example.dart';
-import 'package:flutter_widget/pages/animationAndMotion/example/scale_transition_example.dart';
-import 'package:flutter_widget/pages/animationAndMotion/example/size_transition_example.dart';
-import 'package:flutter_widget/pages/animationAndMotion/example/slide_transition_example.dart';
-import 'package:flutter_widget/pages/assetsImagesAndIcons/assets_images_and_icons_page.dart';
-import 'package:flutter_widget/pages/assetsImagesAndIcons/example/asset_bundle_example.dart';
-import 'package:flutter_widget/pages/assetsImagesAndIcons/example/raw_image_example.dart';
+import 'package:flutter_widget/pages/animation_and_motion/animation_and_motion_page.dart';
+import 'package:flutter_widget/pages/animation_and_motion/example/animated_align_example.dart';
+import 'package:flutter_widget/pages/animation_and_motion/example/animated_builder_example.dart';
+import 'package:flutter_widget/pages/animation_and_motion/example/animated_container_example.dart';
+import 'package:flutter_widget/pages/animation_and_motion/example/animated_cross_fade_example.dart';
+import 'package:flutter_widget/pages/animation_and_motion/example/animated_default_text_style_example.dart';
+import 'package:flutter_widget/pages/animation_and_motion/example/animated_list_example.dart';
+import 'package:flutter_widget/pages/animation_and_motion/example/animated_list_state_example.dart';
+import 'package:flutter_widget/pages/animation_and_motion/example/animated_modal_barrier_example.dart';
+import 'package:flutter_widget/pages/animation_and_motion/example/animated_opacity_example.dart';
+import 'package:flutter_widget/pages/animation_and_motion/example/animated_physical_model_example.dart';
+import 'package:flutter_widget/pages/animation_and_motion/example/animated_positioned_example.dart';
+import 'package:flutter_widget/pages/animation_and_motion/example/animated_size_example.dart';
+import 'package:flutter_widget/pages/animation_and_motion/example/animated_widget_example.dart';
+import 'package:flutter_widget/pages/animation_and_motion/example/decorated_box_transition_example.dart';
+import 'package:flutter_widget/pages/animation_and_motion/example/fade_transition_example.dart';
+import 'package:flutter_widget/pages/animation_and_motion/example/hero_example.dart';
+import 'package:flutter_widget/pages/animation_and_motion/example/implicitly_animated_widget_example.dart';
+import 'package:flutter_widget/pages/animation_and_motion/example/positioned_transition_example.dart';
+import 'package:flutter_widget/pages/animation_and_motion/example/rotation_transition_example.dart';
+import 'package:flutter_widget/pages/animation_and_motion/example/scale_transition_example.dart';
+import 'package:flutter_widget/pages/animation_and_motion/example/size_transition_example.dart';
+import 'package:flutter_widget/pages/animation_and_motion/example/slide_transition_example.dart';
+import 'package:flutter_widget/pages/assets_images_and_icons/assets_images_and_icons_page.dart';
+import 'package:flutter_widget/pages/assets_images_and_icons/example/asset_bundle_example.dart';
+import 'package:flutter_widget/pages/assets_images_and_icons/example/raw_image_example.dart';
 import 'package:flutter_widget/pages/async/async_page.dart';
 import 'package:flutter_widget/pages/async/example/future_builder_example.dart';
 import 'package:flutter_widget/pages/async/example/stream_builder_example.dart';
@@ -79,49 +79,49 @@ import 'package:flutter_widget/pages/input/example/form_example.dart';
 import 'package:flutter_widget/pages/input/example/form_field_example.dart';
 import 'package:flutter_widget/pages/input/example/raw_keyboard_listener.dart';
 import 'package:flutter_widget/pages/input/input_page.dart';
-import 'package:flutter_widget/pages/interactionModels/example/absorb_pointer_example.dart';
-import 'package:flutter_widget/pages/interactionModels/example/dismissible_example.dart';
-import 'package:flutter_widget/pages/interactionModels/example/drag_target_example.dart';
-import 'package:flutter_widget/pages/interactionModels/example/draggable_example.dart';
-import 'package:flutter_widget/pages/interactionModels/example/draggable_scrollable_sheet_example.dart';
-import 'package:flutter_widget/pages/interactionModels/example/gesture_detector_example.dart';
-import 'package:flutter_widget/pages/interactionModels/example/ignore_pointer_example.dart';
-import 'package:flutter_widget/pages/interactionModels/example/interactive_viewer_example.dart';
-import 'package:flutter_widget/pages/interactionModels/example/long_press_draggable_example.dart';
-import 'package:flutter_widget/pages/interactionModels/example/scrollable_example.dart';
-import 'package:flutter_widget/pages/interactionModels/interaction_models_page.dart';
-import 'package:flutter_widget/pages/layout/example/multiChildLayoutWidgets/custom_multi_child_layout_example.dart';
-import 'package:flutter_widget/pages/layout/example/multiChildLayoutWidgets/flow_example.dart';
-import 'package:flutter_widget/pages/layout/example/multiChildLayoutWidgets/grid_view_example.dart';
-import 'package:flutter_widget/pages/layout/example/multiChildLayoutWidgets/indexed_stack_example.dart';
-import 'package:flutter_widget/pages/layout/example/multiChildLayoutWidgets/layout_builder_example.dart';
-import 'package:flutter_widget/pages/layout/example/multiChildLayoutWidgets/list_view_example.dart';
-import 'package:flutter_widget/pages/layout/example/multiChildLayoutWidgets/multi_child_layout_widgets.dart';
-import 'package:flutter_widget/pages/layout/example/multiChildLayoutWidgets/stack_example.dart';
-import 'package:flutter_widget/pages/layout/example/multiChildLayoutWidgets/table_example.dart';
-import 'package:flutter_widget/pages/layout/example/multiChildLayoutWidgets/wrap_example.dart';
-import 'package:flutter_widget/pages/layout/example/singleChildLayoutWidgets/align_example.dart';
-import 'package:flutter_widget/pages/layout/example/singleChildLayoutWidgets/aspect_ratio_example.dart';
-import 'package:flutter_widget/pages/layout/example/singleChildLayoutWidgets/baseline_example.dart';
-import 'package:flutter_widget/pages/layout/example/singleChildLayoutWidgets/center_example.dart';
-import 'package:flutter_widget/pages/layout/example/singleChildLayoutWidgets/constrained_box_example.dart';
-import 'package:flutter_widget/pages/layout/example/singleChildLayoutWidgets/custom_single_child_layout_example.dart';
-import 'package:flutter_widget/pages/layout/example/singleChildLayoutWidgets/expanded_example.dart';
-import 'package:flutter_widget/pages/layout/example/singleChildLayoutWidgets/fitted_box_example.dart';
-import 'package:flutter_widget/pages/layout/example/singleChildLayoutWidgets/fractionally_sized_box_example.dart';
-import 'package:flutter_widget/pages/layout/example/singleChildLayoutWidgets/intrinsic_height_example.dart';
-import 'package:flutter_widget/pages/layout/example/singleChildLayoutWidgets/intrinsic_width_example.dart';
-import 'package:flutter_widget/pages/layout/example/singleChildLayoutWidgets/limited_box_example.dart';
-import 'package:flutter_widget/pages/layout/example/singleChildLayoutWidgets/overflow_box_example.dart';
-import 'package:flutter_widget/pages/layout/example/singleChildLayoutWidgets/padding_example.dart';
-import 'package:flutter_widget/pages/layout/example/singleChildLayoutWidgets/single_child_layout_widgets.dart';
-import 'package:flutter_widget/pages/layout/example/singleChildLayoutWidgets/sized_box_example.dart';
-import 'package:flutter_widget/pages/layout/example/singleChildLayoutWidgets/sized_overflow_box_example.dart';
-import 'package:flutter_widget/pages/layout/example/singleChildLayoutWidgets/transform_example.dart';
-import 'package:flutter_widget/pages/layout/example/sliverWidgets/custom_scroll_view_example.dart';
-import 'package:flutter_widget/pages/layout/example/sliverWidgets/nested_scroll_view_example.dart';
-import 'package:flutter_widget/pages/layout/example/sliverWidgets/nested_scroll_view_example2.dart';
-import 'package:flutter_widget/pages/layout/example/sliverWidgets/sliver_widgets.dart';
+import 'package:flutter_widget/pages/interaction_models/example/absorb_pointer_example.dart';
+import 'package:flutter_widget/pages/interaction_models/example/dismissible_example.dart';
+import 'package:flutter_widget/pages/interaction_models/example/drag_target_example.dart';
+import 'package:flutter_widget/pages/interaction_models/example/draggable_example.dart';
+import 'package:flutter_widget/pages/interaction_models/example/draggable_scrollable_sheet_example.dart';
+import 'package:flutter_widget/pages/interaction_models/example/gesture_detector_example.dart';
+import 'package:flutter_widget/pages/interaction_models/example/ignore_pointer_example.dart';
+import 'package:flutter_widget/pages/interaction_models/example/interactive_viewer_example.dart';
+import 'package:flutter_widget/pages/interaction_models/example/long_press_draggable_example.dart';
+import 'package:flutter_widget/pages/interaction_models/example/scrollable_example.dart';
+import 'package:flutter_widget/pages/interaction_models/interaction_models_page.dart';
+import 'package:flutter_widget/pages/layout/example/multi_child_layout_widgets/custom_multi_child_layout_example.dart';
+import 'package:flutter_widget/pages/layout/example/multi_child_layout_widgets/flow_example.dart';
+import 'package:flutter_widget/pages/layout/example/multi_child_layout_widgets/grid_view_example.dart';
+import 'package:flutter_widget/pages/layout/example/multi_child_layout_widgets/indexed_stack_example.dart';
+import 'package:flutter_widget/pages/layout/example/multi_child_layout_widgets/layout_builder_example.dart';
+import 'package:flutter_widget/pages/layout/example/multi_child_layout_widgets/list_view_example.dart';
+import 'package:flutter_widget/pages/layout/example/multi_child_layout_widgets/multi_child_layout_widgets_page.dart';
+import 'package:flutter_widget/pages/layout/example/multi_child_layout_widgets/stack_example.dart';
+import 'package:flutter_widget/pages/layout/example/multi_child_layout_widgets/table_example.dart';
+import 'package:flutter_widget/pages/layout/example/multi_child_layout_widgets/wrap_example.dart';
+import 'package:flutter_widget/pages/layout/example/single_child_layout_widgets/align_example.dart';
+import 'package:flutter_widget/pages/layout/example/single_child_layout_widgets/aspect_ratio_example.dart';
+import 'package:flutter_widget/pages/layout/example/single_child_layout_widgets/baseline_example.dart';
+import 'package:flutter_widget/pages/layout/example/single_child_layout_widgets/center_example.dart';
+import 'package:flutter_widget/pages/layout/example/single_child_layout_widgets/constrained_box_example.dart';
+import 'package:flutter_widget/pages/layout/example/single_child_layout_widgets/custom_single_child_layout_example.dart';
+import 'package:flutter_widget/pages/layout/example/single_child_layout_widgets/expanded_example.dart';
+import 'package:flutter_widget/pages/layout/example/single_child_layout_widgets/fitted_box_example.dart';
+import 'package:flutter_widget/pages/layout/example/single_child_layout_widgets/fractionally_sized_box_example.dart';
+import 'package:flutter_widget/pages/layout/example/single_child_layout_widgets/intrinsic_height_example.dart';
+import 'package:flutter_widget/pages/layout/example/single_child_layout_widgets/intrinsic_width_example.dart';
+import 'package:flutter_widget/pages/layout/example/single_child_layout_widgets/limited_box_example.dart';
+import 'package:flutter_widget/pages/layout/example/single_child_layout_widgets/overflow_box_example.dart';
+import 'package:flutter_widget/pages/layout/example/single_child_layout_widgets/padding_example.dart';
+import 'package:flutter_widget/pages/layout/example/single_child_layout_widgets/single_child_layout_widgets_page.dart';
+import 'package:flutter_widget/pages/layout/example/single_child_layout_widgets/sized_box_example.dart';
+import 'package:flutter_widget/pages/layout/example/single_child_layout_widgets/sized_overflow_box_example.dart';
+import 'package:flutter_widget/pages/layout/example/single_child_layout_widgets/transform_example.dart';
+import 'package:flutter_widget/pages/layout/example/sliver_widgets/custom_scroll_view_example.dart';
+import 'package:flutter_widget/pages/layout/example/sliver_widgets/nested_scroll_view_example.dart';
+import 'package:flutter_widget/pages/layout/example/sliver_widgets/nested_scroll_view_example2.dart';
+import 'package:flutter_widget/pages/layout/example/sliver_widgets/sliver_widgets_page.dart';
 import 'package:flutter_widget/pages/layout/layout_page.dart';
 import 'package:flutter_widget/pages/material/actions/actions_page.dart';
 import 'package:flutter_widget/pages/material/actions/example/common_buttons_example.dart';
@@ -139,6 +139,7 @@ import 'package:flutter_widget/pages/material/containment/example/dialog_example
 import 'package:flutter_widget/pages/material/containment/example/divider_example.dart';
 import 'package:flutter_widget/pages/material/containment/example/list_tile_example.dart';
 import 'package:flutter_widget/pages/material/material_page.dart';
+import 'package:flutter_widget/pages/material/navigation/example/app_bar_example.dart' as material_app_bar;
 import 'package:flutter_widget/pages/material/navigation/example/bottom_app_bar_example.dart';
 import 'package:flutter_widget/pages/material/navigation/example/navigation_bar_example.dart';
 import 'package:flutter_widget/pages/material/navigation/example/navigation_drawer_example.dart';
@@ -154,21 +155,21 @@ import 'package:flutter_widget/pages/material/selection/example/slider_example.d
 import 'package:flutter_widget/pages/material/selection/example/switch_example.dart';
 import 'package:flutter_widget/pages/material/selection/example/time_picker_example.dart';
 import 'package:flutter_widget/pages/material/selection/selection_page.dart';
-import 'package:flutter_widget/pages/material/textInputs/example/text_field_example.dart';
-import 'package:flutter_widget/pages/material/textInputs/text_inputs_page.dart';
+import 'package:flutter_widget/pages/material/text_inputs/example/text_field_example.dart';
+import 'package:flutter_widget/pages/material/text_inputs/text_inputs_page.dart';
 import 'package:flutter_widget/pages/others/others_page.dart';
-import 'package:flutter_widget/pages/paintingAndEffects/example/backdrop_filter_example.dart';
-import 'package:flutter_widget/pages/paintingAndEffects/example/clip_oval_example.dart';
-import 'package:flutter_widget/pages/paintingAndEffects/example/clip_path_example.dart';
-import 'package:flutter_widget/pages/paintingAndEffects/example/clip_r_rect_example.dart';
-import 'package:flutter_widget/pages/paintingAndEffects/example/clip_rect_example.dart';
-import 'package:flutter_widget/pages/paintingAndEffects/example/color_filter_example.dart';
-import 'package:flutter_widget/pages/paintingAndEffects/example/custom_paint_example.dart';
-import 'package:flutter_widget/pages/paintingAndEffects/example/decorated_box_example.dart';
-import 'package:flutter_widget/pages/paintingAndEffects/example/fractional_translation_example.dart';
-import 'package:flutter_widget/pages/paintingAndEffects/example/opacity_example.dart';
-import 'package:flutter_widget/pages/paintingAndEffects/example/rotated_box_example.dart';
-import 'package:flutter_widget/pages/paintingAndEffects/painting_and_effects_page.dart';
+import 'package:flutter_widget/pages/painting_and_effects/example/backdrop_filter_example.dart';
+import 'package:flutter_widget/pages/painting_and_effects/example/clip_oval_example.dart';
+import 'package:flutter_widget/pages/painting_and_effects/example/clip_path_example.dart';
+import 'package:flutter_widget/pages/painting_and_effects/example/clip_r_rect_example.dart';
+import 'package:flutter_widget/pages/painting_and_effects/example/clip_rect_example.dart';
+import 'package:flutter_widget/pages/painting_and_effects/example/color_filter_example.dart';
+import 'package:flutter_widget/pages/painting_and_effects/example/custom_paint_example.dart';
+import 'package:flutter_widget/pages/painting_and_effects/example/decorated_box_example.dart';
+import 'package:flutter_widget/pages/painting_and_effects/example/fractional_translation_example.dart';
+import 'package:flutter_widget/pages/painting_and_effects/example/opacity_example.dart';
+import 'package:flutter_widget/pages/painting_and_effects/example/rotated_box_example.dart';
+import 'package:flutter_widget/pages/painting_and_effects/painting_and_effects_page.dart';
 import 'package:flutter_widget/pages/scrolling/example/notification_listener_example.dart';
 import 'package:flutter_widget/pages/scrolling/example/page_view_example.dart';
 import 'package:flutter_widget/pages/scrolling/example/refresh_indicator_example.dart';
@@ -176,6 +177,7 @@ import 'package:flutter_widget/pages/scrolling/example/reorderable_list_view_exa
 import 'package:flutter_widget/pages/scrolling/example/scroll_configuration_example.dart';
 import 'package:flutter_widget/pages/scrolling/example/scrollbar_example.dart';
 import 'package:flutter_widget/pages/scrolling/example/single_child_scroll_view_example.dart';
+import 'package:flutter_widget/pages/scrolling/scrolling.dart' as scrolling;
 import 'package:flutter_widget/pages/scrolling/scrolling_page.dart';
 import 'package:flutter_widget/pages/styling/example/media_query_example.dart';
 import 'package:flutter_widget/pages/styling/example/theme_example.dart';
@@ -220,24 +222,24 @@ final router = GoRouter(
           builder: (_, __) => const AccessibilityPage(),
           routes: [
             GoRoute(
-              path: 'ExcludeSemanticsExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: ExcludeSemanticsExample(),
+              path: (ExcludeSemanticsExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/accessibility/example/${(ExcludeSemanticsExample).underscoreCaseName}.dart',
+                child: const ExcludeSemanticsExample(),
               ),
             ),
             GoRoute(
-              path: 'MergeSemanticsExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: MergeSemanticsExample(),
+              path: (MergeSemanticsExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/accessibility/example/${(MergeSemanticsExample).underscoreCaseName}.dart',
+                child: const MergeSemanticsExample(),
               ),
             ),
             GoRoute(
-              path: 'SemanticsExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: SemanticsExample(),
+              path: (SemanticsExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/accessibility/example/${(SemanticsExample).underscoreCaseName}.dart',
+                child: const SemanticsExample(),
               ),
             ),
           ],
@@ -247,157 +249,157 @@ final router = GoRouter(
           builder: (_, __) => const AnimationAndMotionPage(),
           routes: [
             GoRoute(
-              path: 'AnimatedAlignExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: AnimatedAlignExample(),
+              path: (AnimatedAlignExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/animation_and_motion/example/${(AnimatedAlignExample).underscoreCaseName}.dart',
+                child: const AnimatedAlignExample(),
               ),
             ),
             GoRoute(
-              path: 'AnimatedBuilderExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: AnimatedBuilderExample(),
+              path: (AnimatedBuilderExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/animation_and_motion/example/${(AnimatedBuilderExample).underscoreCaseName}.dart',
+                child: const AnimatedBuilderExample(),
               ),
             ),
             GoRoute(
-              path: 'AnimatedContainerExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: AnimatedContainerExample(),
+              path: (AnimatedContainerExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/animation_and_motion/example/${(AnimatedContainerExample).underscoreCaseName}.dart',
+                child: const AnimatedContainerExample(),
               ),
             ),
             GoRoute(
-              path: 'AnimatedCrossFadeExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: AnimatedCrossFadeExample(),
+              path: (AnimatedCrossFadeExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/animation_and_motion/example/${(AnimatedCrossFadeExample).underscoreCaseName}.dart',
+                child: const AnimatedCrossFadeExample(),
               ),
             ),
             GoRoute(
-              path: 'AnimatedDefaultTextStyleExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: AnimatedDefaultTextStyleExample(),
+              path: (AnimatedDefaultTextStyleExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/animation_and_motion/example/${(AnimatedDefaultTextStyleExample).underscoreCaseName}.dart',
+                child: const AnimatedDefaultTextStyleExample(),
               ),
             ),
             GoRoute(
-              path: 'AnimatedListExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: AnimatedListExample(),
+              path: (AnimatedListExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/animation_and_motion/example/${(AnimatedListExample).underscoreCaseName}.dart',
+                child: const AnimatedListExample(),
               ),
             ),
             GoRoute(
-              path: 'AnimatedListStateExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: AnimatedListStateExample(),
+              path: (AnimatedListStateExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/animation_and_motion/example/${(AnimatedListStateExample).underscoreCaseName}.dart',
+                child: const AnimatedListStateExample(),
               ),
             ),
             GoRoute(
-              path: 'AnimatedModalBarrierExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: AnimatedModalBarrierExample(),
+              path: (AnimatedModalBarrierExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/animation_and_motion/example/${(AnimatedModalBarrierExample).underscoreCaseName}.dart',
+                child: const AnimatedModalBarrierExample(),
               ),
             ),
             GoRoute(
-              path: 'AnimatedOpacityExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: AnimatedOpacityExample(),
+              path: (AnimatedOpacityExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/animation_and_motion/example/${(AnimatedOpacityExample).underscoreCaseName}.dart',
+                child: const AnimatedOpacityExample(),
               ),
             ),
             GoRoute(
-              path: 'AnimatedPhysicalModelExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: AnimatedPhysicalModelExample(),
+              path: (AnimatedPhysicalModelExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/animation_and_motion/example/${(AnimatedPhysicalModelExample).underscoreCaseName}.dart',
+                child: const AnimatedPhysicalModelExample(),
               ),
             ),
             GoRoute(
-              path: 'AnimatedPositionedExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: AnimatedPositionedExample(),
+              path: (AnimatedPositionedExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/animation_and_motion/example/${(AnimatedPositionedExample).underscoreCaseName}.dart',
+                child: const AnimatedPositionedExample(),
               ),
             ),
             GoRoute(
-              path: 'AnimatedSizeExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: AnimatedSizeExample(),
+              path: (AnimatedSizeExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/animation_and_motion/example/${(AnimatedSizeExample).underscoreCaseName}.dart',
+                child: const AnimatedSizeExample(),
               ),
             ),
             GoRoute(
-              path: 'AnimatedWidgetExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: AnimatedWidgetExample(),
+              path: (AnimatedWidgetExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/animation_and_motion/example/${(AnimatedWidgetExample).underscoreCaseName}.dart',
+                child: const AnimatedWidgetExample(),
               ),
             ),
             GoRoute(
-              path: 'DecoratedBoxTransitionExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: DecoratedBoxTransitionExample(),
+              path: (DecoratedBoxTransitionExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/animation_and_motion/example/${(DecoratedBoxTransitionExample).underscoreCaseName}.dart',
+                child: const DecoratedBoxTransitionExample(),
               ),
             ),
             GoRoute(
-              path: 'FadeTransitionExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: FadeTransitionExample(),
+              path: (FadeTransitionExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/animation_and_motion/example/${(FadeTransitionExample).underscoreCaseName}.dart',
+                child: const FadeTransitionExample(),
               ),
             ),
             GoRoute(
-              path: 'HeroExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: HeroExample(),
+              path: (HeroExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/animation_and_motion/example/${(HeroExample).underscoreCaseName}.dart',
+                child: const HeroExample(),
               ),
             ),
             GoRoute(
-              path: 'ImplicitlyAnimatedWidgetExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: ImplicitlyAnimatedWidgetExample(),
+              path: (ImplicitlyAnimatedWidgetExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/animation_and_motion/example/${(ImplicitlyAnimatedWidgetExample).underscoreCaseName}.dart',
+                child: const ImplicitlyAnimatedWidgetExample(),
               ),
             ),
             GoRoute(
-              path: 'PositionedTransitionExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: PositionedTransitionExample(),
+              path: (PositionedTransitionExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/animation_and_motion/example/${(PositionedTransitionExample).underscoreCaseName}.dart',
+                child: const PositionedTransitionExample(),
               ),
             ),
             GoRoute(
-              path: 'RotationTransitionExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: RotationTransitionExample(),
+              path: (RotationTransitionExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/animation_and_motion/example/${(RotationTransitionExample).underscoreCaseName}.dart',
+                child: const RotationTransitionExample(),
               ),
             ),
             GoRoute(
-              path: 'ScaleTransitionExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: ScaleTransitionExample(),
+              path: (ScaleTransitionExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/animation_and_motion/example/${(ScaleTransitionExample).underscoreCaseName}.dart',
+                child: const ScaleTransitionExample(),
               ),
             ),
             GoRoute(
-              path: 'SizeTransitionExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: SizeTransitionExample(),
+              path: (SizeTransitionExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/animation_and_motion/example/${(SizeTransitionExample).underscoreCaseName}.dart',
+                child: const SizeTransitionExample(),
               ),
             ),
             GoRoute(
-              path: 'SlideTransitionExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: SlideTransitionExample(),
+              path: (SlideTransitionExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/animation_and_motion/example/${(SlideTransitionExample).underscoreCaseName}.dart',
+                child: const SlideTransitionExample(),
               ),
             ),
           ],
@@ -407,31 +409,31 @@ final router = GoRouter(
           builder: (_, __) => const AssetsImagesAndIconsPage(),
           routes: [
             GoRoute(
-              path: 'AssetBundleExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: AssetBundleExample(),
+              path: (AssetBundleExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/assets_images_and_icons/example/${(AssetBundleExample).underscoreCaseName}.dart',
+                child: const AssetBundleExample(),
               ),
             ),
             GoRoute(
-              path: 'IconExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: IconExample(),
+              path: (IconExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/assets_images_and_icons/example/${(IconExample).underscoreCaseName}.dart',
+                child: const IconExample(),
               ),
             ),
             GoRoute(
-              path: 'ImageExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: ImageExample(),
+              path: (ImageExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/assets_images_and_icons/example/${(ImageExample).underscoreCaseName}.dart',
+                child: const ImageExample(),
               ),
             ),
             GoRoute(
-              path: 'RawImageExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: RawImageExample(),
+              path: (RawImageExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/assets_images_and_icons/example/${(RawImageExample).underscoreCaseName}.dart',
+                child: const RawImageExample(),
               ),
             ),
           ],
@@ -441,17 +443,17 @@ final router = GoRouter(
           builder: (_, __) => const AsyncPage(),
           routes: [
             GoRoute(
-              path: 'FutureBuilderExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: FutureBuilderExample(),
+              path: (FutureBuilderExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/async/example/${(FutureBuilderExample).underscoreCaseName}.dart',
+                child: const FutureBuilderExample(),
               ),
             ),
             GoRoute(
-              path: 'StreamBuilderExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: StreamBuilderExample(),
+              path: (StreamBuilderExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/async/example/${(StreamBuilderExample).underscoreCaseName}.dart',
+                child: const StreamBuilderExample(),
               ),
             ),
           ],
@@ -461,94 +463,94 @@ final router = GoRouter(
           builder: (_, __) => const BasicsPage(),
           routes: [
             GoRoute(
-              path: 'AppBarExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: AppBarExample(),
+              path: (AppBarExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/basics/example/${(AppBarExample).underscoreCaseName}.dart',
+                child: const AppBarExample(),
               ),
             ),
             GoRoute(
-              path: 'ColumnExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: ColumnExample(),
+              path: (ColumnExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/basics/example/${(ColumnExample).underscoreCaseName}.dart',
+                child: const ColumnExample(),
               ),
             ),
             GoRoute(
-              path: 'ContainerExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: ContainerExample(),
+              path: (ContainerExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/basics/example/${(ContainerExample).underscoreCaseName}.dart',
+                child: const ContainerExample(),
               ),
             ),
             GoRoute(
-              path: 'ElevatedButtonExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: ElevatedButtonExample(),
+              path: (ElevatedButtonExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/basics/example/${(ElevatedButtonExample).underscoreCaseName}.dart',
+                child: const ElevatedButtonExample(),
               ),
             ),
             GoRoute(
-              path: 'FlutterLogoExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: FlutterLogoExample(),
+              path: (FlutterLogoExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/basics/example/${(FlutterLogoExample).underscoreCaseName}.dart',
+                child: const FlutterLogoExample(),
               ),
             ),
             GoRoute(
-              path: 'IconExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: IconExample(),
+              path: (IconExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/basics/example/${(IconExample).underscoreCaseName}.dart',
+                child: const IconExample(),
               ),
             ),
             GoRoute(
-              path: 'ImageExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: ImageExample(),
+              path: (ImageExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/basics/example/${(ImageExample).underscoreCaseName}.dart',
+                child: const ImageExample(),
               ),
             ),
             GoRoute(
-              path: 'OutlinedButtonExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: OutlinedButtonExample(),
+              path: (OutlinedButtonExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/basics/example/${(OutlinedButtonExample).underscoreCaseName}.dart',
+                child: const OutlinedButtonExample(),
               ),
             ),
             GoRoute(
-              path: 'PlaceholderExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: PlaceholderExample(),
+              path: (PlaceholderExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/basics/example/${(PlaceholderExample).underscoreCaseName}.dart',
+                child: const PlaceholderExample(),
               ),
             ),
             GoRoute(
-              path: 'RowExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: RowExample(),
+              path: (RowExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/basics/example/${(RowExample).underscoreCaseName}.dart',
+                child: const RowExample(),
               ),
             ),
             GoRoute(
-              path: 'ScaffoldExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: ScaffoldExample(),
+              path: (ScaffoldExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/basics/example/${(ScaffoldExample).underscoreCaseName}.dart',
+                child: const ScaffoldExample(),
               ),
             ),
             GoRoute(
-              path: 'TextButtonExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: TextButtonExample(),
+              path: (TextButtonExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/basics/example/${(TextButtonExample).underscoreCaseName}.dart',
+                child: const TextButtonExample(),
               ),
             ),
             GoRoute(
-              path: 'TextExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: TextExample(),
+              path: (TextExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/basics/example/${(TextExample).underscoreCaseName}.dart',
+                child: const TextExample(),
               ),
             ),
           ],
@@ -558,56 +560,56 @@ final router = GoRouter(
           builder: (_, __) => const CupertinoComponentsPage(),
           routes: [
             GoRoute(
-              path: 'CupertinoActionSheetExample',
+              path: (CupertinoActionSheetExample).name,
               builder: (_, __) => CustomWidgetCodeView(
                 filePath: 'lib/pages/cupertino/example/${(CupertinoActionSheetExample).underscoreCaseName}.dart',
                 child: const CupertinoActionSheetExample(),
               ),
             ),
             GoRoute(
-              path: 'CupertinoActivityIndicatorExample',
+              path: (CupertinoActivityIndicatorExample).name,
               builder: (_, __) => CustomWidgetCodeView(
                 filePath: 'lib/pages/cupertino/example/${(CupertinoActivityIndicatorExample).underscoreCaseName}.dart',
                 child: const CupertinoActivityIndicatorExample(),
               ),
             ),
             GoRoute(
-              path: 'CupertinoAlertDialogExample',
+              path: (CupertinoAlertDialogExample).name,
               builder: (_, __) => CustomWidgetCodeView(
                 filePath: 'lib/pages/cupertino/example/${(CupertinoAlertDialogExample).underscoreCaseName}.dart',
                 child: const CupertinoAlertDialogExample(),
               ),
             ),
             GoRoute(
-              path: 'CupertinoButtonExample',
+              path: (CupertinoButtonExample).name,
               builder: (_, __) => CustomWidgetCodeView(
                 filePath: 'lib/pages/cupertino/example/${(CupertinoButtonExample).underscoreCaseName}.dart',
                 child: const CupertinoButtonExample(),
               ),
             ),
             GoRoute(
-              path: 'CupertinoContextMenuExample',
+              path: (CupertinoContextMenuExample).name,
               builder: (_, __) => CustomWidgetCodeView(
                 filePath: 'lib/pages/cupertino/example/${(CupertinoContextMenuExample).underscoreCaseName}.dart',
                 child: const CupertinoContextMenuExample(),
               ),
             ),
             GoRoute(
-              path: 'CupertinoDatePickerExample',
+              path: (CupertinoDatePickerExample).name,
               builder: (_, __) => CustomWidgetCodeView(
                 filePath: 'lib/pages/cupertino/example/${(CupertinoDatePickerExample).underscoreCaseName}.dart',
                 child: const CupertinoDatePickerExample(),
               ),
             ),
             GoRoute(
-              path: 'CupertinoAlertDialogExample',
+              path: (CupertinoAlertDialogExample).name,
               builder: (_, __) => CustomWidgetCodeView(
                 filePath: 'lib/pages/cupertino/example/${(CupertinoAlertDialogExample).underscoreCaseName}.dart',
                 child: const CupertinoAlertDialogExample(),
               ),
             ),
             GoRoute(
-              path: 'CupertinoFullscreenDialogTransitionExample',
+              path: (CupertinoFullscreenDialogTransitionExample).name,
               builder: (_, __) => CustomWidgetCodeView(
                 filePath:
                     'lib/pages/cupertino/example/${(CupertinoFullscreenDialogTransitionExample).underscoreCaseName}.dart',
@@ -615,77 +617,77 @@ final router = GoRouter(
               ),
             ),
             GoRoute(
-              path: 'CupertinoListSectionExample',
+              path: (CupertinoListSectionExample).name,
               builder: (_, __) => CustomWidgetCodeView(
                 filePath: 'lib/pages/cupertino/example/${(CupertinoListSectionExample).underscoreCaseName}.dart',
                 child: const CupertinoListSectionExample(),
               ),
             ),
             GoRoute(
-              path: 'CupertinoListTileExample',
+              path: (CupertinoListTileExample).name,
               builder: (_, __) => CustomWidgetCodeView(
                 filePath: 'lib/pages/cupertino/example/${(CupertinoListTileExample).underscoreCaseName}.dart',
                 child: const CupertinoListTileExample(),
               ),
             ),
             GoRoute(
-              path: 'CupertinoNavigationBarExample',
+              path: (CupertinoNavigationBarExample).name,
               builder: (_, __) => CustomWidgetCodeView(
                 filePath: 'lib/pages/cupertino/example/${(CupertinoNavigationBarExample).underscoreCaseName}.dart',
                 child: const CupertinoNavigationBarExample(),
               ),
             ),
             GoRoute(
-              path: 'CupertinoPageScaffoldExample',
+              path: (CupertinoPageScaffoldExample).name,
               builder: (_, __) => CustomWidgetCodeView(
                 filePath: 'lib/pages/cupertino/example/${(CupertinoPageScaffoldExample).underscoreCaseName}.dart',
                 child: const CupertinoPageScaffoldExample(),
               ),
             ),
             GoRoute(
-              path: 'CupertinoPageTransitionExample',
+              path: (CupertinoPageTransitionExample).name,
               builder: (_, __) => CustomWidgetCodeView(
                 filePath: 'lib/pages/cupertino/example/${(CupertinoPageTransitionExample).underscoreCaseName}.dart',
                 child: const CupertinoPageTransitionExample(),
               ),
             ),
             GoRoute(
-              path: 'CupertinoPickerExample',
+              path: (CupertinoPickerExample).name,
               builder: (_, __) => CustomWidgetCodeView(
                 filePath: 'lib/pages/cupertino/example/${(CupertinoPickerExample).underscoreCaseName}.dart',
                 child: const CupertinoPickerExample(),
               ),
             ),
             GoRoute(
-              path: 'CupertinoPopupSurfaceExample',
+              path: (CupertinoPopupSurfaceExample).name,
               builder: (_, __) => CustomWidgetCodeView(
                 filePath: 'lib/pages/cupertino/example/${(CupertinoPopupSurfaceExample).underscoreCaseName}.dart',
                 child: const CupertinoPopupSurfaceExample(),
               ),
             ),
             GoRoute(
-              path: 'CupertinoSearchTextFieldExample',
+              path: (CupertinoSearchTextFieldExample).name,
               builder: (_, __) => CustomWidgetCodeView(
                 filePath: 'lib/pages/cupertino/example/${(CupertinoSearchTextFieldExample).underscoreCaseName}.dart',
                 child: const CupertinoSearchTextFieldExample(),
               ),
             ),
             GoRoute(
-              path: 'SegmentedControlExample',
+              path: (SegmentedControlExample).name,
               builder: (_, __) => CustomWidgetCodeView(
                 filePath: 'lib/pages/cupertino/example/${(SegmentedControlExample).underscoreCaseName}.dart',
                 child: const SegmentedControlExample(),
               ),
             ),
             GoRoute(
-              path: 'CupertinoSliderExample',
+              path: (CupertinoSliderExample).name,
               builder: (_, __) => CustomWidgetCodeView(
                 filePath: 'lib/pages/cupertino/example/${(CupertinoSliderExample).underscoreCaseName}.dart',
                 child: const CupertinoSliderExample(),
               ),
             ),
             GoRoute(
-              path: 'CupertinoSlidingSegmentedControlExample',
+              path: (CupertinoSlidingSegmentedControlExample).name,
               builder: (_, __) => CustomWidgetCodeView(
                 filePath:
                     'lib/pages/cupertino/example/${(CupertinoSlidingSegmentedControlExample).underscoreCaseName}.dart',
@@ -693,7 +695,7 @@ final router = GoRouter(
               ),
             ),
             GoRoute(
-              path: 'CupertinoSliverNavigationBarExample',
+              path: (CupertinoSliverNavigationBarExample).name,
               builder: (_, __) => CustomWidgetCodeView(
                 filePath:
                     'lib/pages/cupertino/example/${(CupertinoSliverNavigationBarExample).underscoreCaseName}.dart',
@@ -701,42 +703,42 @@ final router = GoRouter(
               ),
             ),
             GoRoute(
-              path: 'CupertinoSwitchExample',
+              path: (CupertinoSwitchExample).name,
               builder: (_, __) => CustomWidgetCodeView(
                 filePath: 'lib/pages/cupertino/example/${(CupertinoSwitchExample).underscoreCaseName}.dart',
                 child: const CupertinoSwitchExample(),
               ),
             ),
             GoRoute(
-              path: 'CupertinoTabBarExample',
+              path: (CupertinoTabBarExample).name,
               builder: (_, __) => CustomWidgetCodeView(
                 filePath: 'lib/pages/cupertino/example/${(CupertinoTabBarExample).underscoreCaseName}.dart',
                 child: const CupertinoTabBarExample(),
               ),
             ),
             GoRoute(
-              path: 'CupertinoTabScaffoldExample',
+              path: (CupertinoTabScaffoldExample).name,
               builder: (_, __) => CustomWidgetCodeView(
                 filePath: 'lib/pages/cupertino/example/${(CupertinoTabScaffoldExample).underscoreCaseName}.dart',
                 child: const CupertinoTabScaffoldExample(),
               ),
             ),
             GoRoute(
-              path: 'CupertinoTabViewExample',
+              path: (CupertinoTabViewExample).name,
               builder: (_, __) => CustomWidgetCodeView(
                 filePath: 'lib/pages/cupertino/example/${(CupertinoTabViewExample).underscoreCaseName}.dart',
                 child: const CupertinoTabViewExample(),
               ),
             ),
             GoRoute(
-              path: 'CupertinoTextFieldExample',
+              path: (CupertinoTextFieldExample).name,
               builder: (_, __) => CustomWidgetCodeView(
                 filePath: 'lib/pages/cupertino/example/${(CupertinoTextFieldExample).underscoreCaseName}.dart',
                 child: const CupertinoTextFieldExample(),
               ),
             ),
             GoRoute(
-              path: 'CupertinoTimerPickerExample',
+              path: (CupertinoTimerPickerExample).name,
               builder: (_, __) => CustomWidgetCodeView(
                 filePath: 'lib/pages/cupertino/example/${(CupertinoTimerPickerExample).underscoreCaseName}.dart',
                 child: const CupertinoTimerPickerExample(),
@@ -749,31 +751,31 @@ final router = GoRouter(
           builder: (_, __) => const InputPage(),
           routes: [
             GoRoute(
-              path: 'AutocompleteBasicExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: AutocompleteBasicExample(),
+              path: (AutocompleteBasicExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/input/example/${(AutocompleteBasicExample).underscoreCaseName}.dart',
+                child: const AutocompleteBasicExample(),
               ),
             ),
             GoRoute(
-              path: 'FormExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: FormExample(),
+              path: (FormExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/input/example/${(FormExample).underscoreCaseName}.dart',
+                child: const FormExample(),
               ),
             ),
             GoRoute(
-              path: 'FormFieldExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: FormFieldExample(),
+              path: (FormFieldExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/input/example/${(FormFieldExample).underscoreCaseName}.dart',
+                child: const FormFieldExample(),
               ),
             ),
             GoRoute(
-              path: 'KeyboardListenerExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: KeyboardListenerExample(),
+              path: (KeyboardListenerExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/input/example/${(KeyboardListenerExample).underscoreCaseName}.dart',
+                child: const KeyboardListenerExample(),
               ),
             ),
           ],
@@ -783,73 +785,73 @@ final router = GoRouter(
           builder: (_, __) => const InteractionModelsPage(),
           routes: [
             GoRoute(
-              path: 'AbsorbPointerExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: AbsorbPointerExample(),
+              path: (AbsorbPointerExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/interaction_models/example/${(AbsorbPointerExample).underscoreCaseName}.dart',
+                child: const AbsorbPointerExample(),
               ),
             ),
             GoRoute(
-              path: 'DismissibleExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: DismissibleExample(),
+              path: (DismissibleExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/interaction_models/example/${(DismissibleExample).underscoreCaseName}.dart',
+                child: const DismissibleExample(),
               ),
             ),
             GoRoute(
-              path: 'DragTargetExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: DragTargetExample(),
+              path: (DragTargetExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/interaction_models/example/${(DragTargetExample).underscoreCaseName}.dart',
+                child: const DragTargetExample(),
               ),
             ),
             GoRoute(
-              path: 'DraggableExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: DraggableExample(),
+              path: (DraggableExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/interaction_models/example/${(DraggableExample).underscoreCaseName}.dart',
+                child: const DraggableExample(),
               ),
             ),
             GoRoute(
-              path: 'DraggableScrollableSheetExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: DraggableScrollableSheetExample(),
+              path: (DraggableScrollableSheetExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/interaction_models/example/${(DraggableScrollableSheetExample).underscoreCaseName}.dart',
+                child: const DraggableScrollableSheetExample(),
               ),
             ),
             GoRoute(
-              path: 'GestureDetectorExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: GestureDetectorExample(),
+              path: (GestureDetectorExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/interaction_models/example/${(GestureDetectorExample).underscoreCaseName}.dart',
+                child: const GestureDetectorExample(),
               ),
             ),
             GoRoute(
-              path: 'IgnorePointerExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: IgnorePointerExample(),
+              path: (IgnorePointerExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/interaction_models/example/${(IgnorePointerExample).underscoreCaseName}.dart',
+                child: const IgnorePointerExample(),
               ),
             ),
             GoRoute(
-              path: 'InteractiveViewerExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: InteractiveViewerExample(),
+              path: (InteractiveViewerExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/interaction_models/example/${(InteractiveViewerExample).underscoreCaseName}.dart',
+                child: const InteractiveViewerExample(),
               ),
             ),
             GoRoute(
-              path: 'LongPressDraggableExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: LongPressDraggableExample(),
+              path: (LongPressDraggableExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/interaction_models/example/${(LongPressDraggableExample).underscoreCaseName}.dart',
+                child: const LongPressDraggableExample(),
               ),
             ),
             GoRoute(
-              path: 'ScrollableExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: ScrollableExample(),
+              path: (ScrollableExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/interaction/example/${(ScrollableExample).underscoreCaseName}.dart',
+                child: const ScrollableExample(),
               ),
             ),
           ],
@@ -859,243 +861,243 @@ final router = GoRouter(
           builder: (_, __) => const LayoutPage(),
           routes: [
             GoRoute(
-              path: 'MultiChildLayoutWidgets',
-              builder: (_, __) => const MultiChildLayoutWidgets(),
+              path: 'multi_child_layout_widgets',
+              builder: (_, __) => const MultiChildLayoutWidgetsPage(),
               routes: [
                 GoRoute(
-                  path: 'ColumnExample',
-                  builder: (_, __) => const CustomWidgetCodeView(
-                    filePath: '',
-                    child: ColumnExample(),
+                  path: (ColumnExample).name,
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: 'lib/pages/layout/example/${(ColumnExample).underscoreCaseName}.dart',
+                    child: const ColumnExample(),
                   ),
                 ),
                 GoRoute(
-                  path: 'CustomMultiChildLayoutExample',
-                  builder: (_, __) => const CustomWidgetCodeView(
-                    filePath: '',
-                    child: CustomMultiChildLayoutExample(),
+                  path: (CustomMultiChildLayoutExample).name,
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: 'lib/pages/layout/example/multi_child_layout_widgets/${(CustomMultiChildLayoutExample).underscoreCaseName}.dart',
+                    child: const CustomMultiChildLayoutExample(),
                   ),
                 ),
                 GoRoute(
-                  path: 'FlowExample',
-                  builder: (_, __) => const CustomWidgetCodeView(
-                    filePath: '',
-                    child: FlowExample(),
+                  path: (FlowExample).name,
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: 'lib/pages/layout/example/multi_child_layout_widgets/${(FlowExample).underscoreCaseName}.dart',
+                    child: const FlowExample(),
                   ),
                 ),
                 GoRoute(
-                  path: 'GridViewExample',
-                  builder: (_, __) => const CustomWidgetCodeView(
-                    filePath: '',
-                    child: GridViewExample(),
+                  path: (GridViewExample).name,
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: 'lib/pages/layout/example/multi_child_layout_widgets/${(GridViewExample).underscoreCaseName}.dart',
+                    child: const GridViewExample(),
                   ),
                 ),
                 GoRoute(
-                  path: 'IndexedStackExample',
-                  builder: (_, __) => const CustomWidgetCodeView(
-                    filePath: '',
-                    child: IndexedStackExample(),
+                  path: (IndexedStackExample).name,
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: 'lib/pages/layout/example/multi_child_layout_widgets/${(IndexedStackExample).underscoreCaseName}.dart',
+                    child: const IndexedStackExample(),
                   ),
                 ),
                 GoRoute(
-                  path: 'LayoutBuilderExample',
-                  builder: (_, __) => const CustomWidgetCodeView(
-                    filePath: '',
-                    child: LayoutBuilderExample(),
+                  path: (LayoutBuilderExample).name,
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: 'lib/pages/layout/example/multi_child_layout_widgets/${(LayoutBuilderExample).underscoreCaseName}.dart',
+                    child: const LayoutBuilderExample(),
                   ),
                 ),
                 GoRoute(
-                  path: 'ListViewExample',
-                  builder: (_, __) => const CustomWidgetCodeView(
-                    filePath: '',
-                    child: ListViewExample(),
+                  path: (ListViewExample).name,
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: 'lib/pages/layout/example/multi_child_layout_widgets/${(ListViewExample).underscoreCaseName}.dart',
+                    child: const ListViewExample(),
                   ),
                 ),
                 GoRoute(
-                  path: 'RowExample',
-                  builder: (_, __) => const CustomWidgetCodeView(
-                    filePath: '',
-                    child: RowExample(),
+                  path: (RowExample).name,
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: 'lib/pages/layout/example/${(RowExample).underscoreCaseName}.dart',
+                    child: const RowExample(),
                   ),
                 ),
                 GoRoute(
-                  path: 'StackExample',
-                  builder: (_, __) => const CustomWidgetCodeView(
-                    filePath: '',
-                    child: StackExample(),
+                  path: (StackExample).name,
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: 'lib/pages/layout/example/multi_child_layout_widgets/${(StackExample).underscoreCaseName}.dart',
+                    child: const StackExample(),
                   ),
                 ),
                 GoRoute(
-                  path: 'TableExample',
-                  builder: (_, __) => const CustomWidgetCodeView(
-                    filePath: '',
-                    child: TableExample(),
+                  path: (TableExample).name,
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: 'lib/pages/layout/example/multi_child_layout_widgets/${(TableExample).underscoreCaseName}.dart',
+                    child: const TableExample(),
                   ),
                 ),
                 GoRoute(
-                  path: 'WrapExample',
-                  builder: (_, __) => const CustomWidgetCodeView(
-                    filePath: '',
-                    child: WrapExample(),
+                  path: (WrapExample).name,
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: 'lib/pages/layout/example/multi_child_layout_widgets/${(WrapExample).underscoreCaseName}.dart',
+                    child: const WrapExample(),
                   ),
                 ),
               ],
             ),
             GoRoute(
-              path: 'SingleChildLayoutWidgets',
-              builder: (_, __) => const SingleChildLayoutWidgets(),
+              path: 'single_child_layout_widgets',
+              builder: (_, __) => const SingleChildLayoutWidgetsPage(),
               routes: [
                 GoRoute(
-                  path: 'AlignExample',
-                  builder: (_, __) => const CustomWidgetCodeView(
-                    filePath: '',
-                    child: AlignExample(),
-                  ),
-                ),
-                GoRoute(
-                  path: 'AspectRatioExample',
-                  builder: (_, __) => const CustomWidgetCodeView(
-                    filePath: '',
-                    child: AspectRatioExample(),
-                  ),
-                ),
-                GoRoute(
-                  path: 'BaselineExample',
-                  builder: (_, __) => const CustomWidgetCodeView(
-                    filePath: '',
-                    child: BaselineExample(),
-                  ),
-                ),
-                GoRoute(
-                  path: 'CenterExample',
-                  builder: (_, __) => const CustomWidgetCodeView(
-                    filePath: '',
-                    child: CenterExample(),
-                  ),
-                ),
-                GoRoute(
-                  path: 'ConstrainedBoxExample',
-                  builder: (_, __) => const CustomWidgetCodeView(
-                    filePath: '',
-                    child: ConstrainedBoxExample(),
-                  ),
-                ),
-                GoRoute(
-                  path: 'ContainerExample',
-                  builder: (_, __) => const CustomWidgetCodeView(
-                    filePath: '',
-                    child: ContainerExample(),
-                  ),
-                ),
-                GoRoute(
-                  path: 'CustomSingleChildLayoutExample',
+                  path: (AlignExample).name,
                   builder: (_, __) => CustomWidgetCodeView(
-                    filePath: '',
+                    filePath: 'lib/pages/layout/example/single_child_layout_widgets/${(AlignExample).underscoreCaseName}.dart',
+                    child: const AlignExample(),
+                  ),
+                ),
+                GoRoute(
+                  path: (AspectRatioExample).name,
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: 'lib/pages/layout/example/single_child_layout_widgets/${(AspectRatioExample).underscoreCaseName}.dart',
+                    child: const AspectRatioExample(),
+                  ),
+                ),
+                GoRoute(
+                  path: (BaselineExample).name,
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: 'lib/pages/layout/example/single_child_layout_widgets/${(BaselineExample).underscoreCaseName}.dart',
+                    child: const BaselineExample(),
+                  ),
+                ),
+                GoRoute(
+                  path: (CenterExample).name,
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: 'lib/pages/layout/example/single_child_layout_widgets/${(CenterExample).underscoreCaseName}.dart',
+                    child: const CenterExample(),
+                  ),
+                ),
+                GoRoute(
+                  path: (ConstrainedBoxExample).name,
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: 'lib/pages/layout/example/single_child_layout_widgets/${(ConstrainedBoxExample).underscoreCaseName}.dart',
+                    child: const ConstrainedBoxExample(),
+                  ),
+                ),
+                GoRoute(
+                  path: (ContainerExample).name,
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: 'lib/pages/layout/example/single_child_layout_widgets/${(ContainerExample).underscoreCaseName}.dart',
+                    child: const ContainerExample(),
+                  ),
+                ),
+                GoRoute(
+                  path: (CustomSingleChildLayoutExample).name,
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: 'lib/pages/layout/example/single_child_layout_widgets/${(CustomSingleChildLayoutExample).underscoreCaseName}.dart',
                     child: CustomSingleChildLayoutExample(),
                   ),
                 ),
                 GoRoute(
-                  path: 'ExpandedExample',
-                  builder: (_, __) => const CustomWidgetCodeView(
-                    filePath: '',
-                    child: ExpandedExample(),
+                  path: (ExpandedExample).name,
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: 'lib/pages/layout/example/single_child_layout_widgets/${(ExpandedExample).underscoreCaseName}.dart',
+                    child: const ExpandedExample(),
                   ),
                 ),
                 GoRoute(
-                  path: 'FittedBoxExample',
-                  builder: (_, __) => const CustomWidgetCodeView(
-                    filePath: '',
-                    child: FittedBoxExample(),
+                  path: (FittedBoxExample).name,
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: 'lib/pages/layout/example/single_child_layout_widgets/${(FittedBoxExample).underscoreCaseName}.dart',
+                    child: const FittedBoxExample(),
                   ),
                 ),
                 GoRoute(
-                  path: 'FractionallySizedBoxExample',
-                  builder: (_, __) => const CustomWidgetCodeView(
-                    filePath: '',
-                    child: FractionallySizedBoxExample(),
+                  path: (FractionallySizedBoxExample).name,
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: 'lib/pages/layout/example/single_child_layout_widgets/${(FractionallySizedBoxExample).underscoreCaseName}.dart',
+                    child: const FractionallySizedBoxExample(),
                   ),
                 ),
                 GoRoute(
-                  path: 'IntrinsicHeightExample',
-                  builder: (_, __) => const CustomWidgetCodeView(
-                    filePath: '',
-                    child: IntrinsicHeightExample(),
+                  path: (IntrinsicHeightExample).name,
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: 'lib/pages/layout/example/single_child_layout_widgets/${(IntrinsicHeightExample).underscoreCaseName}.dart',
+                    child: const IntrinsicHeightExample(),
                   ),
                 ),
                 GoRoute(
-                  path: 'IntrinsicWidthExample',
-                  builder: (_, __) => const CustomWidgetCodeView(
-                    filePath: '',
-                    child: IntrinsicWidthExample(),
+                  path: (IntrinsicWidthExample).name,
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: 'lib/pages/layout/example/single_child_layout_widgets/${(IntrinsicWidthExample).underscoreCaseName}.dart',
+                    child: const IntrinsicWidthExample(),
                   ),
                 ),
                 GoRoute(
-                  path: 'LimitedBoxExample',
-                  builder: (_, __) => const CustomWidgetCodeView(
-                    filePath: '',
-                    child: LimitedBoxExample(),
+                  path: (LimitedBoxExample).name,
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: 'lib/pages/layout/example/single_child_layout_widgets/${(LimitedBoxExample).underscoreCaseName}.dart',
+                    child: const LimitedBoxExample(),
                   ),
                 ),
                 GoRoute(
-                  path: 'OverflowBoxExample',
-                  builder: (_, __) => const CustomWidgetCodeView(
-                    filePath: '',
-                    child: OverflowBoxExample(),
+                  path: (OverflowBoxExample).name,
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: 'lib/pages/layout/example/single_child_layout_widgets/${(OverflowBoxExample).underscoreCaseName}.dart',
+                    child: const OverflowBoxExample(),
                   ),
                 ),
                 GoRoute(
-                  path: 'PaddingExample',
-                  builder: (_, __) => const CustomWidgetCodeView(
-                    filePath: '',
-                    child: PaddingExample(),
+                  path: (PaddingExample).name,
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: 'lib/pages/layout/example/single_child_layout_widgets/${(PaddingExample).underscoreCaseName}.dart',
+                    child: const PaddingExample(),
                   ),
                 ),
                 GoRoute(
-                  path: 'SizedBoxExample',
-                  builder: (_, __) => const CustomWidgetCodeView(
-                    filePath: '',
-                    child: SizedBoxExample(),
+                  path: (SizedBoxExample).name,
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: 'lib/pages/layout/example/single_child_layout_widgets/${(SizedBoxExample).underscoreCaseName}.dart',
+                    child: const SizedBoxExample(),
                   ),
                 ),
                 GoRoute(
-                  path: 'SizedOverflowBoxExample',
-                  builder: (_, __) => const CustomWidgetCodeView(
-                    filePath: '',
-                    child: SizedOverflowBoxExample(),
+                  path: (SizedOverflowBoxExample).name,
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: 'lib/pages/layout/example/single_child_layout_widgets/${(SizedOverflowBoxExample).underscoreCaseName}.dart',
+                    child: const SizedOverflowBoxExample(),
                   ),
                 ),
                 GoRoute(
-                  path: 'TransformExample',
-                  builder: (_, __) => const CustomWidgetCodeView(
-                    filePath: '',
-                    child: TransformExample(),
+                  path: (TransformExample).name,
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: 'lib/pages/layout/example/single_child_layout_widgets/${(TransformExample).underscoreCaseName}.dart',
+                    child: const TransformExample(),
                   ),
                 ),
               ],
             ),
             GoRoute(
-              path: 'SliverWidgets',
-              builder: (_, __) => const SliverWidgets(),
+              path: 'sliver_widgets',
+              builder: (_, __) => const SliverWidgetsPage(),
               routes: [
                 GoRoute(
-                  path: 'CustomScrollViewExample',
-                  builder: (_, __) => const CustomWidgetCodeView(
-                    filePath: '',
-                    child: CustomScrollViewExample(),
+                  path: (CustomScrollViewExample).name,
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: 'lib/pages/layout/example/sliver_widgets/${(CustomScrollViewExample).underscoreCaseName}.dart',
+                    child: const CustomScrollViewExample(),
                   ),
                 ),
                 GoRoute(
-                  path: 'NestedScrollViewExample',
-                  builder: (_, __) => const CustomWidgetCodeView(
-                    filePath: '',
-                    child: NestedScrollViewExample(),
+                  path: (NestedScrollViewExample).name,
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: 'lib/pages/layout/example/sliver_widgets/${(NestedScrollViewExample).underscoreCaseName}.dart',
+                    child: const NestedScrollViewExample(),
                   ),
                 ),
                 GoRoute(
-                  path: 'NestedScrollViewExample2',
-                  builder: (_, __) => const CustomWidgetCodeView(
-                    filePath: '',
-                    child: NestedScrollViewExample2(),
+                  path: (NestedScrollViewExample2).name,
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: 'lib/pages/layout/example/sliver_widgets/${(NestedScrollViewExample2).underscoreCaseName}.dart',
+                    child: const NestedScrollViewExample2(),
                   ),
                 ),
               ],
@@ -1107,226 +1109,226 @@ final router = GoRouter(
           builder: (_, __) => const MaterialComponentsPage(),
           routes: [
             GoRoute(
-              path: 'ActionsExample',
+              path: 'Actions',
               builder: (_, __) => const ActionsPage(),
               routes: [
                 GoRoute(
-                  path: 'CommonButtonsExample',
-                  builder: (_, __) => const CustomWidgetCodeView(
-                    filePath: '',
-                    child: CommonButtonsExample(),
+                  path: (CommonButtonsExample).name,
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: 'lib/pages/actions/example/${(CommonButtonsExample).underscoreCaseName}.dart',
+                    child: const CommonButtonsExample(),
                   ),
                 ),
                 GoRoute(
-                  path: 'FABExample',
-                  builder: (_, __) => const CustomWidgetCodeView(
-                    filePath: '',
-                    child: FABExample(),
+                  path: (FABExample).name,
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: 'lib/pages/actions/example/${(FABExample).underscoreCaseName}.dart',
+                    child: const FABExample(),
                   ),
                 ),
                 GoRoute(
-                  path: 'IconButtonExample',
-                  builder: (_, __) => const CustomWidgetCodeView(
-                    filePath: '',
-                    child: IconButtonExample(),
+                  path: (IconButtonExample).name,
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: 'lib/pages/actions/example/${(IconButtonExample).underscoreCaseName}.dart',
+                    child: const IconButtonExample(),
                   ),
                 ),
                 GoRoute(
-                  path: 'SegmentedButtonExample',
-                  builder: (_, __) => const CustomWidgetCodeView(
-                    filePath: '',
-                    child: SegmentedButtonExample(),
+                  path: (SegmentedButtonExample).name,
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: 'lib/pages/actions/example/${(SegmentedButtonExample).underscoreCaseName}.dart',
+                    child: const SegmentedButtonExample(),
                   ),
                 ),
               ],
             ),
             GoRoute(
-              path: 'CommunicationExample',
+              path: 'Communication',
               builder: (_, __) => const CommunicationPage(),
               routes: [
                 GoRoute(
-                  path: 'BadgeExample',
-                  builder: (_, __) => const CustomWidgetCodeView(
-                    filePath: '',
-                    child: BadgeExample(),
+                  path: (BadgeExample).name,
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: 'lib/pages/material/communication/example/${(BadgeExample).underscoreCaseName}.dart',
+                    child: const BadgeExample(),
                   ),
                 ),
                 GoRoute(
-                  path: 'ProgressIndicatorExample',
-                  builder: (_, __) => const CustomWidgetCodeView(
-                    filePath: '',
-                    child: ProgressIndicatorExample(),
+                  path: (ProgressIndicatorExample).name,
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: 'lib/pages/material/communication/example/${(ProgressIndicatorExample).underscoreCaseName}.dart',
+                    child: const ProgressIndicatorExample(),
                   ),
                 ),
                 GoRoute(
-                  path: 'SnackBarExample',
-                  builder: (_, __) => const CustomWidgetCodeView(
-                    filePath: '',
-                    child: SnackBarExample(),
+                  path: (SnackBarExample).name,
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: 'lib/pages/material/communication/example/${(SnackBarExample).underscoreCaseName}.dart',
+                    child: const SnackBarExample(),
                   ),
                 ),
               ],
             ),
             GoRoute(
-              path: 'ContainmentExample',
+              path: 'Containment',
               builder: (_, __) => const ContainmentPage(),
               routes: [
                 GoRoute(
-                  path: 'BottomSheetExample',
-                  builder: (_, __) => const CustomWidgetCodeView(
-                    filePath: 'lib/pages/material/containment/example/bottom_sheet_example.dart',
-                    child: BottomSheetExample(),
+                  path: (BottomSheetExample).name,
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: 'lib/pages/material/containment/example/${(BottomSheetExample).underscoreCaseName}.dart',
+                    child: const BottomSheetExample(),
                   ),
                 ),
                 GoRoute(
-                  path: 'CardExample',
-                  builder: (_, __) => const CustomWidgetCodeView(
-                    filePath: '',
-                    child: CardExample(),
+                  path: (CardExample).name,
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: 'lib/pages/material/containment/example/${(CardExample).underscoreCaseName}.dart',
+                    child: const CardExample(),
                   ),
                 ),
                 GoRoute(
-                  path: 'DialogExample',
-                  builder: (_, __) => const CustomWidgetCodeView(
-                    filePath: '',
-                    child: DialogExample(),
+                  path: (DialogExample).name,
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: 'lib/pages/material/containment/example/${(DialogExample).underscoreCaseName}.dart',
+                    child: const DialogExample(),
                   ),
                 ),
                 GoRoute(
-                  path: 'DividerExample',
-                  builder: (_, __) => const CustomWidgetCodeView(
-                    filePath: '',
-                    child: DividerExample(),
+                  path: (DividerExample).name,
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: 'lib/pages/material/containment/example/${(DividerExample).underscoreCaseName}.dart',
+                    child: const DividerExample(),
                   ),
                 ),
                 GoRoute(
-                  path: 'ListTileExample',
-                  builder: (_, __) => const CustomWidgetCodeView(
-                    filePath: '',
-                    child: ListTileExample(),
+                  path: (ListTileExample).name,
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: 'lib/pages/material/containment/example/${(ListTileExample).underscoreCaseName}.dart',
+                    child: const ListTileExample(),
                   ),
                 ),
               ],
             ),
             GoRoute(
-              path: 'NavigationExample',
+              path: 'Navigation',
               builder: (_, __) => const NavigationPage(),
               routes: [
                 GoRoute(
-                  path: 'AppBarExample',
-                  builder: (_, __) => const CustomWidgetCodeView(
-                    filePath: '',
-                    child: AppBarExample(),
+                  path: (material_app_bar.AppBarExample).name,
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: 'lib/pages/basics/example/${(material_app_bar.AppBarExample).underscoreCaseName}.dart',
+                    child: const material_app_bar.AppBarExample(),
                   ),
                 ),
                 GoRoute(
-                  path: 'BottomAppBarExample',
-                  builder: (_, __) => const CustomWidgetCodeView(
-                    filePath: '',
-                    child: BottomAppBarExample(),
+                  path: (BottomAppBarExample).name,
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: 'lib/pages/material/navigation/example/${(BottomAppBarExample).underscoreCaseName}.dart',
+                    child: const BottomAppBarExample(),
                   ),
                 ),
                 GoRoute(
-                  path: 'NavigationBarExample',
-                  builder: (_, __) => const CustomWidgetCodeView(
-                    filePath: '',
-                    child: NavigationBarExample(),
+                  path: (NavigationBarExample).name,
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: 'lib/pages/material/navigation/example/${(NavigationBarExample).underscoreCaseName}.dart',
+                    child: const NavigationBarExample(),
                   ),
                 ),
                 GoRoute(
-                  path: 'NavigationDrawerExample',
-                  builder: (_, __) => const CustomWidgetCodeView(
-                    filePath: '',
-                    child: NavigationDrawerExample(),
+                  path: (NavigationDrawerExample).name,
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: 'lib/pages/material/navigation/example/${(NavigationDrawerExample).underscoreCaseName}.dart',
+                    child: const NavigationDrawerExample(),
                   ),
                 ),
                 GoRoute(
-                  path: 'NavigationRailExample',
-                  builder: (_, __) => const CustomWidgetCodeView(
-                    filePath: '',
-                    child: NavigationRailExample(),
+                  path: (NavigationRailExample).name,
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: 'lib/pages/material/navigation/example/${(NavigationRailExample).underscoreCaseName}.dart',
+                    child: const NavigationRailExample(),
                   ),
                 ),
                 GoRoute(
-                  path: 'TabBarExample',
-                  builder: (_, __) => const CustomWidgetCodeView(
-                    filePath: '',
-                    child: TabBarExample(),
+                  path: (TabBarExample).name,
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: 'lib/pages/material/navigation/example/${(TabBarExample).underscoreCaseName}.dart',
+                    child: const TabBarExample(),
                   ),
                 ),
               ],
             ),
             GoRoute(
-              path: 'SelectionExample',
+              path: 'Selection',
               builder: (_, __) => const SelectionPage(),
               routes: [
                 GoRoute(
-                  path: 'CheckboxExample',
-                  builder: (_, __) => const CustomWidgetCodeView(
-                    filePath: '',
-                    child: CheckboxExample(),
+                  path: (CheckboxExample).name,
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: 'lib/pages/material/selection/example/${(CheckboxExample).underscoreCaseName}.dart',
+                    child: const CheckboxExample(),
                   ),
                 ),
                 GoRoute(
-                  path: 'ChipExample',
-                  builder: (_, __) => const CustomWidgetCodeView(
-                    filePath: '',
-                    child: ChipExample(),
+                  path: (ChipExample).name,
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: 'lib/pages/material/selection/example/${(ChipExample).underscoreCaseName}.dart',
+                    child: const ChipExample(),
                   ),
                 ),
                 GoRoute(
-                  path: 'DatePickerExample',
-                  builder: (_, __) => const CustomWidgetCodeView(
-                    filePath: '',
-                    child: DatePickerExample(),
+                  path: (DatePickerExample).name,
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: 'lib/pages/material/selection/example/${(DatePickerExample).underscoreCaseName}.dart',
+                    child: const DatePickerExample(),
                   ),
                 ),
                 GoRoute(
-                  path: 'PopupMenuExample',
-                  builder: (_, __) => const CustomWidgetCodeView(
-                    filePath: '',
-                    child: PopupMenuExample(),
+                  path: (PopupMenuExample).name,
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: 'lib/pages/material/selection/example/${(PopupMenuExample).underscoreCaseName}.dart',
+                    child: const PopupMenuExample(),
                   ),
                 ),
                 GoRoute(
-                  path: 'RadioExample',
-                  builder: (_, __) => const CustomWidgetCodeView(
-                    filePath: '',
-                    child: RadioExample(),
+                  path: (RadioButtonExample).name,
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: 'lib/pages/material/selection/example/${(RadioButtonExample).underscoreCaseName}.dart',
+                    child: const RadioButtonExample(),
                   ),
                 ),
                 GoRoute(
-                  path: 'SliderExample',
-                  builder: (_, __) => const CustomWidgetCodeView(
-                    filePath: '',
-                    child: SliderExample(),
+                  path: (SliderExample).name,
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: 'lib/pages/material/selection/example/${(SliderExample).underscoreCaseName}.dart',
+                    child: const SliderExample(),
                   ),
                 ),
                 GoRoute(
-                  path: 'SwitchExample',
-                  builder: (_, __) => const CustomWidgetCodeView(
-                    filePath: '',
-                    child: SwitchExample(),
+                  path: (SwitchExample).name,
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: 'lib/pages/material/selection/example/${(SwitchExample).underscoreCaseName}.dart',
+                    child: const SwitchExample(),
                   ),
                 ),
                 GoRoute(
-                  path: 'TimePickerExample',
-                  builder: (_, __) => const CustomWidgetCodeView(
-                    filePath: '',
-                    child: TimePickerExample(),
+                  path: (TimePickerExample).name,
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: 'lib/pages/material/selection/example/${(TimePickerExample).underscoreCaseName}.dart',
+                    child: const TimePickerExample(),
                   ),
                 ),
               ],
             ),
             GoRoute(
-              path: 'TextInpusExample',
+              path: 'TextInpus',
               builder: (_, __) => const TextInpusPage(),
               routes: [
                 GoRoute(
-                  path: 'TextFieldExample',
-                  builder: (_, __) => const CustomWidgetCodeView(
-                    filePath: '',
-                    child: TextFieldExample(),
+                  path: (TextFieldExample).name,
+                  builder: (_, __) => CustomWidgetCodeView(
+                    filePath: 'lib/pages/material/textInputs/example/${(TextFieldExample).underscoreCaseName}.dart',
+                    child: const TextFieldExample(),
                   ),
                 ),
               ],
@@ -1336,93 +1338,94 @@ final router = GoRouter(
         GoRoute(
           path: 'others',
           builder: (_, __) => const OthersPage(),
+          routes: const [],
         ),
         GoRoute(
           path: 'painting',
           builder: (_, __) => const PaintingAndEffectsPage(),
           routes: [
             GoRoute(
-              path: 'BackdropFilterExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: BackdropFilterExample(),
+              path: (BackdropFilterExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/painting_and_effects/example/${(BackdropFilterExample).underscoreCaseName}.dart',
+                child: const BackdropFilterExample(),
               ),
             ),
             GoRoute(
-              path: 'ClipOvalExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: ClipOvalExample(),
+              path: (ClipOvalExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/painting_and_effects/example/${(ClipOvalExample).underscoreCaseName}.dart',
+                child: const ClipOvalExample(),
               ),
             ),
             GoRoute(
-              path: 'ClipPathExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: ClipPathExample(),
+              path: (ClipPathExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/painting_and_effects/example/${(ClipPathExample).underscoreCaseName}.dart',
+                child: const ClipPathExample(),
               ),
             ),
             GoRoute(
-              path: 'ClipRRectExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: ClipRRectExample(),
+              path: (ClipRRectExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/painting_and_effects/example/${(ClipRRectExample).underscoreCaseName}.dart',
+                child: const ClipRRectExample(),
               ),
             ),
             GoRoute(
-              path: 'ClipRectExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: ClipRectExample(),
+              path: (ClipRectExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/painting_and_effects/example/${(ClipRectExample).underscoreCaseName}.dart',
+                child: const ClipRectExample(),
               ),
             ),
             GoRoute(
-              path: 'ColorFilteredExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: ColorFilteredExample(),
+              path: (ColorFilteredExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/painting_and_effects/example/${(ColorFilteredExample).underscoreCaseName}.dart',
+                child: const ColorFilteredExample(),
               ),
             ),
             GoRoute(
-              path: 'CustomPaintExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: CustomPaintExample(),
+              path: (CustomPaintExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/painting_and_effects/example/${(CustomPaintExample).underscoreCaseName}.dart',
+                child: const CustomPaintExample(),
               ),
             ),
             GoRoute(
-              path: 'DecoratedBoxExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: DecoratedBoxExample(),
+              path: (DecoratedBoxExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/painting_and_effects/example/${(DecoratedBoxExample).underscoreCaseName}.dart',
+                child: const DecoratedBoxExample(),
               ),
             ),
             GoRoute(
-              path: 'FractionalTranslationExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: FractionalTranslationExample(),
+              path: (FractionalTranslationExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/painting_and_effects/example/${(FractionalTranslationExample).underscoreCaseName}.dart',
+                child: const FractionalTranslationExample(),
               ),
             ),
             GoRoute(
-              path: 'OpacityExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: OpacityExample(),
+              path: (OpacityExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/painting_and_effects/example/${(OpacityExample).underscoreCaseName}.dart',
+                child: const OpacityExample(),
               ),
             ),
             GoRoute(
-              path: 'RotatedBoxExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: RotatedBoxExample(),
+              path: (RotatedBoxExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/painting_and_effects/example/${(RotatedBoxExample).underscoreCaseName}.dart',
+                child: const RotatedBoxExample(),
               ),
             ),
             GoRoute(
-              path: 'TransformExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: TransformExample(),
+              path: (TransformExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/painting_and_effects/example/${(TransformExample).underscoreCaseName}.dart',
+                child: const TransformExample(),
               ),
             ),
           ],
@@ -1432,94 +1435,94 @@ final router = GoRouter(
           builder: (_, __) => const ScrollingPage(),
           routes: [
             GoRoute(
-              path: 'CustomScrollViewExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: CustomScrollViewExample(),
+              path: (scrolling.CustomScrollViewExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/scrolling/example/${(scrolling.CustomScrollViewExample).underscoreCaseName}.dart',
+                child: const scrolling.CustomScrollViewExample(),
               ),
             ),
             GoRoute(
-              path: 'DraggableScrollableSheetExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: DraggableScrollableSheetExample(),
+              path: (scrolling.DraggableScrollableSheetExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/scrolling/example/${(scrolling.DraggableScrollableSheetExample).underscoreCaseName}.dart',
+                child: const scrolling.DraggableScrollableSheetExample(),
               ),
             ),
             GoRoute(
-              path: 'GridViewExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: GridViewExample(),
+              path: (scrolling.GridViewExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/scrolling/example/${(scrolling.GridViewExample).underscoreCaseName}.dart',
+                child: const scrolling.GridViewExample(),
               ),
             ),
             GoRoute(
-              path: 'ListViewExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: ListViewExample(),
+              path: (scrolling.ListViewExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/scrolling/example/${(scrolling.ListViewExample).underscoreCaseName}.dart',
+                child: const scrolling.ListViewExample(),
               ),
             ),
             GoRoute(
-              path: 'NestedScrollViewExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: NestedScrollViewExample(),
+              path: (scrolling.NestedScrollViewExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/scrolling/example/${(scrolling.NestedScrollViewExample).underscoreCaseName}.dart',
+                child: const scrolling.NestedScrollViewExample(),
               ),
             ),
             GoRoute(
-              path: 'NotificationListenerExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: NotificationListenerExample(),
+              path: (NotificationListenerExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/scrolling/example/${(NotificationListenerExample).underscoreCaseName}.dart',
+                child: const NotificationListenerExample(),
               ),
             ),
             GoRoute(
-              path: 'PageViewExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: PageViewExample(),
+              path: (PageViewExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/scrolling/example/${(PageViewExample).underscoreCaseName}.dart',
+                child: const PageViewExample(),
               ),
             ),
             GoRoute(
-              path: 'RefreshIndicatorExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: RefreshIndicatorExample(),
+              path: (RefreshIndicatorExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/scrolling/example/${(RefreshIndicatorExample).underscoreCaseName}.dart',
+                child: const RefreshIndicatorExample(),
               ),
             ),
             GoRoute(
-              path: 'ReorderableExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: ReorderableExample(),
+              path: (ReorderableExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/scrolling/example/${(ReorderableExample).underscoreCaseName}.dart',
+                child: const ReorderableExample(),
               ),
             ),
             GoRoute(
-              path: 'ScrollConfigurationExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: ScrollConfigurationExample(),
+              path: (ScrollConfigurationExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/scrolling/example/${(ScrollConfigurationExample).underscoreCaseName}.dart',
+                child: const ScrollConfigurationExample(),
               ),
             ),
             GoRoute(
-              path: 'ScrollableExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: ScrollableExample(),
+              path: (scrolling.ScrollableExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/scrolling/example/${(scrolling.ScrollableExample).underscoreCaseName}.dart',
+                child: const scrolling.ScrollableExample(),
               ),
             ),
             GoRoute(
-              path: 'ScrollbarExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: ScrollbarExample(),
+              path: (ScrollbarExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/scrolling/example/${(ScrollbarExample).underscoreCaseName}.dart',
+                child: const ScrollbarExample(),
               ),
             ),
             GoRoute(
-              path: 'SingleChildScrollViewExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: SingleChildScrollViewExample(),
+              path: (SingleChildScrollViewExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/scrolling/example/${(SingleChildScrollViewExample).underscoreCaseName}.dart',
+                child: const SingleChildScrollViewExample(),
               ),
             ),
           ],
@@ -1529,24 +1532,24 @@ final router = GoRouter(
           builder: (_, __) => const StylingPage(),
           routes: [
             GoRoute(
-              path: 'MediaQueryExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: MediaQueryExample(),
+              path: (MediaQueryExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/styling/example/${(MediaQueryExample).underscoreCaseName}.dart',
+                child: const MediaQueryExample(),
               ),
             ),
             GoRoute(
-              path: 'PaddingExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: PaddingExample(),
+              path: (PaddingExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/styling/example/${(PaddingExample).underscoreCaseName}.dart',
+                child: const PaddingExample(),
               ),
             ),
             GoRoute(
-              path: 'ThemeExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: ThemeExample(),
+              path: (ThemeExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/styling/example/${(ThemeExample).underscoreCaseName}.dart',
+                child: const ThemeExample(),
               ),
             ),
           ],
@@ -1556,24 +1559,24 @@ final router = GoRouter(
           builder: (_, __) => const TextPage(),
           routes: [
             GoRoute(
-              path: 'DefaultTextStyleExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: DefaultTextStyleExample(),
+              path: (DefaultTextStyleExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/text/example/${(DefaultTextStyleExample).underscoreCaseName}.dart',
+                child: const DefaultTextStyleExample(),
               ),
             ),
             GoRoute(
-              path: 'RichTextExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: RichTextExample(),
+              path: (RichTextExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/text/example/${(RichTextExample).underscoreCaseName}.dart',
+                child: const RichTextExample(),
               ),
             ),
             GoRoute(
-              path: 'TextExample',
-              builder: (_, __) => const CustomWidgetCodeView(
-                filePath: '',
-                child: TextExample(),
+              path: (TextExample).name,
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/text/example/${(TextExample).underscoreCaseName}.dart',
+                child: const TextExample(),
               ),
             ),
           ],

@@ -9,43 +9,43 @@ class CupertinoSlidingSegmentedControlExample extends StatefulWidget {
 }
 
 class _CupertinoSlidingSegmentedControlExampleState extends State<CupertinoSlidingSegmentedControlExample> {
-  Sky _selectedSegment = Sky.midnight;
+  SkyColor _selectedSegment = SkyColor.midnight;
 
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
-      backgroundColor: skyColors[_selectedSegment],
+      backgroundColor: mySkyColors[_selectedSegment],
       navigationBar: CupertinoNavigationBar(
         // This Cupertino segmented control has the enum "Sky" as the type.
-        middle: CupertinoSlidingSegmentedControl<Sky>(
+        middle: CupertinoSlidingSegmentedControl<SkyColor>(
           backgroundColor: CupertinoColors.systemGrey2,
-          thumbColor: skyColors[_selectedSegment]!,
+          thumbColor: mySkyColors[_selectedSegment]!,
           // This represents the currently selected segmented control.
           groupValue: _selectedSegment,
           // Callback that sets the selected segmented control.
-          onValueChanged: (Sky? value) {
+          onValueChanged: (SkyColor? value) {
             if (value != null) {
               setState(() {
                 _selectedSegment = value;
               });
             }
           },
-          children: const <Sky, Widget>{
-            Sky.midnight: Padding(
+          children: const <SkyColor, Widget>{
+            SkyColor.midnight: Padding(
               padding: EdgeInsets.symmetric(horizontal: 20),
               child: Text(
                 'Midnight',
                 style: TextStyle(color: CupertinoColors.white),
               ),
             ),
-            Sky.viridian: Padding(
+            SkyColor.viridian: Padding(
               padding: EdgeInsets.symmetric(horizontal: 20),
               child: Text(
                 'Viridian',
                 style: TextStyle(color: CupertinoColors.white),
               ),
             ),
-            Sky.cerulean: Padding(
+            SkyColor.cerulean: Padding(
               padding: EdgeInsets.symmetric(horizontal: 20),
               child: Text(
                 'Cerulean',
@@ -65,10 +65,10 @@ class _CupertinoSlidingSegmentedControlExampleState extends State<CupertinoSlidi
   }
 }
 
-enum Sky { midnight, viridian, cerulean }
+enum SkyColor { midnight, viridian, cerulean }
 
-Map<Sky, Color> skyColors = <Sky, Color>{
-  Sky.midnight: const Color(0xff191970),
-  Sky.viridian: const Color(0xff40826d),
-  Sky.cerulean: const Color(0xff007ba7),
+Map<SkyColor, Color> mySkyColors = <SkyColor, Color>{
+  SkyColor.midnight: const Color(0xff191970),
+  SkyColor.viridian: const Color(0xff40826d),
+  SkyColor.cerulean: const Color(0xff007ba7),
 };
