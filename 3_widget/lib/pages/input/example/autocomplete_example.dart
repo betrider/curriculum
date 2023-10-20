@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class AutocompleteBasicExample extends StatelessWidget {
-  const AutocompleteBasicExample({super.key});
+class AutocompleteExample extends StatelessWidget {
+  const AutocompleteExample({super.key});
 
   static const List<String> _kOptions = <String>[
     'aardvark',

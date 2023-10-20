@@ -72,9 +72,9 @@ class ScrollingPage extends StatelessWidget {
             },
           ),
           MyCardWidget(
-            title: (ReorderableExample).name,
+            title: (ReorderableListViewExample).name,
             onTap: () {
-              context.pushRelative((ReorderableExample).name);
+              context.pushRelative((ReorderableListViewExample).name);
             },
           ),
           MyCardWidget(

@@ -1,14 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class CupertinoFullscreenDialogTransitionExample extends StatefulWidget {
-  const CupertinoFullscreenDialogTransitionExample({super.key});
+class CupertinoFullScreenDialogTransitionExample extends StatefulWidget {
+  const CupertinoFullScreenDialogTransitionExample({super.key});
 
   @override
   CupertinoFullscreenDialogTransitionState createState() => CupertinoFullscreenDialogTransitionState();
 }
 
-class CupertinoFullscreenDialogTransitionState extends State<CupertinoFullscreenDialogTransitionExample> {
+class CupertinoFullscreenDialogTransitionState extends State<CupertinoFullScreenDialogTransitionExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

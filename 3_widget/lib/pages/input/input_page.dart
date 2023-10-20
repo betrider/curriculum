@@ -24,9 +24,9 @@ class InputPage extends StatelessWidget {
         crossAxisCount: 2,
         children: [
           MyCardWidget(
-            title: (AutocompleteBasicExample).name,
+            title: (AutocompleteExample).name,
             onTap: () {
-              context.pushRelative((AutocompleteBasicExample).name);
+              context.pushRelative((AutocompleteExample).name);
             },
           ),
           MyCardWidget(
@@ -42,9 +42,9 @@ class InputPage extends StatelessWidget {
             },
           ),
           MyCardWidget(
-            title: (KeyboardListenerExample).name,
+            title: (RawKeyboardListenerExample).name,
             onTap: () {
-              context.pushRelative((KeyboardListenerExample).name);
+              context.pushRelative((RawKeyboardListenerExample).name);
             },
           ),
         ],

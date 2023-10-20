@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_widget/extensions.dart';
@@ -77,7 +79,7 @@ import 'package:flutter_widget/pages/cupertino/example/cupertino_timer_picker_ex
 import 'package:flutter_widget/pages/input/example/autocomplete_example.dart';
 import 'package:flutter_widget/pages/input/example/form_example.dart';
 import 'package:flutter_widget/pages/input/example/form_field_example.dart';
-import 'package:flutter_widget/pages/input/example/raw_keyboard_listener.dart';
+import 'package:flutter_widget/pages/input/example/raw_keyboard_listener_example.dart';
 import 'package:flutter_widget/pages/input/input_page.dart';
 import 'package:flutter_widget/pages/interaction_models/example/absorb_pointer_example.dart';
 import 'package:flutter_widget/pages/interaction_models/example/dismissible_example.dart';
@@ -163,7 +165,7 @@ import 'package:flutter_widget/pages/painting_and_effects/example/clip_oval_exam
 import 'package:flutter_widget/pages/painting_and_effects/example/clip_path_example.dart';
 import 'package:flutter_widget/pages/painting_and_effects/example/clip_r_rect_example.dart';
 import 'package:flutter_widget/pages/painting_and_effects/example/clip_rect_example.dart';
-import 'package:flutter_widget/pages/painting_and_effects/example/color_filter_example.dart';
+import 'package:flutter_widget/pages/painting_and_effects/example/color_filtered_example.dart';
 import 'package:flutter_widget/pages/painting_and_effects/example/custom_paint_example.dart';
 import 'package:flutter_widget/pages/painting_and_effects/example/decorated_box_example.dart';
 import 'package:flutter_widget/pages/painting_and_effects/example/fractional_translation_example.dart';
@@ -609,11 +611,11 @@ final router = GoRouter(
               ),
             ),
             GoRoute(
-              path: (CupertinoFullscreenDialogTransitionExample).name,
+              path: (CupertinoFullScreenDialogTransitionExample).name,
               builder: (_, __) => CustomWidgetCodeView(
                 filePath:
-                    'lib/pages/cupertino/example/${(CupertinoFullscreenDialogTransitionExample).underscoreCaseName}.dart',
-                child: const CupertinoFullscreenDialogTransitionExample(),
+                    'lib/pages/cupertino/example/${(CupertinoFullScreenDialogTransitionExample).underscoreCaseName}.dart',
+                child: const CupertinoFullScreenDialogTransitionExample(),
               ),
             ),
             GoRoute(
@@ -673,10 +675,10 @@ final router = GoRouter(
               ),
             ),
             GoRoute(
-              path: (SegmentedControlExample).name,
+              path: (CupertinoSegmentedControlExample).name,
               builder: (_, __) => CustomWidgetCodeView(
-                filePath: 'lib/pages/cupertino/example/${(SegmentedControlExample).underscoreCaseName}.dart',
-                child: const SegmentedControlExample(),
+                filePath: 'lib/pages/cupertino/example/${(CupertinoSegmentedControlExample).underscoreCaseName}.dart',
+                child: const CupertinoSegmentedControlExample(),
               ),
             ),
             GoRoute(
@@ -751,10 +753,10 @@ final router = GoRouter(
           builder: (_, __) => const InputPage(),
           routes: [
             GoRoute(
-              path: (AutocompleteBasicExample).name,
+              path: (AutocompleteExample).name,
               builder: (_, __) => CustomWidgetCodeView(
-                filePath: 'lib/pages/input/example/${(AutocompleteBasicExample).underscoreCaseName}.dart',
-                child: const AutocompleteBasicExample(),
+                filePath: 'lib/pages/input/example/${(AutocompleteExample).underscoreCaseName}.dart',
+                child: const AutocompleteExample(),
               ),
             ),
             GoRoute(
@@ -772,10 +774,10 @@ final router = GoRouter(
               ),
             ),
             GoRoute(
-              path: (KeyboardListenerExample).name,
+              path: (RawKeyboardListenerExample).name,
               builder: (_, __) => CustomWidgetCodeView(
-                filePath: 'lib/pages/input/example/${(KeyboardListenerExample).underscoreCaseName}.dart',
-                child: const KeyboardListenerExample(),
+                filePath: 'lib/pages/input/example/${(RawKeyboardListenerExample).underscoreCaseName}.dart',
+                child: const RawKeyboardListenerExample(),
               ),
             ),
           ],
@@ -850,7 +852,7 @@ final router = GoRouter(
             GoRoute(
               path: (ScrollableExample).name,
               builder: (_, __) => CustomWidgetCodeView(
-                filePath: 'lib/pages/interaction/example/${(ScrollableExample).underscoreCaseName}.dart',
+                filePath: 'lib/pages/interaction_models/example/${(ScrollableExample).underscoreCaseName}.dart',
                 child: const ScrollableExample(),
               ),
             ),
@@ -867,7 +869,7 @@ final router = GoRouter(
                 GoRoute(
                   path: (ColumnExample).name,
                   builder: (_, __) => CustomWidgetCodeView(
-                    filePath: 'lib/pages/layout/example/${(ColumnExample).underscoreCaseName}.dart',
+                    filePath: 'lib/pages/layout/example/multi_child_layout_widgets/${(ColumnExample).underscoreCaseName}.dart',
                     child: const ColumnExample(),
                   ),
                 ),
@@ -916,7 +918,7 @@ final router = GoRouter(
                 GoRoute(
                   path: (RowExample).name,
                   builder: (_, __) => CustomWidgetCodeView(
-                    filePath: 'lib/pages/layout/example/${(RowExample).underscoreCaseName}.dart',
+                    filePath: 'lib/pages/layout/example/multi_child_layout_widgets/${(RowExample).underscoreCaseName}.dart',
                     child: const RowExample(),
                   ),
                 ),
@@ -1115,28 +1117,28 @@ final router = GoRouter(
                 GoRoute(
                   path: (CommonButtonsExample).name,
                   builder: (_, __) => CustomWidgetCodeView(
-                    filePath: 'lib/pages/actions/example/${(CommonButtonsExample).underscoreCaseName}.dart',
+                    filePath: 'lib/pages/material/actions/example/${(CommonButtonsExample).underscoreCaseName}.dart',
                     child: const CommonButtonsExample(),
                   ),
                 ),
                 GoRoute(
                   path: (FABExample).name,
                   builder: (_, __) => CustomWidgetCodeView(
-                    filePath: 'lib/pages/actions/example/${(FABExample).underscoreCaseName}.dart',
+                    filePath: 'lib/pages/material/actions/example/${(FABExample).underscoreCaseName}.dart',
                     child: const FABExample(),
                   ),
                 ),
                 GoRoute(
                   path: (IconButtonExample).name,
                   builder: (_, __) => CustomWidgetCodeView(
-                    filePath: 'lib/pages/actions/example/${(IconButtonExample).underscoreCaseName}.dart',
+                    filePath: 'lib/pages/material/actions/example/${(IconButtonExample).underscoreCaseName}.dart',
                     child: const IconButtonExample(),
                   ),
                 ),
                 GoRoute(
                   path: (SegmentedButtonExample).name,
                   builder: (_, __) => CustomWidgetCodeView(
-                    filePath: 'lib/pages/actions/example/${(SegmentedButtonExample).underscoreCaseName}.dart',
+                    filePath: 'lib/pages/material/actions/example/${(SegmentedButtonExample).underscoreCaseName}.dart',
                     child: const SegmentedButtonExample(),
                   ),
                 ),
@@ -1217,7 +1219,7 @@ final router = GoRouter(
                 GoRoute(
                   path: (material_app_bar.AppBarExample).name,
                   builder: (_, __) => CustomWidgetCodeView(
-                    filePath: 'lib/pages/basics/example/${(material_app_bar.AppBarExample).underscoreCaseName}.dart',
+                    filePath: 'lib/pages/material/navigation/example/${(material_app_bar.AppBarExample).underscoreCaseName}.dart',
                     child: const material_app_bar.AppBarExample(),
                   ),
                 ),
@@ -1327,7 +1329,7 @@ final router = GoRouter(
                 GoRoute(
                   path: (TextFieldExample).name,
                   builder: (_, __) => CustomWidgetCodeView(
-                    filePath: 'lib/pages/material/textInputs/example/${(TextFieldExample).underscoreCaseName}.dart',
+                    filePath: 'lib/pages/material/text_inputs/example/${(TextFieldExample).underscoreCaseName}.dart',
                     child: const TextFieldExample(),
                   ),
                 ),
@@ -1491,10 +1493,10 @@ final router = GoRouter(
               ),
             ),
             GoRoute(
-              path: (ReorderableExample).name,
+              path: (ReorderableListViewExample).name,
               builder: (_, __) => CustomWidgetCodeView(
-                filePath: 'lib/pages/scrolling/example/${(ReorderableExample).underscoreCaseName}.dart',
-                child: const ReorderableExample(),
+                filePath: 'lib/pages/scrolling/example/${(ReorderableListViewExample).underscoreCaseName}.dart',
+                child: const ReorderableListViewExample(),
               ),
             ),
             GoRoute(
@@ -1758,6 +1760,7 @@ class CustomWidgetCodeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    log('### - $filePath');
     return Theme(
       data: Theme.of(context).copyWith(
         primaryColor: Colors.purple[300],

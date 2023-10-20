@@ -64,9 +64,9 @@ class CupertinoComponentsPage extends StatelessWidget {
             },
           ),
           MyCardWidget(
-            title: (CupertinoFullscreenDialogTransitionExample).name,
+            title: (CupertinoFullScreenDialogTransitionExample).name,
             onTap: () {
-              context.pushRelative((CupertinoFullscreenDialogTransitionExample).name);
+              context.pushRelative((CupertinoFullScreenDialogTransitionExample).name);
             },
           ),
           MyCardWidget(
@@ -118,9 +118,9 @@ class CupertinoComponentsPage extends StatelessWidget {
             },
           ),
           MyCardWidget(
-            title: (SegmentedControlExample).name,
+            title: (CupertinoSegmentedControlExample).name,
             onTap: () {
-              context.pushRelative((SegmentedControlExample).name);
+              context.pushRelative((CupertinoSegmentedControlExample).name);
             },
           ),
           MyCardWidget(

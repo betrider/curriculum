@@ -3,7 +3,7 @@ export 'clip_oval_example.dart';
 export 'clip_path_example.dart';
 export 'clip_r_rect_example.dart';
 export 'clip_rect_example.dart';
-export 'color_filter_example.dart';
+export 'color_filtered_example.dart';
 export 'custom_paint_example.dart';
 export 'decorated_box_example.dart';
 export 'fractional_translation_example.dart';

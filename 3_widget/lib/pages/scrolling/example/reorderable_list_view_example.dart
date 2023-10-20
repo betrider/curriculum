@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
 /// 사용자가 드래그하여 대화형으로 재정렬할 수 있는 항목의 목록입니다.
-class ReorderableExample extends StatefulWidget {
-  const ReorderableExample({super.key});
+class ReorderableListViewExample extends StatefulWidget {
+  const ReorderableListViewExample({super.key});
 
   @override
-  State<ReorderableExample> createState() => _ReorderableListViewExampleState();
+  State<ReorderableListViewExample> createState() => _ReorderableListViewExampleState();
 }
 
-class _ReorderableListViewExampleState extends State<ReorderableExample> {
+class _ReorderableListViewExampleState extends State<ReorderableListViewExample> {
   final List<int> _items = List<int>.generate(50, (int index) => index);
 
   @override

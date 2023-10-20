@@ -32,7 +32,7 @@ class AsyncPage extends StatelessWidget {
           MyCardWidget(
             title: (StreamBuilderExample).name,
             onTap: () {
-              context.pushRelative((FutureBuilderExample).name);
+              context.pushRelative((StreamBuilderExample).name);
             },
           ),
         ],

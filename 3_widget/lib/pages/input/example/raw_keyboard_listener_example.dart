@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class KeyboardListenerExample extends StatefulWidget {
-  const KeyboardListenerExample({super.key});
+class RawKeyboardListenerExample extends StatefulWidget {
+  const RawKeyboardListenerExample({super.key});
 
   @override
-  KeyboardListenerExampleState createState() => KeyboardListenerExampleState();
+  RawKeyboardListenerExampleState createState() => RawKeyboardListenerExampleState();
 }
 
-class KeyboardListenerExampleState extends State<KeyboardListenerExample> {
+class RawKeyboardListenerExampleState extends State<RawKeyboardListenerExample> {
   String keyPressed = '';
 
   @override

@@ -1,14 +1,14 @@
 import 'package:flutter/cupertino.dart';
 
-class SegmentedControlExample extends StatefulWidget {
-  const SegmentedControlExample({super.key});
+class CupertinoSegmentedControlExample extends StatefulWidget {
+  const CupertinoSegmentedControlExample({super.key});
 
   @override
-  State<SegmentedControlExample> createState() =>
-      _SegmentedControlExampleState();
+  State<CupertinoSegmentedControlExample> createState() =>
+      _CupertinoSegmentedControlExampleState();
 }
 
-class _SegmentedControlExampleState extends State<SegmentedControlExample> {
+class _CupertinoSegmentedControlExampleState extends State<CupertinoSegmentedControlExample> {
   Sky _selectedSegment = Sky.midnight;
 
   @override
