@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_widget/extensions.dart';
 import 'package:flutter_widget/main.dart';
 
+import 'styling.dart';
+
 class StylingPage extends StatelessWidget {
   const StylingPage({
     super.key,
@@ -11,7 +13,7 @@ class StylingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('스타일'),
+        title: const Text('스타일링'),
         centerTitle: true,
       ),
       body: GridView.count(
@@ -22,21 +24,21 @@ class StylingPage extends StatelessWidget {
         crossAxisCount: 2,
         children: [
           MyCardWidget(
-            title: 'MediaQueryExample',
+            title: (MediaQueryExample).name,
             onTap: () {
-              context.pushRelative('MediaQueryExample');
+              context.pushRelative((MediaQueryExample).name);
             },
           ),
           MyCardWidget(
-            title: 'PaddingExample',
+            title: (PaddingExample).name,
             onTap: () {
-              context.pushRelative('PaddingExample');
+              context.pushRelative((PaddingExample).name);
             },
           ),
           MyCardWidget(
-            title: 'ThemeExample',
+            title: (ThemeExample).name,
             onTap: () {
-              context.pushRelative('ThemeExample');
+              context.pushRelative((ThemeExample).name);
             },
           ),
         ],

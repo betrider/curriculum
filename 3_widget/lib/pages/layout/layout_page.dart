@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_widget/extensions.dart';
 import 'package:flutter_widget/main.dart';
 
+import 'layout.dart';
+
 class LayoutPage extends StatelessWidget {
   const LayoutPage({
     super.key,
@@ -22,21 +24,21 @@ class LayoutPage extends StatelessWidget {
         crossAxisCount: 2,
         children: [
           MyCardWidget(
-            title: 'MultiChildLayoutWidgets',
+            title: '다중 위젯',
             onTap: () {
-              context.pushRelative('multi_child_layout_widgets');
+              context.pushRelative((MultiChildLayoutWidgetsPage).name);
             },
           ),
           MyCardWidget(
-            title: 'SingleChildLayoutWidgets',
+            title: '단일 위젯',
             onTap: () {
-              context.pushRelative('single_child_layout_widgets');
+              context.pushRelative((SingleChildLayoutWidgetsPage).name);
             },
           ),
           MyCardWidget(
-            title: 'SliverWidgets',
+            title: '조각 위젯',
             onTap: () {
-              context.pushRelative('sliver_widgets');
+              context.pushRelative((SliverWidgetsPage).name);
             },
           ),
         ],

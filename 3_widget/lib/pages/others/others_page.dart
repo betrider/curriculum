@@ -22,25 +22,50 @@ class OthersPage extends StatelessWidget {
         crossAxisCount: 2,
         children: [
           MyCardWidget(
-            title: 'WidgetExample1',
+            title: (WidgetExample1).name,
             onTap: () {
-              context.pushRelative('WidgetExample1');
+              context.pushRelative((WidgetExample1).name);
             },
           ),
           MyCardWidget(
-            title: 'WidgetExample2',
+            title: (WidgetExample2).name,
             onTap: () {
-              context.pushRelative('WidgetExample2');
+              context.pushRelative((WidgetExample2).name);
             },
           ),
           MyCardWidget(
-            title: 'WidgetExample3',
+            title: (WidgetExample3).name,
             onTap: () {
-              context.pushRelative('WidgetExample3');
+              context.pushRelative((WidgetExample3).name);
             },
           ),
         ],
       ),
     );
+  }
+}
+
+class WidgetExample1 extends StatelessWidget {
+  const WidgetExample1({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder();
+  }
+}
+class WidgetExample2 extends StatelessWidget {
+  const WidgetExample2({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder();
+  }
+}
+class WidgetExample3 extends StatelessWidget {
+  const WidgetExample3({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder();
   }
 }

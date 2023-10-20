@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_widget/extensions.dart';
 import 'package:flutter_widget/main.dart';
 
+import 'input.dart';
+
 class InputPage extends StatelessWidget {
   const InputPage({
     super.key,
@@ -22,27 +24,27 @@ class InputPage extends StatelessWidget {
         crossAxisCount: 2,
         children: [
           MyCardWidget(
-            title: 'AutocompleteBasicExample',
+            title: (AutocompleteBasicExample).name,
             onTap: () {
-              context.pushRelative('AutocompleteBasicExample');
+              context.pushRelative((AutocompleteBasicExample).name);
             },
           ),
           MyCardWidget(
-            title: 'FormExample',
+            title: (FormExample).name,
             onTap: () {
-              context.pushRelative('FormExample');
+              context.pushRelative((FormExample).name);
             },
           ),
           MyCardWidget(
-            title: 'FormFieldExample',
+            title: (FormFieldExample).name,
             onTap: () {
-              context.pushRelative('FormFieldExample');
+              context.pushRelative((FormFieldExample).name);
             },
           ),
           MyCardWidget(
-            title: 'KeyboardListenerExample',
+            title: (KeyboardListenerExample).name,
             onTap: () {
-              context.pushRelative('KeyboardListenerExample');
+              context.pushRelative((KeyboardListenerExample).name);
             },
           ),
         ],

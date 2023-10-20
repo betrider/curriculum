@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_widget/extensions.dart';
 import 'package:flutter_widget/main.dart';
 
+import 'actions.dart';
+
 class ActionsPage extends StatelessWidget {
   const ActionsPage({super.key});
 
@@ -20,27 +22,27 @@ class ActionsPage extends StatelessWidget {
         crossAxisCount: 2,
         children: [
           MyCardWidget(
-            title: 'CommonButtonsExample',
+            title: (CommonButtonsExample).name,
             onTap: () {
-              context.pushRelative('CommonButtonsExample');
+              context.pushRelative((CommonButtonsExample).name);
             },
           ),
           MyCardWidget(
-            title: 'FABExample',
+            title: (FABExample).name,
             onTap: () {
-              context.pushRelative('FABExample');
+              context.pushRelative((FABExample).name);
             },
           ),
           MyCardWidget(
-            title: 'IconButtonExample',
+            title: (IconButtonExample).name,
             onTap: () {
-              context.pushRelative('IconButtonExample');
+              context.pushRelative((IconButtonExample).name);
             },
           ),
           MyCardWidget(
-            title: 'SegmentedButtonExample',
+            title: (SegmentedButtonExample).name,
             onTap: () {
-              context.pushRelative('SegmentedButtonExample');
+              context.pushRelative((SegmentedButtonExample).name);
             },
           ),
         ],

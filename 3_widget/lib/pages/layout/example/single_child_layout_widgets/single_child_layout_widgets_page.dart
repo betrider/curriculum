@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_widget/extensions.dart';
 import 'package:flutter_widget/main.dart';
 
+import 'single_child_layout_widgets.dart';
+
 class SingleChildLayoutWidgetsPage extends StatelessWidget {
   const SingleChildLayoutWidgetsPage({super.key});
 
@@ -9,7 +11,7 @@ class SingleChildLayoutWidgetsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('SingleChildLayoutWidgets'),
+        title: const Text('단일 위젯'),
         centerTitle: true,
       ),
       body: GridView.count(
@@ -20,111 +22,111 @@ class SingleChildLayoutWidgetsPage extends StatelessWidget {
         crossAxisCount: 2,
         children: [
           MyCardWidget(
-            title: 'AlignExample',
+            title: (AlignExample).name,
             onTap: () {
-              context.pushRelative('AlignExample');
+              context.pushRelative((AlignExample).name);
             },
           ),
           MyCardWidget(
-            title: 'AspectRatioExample',
+            title: (AspectRatioExample).name,
             onTap: () {
-              context.pushRelative('AspectRatioExample');
+              context.pushRelative((AspectRatioExample).name);
             },
           ),
           MyCardWidget(
-            title: 'BaselineExample',
+            title: (BaselineExample).name,
             onTap: () {
-              context.pushRelative('BaselineExample');
+              context.pushRelative((BaselineExample).name);
             },
           ),
           MyCardWidget(
-            title: 'CenterExample',
+            title: (CenterExample).name,
             onTap: () {
-              context.pushRelative('CenterExample');
+              context.pushRelative((CenterExample).name);
             },
           ),
           MyCardWidget(
-            title: 'ConstrainedBoxExample',
+            title: (ConstrainedBoxExample).name,
             onTap: () {
-              context.pushRelative('ConstrainedBoxExample');
+              context.pushRelative((ConstrainedBoxExample).name);
             },
           ),
           MyCardWidget(
-            title: 'ContainerExample',
+            title: (ContainerExample).name,
             onTap: () {
-              context.pushRelative('ContainerExample');
+              context.pushRelative((ContainerExample).name);
             },
           ),
           MyCardWidget(
-            title: 'CustomSingleChildLayoutExample',
+            title: (CustomSingleChildLayoutExample).name,
             onTap: () {
-              context.pushRelative('CustomSingleChildLayoutExample');
+              context.pushRelative((CustomSingleChildLayoutExample).name);
             },
           ),
           MyCardWidget(
-            title: 'ExpandedExample',
+            title: (ExpandedExample).name,
             onTap: () {
-              context.pushRelative('ExpandedExample');
+              context.pushRelative((ExpandedExample).name);
             },
           ),
           MyCardWidget(
-            title: 'FittedBoxExample',
+            title: (FittedBoxExample).name,
             onTap: () {
-              context.pushRelative('FittedBoxExample');
+              context.pushRelative((FittedBoxExample).name);
             },
           ),
           MyCardWidget(
-            title: 'FractionallySizedBoxExample',
+            title: (FractionallySizedBoxExample).name,
             onTap: () {
-              context.pushRelative('FractionallySizedBoxExample');
+              context.pushRelative((FractionallySizedBoxExample).name);
             },
           ),
           MyCardWidget(
-            title: 'IntrinsicHeightExample',
+            title: (IntrinsicHeightExample).name,
             onTap: () {
-              context.pushRelative('IntrinsicHeightExample');
+              context.pushRelative((IntrinsicHeightExample).name);
             },
           ),
           MyCardWidget(
-            title: 'IntrinsicWidthExample',
+            title: (IntrinsicWidthExample).name,
             onTap: () {
-              context.pushRelative('IntrinsicWidthExample');
+              context.pushRelative((IntrinsicWidthExample).name);
             },
           ),
           MyCardWidget(
-            title: 'LimitedBoxExample',
+            title: (LimitedBoxExample).name,
             onTap: () {
-              context.pushRelative('LimitedBoxExample');
+              context.pushRelative((LimitedBoxExample).name);
             },
           ),
           MyCardWidget(
-            title: 'OverflowBoxExample',
+            title: (OverflowBoxExample).name,
             onTap: () {
-              context.pushRelative('OverflowBoxExample');
+              context.pushRelative((OverflowBoxExample).name);
             },
           ),
           MyCardWidget(
-            title: 'PaddingExample',
+            title: (PaddingExample).name,
             onTap: () {
-              context.pushRelative('PaddingExample');
+              context.pushRelative((PaddingExample).name);
             },
           ),
           MyCardWidget(
-            title: 'SizedBoxExample',
+            title: (SizedBoxExample).name,
             onTap: () {
-              context.pushRelative('SizedBoxExample');
+              context.pushRelative((SizedBoxExample).name);
             },
           ),
           MyCardWidget(
-            title: 'SizedOverflowBoxExample',
+            title: (SizedOverflowBoxExample).name,
             onTap: () {
-              context.pushRelative('SizedOverflowBoxExample');
+              context.pushRelative((SizedOverflowBoxExample).name);
             },
           ),
           MyCardWidget(
-            title: 'TransformExample',
+            title: (TransformExample).name,
             onTap: () {
-              context.pushRelative('TransformExample');
+              context.pushRelative((TransformExample).name);
             },
           ),
         ],

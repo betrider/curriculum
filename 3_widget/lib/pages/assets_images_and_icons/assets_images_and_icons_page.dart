@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_widget/extensions.dart';
 import 'package:flutter_widget/main.dart';
 
+import 'assets_images_and_icons.dart';
+
 class AssetsImagesAndIconsPage extends StatelessWidget {
   const AssetsImagesAndIconsPage({
     super.key,
@@ -22,27 +24,27 @@ class AssetsImagesAndIconsPage extends StatelessWidget {
         crossAxisCount: 2,
         children: [
           MyCardWidget(
-            title: 'AssetBundleExample',
+            title: (AssetBundleExample).name,
             onTap: () {
-              context.pushRelative('AssetBundleExample');
+              context.pushRelative((AssetBundleExample).name);
             },
           ),
           MyCardWidget(
-            title: 'IconExample',
+            title: (IconExample).name,
             onTap: () {
-              context.pushRelative('IconExample');
+              context.pushRelative((IconExample).name);
             },
           ),
           MyCardWidget(
-            title: 'ImageExample',
+            title: (ImageExample).name,
             onTap: () {
-              context.pushRelative('ImageExample');
+              context.pushRelative((ImageExample).name);
             },
           ),
           MyCardWidget(
-            title: 'RawImageExample',
+            title: (RawImageExample).name,
             onTap: () {
-              context.pushRelative('RawImageExample');
+              context.pushRelative((RawImageExample).name);
             },
           ),
         ],

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_widget/extensions.dart';
 import 'package:flutter_widget/main.dart';
 
+import 'interaction_models.dart';
+
 class InteractionModelsPage extends StatelessWidget {
   const InteractionModelsPage({
     super.key,
@@ -22,63 +24,63 @@ class InteractionModelsPage extends StatelessWidget {
         crossAxisCount: 2,
         children: [
           MyCardWidget(
-            title: 'AbsorbPointerExample',
+            title: (AbsorbPointerExample).name,
             onTap: () {
-              context.pushRelative('AbsorbPointerExample');
+              context.pushRelative((AbsorbPointerExample).name,);
             },
           ),
           MyCardWidget(
-            title: 'DismissibleExample',
+            title: (DismissibleExample).name,
             onTap: () {
-              context.pushRelative('DismissibleExample');
+              context.pushRelative((DismissibleExample).name,);
             },
           ),
           MyCardWidget(
-            title: 'DragTargetExample',
+            title: (DragTargetExample).name,
             onTap: () {
-              context.pushRelative('DragTargetExample');
+              context.pushRelative((DragTargetExample).name,);
             },
           ),
           MyCardWidget(
-            title: 'DraggableExample',
+            title: (DraggableExample).name,
             onTap: () {
-              context.pushRelative('DraggableExample');
+              context.pushRelative((DraggableExample).name,);
             },
           ),
           MyCardWidget(
-            title: 'DraggableScrollableSheetExample',
+            title: (DraggableScrollableSheetExample).name,
             onTap: () {
-              context.pushRelative('DraggableScrollableSheetExample');
+              context.pushRelative((DraggableScrollableSheetExample).name,);
             },
           ),
           MyCardWidget(
-            title: 'GestureDetectorExample',
+            title: (GestureDetectorExample).name,
             onTap: () {
-              context.pushRelative('GestureDetectorExample');
+              context.pushRelative((GestureDetectorExample).name,);
             },
           ),
           MyCardWidget(
-            title: 'IgnorePointerExample',
+            title: (IgnorePointerExample).name,
             onTap: () {
-              context.pushRelative('IgnorePointerExample');
+              context.pushRelative((IgnorePointerExample).name,);
             },
           ),
           MyCardWidget(
-            title: 'InteractiveViewerExample',
+            title: (InteractiveViewerExample).name,
             onTap: () {
-              context.pushRelative('InteractiveViewerExample');
+              context.pushRelative((InteractiveViewerExample).name,);
             },
           ),
           MyCardWidget(
-            title: 'LongPressDraggableExample',
+            title: (LongPressDraggableExample).name,
             onTap: () {
-              context.pushRelative('LongPressDraggableExample');
+              context.pushRelative((LongPressDraggableExample).name,);
             },
           ),
           MyCardWidget(
-            title: 'ScrollableExample',
+            title: (ScrollableExample).name,
             onTap: () {
-              context.pushRelative('ScrollableExample');
+              context.pushRelative((ScrollableExample).name,);
             },
           ),
         ],

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_widget/extensions.dart';
 import 'package:flutter_widget/main.dart';
+import 'package:flutter_widget/pages/basics/example/text_example.dart';
+import 'package:flutter_widget/pages/text/example/default_text_style_example.dart';
+import 'package:flutter_widget/pages/text/example/rich_text_example.dart';
 
 class TextPage extends StatelessWidget {
   const TextPage({
@@ -22,21 +25,21 @@ class TextPage extends StatelessWidget {
         crossAxisCount: 2,
         children: [
           MyCardWidget(
-            title: 'DefaultTextStyleExample',
+            title: (DefaultTextStyleExample).name,
             onTap: () {
-              context.pushRelative('DefaultTextStyleExample');
+              context.pushRelative((DefaultTextStyleExample).name);
             },
           ),
           MyCardWidget(
-            title: 'RichTextExample',
+            title: (RichTextExample).name,
             onTap: () {
-              context.pushRelative('RichTextExample');
+              context.pushRelative((RichTextExample).name);
             },
           ),
           MyCardWidget(
-            title: 'TextExample',
+            title: (TextExample).name,
             onTap: () {
-              context.pushRelative('TextExample');
+              context.pushRelative((TextExample).name);
             },
           ),
         ],

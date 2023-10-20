@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_widget/extensions.dart';
 import 'package:flutter_widget/main.dart';
 
+import 'navigation.dart';
+
 class NavigationPage extends StatelessWidget {
   const NavigationPage({super.key});
 
@@ -20,39 +22,39 @@ class NavigationPage extends StatelessWidget {
         crossAxisCount: 2,
         children: [
           MyCardWidget(
-            title: 'AppBarExample',
+            title: (AppBarExample).name,
             onTap: () {
-              context.pushRelative('AppBarExample');
+              context.pushRelative((AppBarExample).name);
             },
           ),
           MyCardWidget(
-            title: 'BottomAppBarExample',
+            title: (BottomAppBarExample).name,
             onTap: () {
-              context.pushRelative('BottomAppBarExample');
+              context.pushRelative((BottomAppBarExample).name);
             },
           ),
           MyCardWidget(
-            title: 'NavigationBarExample',
+            title: (NavigationBarExample).name,
             onTap: () {
-              context.pushRelative('NavigationBarExample');
+              context.pushRelative((NavigationBarExample).name);
             },
           ),
           MyCardWidget(
-            title: 'NavigationDrawerExample',
+            title: (NavigationDrawerExample).name,
             onTap: () {
-              context.pushRelative('NavigationDrawerExample');
+              context.pushRelative((NavigationDrawerExample).name);
             },
           ),
           MyCardWidget(
-            title: 'NavigationRailExample',
+            title: (NavigationRailExample).name,
             onTap: () {
-              context.pushRelative('NavigationRailExample');
+              context.pushRelative((NavigationRailExample).name);
             },
           ),
           MyCardWidget(
-            title: 'TabBarExample',
+            title: (TabBarExample).name,
             onTap: () {
-              context.pushRelative('TabBarExample');
+              context.pushRelative((TabBarExample).name);
             },
           ),
         ],

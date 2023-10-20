@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_widget/extensions.dart';
 import 'package:flutter_widget/main.dart';
 
+import 'scrolling.dart';
+
 class ScrollingPage extends StatelessWidget {
   const ScrollingPage({
     super.key,
@@ -22,81 +24,81 @@ class ScrollingPage extends StatelessWidget {
         crossAxisCount: 2,
         children: [
           MyCardWidget(
-            title: 'CustomScrollViewExample',
+            title: (CustomScrollViewExample).name,
             onTap: () {
-              context.pushRelative('CustomScrollViewExample');
+              context.pushRelative((CustomScrollViewExample).name);
             },
           ),
           MyCardWidget(
-            title: 'DraggableScrollableSheetExample',
+            title: (DraggableScrollableSheetExample).name,
             onTap: () {
-              context.pushRelative('DraggableScrollableSheetExample');
+              context.pushRelative((DraggableScrollableSheetExample).name);
             },
           ),
           MyCardWidget(
-            title: 'GridViewExample',
+            title: (GridViewExample).name,
             onTap: () {
-              context.pushRelative('GridViewExample');
+              context.pushRelative((GridViewExample).name);
             },
           ),
           MyCardWidget(
-            title: 'ListViewExample',
+            title: (ListViewExample).name,
             onTap: () {
-              context.pushRelative('ListViewExample');
+              context.pushRelative((ListViewExample).name);
             },
           ),
           MyCardWidget(
-            title: 'NestedScrollViewExample',
+            title: (NestedScrollViewExample).name,
             onTap: () {
-              context.pushRelative('NestedScrollViewExample');
+              context.pushRelative((NestedScrollViewExample).name);
             },
           ),
           MyCardWidget(
-            title: 'NotificationListenerExample',
+            title: (NotificationListenerExample).name,
             onTap: () {
-              context.pushRelative('NotificationListenerExample');
+              context.pushRelative((NotificationListenerExample).name);
             },
           ),
           MyCardWidget(
-            title: 'PageViewExample',
+            title: (PageViewExample).name,
             onTap: () {
-              context.pushRelative('PageViewExample');
+              context.pushRelative((PageViewExample).name);
             },
           ),
           MyCardWidget(
-            title: 'RefreshIndicatorExample',
+            title: (RefreshIndicatorExample).name,
             onTap: () {
-              context.pushRelative('RefreshIndicatorExample');
+              context.pushRelative((RefreshIndicatorExample).name);
             },
           ),
           MyCardWidget(
-            title: 'ReorderableExample',
+            title: (ReorderableExample).name,
             onTap: () {
-              context.pushRelative('ReorderableExample');
+              context.pushRelative((ReorderableExample).name);
             },
           ),
           MyCardWidget(
-            title: 'ScrollConfigurationExample',
+            title: (ScrollConfigurationExample).name,
             onTap: () {
-              context.pushRelative('ScrollConfigurationExample');
+              context.pushRelative((ScrollConfigurationExample).name);
             },
           ),
           MyCardWidget(
-            title: 'ScrollableExample',
+            title: (ScrollableExample).name,
             onTap: () {
-              context.pushRelative('ScrollableExample');
+              context.pushRelative((ScrollableExample).name);
             },
           ),
           MyCardWidget(
-            title: 'ScrollbarExample',
+            title: (ScrollbarExample).name,
             onTap: () {
-              context.pushRelative('ScrollbarExample');
+              context.pushRelative((ScrollbarExample).name);
             },
           ),
           MyCardWidget(
-            title: 'SingleChildScrollViewExample',
+            title: (SingleChildScrollViewExample).name,
             onTap: () {
-              context.pushRelative('SingleChildScrollViewExample');
+              context.pushRelative((SingleChildScrollViewExample).name);
             },
           ),
         ],

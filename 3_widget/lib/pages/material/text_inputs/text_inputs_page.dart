@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_widget/extensions.dart';
 import 'package:flutter_widget/main.dart';
 
+import 'text_inputs.dart';
+
 class TextInpusPage extends StatelessWidget {
   const TextInpusPage({super.key});
 
@@ -20,9 +22,9 @@ class TextInpusPage extends StatelessWidget {
         crossAxisCount: 2,
         children: [
           MyCardWidget(
-            title: 'TextFieldExample',
+            title: (TextFieldExample).name,
             onTap: () {
-              context.pushRelative('TextFieldExample');
+              context.pushRelative((TextFieldExample).name);
             },
           ),
         ],

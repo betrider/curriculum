@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_widget/extensions.dart';
 import 'package:flutter_widget/main.dart';
 
+import 'sliver_widgets.dart';
+
 class SliverWidgetsPage extends StatelessWidget {
   const SliverWidgetsPage({super.key});
 
@@ -9,7 +11,7 @@ class SliverWidgetsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('SliverWidgets'),
+        title: const Text('조각 위젯'),
         centerTitle: true,
       ),
       body: GridView.count(
@@ -20,21 +22,21 @@ class SliverWidgetsPage extends StatelessWidget {
         crossAxisCount: 2,
         children: [
           MyCardWidget(
-            title: 'CustomScrollViewExample',
+            title: (CustomScrollViewExample).name,
             onTap: () {
-              context.pushRelative('CustomScrollViewExample');
+              context.pushRelative((CustomScrollViewExample).name);
             },
           ),
           MyCardWidget(
-            title: 'NestedScrollViewExample',
+            title: (NestedScrollViewExample).name,
             onTap: () {
-              context.pushRelative('NestedScrollViewExample');
+              context.pushRelative((NestedScrollViewExample).name);
             },
           ),
           MyCardWidget(
-            title: 'NestedScrollViewExample2',
+            title: (NestedScrollViewExample2).name,
             onTap: () {
-              context.pushRelative('NestedScrollViewExample2');
+              context.pushRelative((NestedScrollViewExample2).name);
             },
           ),
         ],

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_widget/extensions.dart';
 import 'package:flutter_widget/main.dart';
 
+import 'async.dart';
+
 class AsyncPage extends StatelessWidget {
   const AsyncPage({
     super.key,
@@ -22,15 +24,15 @@ class AsyncPage extends StatelessWidget {
         crossAxisCount: 2,
         children: [
           MyCardWidget(
-            title: 'FutureBuilderExample',
+            title: (FutureBuilderExample).name,
             onTap: () {
-              context.pushRelative('FutureBuilderExample');
+              context.pushRelative((FutureBuilderExample).name);
             },
           ),
           MyCardWidget(
-            title: 'StreamBuilderExample',
+            title: (StreamBuilderExample).name,
             onTap: () {
-              context.pushRelative('StreamBuilderExample');
+              context.pushRelative((FutureBuilderExample).name);
             },
           ),
         ],

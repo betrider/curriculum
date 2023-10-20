@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_widget/extensions.dart';
 import 'package:flutter_widget/main.dart';
 
+import 'animation_and_motion.dart';
+
 class AnimationAndMotionPage extends StatelessWidget {
   const AnimationAndMotionPage({
     super.key,
@@ -22,135 +24,135 @@ class AnimationAndMotionPage extends StatelessWidget {
           crossAxisCount: 2,
           children: [
             MyCardWidget(
-              title: 'AnimatedAlignExample',
+              title: (AnimatedAlignExample).name,
               onTap: () {
-                context.pushRelative('AnimatedAlignExample');
+                context.pushRelative((AnimatedAlignExample).name);
               },
             ),
             MyCardWidget(
-              title: 'AnimatedBuilderExample',
+              title: (AnimatedBuilderExample).name,
               onTap: () {
-                context.pushRelative('AnimatedBuilderExample');
+                context.pushRelative((AnimatedBuilderExample).name);
               },
             ),
             MyCardWidget(
-              title: 'AnimatedContainerExample',
+              title: (AnimatedContainerExample).name,
               onTap: () {
-                context.pushRelative('AnimatedContainerExample');
+                context.pushRelative((AnimatedContainerExample).name);
               },
             ),
             MyCardWidget(
-              title: 'AnimatedCrossFadeExample',
+              title: (AnimatedCrossFadeExample).name,
               onTap: () {
-                context.pushRelative('AnimatedCrossFadeExample');
+                context.pushRelative((AnimatedCrossFadeExample).name);
               },
             ),
             MyCardWidget(
-              title: 'AnimatedDefaultTextStyleExample',
+              title: (AnimatedDefaultTextStyleExample).name,
               onTap: () {
-                context.pushRelative('AnimatedDefaultTextStyleExample');
+                context.pushRelative((AnimatedDefaultTextStyleExample).name);
               },
             ),
             MyCardWidget(
-              title: 'AnimatedListExample',
+              title: (AnimatedListExample).name,
               onTap: () {
-                context.pushRelative('AnimatedListExample');
+                context.pushRelative((AnimatedListExample).name);
               },
             ),
             MyCardWidget(
-              title: 'AnimatedListStateExample',
+              title: (AnimatedListStateExample).name,
               onTap: () {
-                context.pushRelative('AnimatedListStateExample');
+                context.pushRelative((AnimatedListStateExample).name);
               },
             ),
             MyCardWidget(
-              title: 'AnimatedModalBarrierExample',
+              title: (AnimatedModalBarrierExample).name,
               onTap: () {
-                context.pushRelative('AnimatedModalBarrierExample');
+                context.pushRelative((AnimatedModalBarrierExample).name);
               },
             ),
             MyCardWidget(
-              title: 'AnimatedOpacityExample',
+              title: (AnimatedOpacityExample).name,
               onTap: () {
-                context.pushRelative('AnimatedOpacityExample');
+                context.pushRelative((AnimatedOpacityExample).name);
               },
             ),
             MyCardWidget(
-              title: 'AnimatedPhysicalModelExample',
+              title: (AnimatedPhysicalModelExample).name,
               onTap: () {
-                context.pushRelative('AnimatedPhysicalModelExample');
+                context.pushRelative((AnimatedPhysicalModelExample).name);
               },
             ),
             MyCardWidget(
-              title: 'AnimatedPositionedExample',
+              title: (AnimatedPositionedExample).name,
               onTap: () {
-                context.pushRelative('AnimatedPositionedExample');
+                context.pushRelative((AnimatedPositionedExample).name);
               },
             ),
             MyCardWidget(
-              title: 'AnimatedSizeExample',
+              title: (AnimatedSizeExample).name,
               onTap: () {
-                context.pushRelative('AnimatedSizeExample');
+                context.pushRelative((AnimatedSizeExample).name);
               },
             ),
             MyCardWidget(
-              title: 'AnimatedWidgetExample',
+              title: (AnimatedWidgetExample).name,
               onTap: () {
-                context.pushRelative('AnimatedWidgetExample');
+                context.pushRelative((AnimatedWidgetExample).name);
               },
             ),
             MyCardWidget(
-              title: 'DecoratedBoxTransitionExample',
+              title: (DecoratedBoxTransitionExample).name,
               onTap: () {
-                context.pushRelative('DecoratedBoxTransitionExample');
+                context.pushRelative((DecoratedBoxTransitionExample).name);
               },
             ),
             MyCardWidget(
-              title: 'FadeTransitionExample',
+              title: (FadeTransitionExample).name,
               onTap: () {
-                context.pushRelative('FadeTransitionExample');
+                context.pushRelative((FadeTransitionExample).name);
               },
             ),
             MyCardWidget(
-              title: 'HeroExample',
+              title: (HeroExample).name,
               onTap: () {
-                context.pushRelative('HeroExample');
+                context.pushRelative((HeroExample).name);
               },
             ),
             MyCardWidget(
-              title: 'ImplicitlyAnimatedWidgetExample',
+              title: (ImplicitlyAnimatedWidgetExample).name,
               onTap: () {
-                context.pushRelative('ImplicitlyAnimatedWidgetExample');
+                context.pushRelative((ImplicitlyAnimatedWidgetExample).name);
               },
             ),
             MyCardWidget(
-              title: 'PositionedTransitionExample',
+              title: (PositionedTransitionExample).name,
               onTap: () {
-                context.pushRelative('PositionedTransitionExample');
+                context.pushRelative((PositionedTransitionExample).name);
               },
             ),
             MyCardWidget(
-              title: 'RotationTransitionExample',
+              title: (RotationTransitionExample).name,
               onTap: () {
-                context.pushRelative('RotationTransitionExample');
+                context.pushRelative((RotationTransitionExample).name);
               },
             ),
             MyCardWidget(
-              title: 'ScaleTransitionExample',
+              title: (ScaleTransitionExample).name,
               onTap: () {
-                context.pushRelative('ScaleTransitionExample');
+                context.pushRelative((ScaleTransitionExample).name);
               },
             ),
             MyCardWidget(
-              title: 'SizeTransitionExample',
+              title: (SizeTransitionExample).name,
               onTap: () {
-                context.pushRelative('SizeTransitionExample');
+                context.pushRelative((SizeTransitionExample).name);
               },
             ),
             MyCardWidget(
-              title: 'SlideTransitionExample',
+              title: (SlideTransitionExample).name,
               onTap: () {
-                context.pushRelative('SlideTransitionExample');
+                context.pushRelative((SlideTransitionExample).name);
               },
             ),
           ],

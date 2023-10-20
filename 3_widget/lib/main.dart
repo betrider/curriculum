@@ -131,7 +131,7 @@ import 'package:flutter_widget/pages/material/actions/example/segmented_button_e
 import 'package:flutter_widget/pages/material/communication/communication_page.dart';
 import 'package:flutter_widget/pages/material/communication/example/badge_example.dart';
 import 'package:flutter_widget/pages/material/communication/example/progress_indicator_example.dart';
-import 'package:flutter_widget/pages/material/communication/example/snackbar_example.dart';
+import 'package:flutter_widget/pages/material/communication/example/snack_bar_example.dart';
 import 'package:flutter_widget/pages/material/containment/containment_page.dart';
 import 'package:flutter_widget/pages/material/containment/example/bottom_sheet_example.dart';
 import 'package:flutter_widget/pages/material/containment/example/card_example.dart';
@@ -218,7 +218,7 @@ final router = GoRouter(
       builder: (_, __) => const MainScreen(),
       routes: [
         GoRoute(
-          path: 'accessibility',
+          path: (AccessibilityPage).name,
           builder: (_, __) => const AccessibilityPage(),
           routes: [
             GoRoute(
@@ -245,7 +245,7 @@ final router = GoRouter(
           ],
         ),
         GoRoute(
-          path: 'animation',
+          path: (AnimationAndMotionPage).name,
           builder: (_, __) => const AnimationAndMotionPage(),
           routes: [
             GoRoute(
@@ -405,7 +405,7 @@ final router = GoRouter(
           ],
         ),
         GoRoute(
-          path: 'assets',
+          path: (AssetsImagesAndIconsPage).name,
           builder: (_, __) => const AssetsImagesAndIconsPage(),
           routes: [
             GoRoute(
@@ -439,7 +439,7 @@ final router = GoRouter(
           ],
         ),
         GoRoute(
-          path: 'async',
+          path: (AsyncPage).name,
           builder: (_, __) => const AsyncPage(),
           routes: [
             GoRoute(
@@ -459,7 +459,7 @@ final router = GoRouter(
           ],
         ),
         GoRoute(
-          path: 'basics',
+          path: (BasicsPage).name,
           builder: (_, __) => const BasicsPage(),
           routes: [
             GoRoute(
@@ -556,7 +556,7 @@ final router = GoRouter(
           ],
         ),
         GoRoute(
-          path: 'cupertino',
+          path: (CupertinoComponentsPage).name,
           builder: (_, __) => const CupertinoComponentsPage(),
           routes: [
             GoRoute(
@@ -747,7 +747,7 @@ final router = GoRouter(
           ],
         ),
         GoRoute(
-          path: 'input',
+          path: (InputPage).name,
           builder: (_, __) => const InputPage(),
           routes: [
             GoRoute(
@@ -781,7 +781,7 @@ final router = GoRouter(
           ],
         ),
         GoRoute(
-          path: 'interaction',
+          path: (InteractionModelsPage).name,
           builder: (_, __) => const InteractionModelsPage(),
           routes: [
             GoRoute(
@@ -857,11 +857,11 @@ final router = GoRouter(
           ],
         ),
         GoRoute(
-          path: 'layout',
+          path: (LayoutPage).name,
           builder: (_, __) => const LayoutPage(),
           routes: [
             GoRoute(
-              path: 'multi_child_layout_widgets',
+              path: (MultiChildLayoutWidgetsPage).name,
               builder: (_, __) => const MultiChildLayoutWidgetsPage(),
               routes: [
                 GoRoute(
@@ -944,7 +944,7 @@ final router = GoRouter(
               ],
             ),
             GoRoute(
-              path: 'single_child_layout_widgets',
+              path: (SingleChildLayoutWidgetsPage).name,
               builder: (_, __) => const SingleChildLayoutWidgetsPage(),
               routes: [
                 GoRoute(
@@ -1076,7 +1076,7 @@ final router = GoRouter(
               ],
             ),
             GoRoute(
-              path: 'sliver_widgets',
+              path: (SliverWidgetsPage).name,
               builder: (_, __) => const SliverWidgetsPage(),
               routes: [
                 GoRoute(
@@ -1105,11 +1105,11 @@ final router = GoRouter(
           ],
         ),
         GoRoute(
-          path: 'material',
+          path: (MaterialComponentsPage).name,
           builder: (_, __) => const MaterialComponentsPage(),
           routes: [
             GoRoute(
-              path: 'Actions',
+              path: (ActionsPage).name,
               builder: (_, __) => const ActionsPage(),
               routes: [
                 GoRoute(
@@ -1143,7 +1143,7 @@ final router = GoRouter(
               ],
             ),
             GoRoute(
-              path: 'Communication',
+              path: (CommunicationPage).name,
               builder: (_, __) => const CommunicationPage(),
               routes: [
                 GoRoute(
@@ -1170,7 +1170,7 @@ final router = GoRouter(
               ],
             ),
             GoRoute(
-              path: 'Containment',
+              path: (ContainmentPage).name,
               builder: (_, __) => const ContainmentPage(),
               routes: [
                 GoRoute(
@@ -1211,7 +1211,7 @@ final router = GoRouter(
               ],
             ),
             GoRoute(
-              path: 'Navigation',
+              path: (NavigationPage).name,
               builder: (_, __) => const NavigationPage(),
               routes: [
                 GoRoute(
@@ -1259,7 +1259,7 @@ final router = GoRouter(
               ],
             ),
             GoRoute(
-              path: 'Selection',
+              path: (SelectionPage).name,
               builder: (_, __) => const SelectionPage(),
               routes: [
                 GoRoute(
@@ -1321,7 +1321,7 @@ final router = GoRouter(
               ],
             ),
             GoRoute(
-              path: 'TextInpus',
+              path: (TextInpusPage).name,
               builder: (_, __) => const TextInpusPage(),
               routes: [
                 GoRoute(
@@ -1336,12 +1336,12 @@ final router = GoRouter(
           ],
         ),
         GoRoute(
-          path: 'others',
+          path: (OthersPage).name,
           builder: (_, __) => const OthersPage(),
           routes: const [],
         ),
         GoRoute(
-          path: 'painting',
+          path: (PaintingAndEffectsPage).name,
           builder: (_, __) => const PaintingAndEffectsPage(),
           routes: [
             GoRoute(
@@ -1431,7 +1431,7 @@ final router = GoRouter(
           ],
         ),
         GoRoute(
-          path: 'scrolling',
+          path: (ScrollingPage).name,
           builder: (_, __) => const ScrollingPage(),
           routes: [
             GoRoute(
@@ -1528,7 +1528,7 @@ final router = GoRouter(
           ],
         ),
         GoRoute(
-          path: 'styling',
+          path: (StylingPage).name,
           builder: (_, __) => const StylingPage(),
           routes: [
             GoRoute(
@@ -1555,7 +1555,7 @@ final router = GoRouter(
           ],
         ),
         GoRoute(
-          path: 'text',
+          path: (TextPage).name,
           builder: (_, __) => const TextPage(),
           routes: [
             GoRoute(
@@ -1608,91 +1608,91 @@ class MainScreen extends StatelessWidget {
           MyCardWidget(
             title: '접근성',
             onTap: () {
-              context.push('/accessibility');
+              context.push('/${(AccessibilityPage).name}');
             },
           ),
           MyCardWidget(
             title: '애니메이션',
             onTap: () {
-              context.push('/animation');
+              context.push('/${(AnimationAndMotionPage).name}');
             },
           ),
           MyCardWidget(
             title: '자산',
             onTap: () {
-              context.push('/assets');
+              context.push('/${(AssetsImagesAndIconsPage).name}');
             },
           ),
           MyCardWidget(
             title: '비동기',
             onTap: () {
-              context.push('/async');
+              context.push('/${(AsyncPage).name}');
             },
           ),
           MyCardWidget(
             title: '기초',
             onTap: () {
-              context.push('/basics');
+              context.push('/${(BasicsPage).name}');
             },
           ),
           MyCardWidget(
             title: '머티리얼',
             onTap: () {
-              context.push('/material');
+              context.push('/${(MaterialComponentsPage).name}');
             },
           ),
           MyCardWidget(
             title: '쿠퍼티노',
             onTap: () {
-              context.push('/cupertino');
+              context.push('/${(CupertinoComponentsPage).name}');
             },
           ),
           MyCardWidget(
             title: '입력',
             onTap: () {
-              context.push('/input');
+              context.push('/${(InputPage).name}');
             },
           ),
           MyCardWidget(
             title: '상호작용',
             onTap: () {
-              context.push('/interaction');
+              context.push('/${(InteractionModelsPage).name}');
             },
           ),
           MyCardWidget(
-            title: '구성',
+            title: '레이아웃 구성',
             onTap: () {
-              context.push('/layout');
+              context.push('/${(LayoutPage).name}');
             },
           ),
           MyCardWidget(
             title: '그리기',
             onTap: () {
-              context.push('/painting');
+              context.push('/${(PaintingAndEffectsPage).name}');
             },
           ),
           MyCardWidget(
             title: '스크롤',
             onTap: () {
-              context.push('/scrolling');
+              context.push('/${(ScrollingPage).name}');
             },
           ),
           MyCardWidget(
             title: '스타일링',
             onTap: () {
-              context.push('/styling');
+              context.push('/${(StylingPage).name}');
             },
           ),
           MyCardWidget(
             title: '텍스트',
             onTap: () {
-              context.push('/text');
+              context.push('/${(TextPage).name}');
             },
           ),
           MyCardWidget(
             title: '기타',
             onTap: () {
-              context.push('/others');
+              context.push('/${(OthersPage).name}');
             },
           ),
         ],

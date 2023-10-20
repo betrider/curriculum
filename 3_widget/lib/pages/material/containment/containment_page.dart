@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_widget/extensions.dart';
 import 'package:flutter_widget/main.dart';
 
+import 'containment.dart';
+
 class ContainmentPage extends StatelessWidget {
   const ContainmentPage({super.key});
 
@@ -20,33 +22,33 @@ class ContainmentPage extends StatelessWidget {
         crossAxisCount: 2,
         children: [
           MyCardWidget(
-            title: 'BottomsheetExample',
+            title: (BottomSheetExample).name,
             onTap: () {
-              context.pushRelative('BottomsheetExample');
+              context.pushRelative((BottomSheetExample).name);
             },
           ),
           MyCardWidget(
-            title: 'CardExample',
+            title: (CardExample).name,
             onTap: () {
-              context.pushRelative('CardExample');
+              context.pushRelative((CardExample).name);
             },
           ),
           MyCardWidget(
-            title: 'DialogExample',
+            title: (DialogExample).name,
             onTap: () {
-              context.pushRelative('DialogExample');
+              context.pushRelative((DialogExample).name);
             },
           ),
           MyCardWidget(
-            title: 'DividerExample',
+            title: (DividerExample).name,
             onTap: () {
-              context.pushRelative('DividerExample');
+              context.pushRelative((DividerExample).name);
             },
           ),
           MyCardWidget(
-            title: 'ListTileExample',
+            title: (ListTileExample).name,
             onTap: () {
-              context.pushRelative('ListTileExample');
+              context.pushRelative((ListTileExample).name);
             },
           ),
         ],

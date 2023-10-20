@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_widget/extensions.dart';
 import 'package:flutter_widget/main.dart';
 
+import 'painting_and_effects.dart';
+
 class PaintingAndEffectsPage extends StatelessWidget {
   const PaintingAndEffectsPage({
     super.key,
@@ -11,7 +13,7 @@ class PaintingAndEffectsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('페인팅'),
+        title: const Text('그리기'),
         centerTitle: true,
       ),
       body: GridView.count(
@@ -22,75 +24,75 @@ class PaintingAndEffectsPage extends StatelessWidget {
         crossAxisCount: 2,
         children: [
           MyCardWidget(
-            title: 'BackdropFilterExample',
+            title: (BackdropFilterExample).name,
             onTap: () {
-              context.pushRelative('BackdropFilterExample');
+              context.pushRelative((BackdropFilterExample).name);
             },
           ),
           MyCardWidget(
-            title: 'ClipOvalExample',
+            title: (ClipOvalExample).name,
             onTap: () {
-              context.pushRelative('ClipOvalExample');
+              context.pushRelative((ClipOvalExample).name);
             },
           ),
           MyCardWidget(
-            title: 'ClipPathExample',
+            title: (ClipPathExample).name,
             onTap: () {
-              context.pushRelative('ClipPathExample');
+              context.pushRelative((ClipPathExample).name);
             },
           ),
           MyCardWidget(
-            title: 'ClipRRectExample',
+            title: (ClipRRectExample).name,
             onTap: () {
-              context.pushRelative('ClipRRectExample');
+              context.pushRelative((ClipRRectExample).name);
             },
           ),
           MyCardWidget(
-            title: 'ClipRectExample',
+            title: (ClipRectExample).name,
             onTap: () {
-              context.pushRelative('ClipRectExample');
+              context.pushRelative((ClipRectExample).name);
             },
           ),
           MyCardWidget(
-            title: 'ColorFilteredExample',
+            title: (ColorFilteredExample).name,
             onTap: () {
-              context.pushRelative('ColorFilteredExample');
+              context.pushRelative((ColorFilteredExample).name);
             },
           ),
           MyCardWidget(
-            title: 'CustomPaintExample',
+            title: (CustomPaintExample).name,
             onTap: () {
-              context.pushRelative('CustomPaintExample');
+              context.pushRelative((CustomPaintExample).name);
             },
           ),
           MyCardWidget(
-            title: 'DecoratedBoxExample',
+            title: (DecoratedBoxExample).name,
             onTap: () {
-              context.pushRelative('DecoratedBoxExample');
+              context.pushRelative((DecoratedBoxExample).name);
             },
           ),
           MyCardWidget(
-            title: 'FractionalTranslationExample',
+            title: (FractionalTranslationExample).name,
             onTap: () {
-              context.pushRelative('FractionalTranslationExample');
+              context.pushRelative((FractionalTranslationExample).name);
             },
           ),
           MyCardWidget(
-            title: 'OpacityExample',
+            title: (OpacityExample).name,
             onTap: () {
-              context.pushRelative('OpacityExample');
+              context.pushRelative((OpacityExample).name);
             },
           ),
           MyCardWidget(
-            title: 'RotatedBoxExample',
+            title: (RotatedBoxExample).name,
             onTap: () {
-              context.pushRelative('RotatedBoxExample');
+              context.pushRelative((RotatedBoxExample).name);
             },
           ),
           MyCardWidget(
-            title: 'TransformExample',
+            title: (TransformExample).name,
             onTap: () {
-              context.pushRelative('TransformExample');
+              context.pushRelative((TransformExample).name);
             },
           ),
         ],

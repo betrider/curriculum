@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_widget/extensions.dart';
 import 'package:flutter_widget/main.dart';
 
+import 'multi_child_layout_widgets.dart';
+
 class MultiChildLayoutWidgetsPage extends StatelessWidget {
   const MultiChildLayoutWidgetsPage({super.key});
 
@@ -9,7 +11,7 @@ class MultiChildLayoutWidgetsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('MultiChildLayoutWidgets'),
+        title: const Text('다중 위젯'),
         centerTitle: true,
       ),
       body: GridView.count(
@@ -20,69 +22,69 @@ class MultiChildLayoutWidgetsPage extends StatelessWidget {
         crossAxisCount: 2,
         children: [
           MyCardWidget(
-            title: 'ColumnExample',
+            title: (ColumnExample).name,
             onTap: () {
-              context.pushRelative('ColumnExample');
+              context.pushRelative((ColumnExample).name,);
             },
           ),
           MyCardWidget(
-            title: 'CustomMultiChildLayoutExample',
+            title: (CustomMultiChildLayoutExample).name,
             onTap: () {
-              context.pushRelative('CustomMultiChildLayoutExample');
+              context.pushRelative((CustomMultiChildLayoutExample).name,);
             },
           ),
           MyCardWidget(
-            title: 'FlowExample',
+            title: (FlowExample).name,
             onTap: () {
-              context.pushRelative('FlowExample');
+              context.pushRelative((FlowExample).name,);
             },
           ),
           MyCardWidget(
-            title: 'GridViewExample',
+            title: (GridViewExample).name,
             onTap: () {
-              context.pushRelative('GridViewExample');
+              context.pushRelative((GridViewExample).name,);
             },
           ),
           MyCardWidget(
-            title: 'IndexedStackExample',
+            title: (IndexedStackExample).name,
             onTap: () {
-              context.pushRelative('IndexedStackExample');
+              context.pushRelative((IndexedStackExample).name,);
             },
           ),
           MyCardWidget(
-            title: 'LayoutBuilderExample',
+            title: (LayoutBuilderExample).name,
             onTap: () {
-              context.pushRelative('LayoutBuilderExample');
+              context.pushRelative((LayoutBuilderExample).name,);
             },
           ),
           MyCardWidget(
-            title: 'ListViewExample',
+            title: (ListViewExample).name,
             onTap: () {
-              context.pushRelative('ListViewExample');
+              context.pushRelative((ListViewExample).name,);
             },
           ),
           MyCardWidget(
-            title: 'RowExample',
+            title: (RowExample).name,
             onTap: () {
-              context.pushRelative('RowExample');
+              context.pushRelative((RowExample).name,);
             },
           ),
           MyCardWidget(
-            title: 'StackExample',
+            title: (StackExample).name,
             onTap: () {
-              context.pushRelative('StackExample');
+              context.pushRelative((StackExample).name,);
             },
           ),
           MyCardWidget(
-            title: 'TableExample',
+            title: (TableExample).name,
             onTap: () {
-              context.pushRelative('TableExample');
+              context.pushRelative((TableExample).name,);
             },
           ),
           MyCardWidget(
-            title: 'WrapExample',
+            title: (WrapExample).name,
             onTap: () {
-              context.pushRelative('WrapExample');
+              context.pushRelative((WrapExample).name,);
             },
           ),
         ],

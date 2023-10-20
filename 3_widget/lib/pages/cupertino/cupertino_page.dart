@@ -1,31 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_widget/extensions.dart';
 import 'package:flutter_widget/main.dart';
-import 'package:flutter_widget/pages/cupertino/example/cupertino_action_sheet_example.dart';
-import 'package:flutter_widget/pages/cupertino/example/cupertino_activity_indicator_example.dart';
-import 'package:flutter_widget/pages/cupertino/example/cupertino_alert_dialog_example.dart';
-import 'package:flutter_widget/pages/cupertino/example/cupertino_button_example.dart';
-import 'package:flutter_widget/pages/cupertino/example/cupertino_context_menu_example.dart';
-import 'package:flutter_widget/pages/cupertino/example/cupertino_date_picker_example.dart';
-import 'package:flutter_widget/pages/cupertino/example/cupertino_full_screen_dialog_transition_example.dart';
-import 'package:flutter_widget/pages/cupertino/example/cupertino_list_section_example.dart';
-import 'package:flutter_widget/pages/cupertino/example/cupertino_list_tile_example.dart';
-import 'package:flutter_widget/pages/cupertino/example/cupertino_navigation_bar_example.dart';
-import 'package:flutter_widget/pages/cupertino/example/cupertino_page_scaffold_example.dart';
-import 'package:flutter_widget/pages/cupertino/example/cupertino_page_transition_example.dart';
-import 'package:flutter_widget/pages/cupertino/example/cupertino_picker_example.dart';
-import 'package:flutter_widget/pages/cupertino/example/cupertino_popup_surface_example.dart';
-import 'package:flutter_widget/pages/cupertino/example/cupertino_search_text_field_example.dart';
-import 'package:flutter_widget/pages/cupertino/example/cupertino_segmented_control_example.dart';
-import 'package:flutter_widget/pages/cupertino/example/cupertino_slider_example.dart';
-import 'package:flutter_widget/pages/cupertino/example/cupertino_sliding_segmented_control_example.dart';
-import 'package:flutter_widget/pages/cupertino/example/cupertino_sliver_navigation_bar_example.dart';
-import 'package:flutter_widget/pages/cupertino/example/cupertino_switch_example.dart';
-import 'package:flutter_widget/pages/cupertino/example/cupertino_tab_bar_example.dart';
-import 'package:flutter_widget/pages/cupertino/example/cupertino_tab_scaffold_example.dart';
-import 'package:flutter_widget/pages/cupertino/example/cupertino_tab_view_example.dart';
-import 'package:flutter_widget/pages/cupertino/example/cupertino_text_field_example.dart';
-import 'package:flutter_widget/pages/cupertino/example/cupertino_timer_picker_example.dart';
+
+import 'cupertino.dart';
 
 class CupertinoComponentsPage extends StatelessWidget {
   const CupertinoComponentsPage({super.key});

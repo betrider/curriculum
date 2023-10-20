@@ -2,6 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_widget/extensions.dart';
 import 'package:flutter_widget/main.dart';
 
+import 'actions/actions.dart';
+import 'communication/communication.dart';
+import 'containment/containment.dart';
+import 'navigation/navigation.dart';
+import 'selection/selection.dart';
+import 'text_inputs/text_inputs.dart';
+
 class MaterialComponentsPage extends StatelessWidget {
   const MaterialComponentsPage({super.key});
 
@@ -20,39 +27,39 @@ class MaterialComponentsPage extends StatelessWidget {
         crossAxisCount: 2,
         children: [
           MyCardWidget(
-            title: 'Actions',
+            title: '동작',
             onTap: () {
-              context.pushRelative('Actions');
+              context.pushRelative((ActionsPage).name);
             },
           ),
           MyCardWidget(
-            title: 'Communication',
+            title: '소통',
             onTap: () {
-              context.pushRelative('Communication');
+              context.pushRelative((CommunicationPage).name);
             },
           ),
           MyCardWidget(
-            title: 'Containment',
+            title: '방지',
             onTap: () {
-              context.pushRelative('Containment');
+              context.pushRelative((ContainmentPage).name);
             },
           ),
           MyCardWidget(
-            title: 'Navigation',
+            title: '안내',
             onTap: () {
-              context.pushRelative('Navigation');
+              context.pushRelative((NavigationPage).name);
             },
           ),
           MyCardWidget(
-            title: 'Selection',
+            title: '선택',
             onTap: () {
-              context.pushRelative('Selection');
+              context.pushRelative((SelectionPage).name);
             },
           ),
           MyCardWidget(
-            title: 'TextInpus',
+            title: '텍스트 입력',
             onTap: () {
-              context.pushRelative('TextInpus');
+              context.pushRelative((TextInpusPage).name);
             },
           ),
         ],

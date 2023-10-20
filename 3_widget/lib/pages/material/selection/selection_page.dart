@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_widget/extensions.dart';
 import 'package:flutter_widget/main.dart';
 
+import 'selection.dart';
+
 class SelectionPage extends StatelessWidget {
   const SelectionPage({super.key});
 
@@ -20,51 +22,51 @@ class SelectionPage extends StatelessWidget {
         crossAxisCount: 2,
         children: [
           MyCardWidget(
-            title: 'CheckboxExample',
+            title: (CheckboxExample).name,
             onTap: () {
-              context.pushRelative('CheckboxExample');
+              context.pushRelative((CheckboxExample).name);
             },
           ),
           MyCardWidget(
-            title: 'ChipExample',
+            title: (ChipExample).name,
             onTap: () {
-              context.pushRelative('ChipExample');
+              context.pushRelative((ChipExample).name);
             },
           ),
           MyCardWidget(
-            title: 'DatePickerExample',
+            title: (DatePickerExample).name,
             onTap: () {
-              context.pushRelative('DatePickerExample');
+              context.pushRelative((DatePickerExample).name);
             },
           ),
           MyCardWidget(
-            title: 'PopupMenuExample',
+            title: (PopupMenuExample).name,
             onTap: () {
-              context.pushRelative('PopupMenuExample');
+              context.pushRelative((PopupMenuExample).name);
             },
           ),
           MyCardWidget(
-            title: 'RadioButtonExample',
+            title: (RadioButtonExample).name,
             onTap: () {
-              context.pushRelative('RadioButtonExample');
+              context.pushRelative((RadioButtonExample).name);
             },
           ),
           MyCardWidget(
-            title: 'SliderExample',
+            title: (SliderExample).name,
             onTap: () {
-              context.pushRelative('SliderExample');
+              context.pushRelative((SliderExample).name);
             },
           ),
           MyCardWidget(
-            title: 'SwitchExample',
+            title: (SwitchExample).name,
             onTap: () {
-              context.pushRelative('SwitchExample');
+              context.pushRelative((SwitchExample).name);
             },
           ),
           MyCardWidget(
-            title: 'TimePickerExample',
+            title: (TimePickerExample).name,
             onTap: () {
-              context.pushRelative('TimePickerExample');
+              context.pushRelative((TimePickerExample).name);
             },
           ),
         ],

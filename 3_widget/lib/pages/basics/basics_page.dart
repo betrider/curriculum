@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_widget/extensions.dart';
 import 'package:flutter_widget/main.dart';
 
+import 'basics.dart';
+
 class BasicsPage extends StatelessWidget {
   const BasicsPage({
     super.key,
@@ -22,81 +24,81 @@ class BasicsPage extends StatelessWidget {
         crossAxisCount: 2,
         children: [
           MyCardWidget(
-            title: 'AppBarExample',
+            title: (AppBarExample).name,
             onTap: () {
-              context.pushRelative('AppBarExample');
+              context.pushRelative((AppBarExample).name);
             },
           ),
           MyCardWidget(
-            title: 'ColumnExample',
+            title: (ColumnExample).name,
             onTap: () {
-              context.pushRelative('ColumnExample');
+              context.pushRelative((ColumnExample).name);
             },
           ),
           MyCardWidget(
-            title: 'ContainerExample',
+            title: (ContainerExample).name,
             onTap: () {
-              context.pushRelative('ContainerExample');
+              context.pushRelative((ContainerExample).name);
             },
           ),
           MyCardWidget(
-            title: 'ElevatedButtonExample',
+            title: (ElevatedButtonExample).name,
             onTap: () {
-              context.pushRelative('ElevatedButtonExample');
+              context.pushRelative((ElevatedButtonExample).name);
             },
           ),
           MyCardWidget(
-            title: 'FlutterLogoExample',
+            title: (FlutterLogoExample).name,
             onTap: () {
-              context.pushRelative('FlutterLogoExample');
+              context.pushRelative((FlutterLogoExample).name);
             },
           ),
           MyCardWidget(
-            title: 'IconExample',
+            title: (IconExample).name,
             onTap: () {
-              context.pushRelative('IconExample');
+              context.pushRelative((IconExample).name);
             },
           ),
           MyCardWidget(
-            title: 'ImageExample',
+            title: (ImageExample).name,
             onTap: () {
-              context.pushRelative('ImageExample');
+              context.pushRelative((ImageExample).name);
             },
           ),
           MyCardWidget(
-            title: 'OutlinedButtonExample',
+            title: (OutlinedButtonExample).name,
             onTap: () {
-              context.pushRelative('OutlinedButtonExample');
+              context.pushRelative((OutlinedButtonExample).name);
             },
           ),
           MyCardWidget(
-            title: 'PlaceholderExample',
+            title: (PlaceholderExample).name,
             onTap: () {
-              context.pushRelative('PlaceholderExample');
+              context.pushRelative((PlaceholderExample).name);
             },
           ),
           MyCardWidget(
-            title: 'RowExample',
+            title: (RowExample).name,
             onTap: () {
-              context.pushRelative('RowExample');
+              context.pushRelative((RowExample).name);
             },
           ),
           MyCardWidget(
-            title: 'ScaffoldExample',
+            title: (ScaffoldExample).name,
             onTap: () {
-              context.pushRelative('ScaffoldExample');
+              context.pushRelative((ScaffoldExample).name);
             },
           ),
           MyCardWidget(
-            title: 'TextButtonExample',
+            title: (TextButtonExample).name,
             onTap: () {
-              context.pushRelative('TextButtonExample');
+              context.pushRelative((TextButtonExample).name);
             },
           ),
           MyCardWidget(
-            title: 'TextExample',
+            title: (TextExample).name,
             onTap: () {
-              context.pushRelative('TextExample');
+              context.pushRelative((TextExample).name);
             },
           ),
         ],

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_widget/extensions.dart';
 import 'package:flutter_widget/main.dart';
 
+import 'communication.dart';
+
 class CommunicationPage extends StatelessWidget {
   const CommunicationPage({super.key});
 
@@ -20,21 +22,21 @@ class CommunicationPage extends StatelessWidget {
         crossAxisCount: 2,
         children: [
           MyCardWidget(
-            title: 'BadgeExample',
+            title: (BadgeExample).name,
             onTap: () {
-              context.pushRelative('BadgeExample');
+              context.pushRelative((BadgeExample).name,);
             },
           ),
           MyCardWidget(
-            title: 'ProgressIndicatorExample',
+            title: (ProgressIndicatorExample).name,
             onTap: () {
-              context.pushRelative('ProgressIndicatorExample');
+              context.pushRelative((ProgressIndicatorExample).name,);
             },
           ),
           MyCardWidget(
-            title: 'SnackbarExample',
+            title: (SnackBarExample).name,
             onTap: () {
-              context.pushRelative('SnackbarExample');
+              context.pushRelative((SnackBarExample).name,);
             },
           ),
         ],
