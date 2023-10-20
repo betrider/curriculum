@@ -24,19 +24,19 @@ class AccessibilityPage extends StatelessWidget {
         crossAxisCount: 2,
         children: [
           MyCardWidget(
-            title: '의미 제외',
+            title: (ExcludeSemanticsExample).name,
             onTap: () {
               context.pushRelative((ExcludeSemanticsExample).name);
             },
           ),
           MyCardWidget(
-            title: '의미 병합',
+            title: (MergeSemanticsExample).name,
             onTap: () {
               context.pushRelative((MergeSemanticsExample).name);
             },
           ),
           MyCardWidget(
-            title: '의미',
+            title: (SemanticsExample).name,
             onTap: () {
               context.pushRelative((SemanticsExample).name);
             },
