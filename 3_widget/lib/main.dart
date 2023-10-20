@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_widget/pages/accessibility/accessibility_page.dart';
 import 'package:flutter_widget/pages/accessibility/example/exclude_semantics_example.dart';
 import 'package:flutter_widget/pages/accessibility/example/merge_semantics_example.dart';
@@ -161,13 +162,26 @@ import 'package:random_color/random_color.dart';
 import 'package:widget_with_codeview/widget_with_codeview.dart';
 
 /// 참조 링크 : https://docs.flutter.dev/ui/widgets
-void main() => runApp(
-      MaterialApp.router(
-        scrollBehavior: EffectlessScrollBehavior(),
-        routerConfig: router,
-        theme: ThemeData(useMaterial3: true),
-      ),
-    );
+void main() {
+
+  // 위젯 바인딩
+  WidgetsFlutterBinding.ensureInitialized();
+
+  // 가로모드 제어
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown,
+  ]);
+
+  // 앱 실행
+  runApp(
+    MaterialApp.router(
+      scrollBehavior: EffectlessScrollBehavior(),
+      routerConfig: router,
+      theme: ThemeData(useMaterial3: true),
+    ),
+  );
+}
 
 /// 현재 로케이션 : GoRouterState.of(context).uri.path
 final router = GoRouter(

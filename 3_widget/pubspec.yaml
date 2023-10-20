@@ -99,6 +99,7 @@ flutter:
     - assets/images/lafayette.jpeg
     - assets/images/lena.png
     - assets/data.json
+    
     - lib/pages/material/containment/example/bottom_sheet_example.dart
 
   # An image asset can refer to one or more resolution-specific "variants", see
