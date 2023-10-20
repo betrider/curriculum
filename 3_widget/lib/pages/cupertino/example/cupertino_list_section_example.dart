@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 
-class CupertinoListSectionBaseExample extends StatelessWidget {
-  const CupertinoListSectionBaseExample({super.key});
+class CupertinoListSectionExample extends StatelessWidget {
+  const CupertinoListSectionExample({super.key});
 
   @override
   Widget build(BuildContext context) {

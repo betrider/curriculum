@@ -34,3 +34,15 @@ extension ContextExtension on BuildContext {
     await push(newUrl.toString(), extra: extra);
   }
 }
+
+extension DynamicExtension on Type {
+  String get name {
+    return toString();
+  }
+  String get underscoreCaseName {
+    String camelCase = toString();
+    RegExp exp = RegExp(r'(?<=[a-z])[A-Z]');
+    String underscoreCase = camelCase.replaceAllMapped(exp, (Match m) => ('_${m.group(0)}')).toLowerCase();
+    return underscoreCase;
+  }
+}

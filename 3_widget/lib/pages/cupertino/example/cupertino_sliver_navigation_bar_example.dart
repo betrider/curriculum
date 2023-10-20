@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 
-class SliverNavBarExample extends StatelessWidget {
-  const SliverNavBarExample({super.key});
+class CupertinoSliverNavigationBarExample extends StatelessWidget {
+  const CupertinoSliverNavigationBarExample({super.key});
 
   @override
   Widget build(BuildContext context) {

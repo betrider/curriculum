@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 
-class CupertinoIndicatorExample extends StatelessWidget {
-  const CupertinoIndicatorExample({super.key});
+class CupertinoActivityIndicatorExample extends StatelessWidget {
+  const CupertinoActivityIndicatorExample({super.key});
 
   @override
   Widget build(BuildContext context) {

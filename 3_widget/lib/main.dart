@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_widget/extensions.dart';
 import 'package:flutter_widget/pages/accessibility/accessibility_page.dart';
 import 'package:flutter_widget/pages/accessibility/example/exclude_semantics_example.dart';
 import 'package:flutter_widget/pages/accessibility/example/merge_semantics_example.dart';
@@ -48,6 +49,31 @@ import 'package:flutter_widget/pages/basics/example/scaffold_example.dart';
 import 'package:flutter_widget/pages/basics/example/text_button_example.dart';
 import 'package:flutter_widget/pages/basics/example/text_example.dart';
 import 'package:flutter_widget/pages/cupertino/cupertino_page.dart';
+import 'package:flutter_widget/pages/cupertino/example/cupertino_action_sheet_example.dart';
+import 'package:flutter_widget/pages/cupertino/example/cupertino_activity_indicator_example.dart';
+import 'package:flutter_widget/pages/cupertino/example/cupertino_alert_dialog_example.dart';
+import 'package:flutter_widget/pages/cupertino/example/cupertino_button_example.dart';
+import 'package:flutter_widget/pages/cupertino/example/cupertino_context_menu_example.dart';
+import 'package:flutter_widget/pages/cupertino/example/cupertino_date_picker_example.dart';
+import 'package:flutter_widget/pages/cupertino/example/cupertino_full_screen_dialog_transition_example.dart';
+import 'package:flutter_widget/pages/cupertino/example/cupertino_list_section_example.dart';
+import 'package:flutter_widget/pages/cupertino/example/cupertino_list_tile_example.dart';
+import 'package:flutter_widget/pages/cupertino/example/cupertino_navigation_bar_example.dart';
+import 'package:flutter_widget/pages/cupertino/example/cupertino_page_scaffold_example.dart';
+import 'package:flutter_widget/pages/cupertino/example/cupertino_page_transition_example.dart';
+import 'package:flutter_widget/pages/cupertino/example/cupertino_picker_example.dart';
+import 'package:flutter_widget/pages/cupertino/example/cupertino_popup_surface_example.dart';
+import 'package:flutter_widget/pages/cupertino/example/cupertino_search_text_field_example.dart';
+import 'package:flutter_widget/pages/cupertino/example/cupertino_segmented_control_example.dart';
+import 'package:flutter_widget/pages/cupertino/example/cupertino_slider_example.dart';
+import 'package:flutter_widget/pages/cupertino/example/cupertino_sliding_segmented_control_example.dart';
+import 'package:flutter_widget/pages/cupertino/example/cupertino_sliver_navigation_bar_example.dart';
+import 'package:flutter_widget/pages/cupertino/example/cupertino_switch_example.dart';
+import 'package:flutter_widget/pages/cupertino/example/cupertino_tab_bar_example.dart';
+import 'package:flutter_widget/pages/cupertino/example/cupertino_tab_scaffold_example.dart';
+import 'package:flutter_widget/pages/cupertino/example/cupertino_tab_view_example.dart';
+import 'package:flutter_widget/pages/cupertino/example/cupertino_text_field_example.dart';
+import 'package:flutter_widget/pages/cupertino/example/cupertino_timer_picker_example.dart';
 import 'package:flutter_widget/pages/input/example/autocomplete_example.dart';
 import 'package:flutter_widget/pages/input/example/form_example.dart';
 import 'package:flutter_widget/pages/input/example/form_field_example.dart';
@@ -163,7 +189,6 @@ import 'package:widget_with_codeview/widget_with_codeview.dart';
 
 /// 참조 링크 : https://docs.flutter.dev/ui/widgets
 void main() {
-
   // 위젯 바인딩
   WidgetsFlutterBinding.ensureInitialized();
 
@@ -531,6 +556,193 @@ final router = GoRouter(
         GoRoute(
           path: 'cupertino',
           builder: (_, __) => const CupertinoComponentsPage(),
+          routes: [
+            GoRoute(
+              path: 'CupertinoActionSheetExample',
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/cupertino/example/${(CupertinoActionSheetExample).underscoreCaseName}.dart',
+                child: const CupertinoActionSheetExample(),
+              ),
+            ),
+            GoRoute(
+              path: 'CupertinoActivityIndicatorExample',
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/cupertino/example/${(CupertinoActivityIndicatorExample).underscoreCaseName}.dart',
+                child: const CupertinoActivityIndicatorExample(),
+              ),
+            ),
+            GoRoute(
+              path: 'CupertinoAlertDialogExample',
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/cupertino/example/${(CupertinoAlertDialogExample).underscoreCaseName}.dart',
+                child: const CupertinoAlertDialogExample(),
+              ),
+            ),
+            GoRoute(
+              path: 'CupertinoButtonExample',
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/cupertino/example/${(CupertinoButtonExample).underscoreCaseName}.dart',
+                child: const CupertinoButtonExample(),
+              ),
+            ),
+            GoRoute(
+              path: 'CupertinoContextMenuExample',
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/cupertino/example/${(CupertinoContextMenuExample).underscoreCaseName}.dart',
+                child: const CupertinoContextMenuExample(),
+              ),
+            ),
+            GoRoute(
+              path: 'CupertinoDatePickerExample',
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/cupertino/example/${(CupertinoDatePickerExample).underscoreCaseName}.dart',
+                child: const CupertinoDatePickerExample(),
+              ),
+            ),
+            GoRoute(
+              path: 'CupertinoAlertDialogExample',
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/cupertino/example/${(CupertinoAlertDialogExample).underscoreCaseName}.dart',
+                child: const CupertinoAlertDialogExample(),
+              ),
+            ),
+            GoRoute(
+              path: 'CupertinoFullscreenDialogTransitionExample',
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath:
+                    'lib/pages/cupertino/example/${(CupertinoFullscreenDialogTransitionExample).underscoreCaseName}.dart',
+                child: const CupertinoFullscreenDialogTransitionExample(),
+              ),
+            ),
+            GoRoute(
+              path: 'CupertinoListSectionExample',
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/cupertino/example/${(CupertinoListSectionExample).underscoreCaseName}.dart',
+                child: const CupertinoListSectionExample(),
+              ),
+            ),
+            GoRoute(
+              path: 'CupertinoListTileExample',
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/cupertino/example/${(CupertinoListTileExample).underscoreCaseName}.dart',
+                child: const CupertinoListTileExample(),
+              ),
+            ),
+            GoRoute(
+              path: 'CupertinoNavigationBarExample',
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/cupertino/example/${(CupertinoNavigationBarExample).underscoreCaseName}.dart',
+                child: const CupertinoNavigationBarExample(),
+              ),
+            ),
+            GoRoute(
+              path: 'CupertinoPageScaffoldExample',
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/cupertino/example/${(CupertinoPageScaffoldExample).underscoreCaseName}.dart',
+                child: const CupertinoPageScaffoldExample(),
+              ),
+            ),
+            GoRoute(
+              path: 'CupertinoPageTransitionExample',
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/cupertino/example/${(CupertinoPageTransitionExample).underscoreCaseName}.dart',
+                child: const CupertinoPageTransitionExample(),
+              ),
+            ),
+            GoRoute(
+              path: 'CupertinoPickerExample',
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/cupertino/example/${(CupertinoPickerExample).underscoreCaseName}.dart',
+                child: const CupertinoPickerExample(),
+              ),
+            ),
+            GoRoute(
+              path: 'CupertinoPopupSurfaceExample',
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/cupertino/example/${(CupertinoPopupSurfaceExample).underscoreCaseName}.dart',
+                child: const CupertinoPopupSurfaceExample(),
+              ),
+            ),
+            GoRoute(
+              path: 'CupertinoSearchTextFieldExample',
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/cupertino/example/${(CupertinoSearchTextFieldExample).underscoreCaseName}.dart',
+                child: const CupertinoSearchTextFieldExample(),
+              ),
+            ),
+            GoRoute(
+              path: 'SegmentedControlExample',
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/cupertino/example/${(SegmentedControlExample).underscoreCaseName}.dart',
+                child: const SegmentedControlExample(),
+              ),
+            ),
+            GoRoute(
+              path: 'CupertinoSliderExample',
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/cupertino/example/${(CupertinoSliderExample).underscoreCaseName}.dart',
+                child: const CupertinoSliderExample(),
+              ),
+            ),
+            GoRoute(
+              path: 'CupertinoSlidingSegmentedControlExample',
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath:
+                    'lib/pages/cupertino/example/${(CupertinoSlidingSegmentedControlExample).underscoreCaseName}.dart',
+                child: const CupertinoSlidingSegmentedControlExample(),
+              ),
+            ),
+            GoRoute(
+              path: 'CupertinoSliverNavigationBarExample',
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath:
+                    'lib/pages/cupertino/example/${(CupertinoSliverNavigationBarExample).underscoreCaseName}.dart',
+                child: const CupertinoSliverNavigationBarExample(),
+              ),
+            ),
+            GoRoute(
+              path: 'CupertinoSwitchExample',
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/cupertino/example/${(CupertinoSwitchExample).underscoreCaseName}.dart',
+                child: const CupertinoSwitchExample(),
+              ),
+            ),
+            GoRoute(
+              path: 'CupertinoTabBarExample',
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/cupertino/example/${(CupertinoTabBarExample).underscoreCaseName}.dart',
+                child: const CupertinoTabBarExample(),
+              ),
+            ),
+            GoRoute(
+              path: 'CupertinoTabScaffoldExample',
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/cupertino/example/${(CupertinoTabScaffoldExample).underscoreCaseName}.dart',
+                child: const CupertinoTabScaffoldExample(),
+              ),
+            ),
+            GoRoute(
+              path: 'CupertinoTabViewExample',
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/cupertino/example/${(CupertinoTabViewExample).underscoreCaseName}.dart',
+                child: const CupertinoTabViewExample(),
+              ),
+            ),
+            GoRoute(
+              path: 'CupertinoTextFieldExample',
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/cupertino/example/${(CupertinoTextFieldExample).underscoreCaseName}.dart',
+                child: const CupertinoTextFieldExample(),
+              ),
+            ),
+            GoRoute(
+              path: 'CupertinoTimerPickerExample',
+              builder: (_, __) => CustomWidgetCodeView(
+                filePath: 'lib/pages/cupertino/example/${(CupertinoTimerPickerExample).underscoreCaseName}.dart',
+                child: const CupertinoTimerPickerExample(),
+              ),
+            ),
+          ],
         ),
         GoRoute(
           path: 'input',
