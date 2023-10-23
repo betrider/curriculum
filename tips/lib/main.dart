@@ -8,7 +8,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:intl/intl.dart';
-import 'package:tips/effectless_scroll_behavior.dart';
+import 'package:tips/widgets/effectless_scroll_behavior.dart';
 
 void main() async {
   // 기본 앱세팅
