@@ -31,18 +31,8 @@
 
 ### 2.4. analysis_options.yaml 구조
 
-### 2.5. 위젯트리
+### 2.5. dependencies vs dev_dependencies
 
-### 2.6. stateless vs stateful
+### 2.6. caret(^) 란?
 
-### 2.7. 상태 관리(stateful)
-
-### 2.8. addPostFrameCallback
-
-### 2.9. dependencies vs dev_dependencies
-
-### 2.10. caret(^) 란?
-
-### 2.11. key 란?
-
-### 2.12. BuildContext 란?
+### 2.7. lint 란?
