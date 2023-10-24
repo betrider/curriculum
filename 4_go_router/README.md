@@ -9,17 +9,19 @@
 
 ## 🟣 1. 목차
 
-### 1.1. routes
+### 1.1. 패키지 다운 및 설정
 
-### 1.2. param
+### 1.2. routes
 
-### 1.3. shell route
+### 1.3. param
 
-### 1.4. builder route
+### 1.4. shell route
 
-### 1.5. deep link
+### 1.5. builder route
 
-### 1.6. error handling
+### 1.6. deep link
+
+### 1.7. error handling
 
 ***
 
