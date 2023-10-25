@@ -4,9 +4,10 @@
 
 ## 🔴 0. 참조 할 만한 링크
 
-- [retrofit 패키지](https://pub.dev/packages/retrofit)
-- [json_serializable 패키지](https://pub.dev/packages/json_serializable)
-- [build_runner 패키지](https://pub.dev/packages/build_runner)
+- [firebase 사이트](https://firebase.google.com/?hl=ko)
+- [firebase core 패키지](https://pub.dev/packages/firebase_core)
+- [firebase message 패키지](https://pub.dev/packages/firebase_messaging)
+- [firebase auth 패키지](https://pub.dev/packages/firebase_auth)
 
 ## 🟣 1. 목차
 
