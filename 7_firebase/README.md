@@ -1,16 +1,54 @@
-# flutter_widget
+# 7장 파이어베이스
 
-A new Flutter project.
+패키지 파이어베이스와 관련된 커리큘럼 입니다.
 
-## Getting Started
+## 🔴 0. 참조 할 만한 링크
 
-This project is a starting point for a Flutter application.
+- [firebase 사이트](https://firebase.google.com/?hl=ko)
+- [firebase core 패키지](https://pub.dev/packages/firebase_core)
+- [firebase message 패키지](https://pub.dev/packages/firebase_messaging)
+- [firebase auth 패키지](https://pub.dev/packages/firebase_auth)
 
-A few resources to get you started if this is your first Flutter project:
+## 🟣 1. 목차
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### 1.1. firebase 패키지 다운
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### 1.2. 프로젝트 firebase에 연결하기
+
+### 1.3. firebase 설정
+
+### 1.4. token값 받아보기
+
+### 1.5. FCM 받아보기
+
+***
+
+## 🔵 2. 개념
+
+### 2.1. cli 란?
+
+### 2.2. firebase 란?
+
+### 2.3. token 이란?
+
+### 2.4. FCM 이란?
+
+### 2.5. APNS 란?
+
+### 2.6. analysis 란?
+
+***
+
+## 🟡 3. 문제
+
+### 3.1. 플러터와 파이어베이스 연동 해보기
+
+### 3.2. FCM 연동 해보기
+
+### 3.3. FCM 테스트 해보기
+
+### 3.4. 애널리틱스 연동 해보기
+
+### 3.5. 문자 인증 연동 해보기
+
+### 3.6. 소셜로그인 연동 해보기
