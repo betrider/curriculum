@@ -61,6 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
               },
               child: Text('sample'),
             ),
+            const SizedBox(height: 16),
             ElevatedButton(
               onPressed: () async {
                 var result = await client.getPosts1();
@@ -68,6 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
               },
               child: Text('GET /posts'),
             ),
+            const SizedBox(height: 16),
             ElevatedButton(
               onPressed: () async {
                 var result = await client.getPosts2('1');
@@ -75,6 +77,7 @@ class _MyHomePageState extends State<MyHomePage> {
               },
               child: Text('GET /posts/1'),
             ),
+            const SizedBox(height: 16),
             ElevatedButton(
               onPressed: () async {
                 var result = await client.getComments1('1');
@@ -82,19 +85,21 @@ class _MyHomePageState extends State<MyHomePage> {
               },
               child: Text('GET /posts/1/comments'),
             ),
+            const SizedBox(height: 16),
             ElevatedButton(
               onPressed: () async {
                 var request = CommentRequest(postId: 1);
                 var result = await client.getComments2(request);
                 var result2 = DataResponse<List<CommentResponse>>(
-                  success: true,
+                  code: 200,
                   message: '성공',
                   data: result,
                 );
                 print(result2.toJson((p0) => p0));
               },
-              child: Text('GET /posts/1/comments'),
+              child: Text('GET /comments'),
             ),
+            const SizedBox(height: 16),
             ElevatedButton(
               onPressed: () async {
                 var result = await client.postPosts();
@@ -102,6 +107,7 @@ class _MyHomePageState extends State<MyHomePage> {
               },
               child: Text('POST /posts'),
             ),
+            const SizedBox(height: 16),
             ElevatedButton(
               onPressed: () async {
                 var result = await client.putPosts('1');
@@ -109,6 +115,7 @@ class _MyHomePageState extends State<MyHomePage> {
               },
               child: Text('PUT /posts/1'),
             ),
+            const SizedBox(height: 16),
             ElevatedButton(
               onPressed: () async {
                 var result = await client.patchPosts('1');
@@ -116,6 +123,7 @@ class _MyHomePageState extends State<MyHomePage> {
               },
               child: Text('PATCH /posts/1'),
             ),
+            const SizedBox(height: 16),
             ElevatedButton(
               onPressed: () async {
                 var result = await client.deletePosts('1');

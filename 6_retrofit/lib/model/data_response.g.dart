@@ -11,7 +11,7 @@ DataResponse<T> _$DataResponseFromJson<T>(
   T Function(Object? json) fromJsonT,
 ) =>
     DataResponse<T>(
-      success: json['success'] as bool,
+      code: json['code'] as int,
       message: json['message'] as String,
       data: fromJsonT(json['data']),
     );
@@ -21,7 +21,7 @@ Map<String, dynamic> _$DataResponseToJson<T>(
   Object? Function(T value) toJsonT,
 ) =>
     <String, dynamic>{
-      'success': instance.success,
+      'code': instance.code,
       'message': instance.message,
       'data': toJsonT(instance.data),
     };
