@@ -30,7 +30,6 @@ class _DragTargetExampleState extends State<DragTargetExample> {
                   child: const Center(
                     child: Text(
                       'Dragging',
-                      textScaleFactor: 2,
                     ),
                   ),
                 ),
@@ -42,7 +41,6 @@ class _DragTargetExampleState extends State<DragTargetExample> {
                 child: const Center(
                   child: Text(
                     'I was here',
-                    textScaleFactor: 2,
                   ),
                 ),
               ),
@@ -53,7 +51,6 @@ class _DragTargetExampleState extends State<DragTargetExample> {
                 child: const Center(
                   child: Text(
                     'Drag me',
-                    textScaleFactor: 2,
                   ),
                 ),
               ),
@@ -83,7 +80,6 @@ class _DragTargetExampleState extends State<DragTargetExample> {
                       child: Center(
                           child: Text(
                         !isDropped ? 'Drop here' : 'Dropped',
-                        textScaleFactor: 2,
                       )),
                     ),
                   ),
