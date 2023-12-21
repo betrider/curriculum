@@ -37,7 +37,9 @@ dependencies:
   cupertino_icons: ^1.0.2
   easy_localization: ^3.0.3
   easy_localization_loader: ^2.0.1
+  shared_preferences: ^2.2.2
   json_pretty: ^1.0.4
+  easy_logger: ^0.0.2
 
 dev_dependencies:
   flutter_test:
@@ -62,9 +64,8 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+    - assets/translations/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

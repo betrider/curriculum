@@ -1,0 +1,25 @@
+str,en_US,ko_KR,de_DE,ru_RU
+title,Hello,안녕하세요,Hallo,Привет!
+msg,Hello {} in the {} world ,안녕하세요 {}의 세계에서,Hallo {} in der {} welt ,Привет! {} в мире {} 
+msg_named,{} are written in the {lang} language,{}은(는) {lang} 언어로 쓰여져 있습니다,{} ist in {lang} geschrieben,{} написан на языке {lang}
+clickMe,Click me,여기를 클릭해주세요,Click mich,Нажми на меня
+profile.reset_password.label,Reset Password,비밀번호 재설정,Password zurücksetzen,Сбросить пароль
+profile.reset_password.username,Username,사용자 이름,Name,Логин
+profile.reset_password.password,password,비밀번호,Password,Пароль
+clicked.zero,You clicked {} times!,{}번 클릭했습니다!,Du hast {} mal geklickt,Ты кликнул {} раз!
+clicked.one,You clicked {} time!,{}번 클릭했습니다!,Du hast {} mal geklickt,Ты кликнул {} раз!
+clicked.two,You clicked {} times!,{}번 클릭했습니다!,Du hast {} mal geklickt,Ты кликнул {} раза!
+clicked.few,You clicked {} times!,{}번 클릭했습니다!,Du hast {} mal geklickt,Ты кликнул {} раз!
+clicked.many,You clicked {} times!,{}번 클릭했습니다!,Du hast {} mal geklickt,Ты кликнул {} раз!
+clicked.other,You clicked {} times!,{}번 클릭했습니다!,Du hast {} mal geklickt,Ты кликнул {} раз!
+amount.zero,Your amount : {} ,당신의 금액: {} ,Deine Klicks: {},Твой счет : {} 
+amount.one,Your amount : {} , 당신의 금액: {} ,Deine Klicks: {},Твой счет : {} 
+amount.two,Your amount : {} , 당신의 금액: {} ,Deine Klicks: {},Твой счет : {} 
+amount.few,Your amount : {} , 당신의 금액: {} ,Deine Klicks: {},Твой счет : {} 
+amount.many,Your amount : {} , 당신의 금액: {} ,Deine Klicks: {},Твой счет : {} 
+amount.other,Your amount : {} , 당신의 금액: {} ,Deine Klicks: {},Твой счет : {} 
+gender.male,Hi man ;) , 안녕하세요 남성 ;),Hi Mann ;) ,Привет мужчина ;) 
+gender.female,Hello girl :), 안녕하세요 여성 :),Hallo Frau :),Привет девушка :)
+gender.with_arg.male,Hi man ;) {},{} 안녕하세요 남성,Hi Mann ;) {},Привет мужчина {} {}
+gender.with_arg.female,Hello girl :) {},{} 안녕하세요 여성,Hallo Frau :) {},Привет девушка {} {}
+reset_locale,Reset Language,언어 재설정,gespeicherte Sprache zurücksetzen,Сбросить язык
