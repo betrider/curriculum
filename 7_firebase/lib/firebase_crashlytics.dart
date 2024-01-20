@@ -45,6 +45,4 @@ Future<void> crashlyticsReport() async {
     return true;
   };
 
-
-
 }
