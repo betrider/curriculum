@@ -15,8 +15,6 @@ class MediaQueryExample extends StatelessWidget {
             Text(MediaQuery.of(context).size.width.toString()),
             // 논리적 픽셀당 물리적 ​​픽셀 수를 나타내는 double 입니다.
             Text(MediaQuery.of(context).devicePixelRatio.toString()),
-            // 장치의 접근성 설정에 따라 글꼴 크기를 조정하는 데 일반적으로 사용되는 장치의 텍스트 배율을 나타내는 double 입니다.
-            Text(MediaQuery.of(context).textScaleFactor.toString()),
             // 플랫폼의 전체 밝기 (예: 밝은 모드 또는 어두운 모드)를 나타내는 Brightness의 열거형 값입니다.
             Text(MediaQuery.of(context).platformBrightness.toString()),
             // 화면 네 면 모두의 패딩을 나타내는 EdgeInsets 객체입니다.

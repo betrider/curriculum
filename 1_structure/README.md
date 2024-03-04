@@ -38,3 +38,23 @@
 ### 2.6. caret(^) 란?
 
 ### 2.7. lint 란?
+
+***
+
+## 🟡 3.설치방법
+
+### 1.Android Studio 설치 / 실행x
+
+### 2.플러터 다운로드 및 압축 풀기 ex) C:\flutter
+
+### 3-1.환경 변수 설정 이동 (내PC - 우클릭 - 속성 - 고급 시스템 설정 - 환경 변수)
+
+### 3-2.플러터 환경 변수 설정 ex) C:\flutter\bin
+
+### 3-3.터미널 실행 후 flutter --version 으로 확인
+
+### 4.vscode 설치 및 Extension 설치 (DU Ultimate Package)
+
+### 5.flutter new project 이후 chrome으로 실행 확인
+
+### avd) android studio - 우측 상단 톱니 - SDK Manager - Edit - SDK 설치 - Device Manager - Create Virtual Device - device 선택 - 설치 - 실행

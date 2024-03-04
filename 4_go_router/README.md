@@ -48,3 +48,11 @@
 ### 3.3. builder를 활용한 go_router 구현하기
 
 ### 3.4. deep_link 구현하기
+
+***
+
+## 🟡 4. SHA 256 추출해서 등록
+
+    cd C:\Program Files\Java\jdk1.8.0_361\bin
+    keytool -exportcert -alias androiddebugkey -keystore "C:\Users\tj\.android\debug.keystore" -list -v
+    android

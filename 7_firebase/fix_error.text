@@ -1,0 +1,14 @@
+1.Flutter-Firebase-MultiDex-오류-해결-방법
+
+build.gradle
+
+- default config
+    multiDexEnabled true 추가
+
+- dependencies 
+    def multidex_version = "2.0.1" 추가
+    implementation "androidx.multidex:multidex:$multidex_version" 추가
+
+2.firebase login error
+
+윈도우 환경설정에 C:\Windows\System32 추가

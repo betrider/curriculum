@@ -52,3 +52,32 @@
 ### 3.5. 문자 인증 연동 해보기
 
 ### 3.6. 소셜로그인 연동 해보기
+
+***
+
+## 🟡 4. 설치
+
+### 4.1. npm 설치 확인
+    node -v
+    npm -v
+
+### 4.2. firebase 설치 - 확인 - 로그인
+    npm install -g firebase-tools
+
+    firebase --version
+
+    firebase login // 로그인 되어있으면 정보 조회 가능
+    or
+    firebase logout
+    or
+    firebase login --reauth // 이미 로그인이 되어있는 경우
+
+### 4.3. firebase 프로젝트 생성
+
+### 4.4. dart pub global activate flutterfire_cli
+
+### 4.5. flutterfire configure --project=fir-sample-e7ae3
+
+### 4.6. firebase_option.dart 생성 확인
+
+### 4.7. firebase 사이트에서 연동되었는지 확인

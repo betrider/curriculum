@@ -1,5 +1,20 @@
 // 출시 준비 순서
 
+-- 주의사항
+- com.example.xx : example 사용 불가
+
+-- upload-keystore.jks 발급
+
+- 디버그 키 위치 : C:\Users\TJ\.android\debug.keystore
+- 릴리즈 키 위치(발급 후) : C:\Users\TJ\upload-keystore.jks
+- keytool 위치 : C:\Program Files\Java\jdk-11.0.0.1\bin
+
+- keytool 환경설정
+
+- 발급 : keytool -genkey -v -keystore %userprofile%\upload-keystore.jks -storetype JKS -keyalg RSA -keysize 2048 -validity 10000 -alias upload
+- 확인 : keytool -list -v -keystore upload-keystore.jks
+
+
 -- android
 
 - 사전준비

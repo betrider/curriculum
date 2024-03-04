@@ -114,16 +114,13 @@ class MyApp extends StatelessWidget {
         // 폰트 1.0 ~ 1.5 범위
         const minScaleFactor = 1.00;
         const maxScaleFactor = 1.50;
-        var textScaleFactor = MediaQuery.of(context).textScaleFactor; // example : 1.2
+        var textScaleFactor = MediaQuery.of(context).textScaler.scale(1); // example : 1.2
         var textScaleFactor2 = max(textScaleFactor, minScaleFactor); // max(1.2, 1.0) => 1.2
         var textScaleFactor3 = min(textScaleFactor2, maxScaleFactor); // min(1.2, 1.5) => 1.2
         print(textScaleFactor3);
 
         // 폰트 1.0 고정
-        return MediaQuery(
-          data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
-          child: child!,
-        );
+        return child!;
       },
     );
   }
