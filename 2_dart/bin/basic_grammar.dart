@@ -25,8 +25,8 @@ void main(List<String> arguments) {
   // 4.comments(주석)
   commentsFunction();
 
-  // 5.metadata(메타데이터)
-  metadataFunction();
+  // 5.접근지정자
+  accessModifierFunction();
 
   // 6.library(라이브러리)
   libraryFunction();
@@ -52,8 +52,8 @@ void main(List<String> arguments) {
   // 13.async(비동기)
   asyncFunction();
 
-  // 14.isolate(격리)
-  isolateFunction();
+  // 14.값 복사와 주소 복사
+  callByValueCallByReferenceFunction();
 
   // 15.null safety(널 안정성)
   nullSafetyFunction();
@@ -67,8 +67,8 @@ void main(List<String> arguments) {
   // 18.enums(열거형)
   enumsFunction();
 
-  // 19.접근지정자
-  accessModifierFunction();
+  // 19.metadata(메타데이터)
+  metadataFunction();
 
   // 20.상속
   inheritanceFunction();
@@ -79,8 +79,8 @@ void main(List<String> arguments) {
   // 22.패턴
   patternFunction();
 
-  // 23.값 복사와 주소 복사
-  callByValueCallByReferenceFunction();
+  // 23.isolate(격리)
+  isolateFunction();
 
   // 24.정규식
   regExpFunction();
@@ -317,18 +317,29 @@ void commentsFunction() {
   /// ![](https://flutter-ko.dev/images/catalog-widget-placeholder.png)
 }
 
-/// 5.메타데이터
-void metadataFunction() {
-  var manager = Manager();
+/// 5.접근지정자(public & privite)
+void accessModifierFunction() {
+  /// 1.public
+  ///
+  /// 접근 범위에 제한 없이 모든 곳에서 접근이 가능합니다.
+  ///
+  /// 기본적으로 아무런 키워드가 없는 경우 public 입니다.
+  Person person = Person();
+  print(person.name);
+  person.eat();
 
-  /// 1.override
-  manager.printMethod();
+  /// 2.private
+  ///
+  /// 동일 클래스 내에서만 접근이 가능합니다.
+  ///
+  /// 사용법은 변수나 메서드 앞에 _(밑줄)을 붙여서 사용합니다.
+  Person person2 = Person();
+  // print(person2._age); // 오류
+  // person2._sleep(); // 오류
 
-  /// 2.deprecated
-  manager.printMethod2();
-
-  /// 3.custom
-  manager.printMethod3();
+  print(person2.age);
+  person2.age = 10;
+  print(person2.age);
 }
 
 /// 6.라이브러리
@@ -602,264 +613,7 @@ void asyncFunction() async {
   controller2.close();
 }
 
-/// 14.isolate(격리)
-///
-/// 앱 내에서 모든 다트 코드는 격리되어 실행됩니다.
-/// 앱이 하나의(main isolate)만 사용합니다.
-/// 추가로 isolate를 만들어 여러 프로세서 코어에서 병렬로 코드를 실행할 수 있습니다.(다중 코어 활용)
-void isolateFunction() async {
-  
-  // 예제1
-  Isolate.spawn(entryPointFunction, 'Hello!!');
-  Isolate.spawn(entryPointFunction, 'Whats up!!');
-  Isolate.spawn(entryPointFunction, 'Welcome!!');
-
-  // 예제2
-  var port = ReceivePort();
-  port.listen((msg) {
-    print("Received message from isolate $msg");
-  });
-  var isolate = await Isolate.spawn(spawnIsolate, port.sendPort);
-  print(isolate.runtimeType);
-
-  // 예제3
-  final jsonData = await Isolate.run(readAndParseJson);
-  print('Number of JSON keys: ${jsonData.length}');
-}
-
-/// 15.null safety(널 안정성)
-void nullSafetyFunction() {
-  //* String? -> null
-  //*         -> String
-
-  String stringValue = 'dart';
-  // stringValue = null; // 오류
-
-  String? nullStringValue = 'dart';
-  nullStringValue = null;
-
-  // stringValue = nullStringValue; // error
-  stringValue = nullStringValue ?? 'dart'; // null인 경우 'dart'입력
-  // stringValue = nullStringValue!; // null이 아니다 입력
-  if (nullStringValue != null) {
-    // 분기처리(오토캐스팅)
-    stringValue = nullStringValue;
-  }
-
-  nullStringValue = stringValue; // String -> String? (ok)
-
-  /// list가 null인 경우
-  ///
-  /// list.isEmpty -> error
-  /// list?.isEmpty -> null
-  /// list?.isEmpty ?? false -> false
-  List<String>? list;
-  if (list?.isEmpty ?? true) {
-    print('list is null');
-  }
-}
-
-/// 16.serialize(직렬화)
-void serializeFunction() {
-  //* 직렬화(전송 가능한 상태로 변환) 객체 ->(encode)-> json 데이터
-  //* 역직렬화(객체 상태로 변환) json 데이터 ->(decode)-> 객체
-
-  /// json 데이터
-  String jsonString = '''{
-    "name": "John Smith",
-    "email": "john@example.com"
-  }
-  ''';
-
-  /// json 데이터 -> Map 데이터로 역직렬화
-  Map<String, dynamic> userMap = jsonDecode(jsonString);
-
-  /// userMap라는 데이터에 어떤값이 존재할 수 있는지 모름 / 자료형도 모름 / 설명주석 사용 불가
-  print(userMap['name']);
-  print(userMap['email']);
-
-  /// Map 데이터 -> User 데이터로 변환
-  var user = User.fromJson(userMap);
-  print(user.name);
-  print(user.email);
-}
-
-/// 17.extension(확장)
-void extensionFunction() {
-  //* extension - 일반 메서드와 함께 확장 메서드를 제안하는 키워드
-
-  /// 오늘 날짜
-  DateTime time1 = DateTime.now();
-
-  /// 내일 날짜
-  DateTime time2 = time1.add(Duration(days: 1));
-
-  /// 어제 날짜
-  DateTime time3 = time1.add(Duration(days: -1));
-
-  print(time1 < time2); // true
-  print(time1 < time3); // false
-}
-
-/// 18.enums(열거형)
-void enumsFunction() {
-  /// 간단한 enum
-  SimpleColor simpleColor = SimpleColor.red;
-
-  /// 발전된 enum(dart 2.17이상)
-  Vehicle vehicle = Vehicle.car;
-  Vehicle vehicle2 = Vehicle.bus;
-
-  print(vehicle.carbonFootprint);
-  print(vehicle.carbonPerKilometer);
-  print(vehicle.compareTo(vehicle2));
-}
-
-/// 19.접근지정자(public & privite)
-void accessModifierFunction() {
-  /// 1.public
-  ///
-  /// 접근 범위에 제한 없이 모든 곳에서 접근이 가능합니다.
-  ///
-  /// 기본적으로 아무런 키워드가 없는 경우 public 입니다.
-  Person person = Person();
-  print(person.name);
-  person.eat();
-
-  /// 2.private
-  ///
-  /// 동일 클래스 내에서만 접근이 가능합니다.
-  ///
-  /// 사용법은 변수나 메서드 앞에 _(밑줄)을 붙여서 사용합니다.
-  Person person2 = Person();
-  // print(person2._age); // 오류
-  // person2._sleep(); // 오류
-
-  print(person2.age);
-  person2.age = 10;
-  print(person2.age);
-}
-
-/// 20.상속
-void inheritanceFunction() {
-  // 추상 클래스는 직접 인스턴스화할 수 없습니다.
-  // Shape shape = Shape(); // 에러 발생
-
-  // Circle 클래스와 Square 클래스 모두 Shape 추상 클래스를 상속받아 사용할 수 있습니다.
-  Circle circle = Circle("빨간색", 5.0);
-  circle.printInfo();
-
-  Square square = Square("파란색", 4.0);
-  square.printInfo();
-}
-
-/// 21.팩토리
-void factoryFunction() {
-  /// 사례1
-  ///
-  /// 자신의 클래스를 반환
-  User user = User.fromJson2({'name': 'john', 'email': 'john@example.com'});
-
-  /// 사례2
-  ///
-  /// 싱글톤
-  ///
-  /// 캐싱된 인스턴스 반환
-  Manager manager1 = Manager();
-  print(manager1.hashCode);
-  Manager manager2 = Manager();
-  print(manager2.hashCode);
-
-  Singleton singleton1 = Singleton();
-  print(singleton1.hashCode);
-  Singleton singleton2 = Singleton();
-  print(singleton2.hashCode);
-}
-
-/// 22.패턴(dart3.0 이상)
-void patternFunction() {
-  /// 1.Matching(매칭)
-  ///
-  /// 표현식에 들어가는 데이터는 상수여야 합니다.
-  const a1 = 'a';
-  const b1 = 'b';
-  const c1 = 'c';
-  var obj = ['a', 'b'];
-  switch (obj) {
-    case [a1, b1]:
-      print('$a1, $b1');
-    case [a1, b1, c1]:
-      print('$a1, $b1, $c1');
-    case ['a' || 'b', var c]:
-      print(c);
-  }
-
-  /// 2.Destructuring(구조분해)
-  var list = ['1', '2'];
-  var [a2, b2] = list; // a2 = 1, b2 = 2
-
-  /// 3.Variable declaration(변수 선언)
-  var (a3, [b3, c3]) = ('str', [1, 2]);
-
-  /// 4.ariable assignment(변수 할당)
-  var (a4, b4) = ('left', 'right');
-  (b4, a4) = (a4, b4); // Swap.
-  print('$a4 $b4'); // Prints "right left".
-
-  /// 5.switch문 표현식
-  int obj2 = 51;
-  switch (obj2) {
-    // Matches if 1 == obj.
-    case 1:
-      print('one');
-
-    // Matches if the value of obj is between the
-    // constant values of 'first' and 'last'.
-    case >= 0 && <= 10:
-      print('in range');
-
-    default:
-      print('out range');
-  }
-
-  /// 6.switch문 논리 패턴
-  var color = SimpleColor.blue;
-  var isPrimary = switch (color) { SimpleColor.red || SimpleColor.blue => true, _ => false };
-
-  /// 7.for-in element 분해
-  Map<String, int> hist = {
-    'a': 23,
-    'b': 100,
-  };
-
-  for (var MapEntry(key: key, value: count) in hist.entries) {
-    print('$key occurred $count times');
-  }
-
-  /// 8.record 자료형(dart 3.0 이상)
-  (String, String, {int a, bool b}) record = ('first', a: 2, b: true, 'last');
-  print(record.$1);
-  print(record.a);
-  print(record.b);
-  print(record.$2);
-
-  ({String a, String b}) record2 = (a: '11', b: '22');
-  print(record2.a);
-  print(record2.b);
-
-  final Foo foo = Foo(one: 'one', two: 2);
-  var Foo(:one, :two) = foo;
-  print('one $one, two $two');
-
-  // 9.json 검증
-  var json = {
-    'user': ['Lily', 13]
-  };
-  var {'user': [name, age]} = json;
-  print('name $name, age $age');
-}
-
-/// 23.값 복사, 주소 복사 차이
+/// 14.값 복사, 주소 복사 차이
 void callByValueCallByReferenceFunction() {
   String stringValue1 = 'ab';
   String stringValue2 = stringValue1;
@@ -991,6 +745,252 @@ void changeSet(Set value) {
 
 void changeClass(Foo value) {
   value.one = '123';
+}
+
+/// 15.null safety(널 안정성)
+void nullSafetyFunction() {
+  //* String? -> null
+  //*         -> String
+
+  String stringValue = 'dart';
+  // stringValue = null; // 오류
+
+  String? nullStringValue = 'dart';
+  nullStringValue = null;
+
+  // stringValue = nullStringValue; // error
+  stringValue = nullStringValue ?? 'dart'; // null인 경우 'dart'입력
+  // stringValue = nullStringValue!; // null이 아니다 입력
+  if (nullStringValue != null) {
+    // 분기처리(오토캐스팅)
+    stringValue = nullStringValue;
+  }
+
+  nullStringValue = stringValue; // String -> String? (ok)
+
+  /// list가 null인 경우
+  ///
+  /// list.isEmpty -> error
+  /// list?.isEmpty -> null
+  /// list?.isEmpty ?? false -> false
+  List<String>? list;
+  if (list?.isEmpty ?? true) {
+    print('list is null');
+  }
+}
+
+/// 16.serialize(직렬화)
+void serializeFunction() {
+  //* 직렬화(전송 가능한 상태로 변환) 객체 ->(encode)-> json 데이터
+  //* 역직렬화(객체 상태로 변환) json 데이터 ->(decode)-> 객체
+
+  /// json 데이터
+  String jsonString = '''{
+    "name": "John Smith",
+    "email": "john@example.com"
+  }
+  ''';
+
+  /// json 데이터 -> Map 데이터로 역직렬화
+  Map<String, dynamic> userMap = jsonDecode(jsonString);
+
+  /// userMap라는 데이터에 어떤값이 존재할 수 있는지 모름 / 자료형도 모름 / 설명주석 사용 불가
+  print(userMap['name']);
+  print(userMap['email']);
+
+  /// Map 데이터 -> User 데이터로 변환
+  var user = User.fromJson(userMap);
+  print(user.name);
+  print(user.email);
+}
+
+/// 17.extension(확장)
+void extensionFunction() {
+  //* extension - 일반 메서드와 함께 확장 메서드를 제안하는 키워드
+
+  /// 오늘 날짜
+  DateTime time1 = DateTime.now();
+
+  /// 내일 날짜
+  DateTime time2 = time1.add(Duration(days: 1));
+
+  /// 어제 날짜
+  DateTime time3 = time1.add(Duration(days: -1));
+
+  print(time1 < time2); // true
+  print(time1 < time3); // false
+}
+
+/// 18.enums(열거형)
+void enumsFunction() {
+  /// 간단한 enum
+  SimpleColor simpleColor = SimpleColor.red;
+
+  /// 발전된 enum(dart 2.17이상)
+  Vehicle vehicle = Vehicle.car;
+  Vehicle vehicle2 = Vehicle.bus;
+
+  print(vehicle.carbonFootprint);
+  print(vehicle.carbonPerKilometer);
+  print(vehicle.compareTo(vehicle2));
+}
+
+/// 19.메타데이터
+void metadataFunction() {
+  var manager = Manager();
+
+  /// 1.override
+  manager.printMethod();
+
+  /// 2.deprecated
+  manager.printMethod2();
+
+  /// 3.custom
+  manager.printMethod3();
+}
+
+/// 20.상속
+void inheritanceFunction() {
+  // 추상 클래스는 직접 인스턴스화할 수 없습니다.
+  // Shape shape = Shape(); // 에러 발생
+
+  // Circle 클래스와 Square 클래스 모두 Shape 추상 클래스를 상속받아 사용할 수 있습니다.
+  Circle circle = Circle("빨간색", 5.0);
+  circle.printInfo();
+
+  Square square = Square("파란색", 4.0);
+  square.printInfo();
+}
+
+/// 21.팩토리
+void factoryFunction() {
+  /// 사례1
+  ///
+  /// 자신의 클래스를 반환
+  User user = User.fromJson2({'name': 'john', 'email': 'john@example.com'});
+
+  /// 사례2
+  ///
+  /// 싱글톤
+  ///
+  /// 캐싱된 인스턴스 반환
+  Manager manager1 = Manager();
+  print(manager1.hashCode);
+  Manager manager2 = Manager();
+  print(manager2.hashCode);
+
+  Singleton singleton1 = Singleton();
+  print(singleton1.hashCode);
+  Singleton singleton2 = Singleton();
+  print(singleton2.hashCode);
+}
+
+/// 22.패턴(dart3.0 이상)
+void patternFunction() {
+  /// 1.Matching(매칭)
+  ///
+  /// 표현식에 들어가는 데이터는 상수여야 합니다.
+  const a1 = 'a';
+  const b1 = 'b';
+  const c1 = 'c';
+  var obj = ['a', 'b'];
+  switch (obj) {
+    case [a1, b1]:
+      print('$a1, $b1');
+    case [a1, b1, c1]:
+      print('$a1, $b1, $c1');
+    case ['a' || 'b', var c]:
+      print(c);
+  }
+
+  /// 2.Destructuring(구조분해)
+  var list = ['1', '2'];
+  var [a2, b2] = list; // a2 = 1, b2 = 2
+
+  /// 3.Variable declaration(변수 선언)
+  var (a3, [b3, c3]) = ('str', [1, 2]);
+
+  /// 4.ariable assignment(변수 할당)
+  var (a4, b4) = ('left', 'right');
+  (b4, a4) = (a4, b4); // Swap.
+  print('$a4 $b4'); // Prints "right left".
+
+  /// 5.switch문 표현식
+  int obj2 = 51;
+  switch (obj2) {
+    // Matches if 1 == obj.
+    case 1:
+      print('one');
+
+    // Matches if the value of obj is between the
+    // constant values of 'first' and 'last'.
+    case >= 0 && <= 10:
+      print('in range');
+
+    default:
+      print('out range');
+  }
+
+  /// 6.switch문 논리 패턴
+  var color = SimpleColor.blue;
+  var isPrimary = switch (color) { SimpleColor.red || SimpleColor.blue => true, _ => false };
+
+  /// 7.for-in element 분해
+  Map<String, int> hist = {
+    'a': 23,
+    'b': 100,
+  };
+
+  for (var MapEntry(key: key, value: count) in hist.entries) {
+    print('$key occurred $count times');
+  }
+
+  /// 8.record 자료형(dart 3.0 이상)
+  (String, String, {int a, bool b}) record = ('first', a: 2, b: true, 'last');
+  print(record.$1);
+  print(record.a);
+  print(record.b);
+  print(record.$2);
+
+  ({String a, String b}) record2 = (a: '11', b: '22');
+  print(record2.a);
+  print(record2.b);
+
+  final Foo foo = Foo(one: 'one', two: 2);
+  var Foo(:one, :two) = foo;
+  print('one $one, two $two');
+
+  // 9.json 검증
+  var json = {
+    'user': ['Lily', 13]
+  };
+  var {'user': [name, age]} = json;
+  print('name $name, age $age');
+}
+
+/// 23.isolate(격리)
+///
+/// 앱 내에서 모든 다트 코드는 격리되어 실행됩니다.
+/// 앱이 하나의(main isolate)만 사용합니다.
+/// 추가로 isolate를 만들어 여러 프로세서 코어에서 병렬로 코드를 실행할 수 있습니다.(다중 코어 활용)
+void isolateFunction() async {
+  
+  // 예제1
+  Isolate.spawn(entryPointFunction, 'Hello!!');
+  Isolate.spawn(entryPointFunction, 'Whats up!!');
+  Isolate.spawn(entryPointFunction, 'Welcome!!');
+
+  // 예제2
+  var port = ReceivePort();
+  port.listen((msg) {
+    print("Received message from isolate $msg");
+  });
+  var isolate = await Isolate.spawn(spawnIsolate, port.sendPort);
+  print(isolate.runtimeType);
+
+  // 예제3
+  final jsonData = await Isolate.run(readAndParseJson);
+  print('Number of JSON keys: ${jsonData.length}');
 }
 
 /// 24.정규식
