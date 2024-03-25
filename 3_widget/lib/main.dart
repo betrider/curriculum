@@ -48,44 +48,68 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: ElevatedButton(
-          onPressed: (){
-            setState(() {
-              count += 1;
-            });
-          },
-          child: Text(count.toString()),
-        ),
+        child: Container(),
       ),
     );
   }
 }
 
-/// child widget
-///
+/// 필수 widget
+
 /// Scaffold(AppBar, Floatingbutton, Drawer, BottomNavigationBar)
-/// Container(SizedBox / Padding / DecoratedBox)
+/// 
+/// AppBar
+/// floatingActionButton
+/// Drawer
+/// BottomNavigationBar
+
+
+/// Container(SizedBox / Padding / ColoredBox / DecoratedBox / ConstraindBox) widget
+/// 
+/// SizedBox
+/// Padding
+/// ColoredBox
+/// DecoratedBox
+/// ConstraindBox
+
+/// 레이아웃 widget
 /// Flexible, Expanded, Spacer
-/// Align, Center
-/// ElevatedButton, OutlinedButton, TextButton, IconButton
-/// Text
+ 
+/// ???
+
 /// Divider
-/// TextField, TextFormField
 /// Icon
 /// Image
 /// PlaceHolder
-/// 
-/// CircleAvatar, ClipOval, ClipPath, ClipRRect, ClipRect
-/// visibility, Opacity, Offstage
+/// icon
+/// image
 
-/// children widget
+/// text widget o
+/// 
+/// Text
+/// TextField
+/// TextFormField
+
+/// align widget o
+/// 
+/// Align
+/// Center
+
+/// button widget o
+/// 
+/// ElevatedButton
+/// OutlinedButton
+/// TextButton
+/// IconButton
+
+/// children widget o
 ///
 /// Row
 /// Column
 /// Stack
 /// 
 
-/// scroll widget
+/// scroll widget o
 /// 
 /// SingleChildScrollView
 /// ListView
@@ -93,15 +117,24 @@ class _MyHomePageState extends State<MyHomePage> {
 /// Wrap
 /// 
 
-/// gesture widget
+/// gesture widget o
 /// 
 /// InkWell
 /// GestureDetector
 
-/// show
+/// show o
 /// 
 /// showModalBottomSheet
 /// showDialog
 /// showSnackBar
 /// showTimePicker
 /// showDatePicker
+
+/// other
+/// CircleAvatar
+/// ClipOval, ClipPath, ClipRRect, ClipRect
+/// visibility, Opacity, Offstage
+
+/// builder
+/// 
+/// LayoutBuilder
