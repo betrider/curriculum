@@ -184,4 +184,22 @@ class MyApp extends StatelessWidget {
   }
 }
 
+--
+
+예)void login() async{
+    // repository - login호출
+    var result = await ref.read(authRepositoryProvider).login();
+  }
+
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+final authRepositoryProvider = Provider<AuthRepository>((ref) => AuthRepository());
+
+class AuthRepository {
+  Future<String> login() async {
+    // 실제 API 요청을 가정한 2초 딜레이
+    await Future.delayed(const Duration(seconds: 2));
+    return "Hello from API";
+  }
+}
 
