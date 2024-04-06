@@ -96,3 +96,52 @@ final GoRouter router = GoRouter(
     ),
   ],
 );
+
+---------------------------------------------------------------------------------
+
+예 : DateFormat('yyyy.MM.dd (E)').format(DateTime.now());
+
+intl: ^0.18.1
+flutter_localizations:
+  sdk: flutter
+
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_application_9/route.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:intl/intl.dart';
+
+void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  // 세로모드 고정
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown,
+  ]);
+  Intl.defaultLocale = 'ko_KR';
+  runApp(const ProviderScope(child: MyApp()));
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp.router(
+      routerConfig: router,
+      localizationsDelegates: const [
+        //다국어 지원
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: const [
+        Locale('ko', 'KR'),
+      ],
+      title: 'Flutter Demo',
+    );
+  }
+}
+
+
