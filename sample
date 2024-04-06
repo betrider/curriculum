@@ -1,3 +1,40 @@
+dependencies:
+1.go_router(라우팅)
+2.flutter_riverpod, equatable(상태관리)
+3.retrofit,dio,logger,json_annotation(api 통신)
+
+4.package_info_plus(패키지 정보)
+5.device_info_plus(디바이스 정보)
+6.shared_preferences(내부 스토리지)
+7.flutter_secure_storage(암호화 내부 스토리지)
+8.url_launcher(인터넷,전화번호,이메일 연결)
+9.connectivity_plus(네트워크 감지)
+10.upgrader(앱 버전관리)
+
+11.firebase_core(코어)
+12.firebase_analytics
+13.firebase_crashlytics
+14.firebase_messaging
+15.flutter_local_notifications
+
+16.flutter_app_badger(아이콘 배지)
+17.flutter_launcher_icons(아이콘 빌더)
+18.flutter_native_splash(스플래시 빌더)
+
++
+webview_flutter(웹뷰)
+flutter_svg(svg사용시 필요)
+easy_localization(다국어)
+cached_network_image(캐시 네트워크 이미지)
+
+dev_dependencies:
+1.retrofit_generator
+2.build_runner
+3.json_serializable
+4.riverpod_lint(dart run custom_lint)
+5.mockito
+
+-----------------------------------------
 import 'package:flutter/material.dart';
 import 'package:flutter_application_9/1_presentation/login_page/login_page_view_model.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
