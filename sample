@@ -225,3 +225,106 @@ var prefs = await SharedPreferences.getInstance();
       child: MyApp(),
     ),
   );
+
+---
+
+import 'package:dio/dio.dart';
+import 'package:flutter_application_9/2_data/data_source/remote/response/auth_response.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:pretty_dio_logger/pretty_dio_logger.dart';
+import 'package:retrofit/retrofit.dart';
+
+part 'rest_api.g.dart';
+
+final restProvider = Provider<RestClient>((ref) {
+  // dio 생성
+  final dio = Dio();
+
+  // token interceptor 추가
+  dio.interceptors.add(
+    QueuedInterceptorsWrapper(
+      // 요청
+      onRequest: (options, handler) {
+        // Add the access token to the request header
+        options.headers['Authorization'] = 'Bearer your_access_token';
+        return handler.next(options);
+      },
+      // 성공
+      onResponse: (response, handler) {
+        return handler.next(response);
+      },
+      // 실패
+      onError: (DioException e, handler) async {
+        if (e.response?.statusCode == 401) {
+          // If a 401 response is received, refresh the access token
+          String newAccessToken = await refreshToken();
+
+          // Update the request header with the new access token
+          e.requestOptions.headers['Authorization'] = 'Bearer $newAccessToken';
+
+          // Repeat the request with the updated header
+          return handler.resolve(await dio.fetch(e.requestOptions));
+        }
+        return handler.next(e);
+      },
+    ),
+  );
+
+  // log interceptor
+  dio.interceptors.add(PrettyDioLogger());
+
+  final client = RestClient(dio);
+
+  return client;
+});
+
+Future<String> refreshToken() async {
+  // Perform a request to the refresh token endpoint and return the new access token.
+  // You can replace this with your own implementation.
+  return 'your_new_access_token';
+}
+
+@RestApi(baseUrl: 'https://jsonplaceholder.typicode.com')
+abstract class RestClient {
+  factory RestClient(Dio dio, {String baseUrl}) = _RestClient;
+
+  @POST('/login')
+  Future<AuthResponse> login();
+
+  // @POST('/refresh')
+  // Future<RefreshTokenResponse> refreshToken(@Body() RefreshTokenRequest request);
+
+  // @GET('/posts')
+  // Future<List<PostResponse>> getPosts1();
+
+  // @GET('/posts/{postId}')
+  // Future<PostResponse> getPosts2(@Path("postId") String postId);
+
+  // @GET('/posts/{postId}/comments')
+  // Future<List<CommentResponse>> getComments1(@Path("postId") String postId);
+
+  // @GET('/comments')
+  // Future<List<CommentResponse>> getComments2(@Queries() CommentRequest request);
+
+  // @POST('/posts')
+  // Future<dynamic> postPosts();
+
+  // @PUT('/posts/{postId}')
+  // Future<dynamic> putPosts(@Path("postId") String postId);
+
+  // @PATCH('/posts/{postId}')
+  // Future<dynamic> patchPosts(@Path("postId") String postId);
+
+  // @DELETE('/posts/{postId}')
+  // Future<dynamic> deletePosts(@Path("postId") String postId);
+
+  // @POST("/tasks/{cc}")
+  // Future<dynamic> testMethod(
+  //   @Queries() Map<String, dynamic> aa, // queryParameters 형식에 추가(addAll)
+  //   @Query('apikey') String bb, // queryParameters 형식에 추가
+  //   @Path('cc') String cc, // path 파라미터용(link)
+  //   @Body() RefreshTokenRequest dd, // class 형식으로 추가(1)
+  //   @Field() String ff, // Map 형식으로 추가(2)
+  //   @Part() String ee, // FormData 형식으로 추가(3)
+  // );
+}
