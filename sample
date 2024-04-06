@@ -342,3 +342,42 @@ ThemeData customThemeData() {
     ),
   );
 }
+
+--
+
+// 샘플데이터 주입
+// restProvider.overrideWithValue(SampleRestClient()),
+
+class SampleRestClient implements RestClient{
+  @override
+  Future<AuthResponse> login() async{
+    return AuthResponse();
+  }
+}
+
+--
+
+RegExp emailRegex = RegExp(r'^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$');
+RegExp phoneRegExp = RegExp(r'^01[0-9]-\d{3,4}-\d{4}$');
+
+void main(){
+  String aa = '01052223333';
+  print(aa.isPhonNumber);
+}
+
+extension StringExtension on String? {
+  bool get isEmail{
+    if (this == null) {
+      return false;
+    } else {
+      return emailRegex.hasMatch(this!);
+    }
+  }
+  bool get isPhonNumber{
+    if (this == null) {
+      return false;
+    } else {
+      return phoneRegExp.hasMatch(this!);
+    }
+  }
+}
