@@ -21,6 +21,9 @@ dependencies:
 17.flutter_launcher_icons(아이콘 빌더)
 18.flutter_native_splash(스플래시 빌더)
 
+19.intl
+20.flutter_localizations(flutter)
+
 +
 webview_flutter(웹뷰)
 flutter_svg(svg사용시 필요)
