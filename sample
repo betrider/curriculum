@@ -1,0 +1,98 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_application_9/1_presentation/login_page/login_page_view_model.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+class LoginPage extends ConsumerWidget {
+  const LoginPage({super.key});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    int count = ref.watch(loginProvider).count; // 상태를 감지
+    return Scaffold(
+      appBar: AppBar(title: const Text('Login Page')),
+      body: Center(child: Text('count:$count')),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          // 업데이트 호출
+          ref.read(loginProvider.notifier).updateCount();
+        },
+        child: const Icon(Icons.add),
+      ),
+    );
+  }
+}
+
+--
+
+import 'package:equatable/equatable.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+// 호출부
+final loginProvider = NotifierProvider<LoginNotifier, LoginState>(LoginNotifier.new);
+
+// 정의부(알림)
+class LoginNotifier extends Notifier<LoginState> {
+  @override
+  LoginState build() {
+    return const LoginState();
+  }
+
+  // 카운트 업데이트
+  void updateCount(){
+    state = state.copyWith(count: state.count + 1);
+  }
+}
+
+// 정의부(상태)
+class LoginState extends Equatable {
+  final int count;
+  const LoginState({
+    this.count = 0,
+  });
+
+  LoginState copyWith({
+    int? count,
+  }) {
+    return LoginState(
+      count: count ?? this.count,
+    );
+  }
+
+  @override
+  List<Object> get props => [count];
+}
+
+--
+class MyConstants {
+  MyConstants._();
+
+  static const String baseUrl1 = 'https://www.naver.com';
+  static const String baseUrl2 = 'https://www.naver.com';
+  static const String baseUrl3 = 'https://www.naver.com';
+  static const String baseUrl4 = 'https://www.naver.com';
+}
+
+--
+
+import 'package:flutter/material.dart';
+import 'package:flutter_application_9/1_presentation/login_page/login_page_view.dart';
+import 'package:go_router/go_router.dart';
+
+final GoRouter router = GoRouter(
+  routes: <RouteBase>[
+    GoRoute(
+      path: '/',
+      builder: (BuildContext context, GoRouterState state) {
+        return const LoginPage();
+      },
+      // routes: <RouteBase>[
+      //   GoRoute(
+      //     path: 'details',
+      //     builder: (BuildContext context, GoRouterState state) {
+      //       return const DetailsScreen();
+      //     },
+      //   ),
+      // ],
+    ),
+  ],
+);
