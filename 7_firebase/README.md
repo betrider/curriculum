@@ -81,3 +81,13 @@
 ### 4.6. firebase_option.dart 생성 확인
 
 ### 4.7. firebase 사이트에서 연동되었는지 확인
+
+### 4.8. 윈도우 설치
+1.node 설치(https://nodejs.org/en/download)
+2.node -v
+3.npm install -g firebase-tools
+4.firebase login
+5.계정연동
+6.환경변수 등록(C:\Users\TJ\AppData\Local\Pub\Cache\bin)
+7.dart pub global activate flutterfire_cli
+8.flutterfire configure
