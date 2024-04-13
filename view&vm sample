@@ -1,0 +1,236 @@
+-- view
+
+import 'package:flutter/material.dart';
+import 'package:flutter_application_9/1_presentation/login_page/login_page_vm.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+class LoginPage extends StatelessWidget {
+  const LoginPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('로그인 페이지'),
+        centerTitle: true,
+      ),
+      body: SafeArea(
+        child: Center(
+          child: Container(
+            decoration: BoxDecoration(
+                border: Border.all(color: Colors.grey[600]!),
+                borderRadius: BorderRadius.circular(10)),
+            width: 500,
+            height: 400,
+            padding: const EdgeInsets.all(32),
+            child: const Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                IdTitleWidget(),
+                SizedBox(height: 8),
+                IdTextField(),
+                SizedBox(height: 16),
+                PasswordTitleWidget(),
+                SizedBox(height: 8),
+                PasswordTextField(),
+                SizedBox(height: 8),
+                SaveIdCheckButton(),
+                Spacer(),
+                LoginButton()
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class PasswordTextField extends ConsumerWidget {
+  const PasswordTextField({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    return TextField(
+      onChanged: ref.read(loginProvider.notifier).updatePassword,
+    );
+  }
+}
+
+class IdTextField extends ConsumerWidget {
+  const IdTextField({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    return TextField(
+      onChanged: ref.read(loginProvider.notifier).updateId,
+    );
+  }
+}
+
+class LoginButton extends ConsumerWidget {
+  const LoginButton({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    bool buttonEnabel = ref.watch(loginProvider).buttonEnable;
+    bool buttonLoading = ref.watch(loginProvider).buttonLoading;
+
+    return SizedBox(
+      width: double.infinity,
+      height: 50,
+      child: ElevatedButton(
+        onPressed: buttonEnabel ? () {
+          ref.read(loginProvider.notifier).login();
+        } : null,
+        child: buttonLoading
+            ? const Center(child: CircularProgressIndicator())
+            : const Text('로그인'),
+      ),
+    );
+  }
+}
+
+class SaveIdCheckButton extends ConsumerWidget {
+  const SaveIdCheckButton({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    bool saveId = ref.watch(loginProvider).saveId;
+    return InkWell(
+      onTap: () {
+        ref.read(loginProvider.notifier).updateSaveId();
+      },
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          saveId
+              ? const Icon(Icons.check_box)
+              : const Icon(Icons.check_box_outline_blank_rounded),
+          const SizedBox(width: 8),
+          const Text('아이디 저장')
+        ],
+      ),
+    );
+  }
+}
+
+class PasswordTitleWidget extends StatelessWidget {
+  const PasswordTitleWidget({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return const Text(
+      '비밀번호',
+      style: TextStyle(
+        fontSize: 16,
+        fontWeight: FontWeight.bold,
+      ),
+    );
+  }
+}
+
+class IdTitleWidget extends StatelessWidget {
+  const IdTitleWidget({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return const Text(
+      '아이디',
+      style: TextStyle(
+        fontSize: 16,
+        fontWeight: FontWeight.bold,
+      ),
+    );
+  }
+}
+
+
+-- view model
+
+import 'package:equatable/equatable.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+// 호출
+final loginProvider = NotifierProvider<LoginNotifier, LoginState>(LoginNotifier.new);
+
+// 알림<상태>
+class LoginNotifier extends Notifier<LoginState> {
+  @override
+  LoginState build() {
+    return const LoginState();
+  }
+
+  // id 상태 업데이트
+  void updateId(String id){
+    state = state.copyWith(id: id);
+  }
+
+  // password 상태 업데이트
+  void updatePassword(String password){
+    state = state.copyWith(password: password);
+  }
+
+  // saveId 상태 업데이트
+  void updateSaveId(){
+    state = state.copyWith(saveId: !state.saveId);
+  }
+
+  // api 통신
+  Future<void> login() async{
+    state = state.copyWith(buttonLoading: true);
+    // api
+    await Future.delayed(const Duration(seconds: 5));
+    state = state.copyWith(buttonLoading: false);
+    // 1.request
+    // 2.response
+    // 3-1.성공
+    // 3.2.실패
+  }
+}
+
+// 상태
+class LoginState extends Equatable {
+  final String? id;
+  final String? password;
+  final bool saveId;
+  final bool buttonLoading;
+
+  bool get buttonEnable => id != null && id!.length > 10 && password != null && password!.length > 10;
+  
+  const LoginState({
+    this.id,
+    this.password,
+    this.saveId = false,
+    this.buttonLoading = false,
+  });
+
+  @override
+  List<Object?> get props => [id, password, saveId];
+
+  LoginState copyWith({
+    String? id,
+    String? password,
+    bool? saveId,
+    bool? buttonLoading,
+  }) {
+    return LoginState(
+      id: id ?? this.id,
+      password: password ?? this.password,
+      saveId: saveId ?? this.saveId,
+      buttonLoading: buttonLoading ?? this.buttonLoading,
+    );
+  }
+}
