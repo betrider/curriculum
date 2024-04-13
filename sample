@@ -381,3 +381,22 @@ extension StringExtension on String? {
     }
   }
 }
+
+-- 폴더구조
+1.presentation
+	1-1.loginPage
+		1-1-1.login_page.dart
+		1-1-2.login_page_vm.dart
+2.data
+	2-1.data_source
+		2-1-1.local(스토리지)
+		2-1-2.remote(api)
+			1)request
+			2)response
+			3)rest_api.dart
+	
+	2-2.repository
+ui - widget component(재사용 위젯),color, font ..
+utils - extension,regexp ..
+constants - baseUrl, link ..
+route - 페이지 라우트 정의
