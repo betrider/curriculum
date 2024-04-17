@@ -85,15 +85,12 @@ class _LongPressDraggableExampleState extends State<LongPressDraggableExample> {
                   ),
                 );
               },
-              onAccept: (data) {
-                debugPrint('hi $data');
+              onAcceptWithDetails: (details) {
+                debugPrint('hi ${details.data}');
                 setState(() {
                   isDropped = true;
                 });
                 debugPrint('hi $isDropped');
-              },
-              onWillAccept: (data) {
-                return data == color;
               },
             ),
           ],

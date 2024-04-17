@@ -57,9 +57,9 @@ class _DraggableExampleState extends State<DraggableExample> {
                 ),
               );
             },
-            onAccept: (int data) {
+            onAcceptWithDetails: (details) {
               setState(() {
-                acceptedData += data;
+                acceptedData += details.data;
               });
             },
           ),

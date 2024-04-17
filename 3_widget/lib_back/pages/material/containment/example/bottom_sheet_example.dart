@@ -10,7 +10,7 @@ class BottomSheetExample extends StatelessWidget {
         child: ElevatedButton(
           child: const Text('showBottomSheet'),
           onPressed: () {
-            Scaffold.of(context).showBottomSheet<void>(
+            Scaffold.of(context).showBottomSheet(
               (BuildContext context) {
                 return Container(
                   height: 200,

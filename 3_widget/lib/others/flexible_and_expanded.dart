@@ -1,6 +1,3 @@
-
-
-
 import 'package:flutter/material.dart';
 
 // flex : 비율
@@ -8,15 +5,14 @@ import 'package:flutter/material.dart';
 // FlexFit.tight : 가능한 늘어난다.
 // FlexFit.loose : 필요한 만큼 늘어난다.
 
-class FlexibleAndExpanded extends StatelessWidget{
+class FlexibleAndExpanded extends StatelessWidget {
   const FlexibleAndExpanded({super.key});
 
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
       backgroundColor: Colors.white,
-      body:
-       Column(
+      body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
@@ -33,20 +29,22 @@ class FlexibleAndExpanded extends StatelessWidget{
               ExpandedWidget(),
             ],
           ),
-          Row(mainAxisSize: MainAxisSize.min,
+          Row(
+            mainAxisSize: MainAxisSize.min,
             children: [
               FlexibleWidget(),
               FlexibleWidget(),
             ],
           ),
-          Row(mainAxisSize: MainAxisSize.min,
+          Row(
+            mainAxisSize: MainAxisSize.min,
             children: [
               FlexibleWidget(),
               ExpandedWidget(),
             ],
           ),
         ],
-     ),
+      ),
     );
   }
 }

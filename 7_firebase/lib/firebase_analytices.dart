@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -38,10 +40,9 @@ Future<void> analyticsReport() async {
   //
   // 현재 스크린 세팅
   analyticsInstance.setCurrentScreen(screenName: "first");
-
 }
 
-final GoRouter _router = GoRouter(
+final GoRouter router = GoRouter(
   observers: [
     FirebaseAnalyticsObserver(analytics: FirebaseAnalytics.instance) // 옵저버
   ],

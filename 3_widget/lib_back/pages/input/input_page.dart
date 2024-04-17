@@ -41,12 +41,6 @@ class InputPage extends StatelessWidget {
               context.pushRelative((FormFieldExample).name);
             },
           ),
-          MyCardWidget(
-            title: (RawKeyboardListenerExample).name,
-            onTap: () {
-              context.pushRelative((RawKeyboardListenerExample).name);
-            },
-          ),
         ],
       ),
     );

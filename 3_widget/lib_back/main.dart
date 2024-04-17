@@ -79,7 +79,6 @@ import '../lib_back/pages/cupertino/example/cupertino_timer_picker_example.dart'
 import '../lib_back/pages/input/example/autocomplete_example.dart';
 import '../lib_back/pages/input/example/form_example.dart';
 import '../lib_back/pages/input/example/form_field_example.dart';
-import '../lib_back/pages/input/example/raw_keyboard_listener_example.dart';
 import '../lib_back/pages/input/input_page.dart';
 import '../lib_back/pages/interaction_models/example/absorb_pointer_example.dart';
 import '../lib_back/pages/interaction_models/example/dismissible_example.dart';
@@ -613,8 +612,7 @@ final router = GoRouter(
             GoRoute(
               path: (CupertinoFullScreenDialogTransitionExample).name,
               builder: (_, __) => CustomWidgetCodeView(
-                filePath:
-                    'lib/pages/cupertino/example/${(CupertinoFullScreenDialogTransitionExample).underscoreCaseName}.dart',
+                filePath: 'lib/pages/cupertino/example/${(CupertinoFullScreenDialogTransitionExample).underscoreCaseName}.dart',
                 child: const CupertinoFullScreenDialogTransitionExample(),
               ),
             ),
@@ -691,16 +689,14 @@ final router = GoRouter(
             GoRoute(
               path: (CupertinoSlidingSegmentedControlExample).name,
               builder: (_, __) => CustomWidgetCodeView(
-                filePath:
-                    'lib/pages/cupertino/example/${(CupertinoSlidingSegmentedControlExample).underscoreCaseName}.dart',
+                filePath: 'lib/pages/cupertino/example/${(CupertinoSlidingSegmentedControlExample).underscoreCaseName}.dart',
                 child: const CupertinoSlidingSegmentedControlExample(),
               ),
             ),
             GoRoute(
               path: (CupertinoSliverNavigationBarExample).name,
               builder: (_, __) => CustomWidgetCodeView(
-                filePath:
-                    'lib/pages/cupertino/example/${(CupertinoSliverNavigationBarExample).underscoreCaseName}.dart',
+                filePath: 'lib/pages/cupertino/example/${(CupertinoSliverNavigationBarExample).underscoreCaseName}.dart',
                 child: const CupertinoSliverNavigationBarExample(),
               ),
             ),
@@ -771,13 +767,6 @@ final router = GoRouter(
               builder: (_, __) => CustomWidgetCodeView(
                 filePath: 'lib/pages/input/example/${(FormFieldExample).underscoreCaseName}.dart',
                 child: const FormFieldExample(),
-              ),
-            ),
-            GoRoute(
-              path: (RawKeyboardListenerExample).name,
-              builder: (_, __) => CustomWidgetCodeView(
-                filePath: 'lib/pages/input/example/${(RawKeyboardListenerExample).underscoreCaseName}.dart',
-                child: const RawKeyboardListenerExample(),
               ),
             ),
           ],
@@ -876,7 +865,8 @@ final router = GoRouter(
                 GoRoute(
                   path: (CustomMultiChildLayoutExample).name,
                   builder: (_, __) => CustomWidgetCodeView(
-                    filePath: 'lib/pages/layout/example/multi_child_layout_widgets/${(CustomMultiChildLayoutExample).underscoreCaseName}.dart',
+                    filePath:
+                        'lib/pages/layout/example/multi_child_layout_widgets/${(CustomMultiChildLayoutExample).underscoreCaseName}.dart',
                     child: const CustomMultiChildLayoutExample(),
                   ),
                 ),
@@ -994,7 +984,8 @@ final router = GoRouter(
                 GoRoute(
                   path: (CustomSingleChildLayoutExample).name,
                   builder: (_, __) => CustomWidgetCodeView(
-                    filePath: 'lib/pages/layout/example/single_child_layout_widgets/${(CustomSingleChildLayoutExample).underscoreCaseName}.dart',
+                    filePath:
+                        'lib/pages/layout/example/single_child_layout_widgets/${(CustomSingleChildLayoutExample).underscoreCaseName}.dart',
                     child: CustomSingleChildLayoutExample(),
                   ),
                 ),
@@ -1015,7 +1006,8 @@ final router = GoRouter(
                 GoRoute(
                   path: (FractionallySizedBoxExample).name,
                   builder: (_, __) => CustomWidgetCodeView(
-                    filePath: 'lib/pages/layout/example/single_child_layout_widgets/${(FractionallySizedBoxExample).underscoreCaseName}.dart',
+                    filePath:
+                        'lib/pages/layout/example/single_child_layout_widgets/${(FractionallySizedBoxExample).underscoreCaseName}.dart',
                     child: const FractionallySizedBoxExample(),
                   ),
                 ),

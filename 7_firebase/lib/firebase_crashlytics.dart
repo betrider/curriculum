@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/foundation.dart';
 
@@ -30,7 +32,7 @@ Future<void> crashlyticsReport() async {
 
   // 커스텀 로그 메시지
   crashInstance.log("Higgs-Boson detected! Bailing out");
-  
+
   // 플러터 예외처리 보고
 
   // Flutter 내에서 발생하는 모든 error를 catch할 수 있습니다.
@@ -44,5 +46,4 @@ Future<void> crashlyticsReport() async {
     crashInstance.recordError(error, stack, fatal: true);
     return true;
   };
-
 }
