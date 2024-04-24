@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class RichTextSample extends StatelessWidget {
-  const RichTextSample({super.key});
+class StatefulBuilderSample extends StatelessWidget {
+  const StatefulBuilderSample({super.key});
 
   @override
   Widget build(BuildContext context) {
