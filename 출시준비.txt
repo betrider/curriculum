@@ -1,0 +1,67 @@
+*출시준비
+1.패키지명(프로젝트 생성시)
+주의1)패키지명에 example이 들어가면 출시불가
+주의2)패키지명을 지을때 주의
+flutter_application_1 -> android -> com.example.flutter_application_1
+		 -> ios -> com.example.flutterApplication1
+
+android) package id == ios) bundle id
+
+2.버전관리
+ex)2.0.5+1(Major.Minor.Patch+Metadata)
+Majer - 기존 버전과 호환되지 않는 경우
+Minor - 새로운 기능을 추가한 경우
+Patch - 버그를 수정한 경우
+
+3.앱 아이콘 변경(curriculum/8_ready_for_release/pubspec.yaml 27)
+- flutter_icons 패키지 설치
+- icon 이미지 추가
+- flutter pub run flutter_launcher_icons:main
+
+4.스플래시 이미지 변경(curriculum/8_ready_for_release/pubspec.yaml 36)
+- flutter_native_splash 패키지 설치
+- splash 이미지 추가
+- flutter pub run flutter_native_splash:create(생성)
+
+5.출시준비1 - 개발자 등록
+1)android(등록비용 - 평생 한번 25달러)
+2)ios(등록비용 - 매년 100달러)
+
+6.출시준비2 - 앱 생성
+1)android
+	(1)구글플레이콘솔 로그인(https://play.google.com/console/developers)
+	(2)ANDROID 앱 만들기
+
+2)ios
+	(1)애플 개발자 사이트 로그인(https://developer.apple.com/kr/)
+	(2)IOS Provisioning profile 만들기!!
+
+	(1)앱 스토어 커넥트 로그인(https://appstoreconnect.apple.com/login)
+	(2)IOS 앱 만들기
+
+7.출시준비3 - 업로드
+1)android(직접 업로드)
+	(1)jks파일 발급!!
+	(2)프로젝트 폴더에 jks파일 추가(curriculum/8_ready_for_release/upload-keystore.jks 참조)
+	(3)android폴더에 key.properties파일 추가(curriculum/8_ready_for_release/android/key.properties 참조)
+	(4)android/app/build.gradle에 signingConfigs정보 추가(curriculum/8_ready_for_release/android/app/build.gradle 57)
+	(5)android/app/build.gradle에 buildTypes 변경(curriculum/8_ready_for_release/android/app/build.gradle 66)
+	(6)flutter build apk 또는 flutter build appbundle
+	(7)파일 직접 업로드
+
+	!!proguard 오류 시 파일추가(curriculum/8_ready_for_release/android/proguard-rules.pro 참조)
+
+2)ios(자동 업로드)
+	(1)flutter build ios
+	(2)ios폴더 xcode로 실행(애플 개발자 연동되어 있어야함)
+	(3)xcode - product - archive - Distribute App - App Store Connet - upload
+	(4)TextFlight에 업로드 됌
+
+8.버전
+!! 새로운 버전을 올릴때 최소한 1.0.x + 5 마이너 버전과 metadata 숫자를 하나씩 올려줘야함
+
+9.다양한 빌드방법
+1)android(window, macos)
+- flutter build apk(apk 추출), flutter build appbundle(bundle 추출)
+2)ios(macos) 
+- flutter build ipa(ios 전용 앱패키지 추출), flutter build ios(ios폴더 업데이트)
