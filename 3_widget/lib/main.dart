@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:flutter_widget/sample/1_scaffold_widget/scaffold.dart';
+import 'package:random_color_scheme/random_color_scheme.dart';
 
-// 1.lib > main.dart > main(){} start
+// 1.lib > main.dart > main 함수 실행
 // 2.runApp
 // 3.MaterialApp()
 // 4.home - MyHomePage() - view
@@ -17,124 +20,283 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+        tooltipTheme: const TooltipThemeData(
+          verticalOffset: 25,
+          decoration: ShapeDecoration(
+            color: Colors.black,
+            shape: ToolTipCustomShape(),
+          ),
+        ),
       ),
+      title: 'Flutter Demo',
       home: const MyHomePage(),
     );
   }
 }
 
-// Stateful Widget(state o)
-//
-// life cycle
-//
-// 1.initState
-// 2.build
-// 3.dispose
-class MyHomePage extends StatefulWidget {
+class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key});
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int count = 0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Container(),
+      backgroundColor: Colors.grey,
+      body: SingleChildScrollView(
+        child: StaggeredGrid.count(
+          crossAxisCount: 4,
+          mainAxisSpacing: 4,
+          crossAxisSpacing: 4,
+          children: [
+            StaggeredGridTile.count(
+              crossAxisCellCount: 2,
+              mainAxisCellCount: 2,
+              child: Tile(
+                title: 'Scaffold',
+                index: 1,
+                onTap: () {
+                  Navigator.push<void>(
+                    context,
+                    MaterialPageRoute<void>(
+                      builder: (BuildContext context) => const ScaffoldSample(),
+                    ),
+                  );
+                },
+              ),
+            ),
+            StaggeredGridTile.count(
+              crossAxisCellCount: 2,
+              mainAxisCellCount: 1,
+              child: Tile(
+                title: 'Basic',
+                index: 2,
+                onTap: () {},
+              ),
+            ),
+            StaggeredGridTile.count(
+              crossAxisCellCount: 1,
+              mainAxisCellCount: 1,
+              child: Tile(
+                title: 'Layout',
+                index: 3,
+                onTap: () {},
+              ),
+            ),
+            StaggeredGridTile.count(
+              crossAxisCellCount: 1,
+              mainAxisCellCount: 1,
+              child: Tile(
+                title: 'Divider',
+                index: 4,
+                onTap: () {},
+              ),
+            ),
+            StaggeredGridTile.count(
+              crossAxisCellCount: 1,
+              mainAxisCellCount: 1,
+              child: Tile(
+                title: 'Text',
+                index: 5,
+                onTap: () {},
+              ),
+            ),
+            StaggeredGridTile.count(
+              crossAxisCellCount: 1,
+              mainAxisCellCount: 1,
+              child: Tile(
+                title: 'TextField',
+                index: 6,
+                onTap: () {},
+              ),
+            ),
+            StaggeredGridTile.count(
+              crossAxisCellCount: 2,
+              mainAxisCellCount: 2,
+              child: Tile(
+                title: 'Align',
+                index: 7,
+                onTap: () {},
+              ),
+            ),
+            StaggeredGridTile.count(
+              crossAxisCellCount: 2,
+              mainAxisCellCount: 1,
+              child: Tile(
+                title: 'Button',
+                index: 8,
+                onTap: () {},
+              ),
+            ),
+            StaggeredGridTile.count(
+              crossAxisCellCount: 2,
+              mainAxisCellCount: 2,
+              child: Tile(
+                title: 'Children',
+                index: 9,
+                onTap: () {},
+              ),
+            ),
+            StaggeredGridTile.count(
+              crossAxisCellCount: 2,
+              mainAxisCellCount: 1,
+              child: Tile(
+                title: 'Scroll',
+                index: 10,
+                onTap: () {},
+              ),
+            ),
+            StaggeredGridTile.count(
+              crossAxisCellCount: 1,
+              mainAxisCellCount: 1,
+              child: Tile(
+                title: 'Gesture',
+                index: 11,
+                onTap: () {},
+              ),
+            ),
+            StaggeredGridTile.count(
+              crossAxisCellCount: 1,
+              mainAxisCellCount: 1,
+              child: Tile(
+                title: 'Asset',
+                index: 12,
+                onTap: () {},
+              ),
+            ),
+            StaggeredGridTile.count(
+              crossAxisCellCount: 1,
+              mainAxisCellCount: 1,
+              child: Tile(
+                title: 'Indicator',
+                index: 13,
+                onTap: () {},
+              ),
+            ),
+            StaggeredGridTile.count(
+              crossAxisCellCount: 1,
+              mainAxisCellCount: 1,
+              child: Tile(
+                title: 'Clip',
+                index: 14,
+                onTap: () {},
+              ),
+            ),
+            StaggeredGridTile.count(
+              crossAxisCellCount: 2,
+              mainAxisCellCount: 2,
+              child: Tile(
+                title: 'Visible',
+                index: 15,
+                onTap: () {},
+              ),
+            ),
+            StaggeredGridTile.count(
+              crossAxisCellCount: 2,
+              mainAxisCellCount: 1,
+              child: Tile(
+                title: 'Builder',
+                index: 16,
+                onTap: () {},
+              ),
+            ),
+            StaggeredGridTile.count(
+              crossAxisCellCount: 2,
+              mainAxisCellCount: 2,
+              child: Tile(
+                title: 'Dialog',
+                index: 17,
+                onTap: () {},
+              ),
+            ),
+            StaggeredGridTile.count(
+              crossAxisCellCount: 2,
+              mainAxisCellCount: 1,
+              child: Tile(
+                title: 'PlaceHolder',
+                index: 18,
+                onTap: () {},
+              ),
+            ),
+            StaggeredGridTile.count(
+              crossAxisCellCount: 1,
+              mainAxisCellCount: 1,
+              child: Tile(
+                title: 'TabBar',
+                index: 19,
+                onTap: () {},
+              ),
+            ),
+            StaggeredGridTile.count(
+              crossAxisCellCount: 1,
+              mainAxisCellCount: 1,
+              child: Tile(
+                title: 'PageView',
+                index: 20,
+                onTap: () {},
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
 }
 
-/// 필수 widget
+class Tile extends StatelessWidget {
+  const Tile({
+    Key? key,
+    required this.title,
+    required this.index,
+    required this.onTap,
+  }) : super(key: key);
 
-/// Scaffold(AppBar, Floatingbutton, Drawer, BottomNavigationBar)
-/// 
-/// AppBar
-/// floatingActionButton
-/// Drawer
-/// BottomNavigationBar
+  final String title;
+  final int index;
+  final VoidCallback onTap;
 
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: onTap,
+      child: Container(
+        color: randomColorSchemeLight(seed: index + 100 * 30).background,
+        child: Center(
+          child: Text(
+            title,
+            style: const TextStyle(fontSize: 20),
+          ),
+        ),
+      ),
+    );
+  }
+}
 
-/// Container(SizedBox / Padding / ColoredBox / DecoratedBox / ConstraindBox) widget
-/// 
-/// SizedBox
-/// Padding
-/// ColoredBox
-/// DecoratedBox
-/// ConstraindBox
+class ToolTipCustomShape extends ShapeBorder {
+  final bool usePadding;
 
-/// 레이아웃 widget
-/// Flexible, Expanded, Spacer
- 
-/// ???
+  const ToolTipCustomShape({this.usePadding = true});
 
-/// Divider
-/// Icon
-/// Image
-/// PlaceHolder
-/// icon
-/// image
+  @override
+  EdgeInsetsGeometry get dimensions => EdgeInsets.only(bottom: usePadding ? 10 : 0); // 화살표 크기를 줄이기 위해 padding 수정
 
-/// text widget o
-/// 
-/// Text
-/// TextField
-/// TextFormField
+  @override
+  Path getInnerPath(Rect rect, {TextDirection? textDirection}) => Path();
 
-/// align widget o
-/// 
-/// Align
-/// Center
+  @override
+  Path getOuterPath(Rect rect, {TextDirection? textDirection}) {
+    rect = Rect.fromPoints(rect.topLeft, rect.bottomRight - const Offset(0, 10)); // 화살표 크기를 절반으로 줄이기 위해 rect 수정
+    return Path()
+      ..addRRect(RRect.fromRectAndRadius(rect, Radius.circular(rect.height / 3)))
+      ..moveTo(rect.bottomCenter.dx - 5, rect.topCenter.dy) // 화살표 시작점을 변경하고 크기를 줄임
+      ..relativeLineTo(5, -10) // 위로 이동
+      ..relativeLineTo(5, 10) // 아래로 이동
+      ..close();
+  }
 
-/// button widget o
-/// 
-/// ElevatedButton
-/// OutlinedButton
-/// TextButton
-/// IconButton
+  @override
+  void paint(Canvas canvas, Rect rect, {TextDirection? textDirection}) {}
 
-/// children widget o
-///
-/// Row
-/// Column
-/// Stack
-/// 
-
-/// scroll widget o
-/// 
-/// SingleChildScrollView
-/// ListView
-/// GridView
-/// Wrap
-/// 
-
-/// gesture widget o
-/// 
-/// InkWell
-/// GestureDetector
-
-/// show o
-/// 
-/// showModalBottomSheet
-/// showDialog
-/// showSnackBar
-/// showTimePicker
-/// showDatePicker
-
-/// other
-/// CircleAvatar
-/// ClipOval, ClipPath, ClipRRect, ClipRect
-/// visibility, Opacity, Offstage
-
-/// builder
-/// 
-/// LayoutBuilder
+  @override
+  ShapeBorder scale(double t) => this;
+}
