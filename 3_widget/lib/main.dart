@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:flutter_widget/sample/1_scaffold_widget/scaffold.dart';
+import 'package:flutter_widget/sample/2_basic_widget/basic.dart';
 import 'package:random_color_scheme/random_color_scheme.dart';
 
 // 1.lib > main.dart > main 함수 실행
@@ -71,7 +72,14 @@ class MyHomePage extends StatelessWidget {
               child: Tile(
                 title: 'Basic',
                 index: 2,
-                onTap: () {},
+                onTap: () {
+                  Navigator.push<void>(
+                    context,
+                    MaterialPageRoute<void>(
+                      builder: (BuildContext context) => const BasicWidget(),
+                    ),
+                  );
+                },
               ),
             ),
             StaggeredGridTile.count(
@@ -114,7 +122,7 @@ class MyHomePage extends StatelessWidget {
               crossAxisCellCount: 2,
               mainAxisCellCount: 2,
               child: Tile(
-                title: 'Align',
+                title: 'Button',
                 index: 7,
                 onTap: () {},
               ),
@@ -123,7 +131,7 @@ class MyHomePage extends StatelessWidget {
               crossAxisCellCount: 2,
               mainAxisCellCount: 1,
               child: Tile(
-                title: 'Button',
+                title: 'Align',
                 index: 8,
                 onTap: () {},
               ),
@@ -246,27 +254,29 @@ class MyHomePage extends StatelessWidget {
 class Tile extends StatelessWidget {
   const Tile({
     Key? key,
-    required this.title,
-    required this.index,
-    required this.onTap,
+    this.title,
+    this.index,
+    this.onTap,
   }) : super(key: key);
 
-  final String title;
-  final int index;
-  final VoidCallback onTap;
+  final String? title;
+  final int? index;
+  final VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onTap,
       child: Container(
-        color: randomColorSchemeLight(seed: index + 100 * 30).background,
-        child: Center(
-          child: Text(
-            title,
-            style: const TextStyle(fontSize: 20),
-          ),
-        ),
+        color: randomColorSchemeLight(seed: index != null ? index! + 100 * 30 : null).background,
+        child: title == null
+            ? null
+            : Center(
+                child: Text(
+                  title!,
+                  style: const TextStyle(fontSize: 20),
+                ),
+              ),
       ),
     );
   }
