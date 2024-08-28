@@ -56,7 +56,7 @@ Future<void> platformSetup() async {
       alignment: Alignment.center,
       child: Text(
         '오류가 발생했습니다!\n${details.exception}',
-        textAlign: TextAlign.center,
+        textAlign: TextAlign.center, //
       ),
     );
   };
