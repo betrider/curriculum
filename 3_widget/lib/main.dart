@@ -268,7 +268,7 @@ class Tile extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Container(
-        color: randomColorSchemeLight(seed: index != null ? index! + 100 * 30 : null).background,
+        color: randomColorSchemeLight(seed: index != null ? index! + 100 * 30 : null).primary,
         child: title == null
             ? null
             : Center(

@@ -843,6 +843,7 @@ void metadataFunction() {
   manager.printMethod();
 
   /// 2.deprecated
+  // ignore: deprecated_member_use_from_same_package
   manager.printMethod2();
 
   /// 3.custom
@@ -974,7 +975,6 @@ void patternFunction() {
 /// 앱이 하나의(main isolate)만 사용합니다.
 /// 추가로 isolate를 만들어 여러 프로세서 코어에서 병렬로 코드를 실행할 수 있습니다.(다중 코어 활용)
 void isolateFunction() async {
-  
   // 예제1
   Isolate.spawn(entryPointFunction, 'Hello!!');
   Isolate.spawn(entryPointFunction, 'Whats up!!');
