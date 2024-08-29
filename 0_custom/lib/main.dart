@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Custom Widget',
       theme: ThemeData(
+        fontFamily: 'NotoSansKR',
         appBarTheme: const AppBarTheme(elevation: 1),
         scaffoldBackgroundColor: Colors.white,
       ),
