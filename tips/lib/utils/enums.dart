@@ -37,30 +37,19 @@ enum NetworkStatusCode {
   final int code;
   final String message;
 
-  static int getNetworkStatusCode(DioException err) {
-    if (err.error == NetworkStatusCode.ok.message) {
-      return NetworkStatusCode.ok.code;
-    } else if (err.error == NetworkStatusCode.created.message) {
-      return NetworkStatusCode.created.code;
-    } else if (err.error == NetworkStatusCode.badRequest.message) {
-      return NetworkStatusCode.badRequest.code;
-    } else if (err.error == NetworkStatusCode.unauthorized.message) {
-      return NetworkStatusCode.unauthorized.code;
-    } else if (err.error == NetworkStatusCode.forbidden.message) {
-      return NetworkStatusCode.forbidden.code;
-    } else if (err.error == NetworkStatusCode.notFound.message) {
-      return NetworkStatusCode.notFound.code;
-    } else if (err.error == NetworkStatusCode.internalServerError.message) {
-      return NetworkStatusCode.internalServerError.code;
-    } else if (err.error == NetworkStatusCode.notImplemented.message) {
-      return NetworkStatusCode.notImplemented.code;
-    } else {
-      return err.response?.statusCode ?? 404;
-    }
+  static NetworkStatusCode getNetworkStatusCode(DioException err) {
+    return NetworkStatusCode.values.firstWhere(
+      (element) => element.code == err.response?.statusCode,
+      orElse: () => NetworkStatusCode.notFound,
+    );
   }
 
   @override
   String toString() {
     return 'Error(code:$code, message:$message)';
   }
+}
+
+void test() {
+  NetworkStatusCode.badRequest.toString();
 }

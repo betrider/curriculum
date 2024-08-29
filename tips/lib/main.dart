@@ -6,6 +6,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:intl/intl.dart';
 import 'package:tips/widgets/effectless_scroll_behavior.dart';
+import 'package:url_strategy/url_strategy.dart';
 
 void main() async {
   // 기본 앱세팅
@@ -16,6 +17,9 @@ void main() async {
 /// 플러터 환경설정 세팅
 Future<void> platformSetup() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  // Web : # 해시태그 제거
+  setPathUrlStrategy();
 
   // android : status bar 색상 및 아이콘 적용
   //
