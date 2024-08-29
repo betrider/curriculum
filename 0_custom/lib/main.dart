@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_custom_widget/pages/carousel.dart';
 import 'package:flutter_custom_widget/pages/chat_list.dart';
 import 'package:flutter_custom_widget/pages/custom_dropdown.dart';
+import 'package:flutter_custom_widget/pages/web_email_login.dart';
 import 'package:flutter_custom_widget/pages/item_list.dart';
 import 'package:flutter_custom_widget/pages/profile.dart';
+import 'package:flutter_custom_widget/pages/social_login.dart';
 import 'package:flutter_custom_widget/pages/tooltip.dart';
 
 void main() {
@@ -22,6 +24,25 @@ class MyApp extends StatelessWidget {
         fontFamily: 'NotoSansKR',
         appBarTheme: const AppBarTheme(elevation: 1),
         scaffoldBackgroundColor: Colors.white,
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(5),
+            ),
+          ),
+        ),
+        outlinedButtonTheme: OutlinedButtonThemeData(
+          style: OutlinedButton.styleFrom(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(5),
+            ),
+          ),
+        ),
+        inputDecorationTheme: InputDecorationTheme(
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(5),
+          ),
+        ),
       ),
       home: const HomePage(),
     );
@@ -45,6 +66,8 @@ class HomePage extends StatelessWidget {
         CardWidget(child: ProfilePage()),
         CardWidget(child: ChatListPage()),
         CardWidget(child: ItemListPage()),
+        CardWidget(child: WebEmailLoginPage()),
+        CardWidget(child: SocialLoginPage()),
       ],
     );
   }
