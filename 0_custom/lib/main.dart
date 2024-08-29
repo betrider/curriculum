@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_custom_widget/pages/carousel.dart';
 import 'package:flutter_custom_widget/pages/chat_list.dart';
 import 'package:flutter_custom_widget/pages/custom_dropdown.dart';
+import 'package:flutter_custom_widget/pages/double_floating.dart';
 import 'package:flutter_custom_widget/pages/web_email_login.dart';
 import 'package:flutter_custom_widget/pages/item_list.dart';
 import 'package:flutter_custom_widget/pages/profile.dart';
@@ -68,6 +69,7 @@ class HomePage extends StatelessWidget {
         CardWidget(child: ItemListPage()),
         CardWidget(child: WebEmailLoginPage()),
         CardWidget(child: SocialLoginPage()),
+        CardWidget(child: DoubleFloatingPage()),
       ],
     );
   }
