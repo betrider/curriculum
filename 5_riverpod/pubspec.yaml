@@ -53,6 +53,7 @@ dev_dependencies:
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
   # dart run custom_lint
+  # dart pub global activate custom_lint
   riverpod_lint: ^2.0.4
   mockito: ^5.4.2
   build_runner: ^2.4.6

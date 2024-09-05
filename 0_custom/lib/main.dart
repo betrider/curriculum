@@ -4,6 +4,7 @@ import 'package:flutter_custom_widget/pages/chat_list.dart';
 import 'package:flutter_custom_widget/pages/custom_dropdown.dart';
 import 'package:flutter_custom_widget/pages/double_floating.dart';
 import 'package:flutter_custom_widget/pages/global_overlay.dart';
+import 'package:flutter_custom_widget/pages/image.dart';
 import 'package:flutter_custom_widget/pages/toast.dart';
 import 'package:flutter_custom_widget/pages/web_email_login.dart';
 import 'package:flutter_custom_widget/pages/item_list.dart';
@@ -76,6 +77,7 @@ class HomePage extends StatelessWidget {
         CardWidget(child: WebVisibilityChangeViewPage()),
         CardWidget(child: ToastPage()),
         CardWidget(child: GlobalOverlayPage()),
+        CardWidget(child: ImagePage()),
       ],
     );
   }
