@@ -3,11 +3,14 @@ import 'package:flutter_custom_widget/pages/carousel.dart';
 import 'package:flutter_custom_widget/pages/chat_list.dart';
 import 'package:flutter_custom_widget/pages/custom_dropdown.dart';
 import 'package:flutter_custom_widget/pages/double_floating.dart';
+import 'package:flutter_custom_widget/pages/global_overlay.dart';
+import 'package:flutter_custom_widget/pages/toast.dart';
 import 'package:flutter_custom_widget/pages/web_email_login.dart';
 import 'package:flutter_custom_widget/pages/item_list.dart';
 import 'package:flutter_custom_widget/pages/profile.dart';
 import 'package:flutter_custom_widget/pages/social_login.dart';
 import 'package:flutter_custom_widget/pages/tooltip.dart';
+import 'package:flutter_custom_widget/pages/web_visibility_change_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -70,6 +73,9 @@ class HomePage extends StatelessWidget {
         CardWidget(child: WebEmailLoginPage()),
         CardWidget(child: SocialLoginPage()),
         CardWidget(child: DoubleFloatingPage()),
+        CardWidget(child: WebVisibilityChangeViewPage()),
+        CardWidget(child: ToastPage()),
+        CardWidget(child: GlobalOverlayPage()),
       ],
     );
   }
@@ -86,17 +92,20 @@ class CardWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      child: InkWell(
-        onTap: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => child,
-            ),
-          );
-        },
-        child: Center(
-          child: Text(child.toString()),
+      child: Padding(
+        padding: const EdgeInsets.all(16),
+        child: InkWell(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => child,
+              ),
+            );
+          },
+          child: Center(
+            child: Text(child.toString()),
+          ),
         ),
       ),
     );

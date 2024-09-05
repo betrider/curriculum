@@ -12,35 +12,47 @@ class CustomDropDownPage extends StatelessWidget {
         title: const Text('CustomDropDownPage'),
       ),
       body: Center(
-        child: CustomDropDown(
-          items: const {
-            1: '공간1',
-            2: '공간2',
-            3: '공간3',
-          },
-          initialKey: 2,
-          onChanged: (key, value) {
-            log('key : $key, value : $value');
-          },
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            CustomDropDown(
+              items: const {
+                1: '공간1',
+                2: '공간2',
+                3: '공간3',
+              },
+              initialKey: 2,
+              onChanged: (key, value) {
+                log('key : $key, value : $value');
+              },
+            ),
+            const SizedBox(width: 16),
+            CustomDropDown(
+              items: const {},
+              onChanged: (key, value) {
+                log('key : $key, value : $value');
+              },
+            ),
+          ],
         ),
       ),
     );
   }
 }
 
-class CustomDropDown extends StatefulWidget {
+class CustomDropDown<T> extends StatefulWidget {
   /// 아이템 목록
   ///
   /// items : {1: '공간1', 2: '공간2', 3: '공간3'},
   ///
   /// items : ['공간1', '공간2', '공간3'].asMap(),
-  final Map<int, String> items;
+  final Map<T, String> items;
 
   /// 아이템 목록 중 초기 선택된 아이템의 키
-  final int? initialKey;
+  final T? initialKey;
 
   /// 아이템 선택 시 호출되는 콜백 함수
-  final Function(int key, String value) onChanged;
+  final Function(T key, String value) onChanged;
 
   /// 드롭다운 박스의 너비
   final double width;
@@ -58,18 +70,18 @@ class CustomDropDown extends StatefulWidget {
   });
 
   @override
-  State<CustomDropDown> createState() => _CustomDropDownState();
+  State<CustomDropDown<T>> createState() => _CustomDropDownState();
 }
 
-class _CustomDropDownState extends State<CustomDropDown> {
+class _CustomDropDownState<T> extends State<CustomDropDown<T>> {
   LayerLink layerLink = LayerLink();
   late OverlayEntry dropdownBox;
-  late int currentKey;
+  late T? currentKey;
 
   @override
   void initState() {
     super.initState();
-    currentKey = widget.initialKey ?? (widget.items.isEmpty ? 0 : widget.items.keys.first);
+    currentKey = widget.initialKey ?? (widget.items.isEmpty ? null : widget.items.keys.first);
   }
 
   @override
@@ -95,7 +107,7 @@ class _CustomDropDownState extends State<CustomDropDown> {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Text(
-                    widget.items[currentKey].toString(),
+                    currentKey == null ? '' : widget.items[currentKey].toString(),
                     style: const TextStyle(fontSize: 14),
                   ),
                   const Spacer(),
