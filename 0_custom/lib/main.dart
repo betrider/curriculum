@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_custom_widget/pages/carousel.dart';
 import 'package:flutter_custom_widget/pages/chat_list.dart';
+import 'package:flutter_custom_widget/pages/custom_drawer.dart';
 import 'package:flutter_custom_widget/pages/custom_dropdown.dart';
 import 'package:flutter_custom_widget/pages/double_floating.dart';
 import 'package:flutter_custom_widget/pages/global_overlay.dart';
@@ -12,9 +13,15 @@ import 'package:flutter_custom_widget/pages/profile.dart';
 import 'package:flutter_custom_widget/pages/social_login.dart';
 import 'package:flutter_custom_widget/pages/tooltip.dart';
 import 'package:flutter_custom_widget/pages/web_visibility_change_view.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 void main() {
-  runApp(const MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  runApp(
+    const ProviderScope(
+      child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -78,6 +85,7 @@ class HomePage extends StatelessWidget {
         CardWidget(child: ToastPage()),
         CardWidget(child: GlobalOverlayPage()),
         CardWidget(child: ImagePage()),
+        CardWidget(child: CustomDrawerPage()),
       ],
     );
   }
