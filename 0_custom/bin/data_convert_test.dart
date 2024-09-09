@@ -42,7 +42,7 @@ void main() {
   print(stringMap);
 
   // 2.데이터 타입 변환
-  List<Map<String, Object>> result = [
+  List<Map<String, dynamic>> result = [
     {'a': '1', 'b': '2', 'c': '3'},
     {'a': '4', 'b': '5', 'c': '6'},
     {'a': '7', 'b': '8', 'c': '9'},

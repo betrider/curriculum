@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:equatable/equatable.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-final sampleAsyncNotifierProvier3 = AsyncNotifierProvider.autoDispose<SampleAsyncNotifier3, SampleAsyncState3>(SampleAsyncNotifier3.new);
+final asyncNotifierProvider3 = AsyncNotifierProvider.autoDispose<SampleAsyncNotifier3, SampleAsyncState3>(SampleAsyncNotifier3.new);
 
 class SampleAsyncNotifier3 extends AsyncNotifier<SampleAsyncState3> {
   @override

@@ -20,6 +20,13 @@ void main() async {
       overrides: [
         sharedPreferencesProvider.overrideWithValue(prefs), // sharedPreferencesProvider에 값 주입
         packageInfoProvider.overrideWithValue(packageInfo), // packageInfoProvider 값 주입
+        authInfoProvider.overrideWith(
+          (ref) {
+            var info = AuthInfo();
+            info.token = 'a123456';
+            return AuthInfo(); // authInfoProvider 값 주입
+          },
+        )
       ],
       child: const MyApp(),
     ),
@@ -81,4 +88,13 @@ class MyHomePage extends ConsumerWidget {
       ),
     );
   }
+}
+
+final authInfoProvider = Provider<AuthInfo>((ref) {
+  return AuthInfo();
+});
+
+class AuthInfo {
+  String? token;
+  String? refreshToken;
 }

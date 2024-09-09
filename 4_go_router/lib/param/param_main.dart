@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -10,6 +12,7 @@ void main() => runApp(MaterialApp.router(routerConfig: router));
 /// push - 현재 페이지 위에 새로운 페이지를 올리는 방식
 final router = GoRouter(
   initialLocation: '/',
+  refreshListenable: GoRouterRefreshStream(StreamController().stream),
   routes: [
     GoRoute(
       path: '/',
@@ -334,5 +337,22 @@ class DetailScreen extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class GoRouterRefreshStream extends ChangeNotifier {
+  GoRouterRefreshStream(Stream<dynamic> stream) {
+    notifyListeners();
+    _subscription = stream.asBroadcastStream().listen(
+          (dynamic _) => notifyListeners(),
+        );
+  }
+
+  late final StreamSubscription<dynamic> _subscription;
+
+  @override
+  void dispose() {
+    _subscription.cancel();
+    super.dispose();
   }
 }

@@ -41,7 +41,7 @@ extension MapSC<K, V> on Map<K, V> {
     return jsonEncode(this, toEncodable: toEncodable);
   }
 
-  void add(K key, V value){
+  void add(K key, V value) {
     this[key] = value;
   }
 
@@ -69,5 +69,19 @@ extension MapSC<K, V> on Map<K, V> {
       if (element.value.toString() == value) key = element.key.toString();
     }
     return key;
+  }
+
+  /// 맵 더하기
+  Map<K, V> operator +(Map<K, V> other) {
+    return {...this}..addAll(other);
+  }
+
+  // 맵 빼기
+  Map<K, V> operator -(Map<K, V> other) {
+    Map<K, V> result = {...this};
+    other.forEach((key, value) {
+      result.remove(key);
+    });
+    return result;
   }
 }
