@@ -6,7 +6,9 @@ import 'package:flutter_custom_widget/pages/custom_dropdown.dart';
 import 'package:flutter_custom_widget/pages/double_floating.dart';
 import 'package:flutter_custom_widget/pages/global_overlay.dart';
 import 'package:flutter_custom_widget/pages/image.dart';
+import 'package:flutter_custom_widget/pages/qr.dart';
 import 'package:flutter_custom_widget/pages/scroll_animation.dart';
+import 'package:flutter_custom_widget/pages/social_button.dart';
 import 'package:flutter_custom_widget/pages/toast.dart';
 import 'package:flutter_custom_widget/pages/vertical_page_view.dart';
 import 'package:flutter_custom_widget/pages/web_email_login.dart';
@@ -16,9 +18,14 @@ import 'package:flutter_custom_widget/pages/social_login.dart';
 import 'package:flutter_custom_widget/pages/tooltip.dart';
 import 'package:flutter_custom_widget/pages/web_visibility_change_view.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_web_plugins/url_strategy.dart';
 
 void main() {
+  // 위젯 바인딩 초기화
   WidgetsFlutterBinding.ensureInitialized();
+  // url # 제거
+  usePathUrlStrategy();
+  // 앱 실행
   runApp(
     const ProviderScope(
       child: MyApp(),
@@ -90,6 +97,8 @@ class HomePage extends StatelessWidget {
         CardWidget(child: CustomDrawerPage()),
         CardWidget(child: ScrollAnimationPage()),
         CardWidget(child: VerticalPageViewPage()),
+        CardWidget(child: QRPage()),
+        CardWidget(child: SocialButtonPage()),
       ],
     );
   }
