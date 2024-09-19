@@ -8,6 +8,7 @@ import 'package:flutter_custom_widget/pages/global_overlay.dart';
 import 'package:flutter_custom_widget/pages/image.dart';
 import 'package:flutter_custom_widget/pages/scroll_animation.dart';
 import 'package:flutter_custom_widget/pages/toast.dart';
+import 'package:flutter_custom_widget/pages/vertical_page_view.dart';
 import 'package:flutter_custom_widget/pages/web_email_login.dart';
 import 'package:flutter_custom_widget/pages/item_list.dart';
 import 'package:flutter_custom_widget/pages/profile.dart';
@@ -88,6 +89,7 @@ class HomePage extends StatelessWidget {
         CardWidget(child: ImagePage()),
         CardWidget(child: CustomDrawerPage()),
         CardWidget(child: ScrollAnimationPage()),
+        CardWidget(child: VerticalPageViewPage()),
       ],
     );
   }
