@@ -87,6 +87,36 @@ class SocialButtonPage extends StatelessWidget {
                 ),
               ),
             ),
+            const SizedBox(width: 32),
+            Container(
+              width: 200,
+              height: 70,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(50),
+                color: Colors.white,
+              ),
+              child: const Center(
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Text(
+                      '앱 다운로드',
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w500,
+                        color: Colors.green,
+                      ),
+                    ),
+                    SizedBox(width: 2),
+                    Icon(
+                      Icons.file_download_outlined,
+                      size: 24,
+                      color: Colors.green,
+                    ),
+                  ],
+                ),
+              ),
+            )
           ],
         ),
       ),
@@ -99,6 +129,7 @@ SvgPicture appleLogo = SvgPicture.asset(
   width: 30,
   height: 30,
 );
+
 SvgPicture playstoreLogo = SvgPicture.asset(
   "assets/logo/playstore.svg",
   width: 30,
