@@ -256,3 +256,40 @@ class Page4 extends StatelessWidget {
     );
   }
 }
+
+extension ResponsiveContext on BuildContext {
+  /// 현재 브레이크포인트가 모바일인지 확인
+  bool get isMobile {
+    return ResponsiveBreakpoints.of(this).isMobile;
+  }
+
+  /// 현재 브레이크포인트가 데스크탑인지 확인
+  bool get isDesktop {
+    return ResponsiveBreakpoints.of(this).isDesktop;
+  }
+
+  /// 현재 브레이크포인트가 모바일보다 큰지 확인
+  bool get isLargerThanMobile {
+    return ResponsiveBreakpoints.of(this).largerThan(MOBILE);
+  }
+
+  /// 현재 브레이크포인트가 데스크탑보다 큰지 확인
+  bool get isLargerThanDesktop {
+    return ResponsiveBreakpoints.of(this).smallerThan(DESKTOP);
+  }
+
+  /// break point 이름
+  String get deviceName {
+    return ResponsiveBreakpoints.of(this).breakpoint.name.toString();
+  }
+
+  /// break point 너비
+  String get deviceWidth {
+    return ResponsiveBreakpoints.of(this).screenWidth.toString();
+  }
+
+  /// break point 높이
+  String get deviceHeight {
+    return ResponsiveBreakpoints.of(this).screenHeight.toString();
+  }
+}
