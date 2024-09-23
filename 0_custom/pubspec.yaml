@@ -49,6 +49,7 @@ dependencies:
   pretty_qr_code: ^3.3.0
   flutter_svg: ^2.0.10+1
   responsive_framework: ^1.5.1
+  video_player: ^2.9.1
 
 dev_dependencies:
   flutter_test:
