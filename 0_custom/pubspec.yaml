@@ -50,6 +50,10 @@ dependencies:
   flutter_svg: ^2.0.10+1
   responsive_framework: ^1.5.1
   video_player: ^2.9.1
+  excel: ^4.0.6
+  json_pretty: ^1.0.4
+  easy_logger: ^0.0.2
+  easy_localization: ^3.0.7
 
 dev_dependencies:
   flutter_test:

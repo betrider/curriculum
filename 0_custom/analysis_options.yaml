@@ -1,6 +1,10 @@
 analyzer:
   errors:
     avoid_print: ignore
+  exclude: [
+    lib/**.g.dart,
+    test/**.mocks.dart,
+  ]
 
 include: package:flutter_lints/flutter.yaml
 
