@@ -17,6 +17,8 @@ class TossScrollPageState extends State<TossScrollPage> with AfterLayoutMixin<To
 
   late double scrollSize = MediaQuery.of(context).size.height;
 
+  bool isLayoutBuild = false;
+
   @override
   void afterFirstLayout(BuildContext context) {
     setState(() {
@@ -26,6 +28,15 @@ class TossScrollPageState extends State<TossScrollPage> with AfterLayoutMixin<To
 
       // 스크롤 최대길이에 추가로 첫번째 페이지 사이즈 계산
       scrollSize += MediaQuery.of(context).size.height + 500 + 500;
+      isLayoutBuild = true;
+    });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    mainController.addListener(() {
+      setState(() {});
     });
   }
 
@@ -40,19 +51,21 @@ class TossScrollPageState extends State<TossScrollPage> with AfterLayoutMixin<To
 
   @override
   Widget build(BuildContext context) {
+    if (isLayoutBuild) {
+      print(mainController.offset);
+    }
     return Scaffold(
       body: Listener(
         onPointerSignal: (pointerSignal) {
           if (pointerSignal is PointerScrollEvent) {
             double pageSize = MediaQuery.of(context).size.height;
 
-            bool isScrollUp = pointerSignal.scrollDelta.dy < 0;
-            bool isScrollDown = pointerSignal.scrollDelta.dy > 0;
-
             bool isPage1 = pageController.offset >= 0 && pageController.offset < pageSize * 1;
             bool isPage2 = pageController.offset >= pageSize * 1 && pageController.offset < pageSize * 2;
             bool isPage3 = pageController.offset >= pageSize * 2 && pageController.offset < pageSize * 3;
             bool isPage4 = pageController.offset >= pageSize * 3 && pageController.offset < pageSize * 4;
+            bool isScrollUp = pointerSignal.scrollDelta.dy < 0;
+            bool isScrollDown = pointerSignal.scrollDelta.dy > 0;
 
             if (isPage1) {
               if (isScrollDown) {
@@ -119,7 +132,6 @@ class TossScrollPageState extends State<TossScrollPage> with AfterLayoutMixin<To
         },
         child: Stack(
           children: [
-            // 실제 화면 내용
             ScrollConfiguration(
               behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
               child: SingleChildScrollView(
@@ -142,19 +154,49 @@ class TossScrollPageState extends State<TossScrollPage> with AfterLayoutMixin<To
                       width: double.infinity,
                       height: MediaQuery.of(context).size.height,
                       color: Colors.blue[100],
-                      child: ListView.builder(
-                        scrollDirection: Axis.horizontal,
-                        controller: scrollController,
-                        physics: const NeverScrollableScrollPhysics(),
-                        itemCount: 10,
-                        itemBuilder: (context, index) {
-                          return Container(
-                            width: 500,
-                            margin: const EdgeInsets.all(8.0),
-                            color: Colors.blue[300],
-                            child: Center(child: Text('Item $index')),
-                          );
-                        },
+                      child: Center(
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            const Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Text(
+                                  '제목입니다.',
+                                  style: TextStyle(fontSize: 100),
+                                ),
+                                SizedBox(
+                                  height: 32,
+                                ),
+                                Text(
+                                  '내용입니다.1\n내용입니다.2\n내용입니다.3',
+                                  style: TextStyle(fontSize: 30),
+                                ),
+                              ],
+                            ),
+                            const SizedBox(
+                              width: 32,
+                            ),
+                            SizedBox(
+                              height: 500,
+                              width: 750,
+                              child: ListView.builder(
+                                scrollDirection: Axis.horizontal,
+                                controller: scrollController,
+                                physics: const NeverScrollableScrollPhysics(),
+                                itemCount: 10,
+                                itemBuilder: (context, index) {
+                                  return Container(
+                                    width: 500,
+                                    margin: const EdgeInsets.all(8.0),
+                                    color: Colors.blue[300],
+                                    child: Center(child: Text('Item $index')),
+                                  );
+                                },
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                     // Page 3
@@ -163,19 +205,47 @@ class TossScrollPageState extends State<TossScrollPage> with AfterLayoutMixin<To
                         height: MediaQuery.of(context).size.height,
                         color: Colors.red[100],
                         child: Center(
-                          child: ListView.builder(
-                            controller: scrollController2,
-                            physics: const NeverScrollableScrollPhysics(),
-                            itemCount: 10,
-                            itemBuilder: (context, index) {
-                              return Container(
-                                width: 500,
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              const Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  Text(
+                                    '제목입니다.',
+                                    style: TextStyle(fontSize: 100),
+                                  ),
+                                  SizedBox(
+                                    height: 32,
+                                  ),
+                                  Text(
+                                    '내용입니다.1\n내용입니다.2\n내용입니다.3',
+                                    style: TextStyle(fontSize: 30),
+                                  ),
+                                ],
+                              ),
+                              const SizedBox(
+                                width: 32,
+                              ),
+                              SizedBox(
                                 height: 500,
-                                margin: const EdgeInsets.all(8.0),
-                                color: Colors.blue[300],
-                                child: Center(child: Text('Item $index')),
-                              );
-                            },
+                                width: 750,
+                                child: ListView.builder(
+                                  controller: scrollController2,
+                                  physics: const NeverScrollableScrollPhysics(),
+                                  itemCount: 10,
+                                  itemBuilder: (context, index) {
+                                    return Container(
+                                      width: 500,
+                                      height: 500,
+                                      margin: const EdgeInsets.all(8.0),
+                                      color: Colors.blue[300],
+                                      child: Center(child: Text('Item $index')),
+                                    );
+                                  },
+                                ),
+                              ),
+                            ],
                           ),
                         )),
                     // Page 4
@@ -200,7 +270,6 @@ class TossScrollPageState extends State<TossScrollPage> with AfterLayoutMixin<To
                 ),
               ),
             ),
-            // 스크롤바 표시용
             Scrollbar(
               controller: mainController,
               thumbVisibility: true,
