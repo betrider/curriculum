@@ -14,7 +14,8 @@ import 'package:flutter_custom_widget/pages/social_button.dart';
 import 'package:flutter_custom_widget/pages/social_login.dart';
 import 'package:flutter_custom_widget/pages/toast.dart';
 import 'package:flutter_custom_widget/pages/tooltip.dart';
-import 'package:flutter_custom_widget/pages/toss_scroll.dart';
+import 'package:flutter_custom_widget/pages/toss_scroll_index.dart';
+import 'package:flutter_custom_widget/pages/toss_scroll_offset.dart';
 import 'package:flutter_custom_widget/pages/vertical_page_view.dart';
 import 'package:flutter_custom_widget/pages/video_player.dart';
 import 'package:flutter_custom_widget/pages/web_email_login.dart';
@@ -102,7 +103,8 @@ class HomePage extends StatelessWidget {
         CardWidget(child: QRPage()),
         CardWidget(child: SocialButtonPage()),
         CardWidget(child: VideoPlayerPage()),
-        CardWidget(child: TossScrollPage()),
+        CardWidget(child: TossScrollOffsetPage()),
+        CardWidget(child: TossScrollIndexPage()),
       ],
     );
   }

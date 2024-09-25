@@ -2,16 +2,14 @@ import 'package:after_layout/after_layout.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
-
-class TossScrollPage extends StatefulWidget {
-  const TossScrollPage({super.key});
+class TossScrollOffsetPage extends StatefulWidget {
+  const TossScrollOffsetPage({super.key});
 
   @override
-  TossScrollPageState createState() => TossScrollPageState();
+  TossScrollOffsetPageState createState() => TossScrollOffsetPageState();
 }
 
-class TossScrollPageState extends State<TossScrollPage>
-    with AfterLayoutMixin<TossScrollPage> {
+class TossScrollOffsetPageState extends State<TossScrollOffsetPage> with AfterLayoutMixin<TossScrollOffsetPage> {
   ScrollController mainController = ScrollController();
   ScrollController pageController = ScrollController();
   ScrollController scrollController = ScrollController();
@@ -64,14 +62,10 @@ class TossScrollPageState extends State<TossScrollPage>
           if (pointerSignal is PointerScrollEvent) {
             double pageSize = MediaQuery.of(context).size.height;
 
-            bool isPage1 = pageController.offset >= 0 &&
-                pageController.offset < pageSize * 1;
-            bool isPage2 = pageController.offset >= pageSize * 1 &&
-                pageController.offset < pageSize * 2;
-            bool isPage3 = pageController.offset >= pageSize * 2 &&
-                pageController.offset < pageSize * 3;
-            bool isPage4 = pageController.offset >= pageSize * 3 &&
-                pageController.offset < pageSize * 4;
+            bool isPage1 = pageController.offset >= 0 && pageController.offset < pageSize * 1;
+            bool isPage2 = pageController.offset >= pageSize * 1 && pageController.offset < pageSize * 2;
+            bool isPage3 = pageController.offset >= pageSize * 2 && pageController.offset < pageSize * 3;
+            bool isPage4 = pageController.offset >= pageSize * 3 && pageController.offset < pageSize * 4;
             bool isScrollUp = pointerSignal.scrollDelta.dy < 0;
             bool isScrollDown = pointerSignal.scrollDelta.dy > 0;
 
@@ -83,18 +77,13 @@ class TossScrollPageState extends State<TossScrollPage>
               }
             } else if (isPage2) {
               // 스크롤 내릴 때 가로 스크롤이 맨 오른쪽이 아닌 경우
-              if (isScrollDown &&
-                  scrollController.offset <
-                      scrollController.position.maxScrollExtent) {
+              if (isScrollDown && scrollController.offset < scrollController.position.maxScrollExtent) {
                 scrollHorizontally(scrollController, pointerSignal);
                 return;
               }
 
               // 스크롤 올릴 때 가로 스크롤이 맨 왼쪽이 아닌 경우
-              if (isScrollUp &&
-                  scrollController.offset >
-                      scrollController.position.minScrollExtent &&
-                  pageController.offset == pageSize) {
+              if (isScrollUp && scrollController.offset > scrollController.position.minScrollExtent && pageController.offset == pageSize) {
                 scrollHorizontally(scrollController, pointerSignal);
                 return;
               }
@@ -102,8 +91,7 @@ class TossScrollPageState extends State<TossScrollPage>
               if (isScrollDown) {
                 pageScrollVerticallyLimitMax(pointerSignal, pageSize * 2);
               } else {
-                if (scrollController.offset ==
-                    scrollController.position.minScrollExtent) {
+                if (scrollController.offset == scrollController.position.minScrollExtent) {
                   pageScrollVertically(pointerSignal);
                 } else {
                   pageScrollVerticallyLimitMin(pointerSignal, pageSize * 1);
@@ -111,17 +99,14 @@ class TossScrollPageState extends State<TossScrollPage>
               }
             } else if (isPage3) {
               // 스크롤 내릴 때 가로 스크롤이 맨 오른쪽이 아닌 경우
-              if (isScrollDown &&
-                  scrollController2.offset <
-                      scrollController2.position.maxScrollExtent) {
+              if (isScrollDown && scrollController2.offset < scrollController2.position.maxScrollExtent) {
                 scrollHorizontally(scrollController2, pointerSignal);
                 return;
               }
 
               // 스크롤 올릴 때 가로 스크롤이 맨 왼쪽이 아닌 경우
               if (isScrollUp &&
-                  scrollController2.offset >
-                      scrollController2.position.minScrollExtent &&
+                  scrollController2.offset > scrollController2.position.minScrollExtent &&
                   pageController.offset == pageSize * 2) {
                 scrollHorizontally(scrollController2, pointerSignal);
                 return;
@@ -130,8 +115,7 @@ class TossScrollPageState extends State<TossScrollPage>
               if (isScrollDown) {
                 pageScrollVerticallyLimitMax(pointerSignal, pageSize * 3);
               } else {
-                if (scrollController2.offset ==
-                    scrollController2.position.minScrollExtent) {
+                if (scrollController2.offset == scrollController2.position.minScrollExtent) {
                   pageScrollVertically(pointerSignal);
                 } else {
                   pageScrollVerticallyLimitMin(pointerSignal, pageSize * 2);
@@ -139,17 +123,14 @@ class TossScrollPageState extends State<TossScrollPage>
               }
             } else if (isPage4) {
               // 스크롤 내릴 때 가로 스크롤이 맨 오른쪽이 아닌 경우
-              if (isScrollDown &&
-                  scrollController3.offset <
-                      scrollController3.position.maxScrollExtent) {
+              if (isScrollDown && scrollController3.offset < scrollController3.position.maxScrollExtent) {
                 scrollHorizontally(scrollController3, pointerSignal);
                 return;
               }
 
               // 스크롤 올릴 때 가로 스크롤이 맨 왼쪽이 아닌 경우
               if (isScrollUp &&
-                  scrollController3.offset >
-                      scrollController3.position.minScrollExtent &&
+                  scrollController3.offset > scrollController3.position.minScrollExtent &&
                   pageController.offset == pageSize * 3) {
                 scrollHorizontally(scrollController3, pointerSignal);
                 return;
@@ -158,8 +139,7 @@ class TossScrollPageState extends State<TossScrollPage>
               if (isScrollDown) {
                 pageScrollVerticallyLimitMax(pointerSignal, pageSize * 4);
               } else {
-                if (scrollController3.offset ==
-                    scrollController3.position.minScrollExtent) {
+                if (scrollController3.offset == scrollController3.position.minScrollExtent) {
                   pageScrollVertically(pointerSignal);
                 } else {
                   pageScrollVerticallyLimitMin(pointerSignal, pageSize * 3);
@@ -173,8 +153,7 @@ class TossScrollPageState extends State<TossScrollPage>
         child: Stack(
           children: [
             ScrollConfiguration(
-              behavior:
-                  ScrollConfiguration.of(context).copyWith(scrollbars: false),
+              behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
               child: SingleChildScrollView(
                 controller: pageController,
                 scrollDirection: Axis.vertical,
@@ -385,8 +364,7 @@ class TossScrollPageState extends State<TossScrollPage>
   }
 
   /// 페이지 스크롤 상단을 제한합니다.
-  void pageScrollVerticallyLimitMin(
-      PointerScrollEvent pointerSignal, double minOffset) {
+  void pageScrollVerticallyLimitMin(PointerScrollEvent pointerSignal, double minOffset) {
     double offset = pageController.offset + pointerSignal.scrollDelta.dy;
     if (offset < minOffset) {
       offset = minOffset;
@@ -395,8 +373,7 @@ class TossScrollPageState extends State<TossScrollPage>
   }
 
   /// 페이지 스크롤 하단을 제한합니다.
-  void pageScrollVerticallyLimitMax(
-      PointerScrollEvent pointerSignal, double maxOffset) {
+  void pageScrollVerticallyLimitMax(PointerScrollEvent pointerSignal, double maxOffset) {
     double offset = pageController.offset + pointerSignal.scrollDelta.dy;
     if (offset > maxOffset) {
       offset = maxOffset;
@@ -405,8 +382,7 @@ class TossScrollPageState extends State<TossScrollPage>
   }
 
   /// 가로 스크롤을 움직입니다.
-  void scrollHorizontally(
-      ScrollController scrollController, PointerScrollEvent pointerSignal) {
+  void scrollHorizontally(ScrollController scrollController, PointerScrollEvent pointerSignal) {
     double offset = scrollController.offset + pointerSignal.scrollDelta.dy;
     if (offset < 0) {
       offset = 0;
