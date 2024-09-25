@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_custom_widget/pages/box_shadow.dart';
+import 'package:flutter_custom_widget/pages/card_swiper.dart';
 import 'package:flutter_custom_widget/pages/carousel.dart';
 import 'package:flutter_custom_widget/pages/chat_list.dart';
 import 'package:flutter_custom_widget/pages/custom_drawer.dart';
@@ -105,6 +107,8 @@ class HomePage extends StatelessWidget {
         CardWidget(child: VideoPlayerPage()),
         CardWidget(child: TossScrollOffsetPage()),
         CardWidget(child: TossScrollIndexPage()),
+        CardWidget(child: BoxShadowPage()),
+        CardWidget(child: CardSwiperPage()),
       ],
     );
   }
