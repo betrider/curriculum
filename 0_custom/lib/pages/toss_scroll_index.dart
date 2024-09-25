@@ -21,9 +21,9 @@ class _TossScrollIndexPageState extends State<TossScrollIndexPage> {
 
   // index : 0
   int page0Size = 1;
-  // index : 0 ~ 7
+  // index : 0 ~ 25
   int page1Size = 26;
-  // index : 0 ~ 14
+  // index : 0 ~ 25
   int page2Size = 26;
   // index : 0 ~ 25
   int page3Size = 26;
@@ -351,7 +351,11 @@ class _TossScrollIndexPageState extends State<TossScrollIndexPage> {
             ),
             Scrollbar(
               controller: scrollbarController,
+              // 막대 직접제어 x
+              interactive: false,
+              // 막대 표시
               thumbVisibility: true,
+              // 트랙 영역 표시
               trackVisibility: true,
               child: SingleChildScrollView(
                 controller: scrollbarController,
