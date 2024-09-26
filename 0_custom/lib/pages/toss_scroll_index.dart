@@ -203,20 +203,32 @@ class _TossScrollIndexPageState extends State<TossScrollIndexPage> {
                           ),
                           const SizedBox(width: 100),
                           SizedBox(
-                            width: 750,
-                            child: ListView.builder(
-                              controller: page1Controller,
-                              physics: const ClampingScrollPhysics(),
-                              itemCount: 5,
-                              itemBuilder: (context, index) {
-                                return Container(
-                                  width: 500,
-                                  height: 500,
-                                  margin: const EdgeInsets.all(8.0),
-                                  color: Colors.blue[300],
-                                  child: Center(child: Text('Item $index')),
-                                );
-                              },
+                            width: 500,
+                            child: ScrollConfiguration(
+                              behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
+                              child: ListView.separated(
+                                controller: page1Controller,
+                                physics: const ClampingScrollPhysics(),
+                                itemCount: 5,
+                                itemBuilder: (context, index) {
+                                  return Card(
+                                    elevation: 4,
+                                    margin: EdgeInsets.zero,
+                                    child: Container(
+                                      width: 500,
+                                      height: 500,
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(10),
+                                        color: Colors.blue[300],
+                                      ),
+                                      child: Center(child: Text('Item $index')),
+                                    ),
+                                  );
+                                },
+                                separatorBuilder: (context, index) {
+                                  return const SizedBox(height: 16);
+                                },
+                              ),
                             ),
                           ),
                         ],
@@ -260,20 +272,32 @@ class _TossScrollIndexPageState extends State<TossScrollIndexPage> {
                           SizedBox(
                             width: 750,
                             height: 500,
-                            child: ListView.builder(
-                              scrollDirection: Axis.horizontal,
-                              controller: page2Controller,
-                              physics: const ClampingScrollPhysics(),
-                              itemCount: 5,
-                              itemBuilder: (context, index) {
-                                return Container(
-                                  width: 500,
-                                  height: 500,
-                                  margin: const EdgeInsets.all(8.0),
-                                  color: Colors.blue[300],
-                                  child: Center(child: Text('Item $index')),
-                                );
-                              },
+                            child: ScrollConfiguration(
+                              behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
+                              child: ListView.separated(
+                                scrollDirection: Axis.horizontal,
+                                controller: page2Controller,
+                                physics: const ClampingScrollPhysics(),
+                                itemCount: 5,
+                                itemBuilder: (context, index) {
+                                  return Card(
+                                    elevation: 4,
+                                    margin: EdgeInsets.zero,
+                                    child: Container(
+                                      width: 500,
+                                      height: 500,
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(10),
+                                        color: Colors.green[300],
+                                      ),
+                                      child: Center(child: Text('Item $index')),
+                                    ),
+                                  );
+                                },
+                                separatorBuilder: (context, index) {
+                                  return const SizedBox(width: 16);
+                                },
+                              ),
                             ),
                           ),
                         ],
@@ -315,20 +339,38 @@ class _TossScrollIndexPageState extends State<TossScrollIndexPage> {
                           ),
                           const SizedBox(width: 100),
                           SizedBox(
-                            width: 750,
-                            child: ListView.builder(
-                              controller: page3Controller,
-                              physics: const ClampingScrollPhysics(),
-                              itemCount: 5,
-                              itemBuilder: (context, index) {
-                                return Container(
-                                  width: 500,
-                                  height: 500,
-                                  margin: const EdgeInsets.all(8.0),
-                                  color: Colors.blue[300],
-                                  child: Center(child: Text('Item $index')),
-                                );
-                              },
+                            width: 500,
+                            child: ScrollConfiguration(
+                              behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
+                              child: ListView.separated(
+                                controller: page3Controller,
+                                physics: const ClampingScrollPhysics(),
+                                itemCount: 5,
+                                itemBuilder: (context, index) {
+                                  return Card(
+                                    elevation: 4,
+                                    margin: EdgeInsets.zero,
+                                    child: Container(
+                                      width: 500,
+                                      height: 500,
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(10),
+                                        color: Colors.brown[300],
+                                      ),
+                                      child: ClipRRect(
+                                        borderRadius: BorderRadius.circular(10),
+                                        child: Image.network(
+                                          'https://images.ctfassets.net/23aumh6u8s0i/4TsG2mTRrLFhlQ9G1m19sC/4c9f98d56165a0bdd71cbe7b9c2e2484/flutter',
+                                          fit: BoxFit.fill,
+                                        ),
+                                      ),
+                                    ),
+                                  );
+                                },
+                                separatorBuilder: (context, index) {
+                                  return const SizedBox(height: 16);
+                                },
+                              ),
                             ),
                           ),
                         ],

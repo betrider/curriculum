@@ -153,6 +153,7 @@ class TossScrollOffsetPageState extends State<TossScrollOffsetPage> with AfterLa
         child: Stack(
           children: [
             ScrollConfiguration(
+              // 스크롤바 제거
               behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
               child: SingleChildScrollView(
                 controller: pageController,
