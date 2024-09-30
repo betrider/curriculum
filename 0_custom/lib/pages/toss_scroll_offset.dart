@@ -3,6 +3,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 class TossScrollOffsetPage extends StatefulWidget {
+  static const routeName = 'toss-scroll-offset';
   const TossScrollOffsetPage({super.key});
 
   @override

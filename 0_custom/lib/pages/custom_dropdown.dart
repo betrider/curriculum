@@ -3,6 +3,8 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 
 class CustomDropDownPage extends StatelessWidget {
+  static const routeName = 'custom-drop-down';
+
   const CustomDropDownPage({super.key});
 
   @override

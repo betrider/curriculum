@@ -2,6 +2,7 @@ import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
 
 class CarouselPage extends StatelessWidget {
+  static const routeName = 'carousel';
   const CarouselPage({super.key});
 
   @override

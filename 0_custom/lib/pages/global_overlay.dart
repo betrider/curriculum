@@ -3,6 +3,7 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:loader_overlay/loader_overlay.dart';
 
 class GlobalOverlayPage extends StatelessWidget {
+  static const routeName = 'global-overlay';
   const GlobalOverlayPage({super.key});
 
   @override

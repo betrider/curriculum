@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class DoubleFloatingPage extends StatelessWidget {
+  static const routeName = 'double-floating';
   const DoubleFloatingPage({super.key});
 
   @override

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ProfilePage extends StatelessWidget {
+  static const routeName = 'profile';
   const ProfilePage({super.key});
 
   @override

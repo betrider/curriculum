@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_custom_widget/pages/box_shadow.dart';
 import 'package:flutter_custom_widget/pages/card_swiper.dart';
@@ -24,6 +25,8 @@ import 'package:flutter_custom_widget/pages/web_email_login.dart';
 import 'package:flutter_custom_widget/pages/web_visibility_change_view.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_web_plugins/url_strategy.dart';
+
+bool isDesktop = (defaultTargetPlatform == TargetPlatform.windows || defaultTargetPlatform == TargetPlatform.macOS);
 
 void main() {
   // 위젯 바인딩 초기화
@@ -70,45 +73,45 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: const HomePage(),
+      home: const MainPage(),
     );
   }
 }
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class MainPage extends StatelessWidget {
+  const MainPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return GridView.count(
       primary: false,
-      padding: const EdgeInsets.all(20.0),
-      crossAxisSpacing: 10.0,
-      crossAxisCount: 4,
+      padding: const EdgeInsets.all(16),
+      crossAxisSpacing: 8,
+      crossAxisCount: isDesktop ? 4 : 2,
       children: const <Widget>[
-        CardWidget(child: CustomDropDownPage()),
-        CardWidget(child: CarouselPage()),
-        CardWidget(child: TooltipPage()),
-        CardWidget(child: ProfilePage()),
-        CardWidget(child: ChatListPage()),
-        CardWidget(child: ItemListPage()),
-        CardWidget(child: WebEmailLoginPage()),
-        CardWidget(child: SocialLoginPage()),
-        CardWidget(child: DoubleFloatingPage()),
-        CardWidget(child: WebVisibilityChangeViewPage()),
-        CardWidget(child: ToastPage()),
-        CardWidget(child: GlobalOverlayPage()),
-        CardWidget(child: ImagePage()),
-        CardWidget(child: CustomDrawerPage()),
-        CardWidget(child: ScrollAnimationPage()),
-        CardWidget(child: VerticalPageViewPage()),
-        CardWidget(child: QRPage()),
-        CardWidget(child: SocialButtonPage()),
-        CardWidget(child: VideoPlayerPage()),
-        CardWidget(child: TossScrollOffsetPage()),
-        CardWidget(child: TossScrollIndexPage()),
-        CardWidget(child: BoxShadowPage()),
-        CardWidget(child: CardSwiperPage()),
+        CardWidget(title: CustomDropDownPage.routeName, child: CustomDropDownPage()),
+        CardWidget(title: CarouselPage.routeName, child: CarouselPage()),
+        CardWidget(title: TooltipPage.routeName, child: TooltipPage()),
+        CardWidget(title: ProfilePage.routeName, child: ProfilePage()),
+        CardWidget(title: ChatListPage.routeName, child: ChatListPage()),
+        CardWidget(title: ItemListPage.routeName, child: ItemListPage()),
+        CardWidget(title: WebEmailLoginPage.routeName, child: WebEmailLoginPage()),
+        CardWidget(title: SocialLoginPage.routeName, child: SocialLoginPage()),
+        CardWidget(title: DoubleFloatingPage.routeName, child: DoubleFloatingPage()),
+        CardWidget(title: WebVisibilityChangeViewPage.routeName, child: WebVisibilityChangeViewPage()),
+        CardWidget(title: ToastPage.routeName, child: ToastPage()),
+        CardWidget(title: GlobalOverlayPage.routeName, child: GlobalOverlayPage()),
+        CardWidget(title: ImagePage.routeName, child: ImagePage()),
+        CardWidget(title: CustomDrawerPage.routeName, child: CustomDrawerPage()),
+        CardWidget(title: ScrollAnimationPage.routeName, child: ScrollAnimationPage()),
+        CardWidget(title: VerticalPageViewPage.routeName, child: VerticalPageViewPage()),
+        CardWidget(title: QRPage.routeName, child: QRPage()),
+        CardWidget(title: SocialButtonPage.routeName, child: SocialButtonPage()),
+        CardWidget(title: VideoPlayerPage.routeName, child: VideoPlayerPage()),
+        CardWidget(title: TossScrollOffsetPage.routeName, child: TossScrollOffsetPage()),
+        CardWidget(title: TossScrollIndexPage.routeName, child: TossScrollIndexPage()),
+        CardWidget(title: BoxShadowPage.routeName, child: BoxShadowPage()),
+        CardWidget(title: CardSwiperPage.routeName, child: CardSwiperPage()),
       ],
     );
   }
@@ -117,9 +120,11 @@ class HomePage extends StatelessWidget {
 class CardWidget extends StatelessWidget {
   const CardWidget({
     super.key,
+    required this.title,
     required this.child,
   });
 
+  final String title;
   final Widget child;
 
   @override
@@ -127,17 +132,19 @@ class CardWidget extends StatelessWidget {
     return Card(
       child: Padding(
         padding: const EdgeInsets.all(16),
-        child: InkWell(
-          onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => child,
-              ),
-            );
-          },
-          child: Center(
-            child: Text(child.toString()),
+        child: Center(
+          child: InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => child,
+                ),
+              );
+            },
+            child: Center(
+              child: Text(title),
+            ),
           ),
         ),
       ),

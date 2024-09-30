@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CardSwiperPage extends StatefulWidget {
+  static const routeName = 'card-swiper';
   const CardSwiperPage({super.key});
 
   @override

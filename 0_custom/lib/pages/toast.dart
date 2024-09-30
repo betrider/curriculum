@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 class ToastPage extends StatelessWidget {
+  static const routeName = 'toast';
   const ToastPage({super.key});
 
   @override

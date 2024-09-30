@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class CustomDrawerPage extends ConsumerWidget {
+  static const routeName = 'custom-drawer';
   const CustomDrawerPage({super.key});
 
   @override

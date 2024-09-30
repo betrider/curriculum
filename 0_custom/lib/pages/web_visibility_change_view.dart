@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:universal_html/html.dart' as html;
 
 class WebVisibilityChangeViewPage extends StatefulWidget {
+  static const routeName = 'web-visibility-change-view';
   const WebVisibilityChangeViewPage({super.key});
 
   @override

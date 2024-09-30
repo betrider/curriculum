@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pretty_qr_code/pretty_qr_code.dart';
 
 class QRPage extends StatelessWidget {
+  static const routeName = 'qr';
   const QRPage({super.key});
 
   @override

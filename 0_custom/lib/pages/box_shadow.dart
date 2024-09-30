@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class BoxShadowPage extends StatelessWidget {
+  static const routeName = 'box-shadow';
   const BoxShadowPage({super.key});
 
   @override

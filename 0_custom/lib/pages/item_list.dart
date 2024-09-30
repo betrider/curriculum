@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ItemListPage extends StatelessWidget {
+  static const routeName = 'item-list';
   const ItemListPage({super.key});
 
   @override

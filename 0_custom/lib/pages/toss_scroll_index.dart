@@ -2,8 +2,10 @@
 
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_custom_widget/main.dart';
 
 class TossScrollIndexPage extends StatefulWidget {
+  static const routeName = 'toss-scroll-index';
   const TossScrollIndexPage({super.key});
 
   @override
@@ -158,254 +160,283 @@ class _TossScrollIndexPageState extends State<TossScrollIndexPage> {
               physics: const NeverScrollableScrollPhysics(),
               scrollDirection: Axis.vertical,
               children: [
-                KeepAlivePage(
-                  child: Container(
-                    color: Colors.red,
-                    child: Center(
-                      child: Text(
-                        '0.안녕하세요$currentIndex',
-                        style: TextStyle(fontSize: currentIndex.toDouble()),
-                      ),
-                    ),
-                  ),
-                ),
-                KeepAlivePage(
-                  child: Container(
-                    color: Colors.blue,
-                    child: Center(
-                      child: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          SizedBox(
-                            width: 500,
-                            child: Column(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                                Opacity(
-                                  opacity: page1TitleOpacity,
-                                  child: Text(
-                                    '출발은 작은 불편을\n해결하는 것부터111',
-                                    style: TextStyle(
-                                      fontSize: page1TitleSize,
-                                    ),
-                                  ),
-                                ),
-                                const SizedBox(height: 32),
-                                Opacity(
-                                  opacity: page1SubTitleOpacity,
-                                  child: Text(
-                                    '금융생활에 당연한 불편은 없어요. 토스 하나면 언제 어디서든 송금 10초컷 가능. 복잡했던 보험료 돌려받기, 시간에 쫓겨 관공서를 찾아야 했던 증명서 발급도 앉은 자리에서 오케이. 자유로운 금융은 우리의 시간과 공간을 더 여유롭게 해요.',
-                                    style: TextStyle(fontSize: page1SubTitleSize),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          const SizedBox(width: 100),
-                          SizedBox(
-                            width: 500,
-                            child: ScrollConfiguration(
-                              behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
-                              child: ListView.separated(
-                                controller: page1Controller,
-                                physics: const ClampingScrollPhysics(),
-                                itemCount: 5,
-                                itemBuilder: (context, index) {
-                                  return Card(
-                                    elevation: 4,
-                                    margin: EdgeInsets.zero,
-                                    child: Container(
-                                      width: 500,
-                                      height: 500,
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(10),
-                                        color: Colors.blue[300],
-                                      ),
-                                      child: Center(child: Text('Item $index')),
-                                    ),
-                                  );
-                                },
-                                separatorBuilder: (context, index) {
-                                  return const SizedBox(height: 16);
-                                },
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-                KeepAlivePage(
-                  child: Container(
-                    color: Colors.green,
-                    child: Center(
-                      child: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          SizedBox(
-                            width: 500,
-                            child: Column(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                                Opacity(
-                                  opacity: page2TitleOpacity,
-                                  child: Text(
-                                    '출발은 작은 불편을\n해결하는 것부터222',
-                                    style: TextStyle(
-                                      fontSize: page2TitleSize,
-                                    ),
-                                  ),
-                                ),
-                                const SizedBox(height: 32),
-                                Opacity(
-                                  opacity: page2SubTitleOpacity,
-                                  child: Text(
-                                    '금융생활에 당연한 불편은 없어요. 토스 하나면 언제 어디서든 송금 10초컷 가능. 복잡했던 보험료 돌려받기, 시간에 쫓겨 관공서를 찾아야 했던 증명서 발급도 앉은 자리에서 오케이. 자유로운 금융은 우리의 시간과 공간을 더 여유롭게 해요.',
-                                    style: TextStyle(fontSize: page2SubTitleSize),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          const SizedBox(width: 100),
-                          SizedBox(
-                            width: 750,
-                            height: 500,
-                            child: ScrollConfiguration(
-                              behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
-                              child: ListView.separated(
-                                scrollDirection: Axis.horizontal,
-                                controller: page2Controller,
-                                physics: const ClampingScrollPhysics(),
-                                itemCount: 5,
-                                itemBuilder: (context, index) {
-                                  return Card(
-                                    elevation: 4,
-                                    margin: EdgeInsets.zero,
-                                    child: Container(
-                                      width: 500,
-                                      height: 500,
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(10),
-                                        color: Colors.green[300],
-                                      ),
-                                      child: Center(child: Text('Item $index')),
-                                    ),
-                                  );
-                                },
-                                separatorBuilder: (context, index) {
-                                  return const SizedBox(width: 16);
-                                },
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-                KeepAlivePage(
-                  child: Container(
-                    color: Colors.brown,
-                    child: Center(
-                      child: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          SizedBox(
-                            width: 500,
-                            child: Column(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                                Opacity(
-                                  opacity: page3TitleOpacity,
-                                  child: Text(
-                                    '출발은 작은 불편을\n해결하는 것부터333',
-                                    style: TextStyle(
-                                      fontSize: page3TitleSize,
-                                    ),
-                                  ),
-                                ),
-                                const SizedBox(height: 32),
-                                Opacity(
-                                  opacity: page3SubTitleOpacity,
-                                  child: Text(
-                                    '금융생활에 당연한 불편은 없어요. 토스 하나면 언제 어디서든 송금 10초컷 가능. 복잡했던 보험료 돌려받기, 시간에 쫓겨 관공서를 찾아야 했던 증명서 발급도 앉은 자리에서 오케이. 자유로운 금융은 우리의 시간과 공간을 더 여유롭게 해요.',
-                                    style: TextStyle(fontSize: page3SubTitleSize),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          const SizedBox(width: 100),
-                          SizedBox(
-                            width: 500,
-                            child: ScrollConfiguration(
-                              behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
-                              child: ListView.separated(
-                                controller: page3Controller,
-                                physics: const ClampingScrollPhysics(),
-                                itemCount: 5,
-                                itemBuilder: (context, index) {
-                                  return Card(
-                                    elevation: 4,
-                                    margin: EdgeInsets.zero,
-                                    child: Container(
-                                      width: 500,
-                                      height: 500,
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(10),
-                                        color: Colors.brown[300],
-                                      ),
-                                      child: ClipRRect(
-                                        borderRadius: BorderRadius.circular(10),
-                                        child: Image.network(
-                                          'https://images.ctfassets.net/23aumh6u8s0i/4TsG2mTRrLFhlQ9G1m19sC/4c9f98d56165a0bdd71cbe7b9c2e2484/flutter',
-                                          fit: BoxFit.fill,
-                                        ),
-                                      ),
-                                    ),
-                                  );
-                                },
-                                separatorBuilder: (context, index) {
-                                  return const SizedBox(height: 16);
-                                },
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-                KeepAlivePage(
-                  child: Container(
-                    color: Colors.purple,
-                    child: Center(
-                      child: Text(
-                        '4.안녕하세요$currentIndex',
-                        style: TextStyle(fontSize: currentIndex.toDouble()),
-                      ),
-                    ),
-                  ),
-                ),
+                page1(),
+                page2(context),
+                page3(context),
+                page4(context),
+                page5(),
               ],
             ),
-            Scrollbar(
-              controller: scrollbarController,
-              // 막대 직접제어 x
-              interactive: false,
-              // 막대 표시
-              thumbVisibility: true,
-              // 트랙 영역 표시
-              trackVisibility: true,
-              child: SingleChildScrollView(
-                controller: scrollbarController,
-                physics: const NeverScrollableScrollPhysics(),
-                child: SizedBox(width: double.infinity, height: maxIndex * MediaQuery.of(context).size.height),
+            if (isDesktop) ...[
+              IgnorePointer(
+                child: Scrollbar(
+                  controller: scrollbarController,
+                  // 막대 직접제어 x
+                  interactive: false,
+                  // 막대 표시
+                  thumbVisibility: true,
+                  // 트랙 영역 표시
+                  trackVisibility: true,
+                  child: SingleChildScrollView(
+                    controller: scrollbarController,
+                    physics: const NeverScrollableScrollPhysics(),
+                    child: SizedBox(
+                      width: double.infinity,
+                      height: maxIndex * MediaQuery.of(context).size.height,
+                    ),
+                  ),
+                ),
               ),
-            ),
+            ],
           ],
+        ),
+      ),
+    );
+  }
+
+  KeepAlivePage page5() {
+    return KeepAlivePage(
+      child: Container(
+        color: Colors.purple,
+        child: Center(
+          child: Text(
+            '4.안녕하세요$currentIndex',
+            style: TextStyle(fontSize: currentIndex.toDouble()),
+          ),
+        ),
+      ),
+    );
+  }
+
+  KeepAlivePage page4(BuildContext context) {
+    return KeepAlivePage(
+      child: Container(
+        color: Colors.brown,
+        child: Center(
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              SizedBox(
+                width: 500,
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Opacity(
+                      opacity: page3TitleOpacity,
+                      child: Text(
+                        '출발은 작은 불편을\n해결하는 것부터333',
+                        style: TextStyle(
+                          fontSize: page3TitleSize,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 32),
+                    Opacity(
+                      opacity: page3SubTitleOpacity,
+                      child: Text(
+                        '금융생활에 당연한 불편은 없어요. 토스 하나면 언제 어디서든 송금 10초컷 가능. 복잡했던 보험료 돌려받기, 시간에 쫓겨 관공서를 찾아야 했던 증명서 발급도 앉은 자리에서 오케이. 자유로운 금융은 우리의 시간과 공간을 더 여유롭게 해요.',
+                        style: TextStyle(fontSize: page3SubTitleSize),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(width: 100),
+              SizedBox(
+                width: 500,
+                child: ScrollConfiguration(
+                  behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
+                  child: ListView.separated(
+                    controller: page3Controller,
+                    physics: const ClampingScrollPhysics(),
+                    itemCount: 5,
+                    itemBuilder: (context, index) {
+                      return Card(
+                        elevation: 4,
+                        margin: EdgeInsets.zero,
+                        child: Container(
+                          width: 500,
+                          height: 500,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: Colors.brown[300],
+                          ),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: Image.network(
+                              'https://images.ctfassets.net/23aumh6u8s0i/4TsG2mTRrLFhlQ9G1m19sC/4c9f98d56165a0bdd71cbe7b9c2e2484/flutter',
+                              fit: BoxFit.fill,
+                            ),
+                          ),
+                        ),
+                      );
+                    },
+                    separatorBuilder: (context, index) {
+                      return const SizedBox(height: 16);
+                    },
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  KeepAlivePage page3(BuildContext context) {
+    return KeepAlivePage(
+      child: Container(
+        color: Colors.green,
+        child: Center(
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              SizedBox(
+                width: 500,
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Opacity(
+                      opacity: page2TitleOpacity,
+                      child: Text(
+                        '출발은 작은 불편을\n해결하는 것부터222',
+                        style: TextStyle(
+                          fontSize: page2TitleSize,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 32),
+                    Opacity(
+                      opacity: page2SubTitleOpacity,
+                      child: Text(
+                        '금융생활에 당연한 불편은 없어요. 토스 하나면 언제 어디서든 송금 10초컷 가능. 복잡했던 보험료 돌려받기, 시간에 쫓겨 관공서를 찾아야 했던 증명서 발급도 앉은 자리에서 오케이. 자유로운 금융은 우리의 시간과 공간을 더 여유롭게 해요.',
+                        style: TextStyle(fontSize: page2SubTitleSize),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(width: 100),
+              SizedBox(
+                width: 750,
+                height: 500,
+                child: ScrollConfiguration(
+                  behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
+                  child: ListView.separated(
+                    scrollDirection: Axis.horizontal,
+                    controller: page2Controller,
+                    physics: const ClampingScrollPhysics(),
+                    itemCount: 5,
+                    itemBuilder: (context, index) {
+                      return Card(
+                        elevation: 4,
+                        margin: EdgeInsets.zero,
+                        child: Container(
+                          width: 500,
+                          height: 500,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: Colors.green[300],
+                          ),
+                          child: Center(child: Text('Item $index')),
+                        ),
+                      );
+                    },
+                    separatorBuilder: (context, index) {
+                      return const SizedBox(width: 16);
+                    },
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  KeepAlivePage page2(BuildContext context) {
+    return KeepAlivePage(
+      child: Container(
+        color: Colors.blue,
+        child: Center(
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              SizedBox(
+                width: 500,
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Opacity(
+                      opacity: page1TitleOpacity,
+                      child: Text(
+                        '출발은 작은 불편을\n해결하는 것부터111',
+                        style: TextStyle(
+                          fontSize: page1TitleSize,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 32),
+                    Opacity(
+                      opacity: page1SubTitleOpacity,
+                      child: Text(
+                        '금융생활에 당연한 불편은 없어요. 토스 하나면 언제 어디서든 송금 10초컷 가능. 복잡했던 보험료 돌려받기, 시간에 쫓겨 관공서를 찾아야 했던 증명서 발급도 앉은 자리에서 오케이. 자유로운 금융은 우리의 시간과 공간을 더 여유롭게 해요.',
+                        style: TextStyle(fontSize: page1SubTitleSize),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(width: 100),
+              SizedBox(
+                width: 500,
+                child: ScrollConfiguration(
+                  behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
+                  child: ListView.separated(
+                    controller: page1Controller,
+                    physics: const ClampingScrollPhysics(),
+                    itemCount: 5,
+                    itemBuilder: (context, index) {
+                      return Card(
+                        elevation: 4,
+                        margin: EdgeInsets.zero,
+                        child: Container(
+                          width: 500,
+                          height: 500,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: Colors.blue[300],
+                          ),
+                          child: Center(child: Text('Item $index')),
+                        ),
+                      );
+                    },
+                    separatorBuilder: (context, index) {
+                      return const SizedBox(height: 16);
+                    },
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  KeepAlivePage page1() {
+    return KeepAlivePage(
+      child: Container(
+        color: Colors.red,
+        child: Center(
+          child: ElevatedButton(
+            onPressed: () {
+              print('page1');
+            },
+            child: const Text('page1'),
+          ),
         ),
       ),
     );

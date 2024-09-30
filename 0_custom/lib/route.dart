@@ -1,16 +1,18 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_custom_widget/main.dart';
+import 'package:flutter_custom_widget/pages/custom_dropdown.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 final goRouterProvider = Provider<GoRouter>(
   (ref) {
-    // var loginInfo = ref.read(authProvier);
+    // var authProvider = ref.read(authProvier);
     return GoRouter(
       initialLocation: '/',
       debugLogDiagnostics: true,
-      // refreshListenable: loginInfo,
+      // refreshListenable: authProvider,
       refreshListenable: GoRouterRefreshStream(const Stream.empty()),
       redirect: (context, state) {
         // GoRouter(
@@ -30,8 +32,16 @@ final goRouterProvider = Provider<GoRouter>(
         GoRoute(
           path: '/',
           pageBuilder: (context, state) {
-            return const NoTransitionPage(child: SizedBox.shrink());
+            return const NoTransitionPage(child: MainPage());
           },
+          routes: [
+            GoRoute(
+              path: CustomDropDownPage.routeName,
+              pageBuilder: (context, state) {
+                return const NoTransitionPage(child: CustomDropDownPage());
+              },
+            ),
+          ],
         ),
       ],
     );

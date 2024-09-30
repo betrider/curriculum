@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class SocialButtonPage extends StatelessWidget {
+  static const routeName = 'social-button';
   const SocialButtonPage({super.key});
 
   @override

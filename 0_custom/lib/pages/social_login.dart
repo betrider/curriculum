@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class SocialLoginPage extends StatelessWidget {
+  static const routeName = 'social-login';
   const SocialLoginPage({super.key});
 
   @override

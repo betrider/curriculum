@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ChatListPage extends StatelessWidget {
+  static const routeName = 'chat-list';
   const ChatListPage({super.key});
 
   @override

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 
 class ScrollAnimationPage extends StatefulWidget {
+  static const routeName = 'scroll-animation';
   const ScrollAnimationPage({super.key});
 
   @override

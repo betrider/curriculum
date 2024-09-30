@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ImagePage extends StatelessWidget {
+  static const routeName = 'image';
   const ImagePage({super.key});
 
   @override

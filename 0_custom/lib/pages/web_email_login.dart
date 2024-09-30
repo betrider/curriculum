@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 
 class WebEmailLoginPage extends StatelessWidget {
+  static const routeName = 'web-email-login';
   const WebEmailLoginPage({super.key});
 
   @override
