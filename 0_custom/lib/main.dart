@@ -156,3 +156,6 @@ class CardWidget extends StatelessWidget {
 }
 
 // TODO 개발 예정 리스트
+// just_audio
+// flutter_blurhash
+// cached_network_image
