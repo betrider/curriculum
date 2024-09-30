@@ -32,10 +32,38 @@
 
   <title>flutter_custom_widget</title>
   <link rel="manifest" href="manifest.json">
+
+  <style>
+    .container {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: static;
+    }
+
+    .indicator {
+      width: 200px;
+    }
+  </style>
 </head>
 
 <body>
+  <div id="loading_indicator" class="container">
+    <img class="indicator" src="./assets/loading.gif" />
+  </div>
   <script src="flutter_bootstrap.js" async></script>
+  <script>
+    window.onload = function () {
+      setTimeout(function () {
+        var loadingIndicator = document.getElementById("loading_indicator");
+        if (loadingIndicator) {
+          loadingIndicator.remove();
+        }
+      }, 10000);
+    };
+  </script>
 </body>
 
 </html>
