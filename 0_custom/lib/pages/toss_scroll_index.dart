@@ -191,6 +191,36 @@ class _TossScrollIndexPageState extends State<TossScrollIndexPage> {
           ],
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () async {
+          // 홈화면으로 이동
+          await pageController.animateToPage(
+            0,
+            duration: const Duration(milliseconds: 300),
+            curve: Curves.easeInOut,
+          );
+          setState(() {
+            currentIndex = 0;
+            page1TitleOpacity = 0.0;
+            page1TitleSize = 30;
+            page1SubTitleOpacity = 0.0;
+            page1SubTitleSize = 20;
+            page1Controller.jumpToPage(0);
+            page2TitleOpacity = 0.0;
+            page2TitleSize = 30;
+            page2SubTitleOpacity = 0.0;
+            page2SubTitleSize = 20;
+            page1Controller.jumpToPage(0);
+            page3TitleOpacity = 0.0;
+            page3TitleSize = 30;
+            page3SubTitleOpacity = 0.0;
+            page3SubTitleSize = 20;
+            page1Controller.jumpToPage(0);
+            scrollbarController.jumpTo(0);
+          });
+        },
+        child: const Icon(Icons.upload),
+      ),
     );
   }
 

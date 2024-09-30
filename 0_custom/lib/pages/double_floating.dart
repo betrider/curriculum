@@ -8,7 +8,7 @@ class DoubleFloatingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('CarouselPage'),
+        title: const Text('DoubleFloatingPage'),
       ),
       body: Container(
         color: Colors.green,

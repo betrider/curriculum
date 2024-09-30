@@ -11,7 +11,6 @@ class TossScrollOffsetPage extends StatefulWidget {
 }
 
 class TossScrollOffsetPageState extends State<TossScrollOffsetPage> with AfterLayoutMixin<TossScrollOffsetPage> {
-  ScrollController mainController = ScrollController();
   ScrollController pageController = ScrollController();
   ScrollController scrollController = ScrollController();
   ScrollController scrollController2 = ScrollController();
@@ -35,16 +34,7 @@ class TossScrollOffsetPageState extends State<TossScrollOffsetPage> with AfterLa
   }
 
   @override
-  void initState() {
-    super.initState();
-    mainController.addListener(() {
-      setState(() {});
-    });
-  }
-
-  @override
   void dispose() {
-    mainController.dispose();
     pageController.dispose();
     scrollController.dispose();
     scrollController2.dispose();
@@ -54,9 +44,6 @@ class TossScrollOffsetPageState extends State<TossScrollOffsetPage> with AfterLa
 
   @override
   Widget build(BuildContext context) {
-    if (isLayoutBuild) {
-      print(mainController.offset);
-    }
     return Scaffold(
       body: Listener(
         onPointerSignal: (pointerSignal) {
@@ -332,18 +319,6 @@ class TossScrollOffsetPageState extends State<TossScrollOffsetPage> with AfterLa
                       ),
                     ),
                   ],
-                ),
-              ),
-            ),
-            Scrollbar(
-              controller: mainController,
-              thumbVisibility: true,
-              trackVisibility: true,
-              child: SingleChildScrollView(
-                controller: mainController,
-                child: SizedBox(
-                  width: double.infinity,
-                  height: scrollSize,
                 ),
               ),
             ),

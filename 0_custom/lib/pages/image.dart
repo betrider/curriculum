@@ -50,6 +50,19 @@ class ImagePage extends StatelessWidget {
               'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ815Ms1SuDGEez1TYT6BcgqlZ-xOjcqyVjKw&s',
             ),
           ),
+          Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(125),
+              image: const DecorationImage(
+                image: NetworkImage('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ815Ms1SuDGEez1TYT6BcgqlZ-xOjcqyVjKw&s'),
+              ),
+            ),
+            child: Image.network(
+              width: 250,
+              height: 250,
+              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ815Ms1SuDGEez1TYT6BcgqlZ-xOjcqyVjKw&s',
+            ),
+          ),
           ClipRRect(
             borderRadius: BorderRadius.circular(125),
             child: SizedBox(
