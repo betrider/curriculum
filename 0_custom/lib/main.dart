@@ -6,6 +6,7 @@ import 'package:flutter_custom_widget/pages/carousel.dart';
 import 'package:flutter_custom_widget/pages/chat_list.dart';
 import 'package:flutter_custom_widget/pages/custom_drawer.dart';
 import 'package:flutter_custom_widget/pages/custom_dropdown.dart';
+import 'package:flutter_custom_widget/pages/custom_tooltip.dart';
 import 'package:flutter_custom_widget/pages/double_floating.dart';
 import 'package:flutter_custom_widget/pages/global_overlay.dart';
 import 'package:flutter_custom_widget/pages/image.dart';
@@ -26,6 +27,7 @@ import 'package:flutter_custom_widget/pages/web_visibility_change_view.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_web_plugins/url_strategy.dart';
 
+/// 데스킅탑 OS 여부
 bool isDesktop = (defaultTargetPlatform == TargetPlatform.windows || defaultTargetPlatform == TargetPlatform.macOS);
 
 void main() {
@@ -92,6 +94,7 @@ class MainPage extends StatelessWidget {
         CardWidget(title: CustomDropDownPage.routeName, child: CustomDropDownPage()),
         CardWidget(title: CarouselPage.routeName, child: CarouselPage()),
         CardWidget(title: TooltipPage.routeName, child: TooltipPage()),
+        CardWidget(title: CustomTooltipPage.routeName, child: CustomTooltipPage()),
         CardWidget(title: ProfilePage.routeName, child: ProfilePage()),
         CardWidget(title: ChatListPage.routeName, child: ChatListPage()),
         CardWidget(title: ItemListPage.routeName, child: ItemListPage()),

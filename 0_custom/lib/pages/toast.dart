@@ -25,6 +25,37 @@ class ToastPage extends StatelessWidget {
               },
               child: const Text("Show Error Toast"),
             ),
+            const SizedBox(height: 16),
+            const Divider(),
+            const SizedBox(height: 16),
+            ElevatedButton(
+              onPressed: () {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(
+                    content: Text(
+                      "성공입니다.",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    duration: Duration(seconds: 1),
+                    backgroundColor: Colors.green,
+                  ),
+                );
+              },
+              child: const Text("Show Success Toast"),
+            ),
+            const SizedBox(height: 16),
+            ElevatedButton(
+              onPressed: () {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(
+                    content: Text("실패입니다."),
+                    duration: Duration(seconds: 1),
+                    backgroundColor: Colors.red,
+                  ),
+                );
+              },
+              child: const Text("Show Error Toast"),
+            ),
           ],
         ),
       ),

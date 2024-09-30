@@ -15,7 +15,7 @@ class _WebVisibilityChangeViewPageState extends State<WebVisibilityChangeViewPag
   @override
   void initState() {
     super.initState();
-    // 브라우저의 visibilitychange 이벤트 리스너 추가
+    // 브라우저의 visibilitychange 이벤트 리스너 추가(탭이 활성화/비활성화 될 때 발생)
     html.document.onVisibilityChange.listen((event) {
       if (html.document.visibilityState == "visible") {
         setState(() {
