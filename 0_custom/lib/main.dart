@@ -8,6 +8,7 @@ import 'package:flutter_custom_widget/pages/custom_drawer.dart';
 import 'package:flutter_custom_widget/pages/custom_dropdown.dart';
 import 'package:flutter_custom_widget/pages/custom_tooltip.dart';
 import 'package:flutter_custom_widget/pages/double_floating.dart';
+import 'package:flutter_custom_widget/pages/elevated_button.dart';
 import 'package:flutter_custom_widget/pages/global_overlay.dart';
 import 'package:flutter_custom_widget/pages/image.dart';
 import 'package:flutter_custom_widget/pages/item_list.dart';
@@ -92,6 +93,7 @@ class MainPage extends StatelessWidget {
         crossAxisSpacing: 8,
         crossAxisCount: isDesktop ? 4 : 2,
         children: const <Widget>[
+          CardWidget(title: ElevatedButtonPage.routeName, child: ElevatedButtonPage()),
           CardWidget(title: CustomDropDownPage.routeName, child: CustomDropDownPage()),
           CardWidget(title: CarouselPage.routeName, child: CarouselPage()),
           CardWidget(title: TooltipPage.routeName, child: TooltipPage()),
