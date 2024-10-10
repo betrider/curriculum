@@ -57,6 +57,7 @@ dependencies:
   after_layout: ^1.2.0
   appinio_swiper: ^2.1.1
   cached_network_image: ^3.4.1
+  easy_rich_text: ^2.2.0
 
 dev_dependencies:
   flutter_test:
