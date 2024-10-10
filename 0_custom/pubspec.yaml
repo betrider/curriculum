@@ -58,6 +58,8 @@ dependencies:
   appinio_swiper: ^2.1.1
   cached_network_image: ^3.4.1
   easy_rich_text: ^2.2.0
+  encrypt: ^5.0.3
+  pointycastle: ^3.9.1
 
 dev_dependencies:
   flutter_test:
