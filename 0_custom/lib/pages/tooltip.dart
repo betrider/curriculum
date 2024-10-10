@@ -2,7 +2,7 @@ import 'package:el_tooltip/el_tooltip.dart';
 import 'package:flutter/material.dart';
 
 class TooltipPage extends StatelessWidget {
-  static const routeName = 'tooltip';
+  static const routeName = 'tooltip(package)';
   const TooltipPage({super.key});
 
   @override

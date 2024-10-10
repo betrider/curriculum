@@ -10,7 +10,6 @@ class GlobalOverlayPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return LoaderOverlay(
       overlayColor: Colors.grey.withOpacity(0.8),
-      useDefaultLoading: false,
       overlayWidgetBuilder: (progress) {
         return const Center(
           child: SpinKitFadingCircle(

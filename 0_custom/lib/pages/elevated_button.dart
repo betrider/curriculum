@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_custom_widget/components/separated_column.dart';
 
 class ElevatedButtonPage extends StatelessWidget {
   static const routeName = 'elevated-button';
@@ -10,242 +11,244 @@ class ElevatedButtonPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('ElevatedButtonPage'),
       ),
-      body: Padding(
+      body: SingleChildScrollView(
         padding: const EdgeInsets.all(16),
-        child: Wrap(
-          runSpacing: 16,
-          spacing: 16,
-          children: [
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(5),
+        child: Center(
+          child: SeparatedColumn(
+            separatorBuilder: (context, index) => const SizedBox(height: 16),
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                ),
+                onPressed: () {
+                  print('버튼');
+                },
+                child: const Text('버튼'),
+              ),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(50),
+                  ),
+                ),
+                onPressed: () {
+                  print('버튼');
+                },
+                child: const Text('버튼'),
+              ),
+              OutlinedButton(
+                style: OutlinedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                ),
+                onPressed: () {
+                  print('버튼');
+                },
+                child: const Text('버튼'),
+              ),
+              OutlinedButton(
+                style: OutlinedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(50),
+                  ),
+                ),
+                onPressed: () {
+                  print('버튼');
+                },
+                child: const Text('버튼'),
+              ),
+              TextButton(
+                style: TextButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                ),
+                onPressed: () {
+                  print('버튼');
+                },
+                child: const Text('버튼'),
+              ),
+              TextButton(
+                style: TextButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(50),
+                  ),
+                ),
+                onPressed: () {
+                  print('버튼');
+                },
+                child: const Text('버튼'),
+              ),
+              // ---
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                  backgroundColor: Colors.blue,
+                ),
+                onPressed: () {
+                  print('버튼');
+                },
+                child: const Text('버튼'),
+              ),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(50),
+                  ),
+                  backgroundColor: Colors.blue,
+                ),
+                onPressed: () {
+                  print('버튼');
+                },
+                child: const Text('버튼'),
+              ),
+              OutlinedButton(
+                style: OutlinedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                  backgroundColor: Colors.blue,
+                ),
+                onPressed: () {
+                  print('버튼');
+                },
+                child: const Text('버튼'),
+              ),
+              OutlinedButton(
+                style: OutlinedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(50),
+                  ),
+                  backgroundColor: Colors.blue,
+                ),
+                onPressed: () {
+                  print('버튼');
+                },
+                child: const Text('버튼'),
+              ),
+              TextButton(
+                style: TextButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                  backgroundColor: Colors.blue,
+                ),
+                onPressed: () {
+                  print('버튼');
+                },
+                child: const Text('버튼'),
+              ),
+              TextButton(
+                style: TextButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(50),
+                  ),
+                  backgroundColor: Colors.blue,
+                ),
+                onPressed: () {
+                  print('버튼');
+                },
+                child: const Text('버튼'),
+              ),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(5),
+                    side: const BorderSide(color: Colors.red),
+                  ),
+                ),
+                onPressed: () {
+                  print('버튼');
+                },
+                child: const Text(
+                  '버튼',
+                  style: TextStyle(color: Colors.red),
                 ),
               ),
-              onPressed: () {
-                print('버튼');
-              },
-              child: const Text('버튼'),
-            ),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(50),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(50),
+                    side: const BorderSide(color: Colors.red),
+                  ),
+                ),
+                onPressed: () {
+                  print('버튼');
+                },
+                child: const Text(
+                  '버튼',
+                  style: TextStyle(color: Colors.red),
                 ),
               ),
-              onPressed: () {
-                print('버튼');
-              },
-              child: const Text('버튼'),
-            ),
-            OutlinedButton(
-              style: OutlinedButton.styleFrom(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(5),
-                ),
-              ),
-              onPressed: () {
-                print('버튼');
-              },
-              child: const Text('버튼'),
-            ),
-            OutlinedButton(
-              style: OutlinedButton.styleFrom(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(50),
-                ),
-              ),
-              onPressed: () {
-                print('버튼');
-              },
-              child: const Text('버튼'),
-            ),
-            TextButton(
-              style: TextButton.styleFrom(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(5),
-                ),
-              ),
-              onPressed: () {
-                print('버튼');
-              },
-              child: const Text('버튼'),
-            ),
-            TextButton(
-              style: TextButton.styleFrom(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(50),
-                ),
-              ),
-              onPressed: () {
-                print('버튼');
-              },
-              child: const Text('버튼'),
-            ),
-            // ---
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(5),
-                ),
-                backgroundColor: Colors.blue,
-              ),
-              onPressed: () {
-                print('버튼');
-              },
-              child: const Text('버튼'),
-            ),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(50),
-                ),
-                backgroundColor: Colors.blue,
-              ),
-              onPressed: () {
-                print('버튼');
-              },
-              child: const Text('버튼'),
-            ),
-            OutlinedButton(
-              style: OutlinedButton.styleFrom(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(5),
-                ),
-                backgroundColor: Colors.blue,
-              ),
-              onPressed: () {
-                print('버튼');
-              },
-              child: const Text('버튼'),
-            ),
-            OutlinedButton(
-              style: OutlinedButton.styleFrom(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(50),
-                ),
-                backgroundColor: Colors.blue,
-              ),
-              onPressed: () {
-                print('버튼');
-              },
-              child: const Text('버튼'),
-            ),
-            TextButton(
-              style: TextButton.styleFrom(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(5),
-                ),
-                backgroundColor: Colors.blue,
-              ),
-              onPressed: () {
-                print('버튼');
-              },
-              child: const Text('버튼'),
-            ),
-            TextButton(
-              style: TextButton.styleFrom(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(50),
-                ),
-                backgroundColor: Colors.blue,
-              ),
-              onPressed: () {
-                print('버튼');
-              },
-              child: const Text('버튼'),
-            ),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(5),
+              OutlinedButton(
+                style: OutlinedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(5),
+                  ),
                   side: const BorderSide(color: Colors.red),
                 ),
+                onPressed: () {
+                  print('버튼');
+                },
+                child: const Text(
+                  '버튼',
+                  style: TextStyle(color: Colors.red),
+                ),
               ),
-              onPressed: () {
-                print('버튼');
-              },
-              child: const Text(
-                '버튼',
-                style: TextStyle(color: Colors.red),
-              ),
-            ),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(50),
+              OutlinedButton(
+                style: OutlinedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(50),
+                  ),
                   side: const BorderSide(color: Colors.red),
                 ),
-              ),
-              onPressed: () {
-                print('버튼');
-              },
-              child: const Text(
-                '버튼',
-                style: TextStyle(color: Colors.red),
-              ),
-            ),
-            OutlinedButton(
-              style: OutlinedButton.styleFrom(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(5),
-                ),
-                side: const BorderSide(color: Colors.red),
-              ),
-              onPressed: () {
-                print('버튼');
-              },
-              child: const Text(
-                '버튼',
-                style: TextStyle(color: Colors.red),
-              ),
-            ),
-            OutlinedButton(
-              style: OutlinedButton.styleFrom(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(50),
-                ),
-                side: const BorderSide(color: Colors.red),
-              ),
-              onPressed: () {
-                print('버튼');
-              },
-              child: const Text(
-                '버튼',
-                style: TextStyle(color: Colors.red),
-              ),
-            ),
-            TextButton(
-              style: TextButton.styleFrom(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(5),
-                  side: const BorderSide(color: Colors.red),
+                onPressed: () {
+                  print('버튼');
+                },
+                child: const Text(
+                  '버튼',
+                  style: TextStyle(color: Colors.red),
                 ),
               ),
-              onPressed: () {
-                print('버튼');
-              },
-              child: const Text(
-                '버튼',
-                style: TextStyle(color: Colors.red),
-              ),
-            ),
-            TextButton(
-              style: TextButton.styleFrom(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(50),
-                  side: const BorderSide(color: Colors.red),
+              TextButton(
+                style: TextButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(5),
+                    side: const BorderSide(color: Colors.red),
+                  ),
+                ),
+                onPressed: () {
+                  print('버튼');
+                },
+                child: const Text(
+                  '버튼',
+                  style: TextStyle(color: Colors.red),
                 ),
               ),
-              onPressed: () {
-                print('버튼');
-              },
-              child: const Text(
-                '버튼',
-                style: TextStyle(color: Colors.red),
+              TextButton(
+                style: TextButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(50),
+                    side: const BorderSide(color: Colors.red),
+                  ),
+                ),
+                onPressed: () {
+                  print('버튼');
+                },
+                child: const Text(
+                  '버튼',
+                  style: TextStyle(color: Colors.red),
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

@@ -17,16 +17,21 @@ import 'package:flutter_custom_widget/pages/qr.dart';
 import 'package:flutter_custom_widget/pages/scroll_animation.dart';
 import 'package:flutter_custom_widget/pages/social_button.dart';
 import 'package:flutter_custom_widget/pages/social_login.dart';
+import 'package:flutter_custom_widget/pages/text.dart';
+import 'package:flutter_custom_widget/pages/text_field.dart';
 import 'package:flutter_custom_widget/pages/toast.dart';
 import 'package:flutter_custom_widget/pages/tooltip.dart';
 import 'package:flutter_custom_widget/pages/toss_scroll_index.dart';
 import 'package:flutter_custom_widget/pages/toss_scroll_offset.dart';
+import 'package:flutter_custom_widget/pages/utils.dart';
 import 'package:flutter_custom_widget/pages/vertical_page_view.dart';
 import 'package:flutter_custom_widget/pages/video_player.dart';
 import 'package:flutter_custom_widget/pages/web_email_login.dart';
 import 'package:flutter_custom_widget/pages/web_visibility_change_view.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:flutter_web_plugins/url_strategy.dart';
+import 'package:loader_overlay/loader_overlay.dart';
 
 /// 데스킅탑 OS 여부
 bool isDesktop = (defaultTargetPlatform == TargetPlatform.windows || defaultTargetPlatform == TargetPlatform.macOS);
@@ -49,34 +54,45 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Custom Widget',
-      theme: ThemeData(
-        fontFamily: 'NotoSansKR',
-        appBarTheme: const AppBarTheme(elevation: 1),
-        scaffoldBackgroundColor: Colors.white,
-        elevatedButtonTheme: ElevatedButtonThemeData(
-          style: ElevatedButton.styleFrom(
-            shape: RoundedRectangleBorder(
+    return GlobalLoaderOverlay(
+      overlayColor: Colors.grey.withOpacity(0.8),
+      overlayWidgetBuilder: (progress) {
+        return const Center(
+          child: SpinKitFadingCircle(
+            color: Colors.red,
+            size: 50.0,
+          ),
+        );
+      },
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Flutter Custom Widget',
+        theme: ThemeData(
+          fontFamily: 'NotoSansKR',
+          appBarTheme: const AppBarTheme(elevation: 1),
+          scaffoldBackgroundColor: Colors.white,
+          elevatedButtonTheme: ElevatedButtonThemeData(
+            style: ElevatedButton.styleFrom(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(5),
+              ),
+            ),
+          ),
+          outlinedButtonTheme: OutlinedButtonThemeData(
+            style: OutlinedButton.styleFrom(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(5),
+              ),
+            ),
+          ),
+          inputDecorationTheme: InputDecorationTheme(
+            border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(5),
             ),
           ),
         ),
-        outlinedButtonTheme: OutlinedButtonThemeData(
-          style: OutlinedButton.styleFrom(
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(5),
-            ),
-          ),
-        ),
-        inputDecorationTheme: InputDecorationTheme(
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(5),
-          ),
-        ),
+        home: const MainPage(),
       ),
-      home: const MainPage(),
     );
   }
 }
@@ -93,7 +109,10 @@ class MainPage extends StatelessWidget {
         crossAxisSpacing: 8,
         crossAxisCount: isDesktop ? 4 : 2,
         children: const <Widget>[
+          CardWidget(title: UtilsPage.routeName, child: UtilsPage()),
           CardWidget(title: ElevatedButtonPage.routeName, child: ElevatedButtonPage()),
+          CardWidget(title: TextPage.routeName, child: TextPage()),
+          CardWidget(title: TextFieldPage.routeName, child: TextFieldPage()),
           CardWidget(title: CustomDropDownPage.routeName, child: CustomDropDownPage()),
           CardWidget(title: CarouselPage.routeName, child: CarouselPage()),
           CardWidget(title: TooltipPage.routeName, child: TooltipPage()),
