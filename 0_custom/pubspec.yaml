@@ -102,8 +102,14 @@ flutter:
   fonts:
     - family: Pretendard
       fonts:
-        - asset: fonts/Pretendard/PretendardVariable.ttf #Variable은 통합버전 weight 100~900
-          weight: 100
+        - asset: fonts/Pretendard/Pretendard-Light.otf
+          weight: 300
+        - asset: fonts/Pretendard/Pretendard-Medium.otf
+          weight: 500
+        - asset: fonts/Pretendard/Pretendard-Bold.otf
+          weight: 700
+      # fonts:
+      #   - asset: fonts/Pretendard/PretendardVariable.ttf #Variable은 통합버전 weight 100~900
     - family: NotoSansKR
       fonts:
         - asset: fonts/NotoSansKR/NotoSansKR-Thin.ttf
