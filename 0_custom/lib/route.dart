@@ -70,3 +70,29 @@ class GoRouterRefreshStream extends ChangeNotifier {
     super.dispose();
   }
 }
+
+// class ExtraModel {
+//   const ExtraModel();
+
+//   static String toExtra<T>(T value) {
+//     switch (value) {
+//       case ReservationInfo model:
+//         return json.encode(model.toJson());
+//       case ReservationConclusionResponse model:
+//         return json.encode(model.toJson());
+//       default:
+//         throw Exception('Unknown type');
+//     }
+//   }
+
+//   static T fromExtra<T>(String source) {
+//     switch (T) {
+//       case const (ReservationInfo):
+//         return ReservationInfo.fromJson(json.decode(source)) as T;
+//       case const (ReservationConclusionResponse):
+//         return ReservationConclusionResponse.fromJson(json.decode(source)) as T;
+//       default:
+//         throw Exception('Unknown type');
+//     }
+//   }
+// }
