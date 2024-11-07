@@ -90,6 +90,15 @@ class MyApp extends StatelessWidget {
               borderRadius: BorderRadius.circular(5),
             ),
           ),
+          pageTransitionsTheme: const PageTransitionsTheme(
+            builders: {
+              // route builder에 자동으로 주입
+              TargetPlatform.android: CupertinoPageTransitionsBuilder(),
+              TargetPlatform.iOS: CupertinoPageTransitionsBuilder(),
+              TargetPlatform.windows: CupertinoPageTransitionsBuilder(),
+              TargetPlatform.macOS: CupertinoPageTransitionsBuilder(),
+            },
+          ),
         ),
         home: const MainPage(),
       ),
